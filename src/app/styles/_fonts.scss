@@ -1,0 +1,103 @@
+// ----------------------------------------------------------------
+// imports
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Nunito-semibold";
+  src: url("../../assets/fonts/NunitoSans-SemiBold.ttf");
+}
+
+//------------------------------
+// font family
+
+.ff-r {
+  font-family: "Nunito";
+}
+
+.ff-sb {
+  font-family: "Nunito-semibold";
+}
+
+input {
+  font-family: "Nunito";
+}
+
+// ------------------------------
+// font size
+
+.fs\(32\) {
+  font-size: 32px;
+}
+
+.fs\(24\) {
+  font-size: 24px;
+}
+
+.fs\(16\) {
+  font-size: 16px;
+}
+.fs\(14\) {
+  font-size: 14px;
+}
+
+.fs\(12\) {
+  font-size: 12px;
+}
+.fs\(10\) {
+  font-size: 10px !important;
+}
+// --------------------------------
+// font weight
+
+.fw\(bold\) {
+  font-weight: bold;
+}
+.fw\(600\) {
+  font-weight: 600;
+}
+
+// ------------------------------
+// font color
+
+.fc\(575D61\) {
+  color: #575D61;
+}
+
+.fc\(ffffff\) {
+  color: #ffffff !important;
+}
+
+.fc\(EDEEEF\) {
+  color: #EDEEEF;
+}
+
+.fc\(C3C5C7\) {
+  color: #C3C5C7;
+}
+
+.fc\(202C3D\) {
+  color: #202C3D !important;
+}
+
+.fc\(9B9B9B\) {
+  color: #9B9B9B !important;
+}
+
+// ------------------------------
+// text align
+
+.talign-left {
+  text-align: left;
+}
+
+// ------------------------------
+
+// text transform
+
+.text-upper {
+  text-transform: uppercase;
+}

@@ -1,0 +1,47 @@
+//----------------------------------------------------------------
+// backgrounds
+
+.bgt {
+  background: transparent;
+}
+
+.bgc\(0F171D\) {
+  background-color: #0f171D;
+}
+
+.bgc\(1565D8\) {
+  background-color: #1565D8;
+}
+
+.bgc\(161F26\) {
+  background-color: #161F26;
+}
+
+.bg-img-cover {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// ------------------------------
+// borders
+
+.bdrb {
+  border-bottom: 1px solid rgba(56, 60, 64, 0.5);
+}
+
+.bdrt {
+  border-top: 1px solid rgba(56, 60, 64, 0.5);
+}
+
+// ------------------------------ box shadow ------------------------------
+
+.bgshadow1 {
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+}
+
+// ------------------------------ border radius ------------------------------
+
+.bdr-rounded {
+    border-radius: 6px;
+}

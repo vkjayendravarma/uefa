@@ -1,0 +1,81 @@
+// @dealsWith: all positions width height paddings margins 
+
+// ----------------------------------------------------------------
+// width
+.wdt-fit-content{
+    width: fit-content;
+}
+.wdta{
+    width: auto;
+}
+
+.wdt\(100\){
+    width: 100%;
+}
+
+.wdt\(90\){
+    width: 90%;
+}
+
+.wdt\(80\){
+    width: 80%;
+}
+
+.wdt\(50\){
+    width: 50%;
+}
+
+.wdtv\(100\){
+    width: 100vw;
+}
+
+.wdtv\(50\){
+    width: 50vw;
+}
+
+
+
+//----------------------------------------------------------------
+// height
+
+.hgta{
+    height: auto;
+}
+
+.hgt\(100\){
+    height: 100%;
+}
+
+.hgt\(50\){
+    height: 50%;
+}
+
+.hgtv\(100\){
+    height: 100vh;
+}
+
+
+
+// ------------------------------
+// overflow
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+// ------------------------------
+// display
+
+.display-block{
+    display: block !important;
+}
+
+.display-inline{
+    display: inline !important;
+}
+
+
+// ------------------------------
+//floating
+
+.float-right{float: right}

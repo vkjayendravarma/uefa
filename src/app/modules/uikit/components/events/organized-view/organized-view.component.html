@@ -1,0 +1,45 @@
+<section class="uiComponent OrganisedEvents bgc(161F26) bgshadow1 bdr-rounded">
+  <div class="componentWrapper pr">
+    <div class="componentHeader">
+      <div class="row">
+        <div class="col-8 align-self-center">
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Events</h2>
+        </div>
+        <div class="col-4 " align="right">
+          <mat-icon svgIcon="filter" class="filterIcon hgta"></mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="componentBody">
+      <mat-tab-group color="accent" align="left" class="mat-tabs">
+        <mat-tab label="Current">
+            <div class="events plr prr">
+                <app-event-card-element></app-event-card-element>
+                <app-event-card-element></app-event-card-element>
+                <app-event-card-element></app-event-card-element>
+                <app-event-card-element></app-event-card-element>
+                <app-event-card-element></app-event-card-element>
+            </div>         
+        </mat-tab>
+
+        <mat-tab label="Upcoming">
+          <div class="events plr prr">
+            <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+        </div>       
+        </mat-tab>
+        <mat-tab label="Drafts">
+          <div class="events plr prr">
+            <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+        </div>       
+            
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+.authSection{
+    background-image: url("../../../../assets/images/auth/loginBanner.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+
+    position: relative;
+
+    .loginFormWrapper{
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+.btn-submit{
+    height: 56px;
+}

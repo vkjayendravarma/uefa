@@ -1,0 +1,138 @@
+$xs: 0.25em;
+$s: 0.5em;
+$r: 1em;
+$l: 2em;
+$xl: 3em;
+$xxl: 4em;
+
+//----------------------------------------------------------------
+// padding 
+
+.p-unset{
+    padding: unset !important;
+}
+
+// paddng xs
+.ptxs{
+    padding-top: $xs;
+}
+.pbxs{
+    padding-bottom: $xs;
+}
+
+// padding s
+.ps{
+    padding: $s;
+}
+.pts{
+    padding-top: $s;
+}
+
+.pbs{
+    padding-bottom: $s;
+}
+
+.pls{
+    padding-left: $s;
+}
+
+.prs{
+    padding-right: $s;
+}
+
+// padding r
+
+.pr{
+    padding: $r;
+}
+
+.ptr{
+    padding-top: $r;
+}
+
+.pbr{
+    padding-bottom: $r;
+}
+
+.plr{
+    padding-left: $r;
+}
+
+.prr{
+    padding-right: $r;
+}
+
+// padding l
+.pl{
+    padding: $l;
+}
+
+.pbl{
+    padding-bottom: $l;
+}
+.ptl{
+    padding-top: $l;
+}
+
+.pll{
+    padding-left: $l;
+}
+
+.prl{
+    padding-right: $l;
+}
+//----------------------------------------------------------------
+// margin 
+
+.m-unset{
+    margin: unset !important;
+}
+
+// ------------------------------ margin xs ----------------
+.mlxs{
+    margin-left: $xs;
+}
+
+// ------------------------------ margin s
+
+.mls{
+    margin-left: $s;
+}
+
+// ------------------------------// margin r..
+.mtr{
+    margin-top: $r;
+}
+
+.mbr{
+    margin-bottom: $r;
+}
+
+.mlr{
+    margin-left: $r;
+}
+
+
+// ------------------------------ margin l
+
+.mtl{
+    margin-top: $l;
+}
+
+.mll{
+    margin-left: $l;
+}
+
+// ------------------------------// margin xl
+.mtxl{
+    margin-top: $xl;
+}
+
+
+
+
+
+
+
+
+

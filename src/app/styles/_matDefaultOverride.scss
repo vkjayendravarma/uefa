@@ -1,0 +1,31 @@
+
+
+.mat-form-field-infix {
+  border-top-width: 5px;
+}
+.mat-form-field-suffix {
+  top: 0 !important;
+}
+
+.mat-checkbox-frame{
+    border-color: #ffffff !important;
+}
+
+// .mat-tab-label {
+//   padding: 0px !important; // adjust this to whatever padding you need
+//   justify-content: left !important;
+// }
+
+.mat-standard-chip {
+  min-height: 17px !important;
+  color: #202C3D !important;
+}
+
+.mat-chip-list-wrapper{
+  width: fit-content !important;
+  display: inline !important;
+}
+
+.mat-tab-header{
+  margin: 0 1em;
+}
