@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AdminRouterModule } from './admin-routing.module';
 import { UikitModule } from '../uikit/uikit.module';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -18,8 +19,10 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     AdminRouterModule,
     UikitModule,
-    MatButtonModule
+    MatButtonModule,    
+    MatDialogModule
     
-  ]
+  ],
+  entryComponents: []
 })
 export class AdminModule { }

@@ -109,9 +109,12 @@ $xxl: 4em;
 }
 
 .mlr{
-    margin-left: $r;
+    margin-left: $r ;
 }
 
+.mrr{
+    margin-right: $r;
+}
 
 // ------------------------------ margin l
 
@@ -120,14 +123,26 @@ $xxl: 4em;
 }
 
 .mll{
-    margin-left: $l;
+    margin-left: $l !important;
 }
 
+.mrl{
+    margin-right: $l ;
+}
 // ------------------------------// margin xl
 .mtxl{
     margin-top: $xl;
 }
 
+.mlxl{
+    margin-left: $xl;
+}
+
+// ------------------------------// margin xxl
+
+.mlxxl{
+    margin-left: $xxl;
+}
 
 
 
