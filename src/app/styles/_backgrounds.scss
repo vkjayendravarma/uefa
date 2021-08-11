@@ -19,8 +19,8 @@
 
 .bg-img-cover {
   background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat  : no-repeat;
+  background-size    : cover;
 }
 
 // ------------------------------
@@ -35,17 +35,18 @@
 }
 
 
-.bdr\(77B7FD\){
-  border: 1px solid #77B7FD;
+.bdr\(77B7FD\) {
+  border: 1px solid #77B7FD !important;
 }
+
 // ------------------------------ box shadow ------------------------------
 
 .bgshadow1 {
-    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
 }
 
 // ------------------------------ border radius ------------------------------
 
 .bdr-rounded {
-    border-radius: 6px;
+  border-radius: 6px;
 }

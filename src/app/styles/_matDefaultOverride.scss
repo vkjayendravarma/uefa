@@ -3,9 +3,13 @@
 .mat-form-field-infix {
   border-top-width: 5px;
 }
-.mat-form-field-suffix {
-  top: 0 !important;
+
+.loginFormWrapper{
+  .mat-form-field-suffix {
+    top: 0 !important;
+  }
 }
+
 
 .mat-checkbox-frame{
     border-color: #ffffff !important;
@@ -15,15 +19,24 @@
 //   padding: 0px !important; // adjust this to whatever padding you need
 //   justify-content: left !important;
 // }
-
-.mat-standard-chip {
-  min-height: 17px !important;
-  color: #202C3D !important;
+.smallChips{
+  .mat-standard-chip {
+    min-height: 17px !important;
+    color: #202C3D !important;
+  }
+  
+  .mat-chip-list-wrapper{
+    width: fit-content !important;
+    display: inline !important;
+  }
+  
 }
 
-.mat-chip-list-wrapper{
-  width: fit-content !important;
-  display: inline !important;
+.formControlTopBorderUnset{
+  .mat-form-field-infix{
+    border-top: unset !important;
+  }
+  
 }
 
 .mat-tab-header{
@@ -35,13 +48,33 @@
 
 // select boxes
 
+.matSelectCustomFocus {
+  .mat-selected{
+    .mat-option-text{
+      color: #77B7FD !important;
+    }
+  }
+}
 .mat-select-min-line, .mat-input-element {
   color: #C3C5C7 !important;
   font-family: "Nunito";
   font-size: 14px
 }
 
+.mat-select-grid-3.mat-select-panel {
+  column-count: 3;
+  column-width: 100px;
+  width: 300px;
+  max-width: 300px;
+}
 
+.mat-pseudo-checkbox::after {
+  color: #ffffff;
+}
+
+.mat-pseudo-checkbox-checked{
+    background-color: #1565D8 !important; /* Red background for example */
+}
 // ------------------------------ mad dialog ----------------
 
 .btn-dialog-action{
@@ -65,4 +98,17 @@
 .mat-dialog-custom-backdrop{
   background-color: #202C3D;
   opacity: 0.6 !important;
+}
+
+
+// ------------------------------------------------------------------------------------------------ stepper
+
+.darkStepperContainer{
+  .mat-stepper-horizontal {
+    background-color: #0F171D;
+  }
+}
+
+.mat-horizontal-content-container{
+  padding-bottom: unset !important;
 }

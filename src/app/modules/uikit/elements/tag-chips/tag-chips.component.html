@@ -1,4 +1,7 @@
-<mat-chip-list aria-label="tags" selectable="false" class="display-inline" >
-  <mat-chip class="text-upper fs(10) fc(202C3D) " [ngStyle]="{'background-color': '#FFD9D9'}" > CLUB</mat-chip>
-  <mat-chip class="text-upper fs(10) fc(202C3D) " [ngStyle]="{'background-color': '#D5DFEF'}" >LIVERPOOL</mat-chip>
-</mat-chip-list>
+<div class="smallChips">
+  <mat-chip-list aria-label="tags" selectable="false" class="display-inline" *ngIf="tags !== undefined" >
+    <mat-chip class="text-upper fs(10) fc(202C3D) " [ngStyle]="{'background-color': tag.bgColor}" *ngFor="let tag of tags" > {{ tag.name }} </mat-chip>
+  </mat-chip-list>
+  
+</div>
+

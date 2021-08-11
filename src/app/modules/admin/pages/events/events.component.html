@@ -3,16 +3,19 @@
         <app-global-search-bar></app-global-search-bar>
 
         <div class="pageTitleWrapper">
-            <h1 class="title fc(ffffff) ff-sb fs(24) pts pbs "> National Events 
-                <button mat-button  type="button" class=" bgc(1565D8)  float-right" (click)="initiateNewEvent()" > <p class="btn-text fs(16) pll prl ">Create Event</p>  </button> </h1>
-            
+            <h1 class="title fc(ffffff) ff-sb fs(24) pts pbs "> National Events
+                <button mat-button type="button" class=" bgc(1565D8)  float-right" (click)="initiateNewEvent()">
+                    <p class="btn-text fs(16) pll prl ">Create Event</p>
+                </button>
+            </h1>
+
         </div>
     </div>
-    
+
 </section>
 
 <section class="eventsWrapper ">
-    <div class="container-fluid bgc(0F171D) " >
+    <div class="container-fluid bgc(0F171D) ">
         <div class=" ptl pbl ">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
@@ -20,31 +23,29 @@
                         <app-organized-view></app-organized-view>
                     </div>
                     <div class="pastEvents mtl">
-                        <app-single-category-events-view componentTitle="Past Events" ></app-single-category-events-view>
+                        <app-single-category-events-view componentTitle="Past Events"></app-single-category-events-view>
                     </div>
-                   
-                    
+
+
                 </div>
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="activitiesView ">
                         <app-global-activities></app-global-activities>
-                    </div>                   
-                    
+                    </div>
+
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="allEvents mtl">
-                        <app-single-category-events-view componentTitle="All Events" ></app-single-category-events-view>
-                    </div>                
-                    
+                        <app-single-category-events-view componentTitle="All Events"></app-single-category-events-view>
+                    </div>
+
                 </div>
-              
+
 
             </div>
         </div>
-        
+
     </div>
-    
+
 </section>
-
-

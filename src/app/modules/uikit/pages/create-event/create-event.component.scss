@@ -1,0 +1,29 @@
+.header {
+    background-image: url("../../../../../assets/images/backgrounds/dashboard/2_player.jpg")
+}
+
+.newEventTitle{
+    position: relative;
+}
+
+.tag{
+    position: absolute;
+    top: 0px;
+}
+
+.eventBodyIcons{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.addBulkWrapper{
+    display: table;
+    height: 100%;
+
+    .addBulk{
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+

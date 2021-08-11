@@ -18,6 +18,14 @@ import { CreateNewEventModelComponent } from './models/create-new-event-model/cr
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { CreateEventComponent } from './pages/create-event/create-event.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FileUploaderComponent } from './elements/file-uploader/file-uploader.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +36,8 @@ import { MatSelectModule } from '@angular/material/select';
     SingleCategoryEventsViewComponent,
     GlobalActivitiesComponent,
     CreateNewEventModelComponent,
+    CreateEventComponent,
+    FileUploaderComponent,
   ],
   imports: [
     CommonModule,
@@ -43,12 +53,18 @@ import { MatSelectModule } from '@angular/material/select';
     MatDialogModule,
     MatButtonModule,
     MatSelectModule,
+    MatStepperModule,
+    MatCheckboxModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatSlideToggleModule
   ],
   exports: [
     GlobalSearchBarComponent,
     OrganizedViewComponent,
     SingleCategoryEventsViewComponent,
     GlobalActivitiesComponent,
+    CreateEventComponent,
   ],
   entryComponents: [CreateNewEventModelComponent],
 })
