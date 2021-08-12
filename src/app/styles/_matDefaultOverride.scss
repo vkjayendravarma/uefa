@@ -10,15 +10,16 @@
   }
 }
 
-
-.mat-checkbox-frame{
-    border-color: #ffffff !important;
+// ------------------------------ checkbox ----------------
+.mat-pseudo-checkbox::after {
+  color: #ffffff;
 }
 
-// .mat-tab-label {
-//   padding: 0px !important; // adjust this to whatever padding you need
-//   justify-content: left !important;
-// }
+.mat-checkbox-checkmark-path{  
+  stroke: #ffffff !important;
+}
+
+
 .smallChips{
   .mat-standard-chip {
     min-height: 17px !important;
@@ -68,9 +69,7 @@
   max-width: 300px;
 }
 
-.mat-pseudo-checkbox::after {
-  color: #ffffff;
-}
+
 
 .mat-pseudo-checkbox-checked{
     background-color: #1565D8 !important; /* Red background for example */
@@ -92,7 +91,7 @@
   
 }
 .mat-dialog-container {
-  background-color: #0F171D;
+  background-color: #0F171D !important;
 }
 
 .mat-dialog-custom-backdrop{

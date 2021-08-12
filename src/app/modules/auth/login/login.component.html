@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-md-12">
           <label class="display-block fc(EDEEEF)   ">Email Address</label>
-          <mat-form-field
+          <mat-form-field color="primary"
             appearance="outline"
             class="formControl wdt(100)">
             <input matInput type="email" class="ff-r fs(14)" />
@@ -18,7 +18,7 @@
         </div>
         <div class="col-md-12">
           <label class="display-block fc(EDEEEF)  ">Password</label>
-          <mat-form-field
+          <mat-form-field color="primary"
             appearance="outline"
             class="formControl wdt(100)">
             <input matInput [type]="hide ? 'password' : 'text'" />
@@ -37,10 +37,10 @@
           <a [routerLink]="['/']" class="fs(14) ff-r ">Forgot Password?</a>
         </div>
         <div class="col-md-12">
-          <mat-checkbox class="agreeTerms mtr mbr" color="primary">I agree to terms & conditions</mat-checkbox>
+          <mat-checkbox class="agreeTerms mtr mbr" color="accent">I agree to terms & conditions</mat-checkbox>
         </div>
         <div class="col-md-12">
-          <button mat-button color="warn" type="submit" class="btn btn-submit wdt(100) bgc(1565d8) fc(ffffff) ff-sb fs(16) pts pbs  ">Login</button>
+          <button mat-raised-button color="accent" type="submit" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs  ">Login</button>
         </div>
       </div>
     </form>

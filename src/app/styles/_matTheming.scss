@@ -1,17 +1,19 @@
 // ------------------------------ theme
+
+// @import "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
 @import "~@angular/material/theming";
 
 @include mat-core();
 
 
+$dark-app-primary: mat-palette($mat-grey);
 
-$dark-app-primary: mat-palette($mat-indigo);
-
-$dark-app-accent: mat-palette($mat-grey, 600, 500, 900);
+$dark-app-accent: mat-palette($mat-purple);
 $dark-app-warn  : mat-palette($mat-red);
 
-$dark-app-theme: mat-light-theme($dark-app-primary, $dark-app-accent, $dark-app-warn);
+$dark-app-theme: mat-dark-theme($dark-app-primary, $dark-app-accent, $dark-app-warn);
 
-// @include angular-material-theme($dark-app-theme);
+@include angular-material-theme($dark-app-theme);
 @include mat-checkbox-theme($dark-app-theme);
+// @include mat-button-theme($dark-app-theme);
 // @include mat-stepper-theme($dark-app-theme);

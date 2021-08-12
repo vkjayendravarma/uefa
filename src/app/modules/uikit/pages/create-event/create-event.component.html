@@ -22,7 +22,7 @@
             </div>
 
             <div class="newEventBuilder darkStepperContainer mtl">
-                <mat-stepper #stepper>
+                <mat-stepper #stepper color="accent">
                     <!-- ---------------------------------------------------------------- Basic Info  -->
                     <mat-step label="Basic Information">
                         <form class="basicInfo mtl">
@@ -41,7 +41,7 @@
                                     <div class="col-6">
                                         <div class="formControl wdt(100)">
                                             <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                            <mat-form-field appearance="outline" color="accent" class=" wdt(100)">
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
                                                 <mat-select panelClass="matSelectCustomFocus">
                                                     <mat-option>None</mat-option>
                                                     <mat-option value="option1">Option 1</mat-option>
@@ -62,7 +62,7 @@
                                     <div class="col-6">
                                         <div class="formControl wdt(100) ">
                                             <label class="display-block fc(EDEEEF)   ">Category</label>
-                                            <mat-form-field appearance="outline" color="accent" class="wdt(100)">
+                                            <mat-form-field appearance="outline" color="primary" class="wdt(100)">
                                                 <mat-select panelClass="mat-select-grid-3" multiple>
                                                     <mat-optgroup label="Gender">
                                                         <mat-option value="option1">Male</mat-option>
@@ -111,7 +111,7 @@
                                     <div class="col-6">
                                         <div class="formControl wdt(100)">
                                             <label class="display-block fc(EDEEEF)   ">Start Date</label>
-                                            <mat-form-field appearance="outline" color="accent" class=" wdt(100)">
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
 
                                                 <input matInput [matDatepicker]="startDatePicker">
                                                 <mat-datepicker-toggle matSuffix [for]="startDatePicker">
@@ -132,7 +132,7 @@
                                     <div class="col-6">
                                         <div class="formControl wdt(100)">
                                             <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                            <mat-form-field appearance="outline" color="accent" class=" wdt(100)">
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
 
                                                 <input matInput [matDatepicker]="endDatePicker">
                                                 <mat-datepicker-toggle matSuffix [for]="endDatePicker">
@@ -163,7 +163,7 @@
                                     <div class="col-6">
                                         <div class="formControl wdt(100)">
                                             <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                            <mat-form-field appearance="outline" color="accent" class=" wdt(100)">
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
 
                                                 <input matInput [matDatepicker]="registrationEndDatePicker">
                                                 <mat-datepicker-toggle matSuffix [for]="registrationEndDatePicker">
@@ -188,7 +188,7 @@
                         </form>
 
                         <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action bgc(1565D8) fc(ffffff) ff-sb fs(16)" mat-button
+                            <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent"
                                 matStepperNext>
                                 Next
                             </button>
@@ -220,7 +220,7 @@
                             <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add Photo | + Add Text | + Add Video</p>
                         </form>
                         <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action bgc(1565D8) fc(ffffff) ff-sb fs(16)" mat-button
+                            <button class="btn-dialog-action  fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent"
                                 matStepperNext>
                                 Next
                             </button>
@@ -263,7 +263,7 @@
                                             <div class="col-6">
                                                 <div class="formControl wdt(100)">
                                                     <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                                    <mat-form-field appearance="outline" color="accent"
+                                                    <mat-form-field appearance="outline" color="primary"
                                                         class=" wdt(100)">
                                                         <mat-select panelClass="matSelectCustomFocus">
                                                             <mat-option>None</mat-option>
@@ -304,7 +304,7 @@
                                             <div class="col-6">
                                                 <div class="formControl wdt(100)">
                                                     <label class="display-block fc(EDEEEF)   ">Select Region</label>
-                                                    <mat-form-field appearance="outline" color="accent"
+                                                    <mat-form-field appearance="outline" color="primary"
                                                         class=" wdt(100)">
                                                         <mat-select panelClass="matSelectCustomFocus">
                                                             <mat-option>None</mat-option>
@@ -319,7 +319,7 @@
                                             <div class="col-12">
                                                 <div class="formControl wdt(100)">
                                                     <label class="display-block fc(EDEEEF)   ">Shareable LInk</label>
-                                                    <mat-form-field appearance="outline" color="accent"
+                                                    <mat-form-field appearance="outline" color="primary"
                                                         class=" wdt(100)">
                                                         <input matInput type="text" value="www.uefa/newtournament">
                                                         <button matSuffix mat-icon-button>
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                         <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action bgc(1565D8) fc(ffffff) ff-sb fs(16)" mat-button>
+                            <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent">
                                 Publish
                             </button>
                             <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
@@ -359,7 +359,7 @@
                                     <div class="manulaAttendanceWrapper mtl">
                                         <label class="manulaAttendance fs(16) ff-r fc(9B9B9B) mrl">Manual
                                             Attendance</label>
-                                        <mat-slide-toggle color="primary"></mat-slide-toggle>
+                                        <mat-slide-toggle color="accent"></mat-slide-toggle>
                                     </div>
 
                                     <div class="row mtl pbr">
@@ -392,7 +392,7 @@
 
                             </form>
                             <div class="stepper-controller mtxxl pr bgc(161F26) ">
-                                <button class="btn-dialog-action bgc(1565D8) fc(ffffff) ff-sb fs(16)" mat-button>
+                                <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent">
                                     Save Changes
                                 </button>
                                 <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
