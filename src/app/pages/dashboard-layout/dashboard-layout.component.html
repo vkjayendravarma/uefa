@@ -1,1 +1,12 @@
-<div class="bgc(0F171D) minHgtv(100)"><router-outlet></router-outlet></div>
+<mat-sidenav-container class="dashboard-layout">
+    <mat-sidenav  mode="side" [(opened)]="opened" [fixedInViewport]="true">
+        <app-side-nav-dashboard-layout></app-side-nav-dashboard-layout>
+    </mat-sidenav>
+
+    <mat-sidenav-content >
+        <!-- <button (click)="opened = !opened">toggle</button> -->
+        <div class="bgc(0F171D) minHgtv(100)">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

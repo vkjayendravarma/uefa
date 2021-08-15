@@ -1,0 +1,47 @@
+
+.navItemsUl {
+    list-style-type: none !important;
+}
+
+.navItemWrapper {
+    padding-left: unset;
+}
+
+.mat-button {
+    text-align: left !important;
+}
+
+.icon {    
+    position: relative;
+    top: 3px;
+    svg {        
+        path {
+            fill: #82898E;
+        }
+    }
+}
+
+.navItem{
+    background:transparent;
+    svg {
+        path {
+            fill: #82898E;
+            stroke: #82898E;
+        }
+    }
+}
+.linkActive{
+    .navItem{
+        background: #ffffff;
+        svg {
+            path {
+                fill: #161F26;
+                stroke: #161F26;
+            }
+        }
+        .navItemLabel{
+            color: #161F26;
+        }
+    }
+}
+

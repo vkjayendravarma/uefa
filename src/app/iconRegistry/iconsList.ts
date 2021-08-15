@@ -3,5 +3,7 @@ export enum Icons{
     CalendarIcon = "calendar",
     LocationIcon = "location",
     threeHorizontalDots = "horizontalDots",
-    copyIcon = "copy"
+    copyIcon = "copy",
+    homeIcon = "home",
+    menuIcon = "menu-open"
 }
