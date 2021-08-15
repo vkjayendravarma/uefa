@@ -3,9 +3,10 @@
     <div class="componentHeader">
       <div class="row">
         <div class="col-8 align-self-center">
-          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Events</h2>
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset"> {{componentTitle }} </h2>
         </div>
-        <div class="col-4 " align="right">
+        <div class="col-4 " align="right">          
+          <mat-icon  class="addNew hgta mrr fc(82898E) " *ngIf="enableCreateNew">add</mat-icon>
           <mat-icon svgIcon="filter" class="filterIcon hgta"></mat-icon>
         </div>
       </div>

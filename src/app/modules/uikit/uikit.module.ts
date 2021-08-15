@@ -25,6 +25,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FileUploaderComponent } from './elements/file-uploader/file-uploader.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatchesFlowComponent } from './elements/matches-flow/matches-flow.component';
+import { RegistrationRequestsComponent } from './components/registration-requests/registration-requests.component';
+import { SurveysComponent } from './components/surveys/surveys.component';
+import { PostsListViewComponent } from './components/posts-list-view/posts-list-view.component';
+import { TournamentsListViewComponent } from './components/tournaments-list-view/tournaments-list-view.component';
 
 
 @NgModule({
@@ -38,6 +43,11 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     CreateNewEventModelComponent,
     CreateEventComponent,
     FileUploaderComponent,
+    MatchesFlowComponent,
+    RegistrationRequestsComponent,
+    SurveysComponent,
+    PostsListViewComponent,
+    TournamentsListViewComponent,
   ],
   imports: [
     CommonModule,
@@ -65,6 +75,11 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     SingleCategoryEventsViewComponent,
     GlobalActivitiesComponent,
     CreateEventComponent,
+    MatchesFlowComponent,
+    RegistrationRequestsComponent,
+    SurveysComponent,
+    PostsListViewComponent,
+    TournamentsListViewComponent,
   ],
   entryComponents: [CreateNewEventModelComponent],
 })

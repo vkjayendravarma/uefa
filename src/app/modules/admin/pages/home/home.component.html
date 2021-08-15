@@ -1,1 +1,53 @@
-<p>home works!</p>
+<section class="header bg-img-cover">
+    <div class="header-inner  ">
+        <app-global-search-bar></app-global-search-bar>
+
+        <div class="pageTitleWrapper ptxl pll pbr prl">
+            <h1 class="title fc(ffffff) ff-sb fs(24) pts pbs display-inline "> Welcome Back, Andrew!</h1>
+            <h2 class="display-inline fc(C3C5C7) ff-sb fs(16)"></h2>
+        </div>
+    </div>
+
+</section>
+
+<section class="eventsWrapper ">
+    <div class="container  ">
+        <div class=" ptl plr pbl ">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="eventsOrganisedView ">
+                        <app-organized-view componentTitle="National Events" [enableCreateNew]="true" ></app-organized-view>
+                    </div>
+        
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <app-registration-requests></app-registration-requests>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="surrveysListView mtl">
+                        <app-surveys></app-surveys>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="tournmentsListView mtl">
+                        <app-tournaments-list-view></app-tournaments-list-view>
+                    </div>
+                    
+                </div>
+
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="postsListView mtl">
+                        <app-posts-list-view></app-posts-list-view>
+                    </div>
+                   
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

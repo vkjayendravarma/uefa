@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-organized-view',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganizedViewComponent  implements OnInit  {
 
+  @Input()
+  componentTitle!: string;
 
+  @Input()
+  enableCreateNew: boolean = false;
   constructor(  ) {
     
   }
