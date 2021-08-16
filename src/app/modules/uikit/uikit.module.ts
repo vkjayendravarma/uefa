@@ -23,7 +23,6 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FileUploaderComponent } from './elements/file-uploader/file-uploader.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatchesFlowComponent } from './elements/matches-flow/matches-flow.component';
 import { RegistrationRequestsComponent } from './components/registration-requests/registration-requests.component';
@@ -31,6 +30,7 @@ import { SurveysComponent } from './components/surveys/surveys.component';
 import { PostsListViewComponent } from './components/posts-list-view/posts-list-view.component';
 import { TournamentsListViewComponent } from './components/tournaments-list-view/tournaments-list-view.component';
 import { EventPreviewComponent } from './pages/event-preview/event-preview.component';
+import { UiElementsModule } from '../ui-elements/ui-elements.module';
 
 
 @NgModule({
@@ -43,7 +43,6 @@ import { EventPreviewComponent } from './pages/event-preview/event-preview.compo
     GlobalActivitiesComponent,
     CreateNewEventModelComponent,
     CreateEventComponent,
-    FileUploaderComponent,
     MatchesFlowComponent,
     RegistrationRequestsComponent,
     SurveysComponent,
@@ -69,7 +68,8 @@ import { EventPreviewComponent } from './pages/event-preview/event-preview.compo
     MatCheckboxModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    UiElementsModule
   ],
   exports: [
     GlobalSearchBarComponent,
