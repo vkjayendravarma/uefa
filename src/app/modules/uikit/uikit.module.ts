@@ -30,6 +30,7 @@ import { RegistrationRequestsComponent } from './components/registration-request
 import { SurveysComponent } from './components/surveys/surveys.component';
 import { PostsListViewComponent } from './components/posts-list-view/posts-list-view.component';
 import { TournamentsListViewComponent } from './components/tournaments-list-view/tournaments-list-view.component';
+import { EventPreviewComponent } from './pages/event-preview/event-preview.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { TournamentsListViewComponent } from './components/tournaments-list-view
     SurveysComponent,
     PostsListViewComponent,
     TournamentsListViewComponent,
+    EventPreviewComponent,
   ],
   imports: [
     CommonModule,
@@ -80,6 +82,7 @@ import { TournamentsListViewComponent } from './components/tournaments-list-view
     SurveysComponent,
     PostsListViewComponent,
     TournamentsListViewComponent,
+    EventPreviewComponent,
   ],
   entryComponents: [CreateNewEventModelComponent],
 })
