@@ -1,3 +1,32 @@
-button{
+button {
     outline: none !important;
+}
+
+// ------------------------------ ui component globle settings action bar with text and icon ----------------
+
+.uiComponent {
+    .componentBody {
+        .clubLogo {
+            height: 42px;
+            width : auto;
+        }
+    }
+    .filterIcon{
+        width: 20px;
+    }
+    .uiComponent-top-actions {
+        position: relative;
+        height  : 100%;
+
+        .uiComponent-text-action {
+            position: relative;
+            top     : -8px;
+        }
+
+    }
+    .uiComponent-small-icon {
+        width : 10px;
+        height: 10px;
+    }
+    
 }
