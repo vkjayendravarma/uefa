@@ -6,13 +6,19 @@ import { AdminRouterModule } from './admin-routing.module';
 import { UikitModule } from '../uikit/uikit.module';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSortModule } from '@angular/material/sort';
+import { MatIconModule } from '@angular/material/icon';
 
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
   declarations: [
     EventsComponent,
     HomeComponent,
+    UserManagementComponent,
     
   ],
   imports: [
@@ -20,7 +26,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     AdminRouterModule,
     UikitModule,
     MatButtonModule,    
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
+    MatSortModule,
+    MatIconModule,
+    MatMenuModule
     
   ],
   entryComponents: []

@@ -4,6 +4,7 @@ import { CreateEventComponent } from '../uikit/pages/create-event/create-event.c
 import { EventPreviewComponent } from '../uikit/pages/event-preview/event-preview.component';
 import { EventsComponent } from './pages/events/events.component';
 import { HomeComponent } from './pages/home/home.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
   },{
     path: 'events/preview',
     component: EventPreviewComponent,
+  },{
+    path: 'users',
+    component: UserManagementComponent
   }
 ];
 

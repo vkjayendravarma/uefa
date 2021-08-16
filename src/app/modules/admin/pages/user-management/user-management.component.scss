@@ -1,0 +1,29 @@
+.header{
+    background-image: url("../../../../../assets/images/backgrounds/dashboard/1_football.jpg")
+}
+
+.table{
+    td,th{
+        padding-left: 4em;
+        padding-right: 4em;
+       
+        vertical-align: middle;
+    }
+    
+}
+.table-hover{
+   
+    tbody{
+        tr{
+            &:hover{
+                background-color: #E5F4FF0D;
+            }
+        }
+    }
+}
+
+.small-icon{
+    width: 10px;
+    height: auto;
+}
+

@@ -1,0 +1,129 @@
+<section class="header bg-img-cover">
+    <div class="header-inner  ">
+        <app-global-search-bar></app-global-search-bar>
+
+        <div class="pageTitleWrapper ptxl pll pbr prl">
+            <h1 class="title fc(ffffff) ff-sb fs(24) m-unset"> User Roles
+                <button mat-raised-button type="button" color="accent" class=" bgc(1565D8)  float-right"
+                    (click)="initiateInvite()">
+                    <p class="btn-text fs(16) pll prl ">Invite Users</p>
+                </button>
+            </h1>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="userManagement ">
+    <div class="container-fluid  ">
+        <div class=" ptl plr pbl ">
+            <div class="users bgc(161F26) bgshadow1 bdr-rounded">
+                <div class="componentWrapper pts ">
+                    <mat-tab-group color="primary" align="left" class="mat-tabs">
+                        <mat-tab label="All Users">
+                            <div class="all users">
+                                <table class="table table-hover table-dark mtr">
+                                    <thead class='thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r'>
+                                        <tr>
+                                            <th scope="col  ">User</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Region</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class='bgc(161F26) fc(9B9B9B) fs(14) '>
+                                        <tr *ngFor="let user of USERS_DATA">
+                                            <td class='ff-r'> {{user.user}}</td>
+                                            <td class='ff-r'> {{user.role}}</td>
+                                            <td class='ff-r'> {{user.region}}</td>
+                                            <td class='ff-r fc(FFC107)'> {{user.status}}</td>
+                                            <td class='actions fc(ffffff)'>
+                                                <mat-icon [matMenuTriggerFor]="menu" svgIcon="horizontalDots" class="small-icon" ></mat-icon>
+                                                <mat-menu #menu="matMenu">
+                                                    <button mat-menu-item>Resend</button>
+                                                    <button mat-menu-item>Cancel Invite</button>
+                                                  </mat-menu>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="NA Admins (3)">
+                            <div class="naAdmins">
+                                <table class="table table-hover table-dark mtr">
+                                    <thead class='thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r'>
+                                        <tr>
+                                            <th scope="col  ">User</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Region</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class='bgc(161F26) fc(9B9B9B) fs(14) '>
+                                        <tr *ngFor="let user of USERS_DATA">
+                                            <td class='ff-r'> {{user.user}}</td>
+                                            <td class='ff-r'> {{user.role}}</td>
+                                            <td class='ff-r'> {{user.region}}</td>
+                                            <td class='ff-r fc(FFC107)'> {{user.status}}</td>
+                                            <td class='actions fc(ffffff)'>
+                                                <mat-icon [matMenuTriggerFor]="menu" svgIcon="horizontalDots" class="small-icon" ></mat-icon>
+                                                <mat-menu #menu="matMenu">
+                                                    <button mat-menu-item>Resend</button>
+                                                    <button mat-menu-item>Cancel Invite</button>
+                                                  </mat-menu>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="RA Admins (3)">
+                            <div class="raAdmins">
+                                <table class="table table-hover table-dark mtr">
+                                    <thead class='thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r'>
+                                        <tr>
+                                            <th scope="col  ">User</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Region</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class='bgc(161F26) fc(9B9B9B) fs(14) '>
+                                        <tr *ngFor="let user of USERS_DATA">
+                                            <td class='ff-r'> {{user.user}}</td>
+                                            <td class='ff-r'> {{user.role}}</td>
+                                            <td class='ff-r'> {{user.region}}</td>
+                                            <td class='ff-r fc(FFC107)'> {{user.status}}</td>
+                                            <td class='actions fc(ffffff)'>
+                                                <mat-icon [matMenuTriggerFor]="menu" svgIcon="horizontalDots" class="small-icon" ></mat-icon>
+                                                <mat-menu #menu="matMenu">
+                                                    <button mat-menu-item>Resend</button>
+                                                    <button mat-menu-item>Cancel Invite</button>
+                                                  </mat-menu>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </mat-tab>
+
+
+                    </mat-tab-group>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

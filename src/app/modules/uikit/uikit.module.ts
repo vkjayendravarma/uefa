@@ -31,6 +31,7 @@ import { PostsListViewComponent } from './components/posts-list-view/posts-list-
 import { TournamentsListViewComponent } from './components/tournaments-list-view/tournaments-list-view.component';
 import { EventPreviewComponent } from './pages/event-preview/event-preview.component';
 import { UiElementsModule } from '../ui-elements/ui-elements.module';
+import { InviteUserModelComponent } from './models/invite-user-model/invite-user-model.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { UiElementsModule } from '../ui-elements/ui-elements.module';
     PostsListViewComponent,
     TournamentsListViewComponent,
     EventPreviewComponent,
+    InviteUserModelComponent,
   ],
   imports: [
     CommonModule,
@@ -84,6 +86,6 @@ import { UiElementsModule } from '../ui-elements/ui-elements.module';
     TournamentsListViewComponent,
     EventPreviewComponent,
   ],
-  entryComponents: [CreateNewEventModelComponent],
+  entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent],
 })
 export class UikitModule {}
