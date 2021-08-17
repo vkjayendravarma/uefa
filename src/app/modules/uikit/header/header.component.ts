@@ -19,6 +19,12 @@ export class HeaderComponent implements OnInit {
   quickActionButtonText: string | undefined;
 
   @Input()
+  linkAction: string | undefined;
+
+  @Input()
+  linkActionButtonText: string | undefined;
+
+  @Input()
   headerTitle: string | undefined;
 
   @Input()

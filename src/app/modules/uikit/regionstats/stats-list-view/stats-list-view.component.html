@@ -1,10 +1,9 @@
-<section class="uiComponent registrationRequests bgc(161F26) bgshadow1 bdr-rounded">
+<section class="uiComponent stats bgc(161F26) bgshadow1 bdr-rounded">
     <div class="componentWrapper ">
         <div class="componentHeader bdrb pr">
             <div class="row">
                 <div class="col-10 align-self-center">
-                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Registration Requests - Regional
-                        Associations (12)</h2>
+                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset"> {{componentTitle}} </h2>
                 </div>
                 <div class="col-2 " align="right">
                     <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
@@ -14,8 +13,8 @@
 
         <div class="componentBody plr prr pbr">
             <div class="requests ">
-                <div class="request " *ngFor="let item of regestrations">
-                    <app-registrations-reuest-element></app-registrations-reuest-element>
+                <div class="request ptr pbr bdrb" *ngFor="let item of regestrations">
+                    <app-stats-element></app-stats-element>
                 </div>
             </div>
         </div>

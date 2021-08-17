@@ -1,0 +1,26 @@
+<section class="uiComponent OrganisedEvents bgc(161F26) bgshadow1 bdr-rounded">
+    <div class="componentWrapper pr">
+      <div class="componentHeader">
+        <div class="row">
+          <div class="col-8 align-self-center">
+            <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset"> {{componentTitle }} </h2>
+          </div>
+          <div class="col-4 " align="right">          
+            <p  class="criteria hgta fs(14) ff-r  mrr fc(77B7FD) ">View Criteria</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="componentBody">
+        <mat-tab-group color="primary" align="left" class="mat-tabs">
+          <mat-tab label="Current">
+              <div class="requests plr prr" *ngFor="let item of regestrations">
+                 <app-registrations-reuest-element></app-registrations-reuest-element>
+              </div>         
+          </mat-tab>
+  
+        </mat-tab-group>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,9 @@
+.col-2,.col-sm-2,.col-md-1,.col-lg-1{
+    width: 56px !important;
+    max-width: 66px!important; 
+    padding-right: unset;
+}
+.col-10,.col-sm-10,.col-md-11,.col-lg-11{
+    max-width: calc(100% - 66px) !important; 
+    padding-left: unset;
+} 

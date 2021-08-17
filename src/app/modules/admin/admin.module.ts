@@ -23,6 +23,11 @@ import { ViewSurveysModule } from '../uikit/surveys/view-surveys/view-surveys.mo
 import { ViewTournamentsModule } from '../uikit/tournaments/view-tournaments/view-tournaments.module';
 import { ViewPostsModule } from '../uikit/posts/view-posts/view-posts.module';
 import { ActivitiesModule } from '../uikit/global/activities/activities.module';
+import { PostsComponent } from './pages/posts/posts.component';
+import { PostsDashboardComponent } from './pages/posts/posts-dashboard/posts-dashboard.component';
+import { AssociationsDashboardComponent } from './pages/associations/associations-dashboard/associations-dashboard.component';
+import { AssociationsComponent } from './pages/associations/associations.component';
+import { RegionstatsModule } from '../uikit/regionstats/regionstats.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,10 @@ import { ActivitiesModule } from '../uikit/global/activities/activities.module';
     EventsDashboardComponent,
     IndividualEventComponent,
     EventPreviewComponent,
+    PostsComponent,
+    PostsDashboardComponent,
+    AssociationsDashboardComponent,
+    AssociationsComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +55,7 @@ import { ActivitiesModule } from '../uikit/global/activities/activities.module';
     ViewSurveysModule,
     ViewPostsModule,
     ActivitiesModule,
-    
+    RegionstatsModule,
     // mat 
     MatButtonModule,
     MatDialogModule,

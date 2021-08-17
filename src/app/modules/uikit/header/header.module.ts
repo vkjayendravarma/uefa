@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CreateNewEventModelComponent } from './models/create-new-event-model/create-new-event-model.component';
 import { InviteUserModelComponent } from './models/invite-user-model/invite-user-model.component';
 import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -27,7 +28,8 @@ import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.modul
     MatSelectModule,
     MatInputModule,
     MatIconModule,
-    FormUiElementsModule
+    FormUiElementsModule,
+    RouterModule
   ],
   exports: [HeaderComponent],
   entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent]
