@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import { InviteUserModelComponent } from 'src/app/modules/uikit/models/invite-user-model/invite-user-model.component';
+import { InviteUserModelComponent } from 'src/app/modules/uikit/header/models/invite-user-model/invite-user-model.component';
 
 @Component({
   selector: 'app-user-management',
