@@ -13,7 +13,7 @@
   
       <div class="componentBody">
         <mat-tab-group color="primary" align="left" class="mat-tabs">
-          <mat-tab label="Current">
+          <mat-tab  label="{{tab}}" *ngFor="let tab of matTabs">
               <div class="requests plr prr" *ngFor="let item of regestrations">
                  <app-registrations-reuest-element></app-registrations-reuest-element>
               </div>         

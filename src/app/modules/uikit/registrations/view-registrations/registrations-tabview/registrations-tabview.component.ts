@@ -9,6 +9,8 @@ export class RegistrationsTabviewComponent implements OnInit {
 
   @Input()
   componentTitle: string | undefined;
+
+  matTabs=['New', 'Changes Requested', 'Rejected']
   regestrations = [1,2,3,4,5,6]
   
   constructor() { }
