@@ -1,0 +1,33 @@
+.title
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mat-raised-button
+{
+    background-color: #1565D8;
+    width: 150px;
+}
+
+.event-date, .event-time, .event-location
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.lineHeight
+{
+    line-height: 28px;
+}
+
+.reg,.reg-end
+{
+    display: flex;
+}
+
+:host ::ng-deep .mat-chip {
+    border-radius: 5px;
+    background-color: #E5F4FF33;
+}
