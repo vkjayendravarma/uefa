@@ -1,0 +1,37 @@
+<section class="uiComponent PostTabView bgc(161F26) bgshadow1 bdr-rounded">
+    <div class="componentWrapper ">
+
+        <div class="componentHeader pr">
+            <div class="row">
+                <div class="col-6 align-self-center">
+                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Surveys (23)</h2>
+                </div>
+                <div class="col-6  " align="right">
+                    <div class="survey-actions uiComponent-top-actions align-items-start">
+                        <mat-icon svgIcon="filter" class="filterIcon hgta"></mat-icon>
+                        <!-- <p class="rescentlyClosed uiComponent-text-action  ff-r fs(12) fc(82898E) display-inline">
+                            Recently Closed </p>
+                        <mat-icon class=" fc(82898E) uiComponent-icon-action hgta mlr">add</mat-icon> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="componentBody plr prr pbr ">
+            <mat-tab-group color="primary" align="left" class="mat-tabs">
+                <mat-tab label="{{tab}}" *ngFor="let tab of matTabs">
+                    <div class="events plr prr">
+                        <uikit-sureveys-element></uikit-sureveys-element>
+                        <uikit-sureveys-element></uikit-sureveys-element>
+                        <uikit-sureveys-element></uikit-sureveys-element>
+                        <uikit-sureveys-element></uikit-sureveys-element>
+                        <uikit-sureveys-element></uikit-sureveys-element>
+                    </div>
+                </mat-tab>
+
+
+            </mat-tab-group>
+        </div>
+    </div>
+</section>

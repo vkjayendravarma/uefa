@@ -28,6 +28,11 @@ import { PostsDashboardComponent } from './pages/posts/posts-dashboard/posts-das
 import { AssociationsDashboardComponent } from './pages/associations/associations-dashboard/associations-dashboard.component';
 import { AssociationsComponent } from './pages/associations/associations.component';
 import { RegionstatsModule } from '../uikit/regionstats/regionstats.module';
+import { SurveysComponent } from './pages/surveys/surveys.component';
+import { SurveysDashboardComponent } from './pages/surveys/surveys-dashboard/surveys-dashboard.component';
+import { AdminTournamentsComponent } from './pages/adminTournaments/admin-tournaments.component';
+import { AdminTournamentsDashboardComponent } from './pages/adminTournaments/admin-tournaments-dashboard/admin-tournaments-dashboard.component';
+import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-tournament/admin-new-tournament.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { RegionstatsModule } from '../uikit/regionstats/regionstats.module';
     PostsComponent,
     PostsDashboardComponent,
     AssociationsDashboardComponent,
-    AssociationsComponent
+    AssociationsComponent,
+    SurveysComponent,
+    SurveysDashboardComponent,
+    AdminTournamentsComponent,
+    AdminTournamentsDashboardComponent,
+    AdminNewTournamentComponent
   ],
   imports: [
     CommonModule,

@@ -40,13 +40,11 @@
                     (click)="initiateQuickAction()" *ngIf="quickActionType !== undefined">
                     <p class="btn-text fs(16) pll prl ">{{quickActionButtonText}}</p>
                 </button>
-                <a [routerLink]="['/']">
-                    <button mat-raised-button type="button" color="accent"
+                <button mat-raised-button type="button" color="accent" (click)="navigate()"
                         class=" quickActions bgc(1565D8)  float-right"
                         *ngIf="linkAction !== undefined">
                         <p class="btn-text fs(16) pll prl ">{{linkActionButtonText}}</p>
                     </button>
-                </a>
             </h1>
 
         </div>

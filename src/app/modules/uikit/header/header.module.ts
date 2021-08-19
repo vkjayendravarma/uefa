@@ -11,6 +11,7 @@ import { CreateNewEventModelComponent } from './models/create-new-event-model/cr
 import { InviteUserModelComponent } from './models/invite-user-model/invite-user-model.component';
 import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.module';
 import { RouterModule } from '@angular/router';
+import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/create-new-survey-model.component';
 
 
 
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HeaderComponent,
     CreateNewEventModelComponent,
-    InviteUserModelComponent
+    InviteUserModelComponent,
+    CreateNewSurveyModelComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,6 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports: [HeaderComponent],
-  entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent]
+  entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent, CreateNewSurveyModelComponent]
 })
 export class HeaderModule { }
