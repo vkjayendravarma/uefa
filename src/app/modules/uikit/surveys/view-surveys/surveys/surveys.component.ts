@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-surveys',
+  selector: 'uikit-surveys',
   templateUrl: './surveys.component.html',
   styleUrls: ['./surveys.component.scss']
 })

@@ -1,0 +1,39 @@
+<app-header backgroundImage='3_survey' headerTitle='Welcome back Andrew'  linkAction="/dashboard/admin/tournaments/new" linkActionButtonText='Create Tournament'></app-header>
+
+<section class="surveysDashboard ">
+    <div class="container-fluid">
+        <div class=" ptl plr pbl ">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="surveysOrganisedView ">
+                        <app-tournaments-tab-view componentTitle="Tournaments"></app-tournaments-tab-view>
+                    </div>
+                    <div class="surveysForYou mtl">
+                       
+                        <app-tournaments-list-view [isCompleted]='true'></app-tournaments-list-view>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="activitiesView ">
+                        <app-global-activities></app-global-activities>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="pastTournaments mtl">
+                        <app-tournaments-list-view></app-tournaments-list-view>
+                    </div>
+                </div>
+
+              
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

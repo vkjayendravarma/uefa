@@ -103,42 +103,47 @@
 
 .searchForm,
 .language-control {
-    .mat-form-field-underline {
-        display: none !important;
-    }
+  .mat-form-field-underline {
+    display: none !important;
+  }
 }
 
-.createNewEventWrapper{
-  .mat-form-field-infix{
+.createNewEventWrapper {
+  .mat-form-field-infix {
     border-top: unset !important;
   }
-  .mat-form-field-suffix{
-    top: 8px !important;
+
+  .mat-form-field-suffix {
+    top   : 8px !important;
     bottom: 0px !important;
   }
-  .mat-select-arrow-wrapper{
+
+  .mat-select-arrow-wrapper {
     position: relative;
-    top: 8px;
+    top     : 8px;
   }
 }
-.formControl-chiplist{
-  .mat-form-field-infix{
-    height: 50px !important;
-    padding-top: 0px !important;
+
+.formControl-chiplist {
+  .mat-form-field-infix {
+    height        : 50px !important;
+    padding-top   : 0px !important;
     padding-bottom: 0px !important;
 
-    .mat-chip-list-wrapper{
-      padding-top: 11px;
+    .mat-chip-list-wrapper {
+      padding-top   : 11px;
       padding-bottom: 7px;
     }
-    .mat-chip-input{
-      padding-top: 4px;
+
+    .mat-chip-input {
+      padding-top   : 4px;
       padding-bottom: 6px;
     }
-    
+
   }
-  
+
 }
+
 // ------------------------------ mad dialog ----------------
 
 .btn-dialog-action {
@@ -163,6 +168,19 @@
 .mat-dialog-custom-backdrop {
   background-color: #202C3D;
   opacity         : 0.6 !important;
+}
+
+.custom-dialog-content {
+  .horizontalLine {
+    width: 100%;
+
+    .horizontal-line {
+      width       : calc(100% + 48px);
+      margin-left : -24px;
+      margin-right: -24px;
+    }
+  }
+
 }
 
 

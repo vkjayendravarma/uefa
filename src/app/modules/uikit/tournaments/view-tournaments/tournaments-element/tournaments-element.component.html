@@ -1,0 +1,45 @@
+<div class="tournaments newElement ptr pbr  bdrb">
+    <div class="row">
+        <div class="col-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="../../../../../assets/images/clubsLogos/manchester.png" alt="LiverPool" class="clubLogo ">
+        </div>
+        <div class="col-10 col-sm-10 col-md-11 col-lg-11  ">
+            <div class="surveyInfo mlr">
+                <app-tag-chips [tags]="[{name: 'Arsenal FC',bgColor: '#D5DFEF'}]" class="display-inline">
+                </app-tag-chips>
+                <h3 class="surveyTitle ff-r fs(14) fc(EDEEEF) mlxs display-inline">Tournament - 1</h3>
+                <p class="time display-inline float-right ff-r fs(12) fc(9B9B9B) ">
+                    <mat-icon svgIcon="calendar" class="uiComponent-small-icon"></mat-icon> 14 Mar’ 21 - 15 Mar’21
+                </p>
+            </div>
+            <div class="matches mlr">
+                <div class="row">
+                    <div class="col-3">
+                        <p class="time display-inline fs(12) fc(9B9B9B) ">
+                            <mat-icon svgIcon="calendar" class="uiComponent-small-icon"></mat-icon> Today (5)
+                        </p>
+                    </div>
+                    <div class="col-9">
+                        <div class="sliderWrapper wdt(100)">
+                            <marquee behavior="scroll" scrollamount="4" direction="left" class="slider wdt(100)">
+                                <div class="slide prs pls display-inline bdrr(383C40) " *ngFor="let item of posts">
+                                    <div class="team1 display-inline">
+                                        <img src="../../../../../assets/images/clubsLogos/manchester.png" alt=""
+                                            class="slideTeamImg display-inline">
+                                        <p class="ff-r fs(12) fc(9B9B9B) display-inline "> Warriors </p>
+                                    </div>
+                                    <p class="vs ff-r fs(12) fc(9B9B9B) display-inline mrs mls "> vs </p>
+                                    <div class="team1 display-inline">
+                                        <img src="../../../../../assets/images/clubsLogos/manchester.png" alt=""
+                                            class="slideTeamImg display-inline">
+                                        <p class="ff-r fs(12) fc(9B9B9B)  display-inline"> Warriors</p>
+                                    </div>
+                                </div>
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

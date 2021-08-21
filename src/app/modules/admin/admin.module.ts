@@ -23,6 +23,16 @@ import { ViewSurveysModule } from '../uikit/surveys/view-surveys/view-surveys.mo
 import { ViewTournamentsModule } from '../uikit/tournaments/view-tournaments/view-tournaments.module';
 import { ViewPostsModule } from '../uikit/posts/view-posts/view-posts.module';
 import { ActivitiesModule } from '../uikit/global/activities/activities.module';
+import { PostsComponent } from './pages/posts/posts.component';
+import { PostsDashboardComponent } from './pages/posts/posts-dashboard/posts-dashboard.component';
+import { AssociationsDashboardComponent } from './pages/associations/associations-dashboard/associations-dashboard.component';
+import { AssociationsComponent } from './pages/associations/associations.component';
+import { RegionstatsModule } from '../uikit/regionstats/regionstats.module';
+import { SurveysComponent } from './pages/surveys/surveys.component';
+import { SurveysDashboardComponent } from './pages/surveys/surveys-dashboard/surveys-dashboard.component';
+import { AdminTournamentsComponent } from './pages/adminTournaments/admin-tournaments.component';
+import { AdminTournamentsDashboardComponent } from './pages/adminTournaments/admin-tournaments-dashboard/admin-tournaments-dashboard.component';
+import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-tournament/admin-new-tournament.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +42,15 @@ import { ActivitiesModule } from '../uikit/global/activities/activities.module';
     EventsDashboardComponent,
     IndividualEventComponent,
     EventPreviewComponent,
+    PostsComponent,
+    PostsDashboardComponent,
+    AssociationsDashboardComponent,
+    AssociationsComponent,
+    SurveysComponent,
+    SurveysDashboardComponent,
+    AdminTournamentsComponent,
+    AdminTournamentsDashboardComponent,
+    AdminNewTournamentComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +65,7 @@ import { ActivitiesModule } from '../uikit/global/activities/activities.module';
     ViewSurveysModule,
     ViewPostsModule,
     ActivitiesModule,
-    
+    RegionstatsModule,
     // mat 
     MatButtonModule,
     MatDialogModule,

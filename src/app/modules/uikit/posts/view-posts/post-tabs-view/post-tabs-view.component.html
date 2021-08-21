@@ -1,0 +1,21 @@
+<section class="uiComponent PostTabView bgc(161F26) bgshadow1 bdr-rounded">
+    <div class="componentWrapper plr prr pbr">  
+  
+      <div class="componentBody ">
+        <mat-tab-group color="primary" align="left" class="mat-tabs">
+          <mat-tab label="{{tab}}" *ngFor="let tab of matTabs">
+              <div class="events plr prr">
+                  <app-post-element></app-post-element>
+                  <app-post-element></app-post-element>
+                  <app-post-element></app-post-element>
+                  <app-post-element></app-post-element>
+                  <app-post-element></app-post-element>
+              </div>         
+          </mat-tab>
+  
+          
+        </mat-tab-group>
+      </div>
+    </div>
+  </section>
+  

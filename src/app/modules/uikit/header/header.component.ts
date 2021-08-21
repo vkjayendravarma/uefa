@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { SidebarServiceService } from 'src/app/globalServices/sidebar-service.service';
 import { CreateNewEventModelComponent } from 'src/app/modules/uikit/header/models/create-new-event-model/create-new-event-model.component';
+import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/create-new-survey-model.component';
 import { InviteUserModelComponent } from './models/invite-user-model/invite-user-model.component';
 
 
@@ -17,6 +19,12 @@ export class HeaderComponent implements OnInit {
 
   @Input()
   quickActionButtonText: string | undefined;
+
+  @Input()
+  linkAction: string | undefined;
+
+  @Input()
+  linkActionButtonText: string | undefined;
 
   @Input()
   headerTitle: string | undefined;
@@ -36,11 +44,10 @@ export class HeaderComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
     private fb: FormBuilder,
-    private sidebarService: SidebarServiceService
+    private sidebarService: SidebarServiceService,
+    private router: Router,
   ) {
-    if (this.quickActionType == 'createNewEvent') {
-      this.quickActionComponent = CreateNewEventModelComponent;
-    }
+    
   }
 
   ngOnInit(): void {
@@ -58,7 +65,7 @@ export class HeaderComponent implements OnInit {
   }
 
   quickActionsConfig() {
-    let supportedQuickActions = ['createNewEvent', 'inviteNewUsers'];
+    let supportedQuickActions = ['createNewEvent', 'inviteNewUsers', 'createNewSurvey'];
     if (
       this.quickActionType !== undefined &&
       this.quickActionType in supportedQuickActions
@@ -66,12 +73,19 @@ export class HeaderComponent implements OnInit {
       throw new Error(
         'unsupported quick action: use ' + supportedQuickActions.join(', ')
       );
+      return;
     }
     if (this.quickActionType == 'createNewEvent') {
       this.quickActionComponent = CreateNewEventModelComponent;
+      return;
     }
     if (this.quickActionType == 'inviteNewUsers') {
       this.quickActionComponent = InviteUserModelComponent;
+      return;
+    }
+    if (this.quickActionType == 'createNewSurvey') {
+      this.quickActionComponent = CreateNewSurveyModelComponent;
+      return;
     }
   }
 
@@ -90,11 +104,17 @@ export class HeaderComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.backdropClass = 'mat-dialog-custom-backdrop';
+    dialogConfig.minWidth = '40%';
 
     const dialogRef = this.dialog.open(this.quickActionComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe((data) => {
       console.log(data);
     });
+  }
+
+  navigate(){
+    if(this.linkAction)
+      this.router.navigateByUrl(this.linkAction)
   }
 }

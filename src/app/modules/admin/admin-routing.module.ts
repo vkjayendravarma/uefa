@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminTournamentsComponent } from './pages/adminTournaments/admin-tournaments.component';
+import { AdminTournamentsDashboardComponent } from './pages/adminTournaments/admin-tournaments-dashboard/admin-tournaments-dashboard.component';
+import { AssociationsDashboardComponent } from './pages/associations/associations-dashboard/associations-dashboard.component';
+import { AssociationsComponent } from './pages/associations/associations.component';
 import { EventPreviewComponent } from './pages/events/event-preview/event-preview.component';
 import { EventsDashboardComponent } from './pages/events/events-dashboard/events-dashboard.component';
 
 import { EventsComponent } from './pages/events/events.component';
 import { IndividualEventComponent } from './pages/events/individual-event/individual-event.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PostsDashboardComponent } from './pages/posts/posts-dashboard/posts-dashboard.component';
+import { PostsComponent } from './pages/posts/posts.component';
+import { SurveysDashboardComponent } from './pages/surveys/surveys-dashboard/surveys-dashboard.component';
+import { SurveysComponent } from './pages/surveys/surveys.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-tournament/admin-new-tournament.component';
 
 const routes: Routes = [
   {
@@ -32,8 +41,56 @@ const routes: Routes = [
     ],
   },
   {
+    path: 'posts',
+    component: PostsComponent,
+    children: [
+      {
+        path: '',
+        component: PostsDashboardComponent
+      },
+     
+    ],
+  },
+  {
     path: 'users',
     component: UserManagementComponent,
+  },
+  {
+    path: 'associations',
+    component: AssociationsComponent,
+    children: [
+      {
+        path: '',
+        component: AssociationsDashboardComponent
+      },
+     
+    ],
+  },
+  {
+    path: 'surveys',
+    component: SurveysComponent,
+    children: [
+      {
+        path: '',
+        component: SurveysDashboardComponent,
+      },
+     
+    ],
+  },
+  {
+    path: 'tournaments',
+    component: AdminTournamentsComponent,
+    children: [
+      {
+        path: '',
+        component: AdminTournamentsDashboardComponent,
+      },
+      {
+        path: 'new',
+        component: AdminNewTournamentComponent,
+      }
+     
+    ],
   },
 ];
 
