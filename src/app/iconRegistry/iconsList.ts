@@ -5,5 +5,6 @@ export enum Icons{
     threeHorizontalDots = "horizontalDots",
     copyIcon = "copy",
     homeIcon = "home",
-    menuIcon = "menu-open"
+    menuIcon = "menu-open",
+    searchIcon = "Icon"
 }

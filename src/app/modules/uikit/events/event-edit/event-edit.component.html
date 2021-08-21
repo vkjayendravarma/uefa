@@ -349,10 +349,16 @@
                                     <div class="manulaAttendanceWrapper mtl">
                                         <label class="manulaAttendance fs(16) ff-r fc(9B9B9B) mrl">Manual
                                             Attendance</label>
-                                        <mat-slide-toggle color="accent"></mat-slide-toggle>
+                                        <mat-slide-toggle 
+                                        color="accent"
+                                        name="manual-attendance"
+                                        [(ngModel)]="slideChecked"
+                                        (change)="onChangeSlideToggle()"
+                                        >
+                                        </mat-slide-toggle>
                                     </div>
 
-                                    <div class="row mtl pbr">
+                                    <div class="row mtl pbr" *ngIf="!displayTable">
                                         <div class="col-4">
                                             <div class="formControl  ">
                                                 <label class="display-block fc(EDEEEF)   ">Attendance Count</label>
@@ -375,9 +381,40 @@
                                         </div>
                                     </div>
 
-
-
-
+                                <ng-container *ngIf="displayTable">
+                                    <div class="table-heading ps">
+                                        <p>Registrations(124)</p>
+                                        <mat-icon svgIcon="Icon"></mat-icon>
+                                    </div>
+                                    <div class="table-responsive-md">
+                                    <table class="table table-style fs(14)">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Attendance</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor="let data of attendanceData;">
+                                            <td>{{data.name}}</td>
+                                            <td>{{data.role}}</td>
+                                            <td>{{data.email}}</td>
+                                            <td>
+                                                <button mat-mini-fab color="accent">
+                                                    <mat-icon>done</mat-icon>
+                                                </button>
+                                                <button mat-mini-fab color="warn">
+                                                    <mat-icon>clear</mat-icon>
+                                                </button>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                </ng-container>
+                                 
                                 </div>
 
                             </form>

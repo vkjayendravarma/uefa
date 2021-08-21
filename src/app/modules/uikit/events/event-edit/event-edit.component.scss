@@ -22,3 +22,29 @@
         vertical-align: middle;
     }
 }
+
+.table-style
+{
+background-color: #161F26;
+border: 1px solid #161F26;
+}
+
+.table-style td, .table-style th
+{
+border: none;
+}
+.table-style th 
+{
+    background-color: #373A3D;
+    color: #9B9B9B;
+}
+
+.table-heading
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #161F26;
+}
+
+

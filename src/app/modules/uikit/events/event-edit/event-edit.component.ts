@@ -3,6 +3,13 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { TagsPrototype } from 'src/app/prototypes/tags.interface';
 import { MatChipInputEvent } from '@angular/material/chips';
 
+export interface Attendance {
+  name: string;
+  role: string;
+  email: string;
+  // attendance: string;
+}
+
 @Component({
   selector: 'app-event-edit',
   templateUrl: './event-edit.component.html',
@@ -18,6 +25,18 @@ export class EventEditComponent implements OnInit {
   selectable = true;
   removable = true;
   addOnBlur = true;
+  displayTable = false;
+  slideChecked = true;
+  attendanceData: Attendance[] = [
+    {name: 'St.Xavier', role: 'Player', email: 'abc@gmail.com'},
+    {name: 'St.Xavier', role: 'Player', email: 'abc@gmail.com'},
+    {name: 'St.Xavier', role: 'Player', email: 'abc@gmail.com'},
+    {name: 'St.Xavier', role: 'Player', email: 'abc@gmail.com'},
+    {name: 'St.Xavier', role: 'Player', email: 'abc@gmail.com'},
+    {name: 'St.Xavier', role: 'Player', email: 'abc@gmail.com'},
+  ];
+
+
 
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   Invitees: any = [{ name: 'Facilitators' }, { name: 'Players' }];
@@ -50,5 +69,10 @@ export class EventEditComponent implements OnInit {
     if (index >= 0) {
       this.Invitees.splice(index, 1);
     }
+  }
+
+  onChangeSlideToggle()
+  {
+    this.slideChecked? this.displayTable = false : this.displayTable = true;
   }
 }
