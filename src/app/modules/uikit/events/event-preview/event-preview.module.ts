@@ -4,6 +4,7 @@ import { EventPreviewComponent } from './event-preview.component';
 import { HeaderModule } from '../../header/header.module';
 import { MatButtonModule } from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -15,7 +16,8 @@ import {MatChipsModule} from '@angular/material/chips';
     CommonModule,
     HeaderModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
+    MatIconModule
   ],
   exports: [EventPreviewComponent]
 })

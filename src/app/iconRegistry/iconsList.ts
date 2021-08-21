@@ -6,5 +6,6 @@ export enum Icons{
     copyIcon = "copy",
     homeIcon = "home",
     menuIcon = "menu-open",
-    searchIcon = "Icon"
+    searchIcon = "Icon",
+    timeIcon = "time"
 }

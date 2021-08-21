@@ -7,7 +7,6 @@
 
 .mat-raised-button
 {
-    background-color: #1565D8;
     width: 150px;
 }
 
@@ -30,4 +29,14 @@
 :host ::ng-deep .mat-chip {
     border-radius: 5px;
     background-color: #E5F4FF33;
+}
+
+.center-image
+{
+    width: 100%;
+}
+
+.player-req
+{
+    font-size: 1rem;
 }
