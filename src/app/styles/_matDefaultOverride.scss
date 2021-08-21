@@ -108,7 +108,7 @@
   }
 }
 
-.createNewEventWrapper {
+.formControlTopBorderUnset {
   .mat-form-field-infix {
     border-top: unset !important;
   }
@@ -204,4 +204,38 @@
 
 .mat-drawer-inner-container {
   background-color: #161F26
+}
+
+.navLinkInActive {
+  .icon {
+    svg {
+      path {
+        fill: #82898E !important;
+      }
+    }
+
+    position: relative;
+    top     : -6px;
+  }
+
+
+}
+
+.navLinkActive {
+  .navItem {
+    background: #ffffff !important;
+
+    .navItemLabel {
+      color: #161F26 !important;
+    }
+  }
+
+  .icon {
+    svg {
+      path {
+        fill: #161F26 !important;
+      }
+    }
+  }
+
 }

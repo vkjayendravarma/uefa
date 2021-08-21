@@ -5,7 +5,7 @@ import { DashboardLayoutComponent } from './pages/dashboard-layout/dashboard-lay
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import("./modules/auth/auth.module").then(module => module.AuthModule)
+    loadChildren: () => import("./modules/auth/login/auth.module").then(module => module.AuthModule)
   },
   {
     path: 'dashboard',
@@ -14,8 +14,20 @@ const routes: Routes = [
       {
         path: 'admin',
         loadChildren: () => import("./modules/admin/admin.module").then(module=> module.AdminModule)
-      }
+      },
+      {
+        path: 'facilitator',
+        loadChildren: () => import("./modules/facilitators/facilitators.module").then(module=> module.FacilitatorsModule)
+      },
+     
     ]
+  },
+  {
+    path: 'event/regester',
+    loadChildren: () => import("./modules/uikit/events/event-register/event-register.module").then(module=> module.EventRegisterModule)
+  }, { 
+    path: 'signup',
+    loadChildren: () => import("./modules/auth/signup/signup.module").then(module=> module.SignupModule)
   }
 ];
 

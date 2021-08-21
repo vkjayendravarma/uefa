@@ -27,12 +27,17 @@ import { PostsComponent } from './pages/posts/posts.component';
 import { PostsDashboardComponent } from './pages/posts/posts-dashboard/posts-dashboard.component';
 import { AssociationsDashboardComponent } from './pages/associations/associations-dashboard/associations-dashboard.component';
 import { AssociationsComponent } from './pages/associations/associations.component';
-import { RegionstatsModule } from '../uikit/regionstats/regionstats.module';
+import { AssociationsModule } from '../uikit/associations/associations.module';
 import { SurveysComponent } from './pages/surveys/surveys.component';
 import { SurveysDashboardComponent } from './pages/surveys/surveys-dashboard/surveys-dashboard.component';
 import { AdminTournamentsComponent } from './pages/adminTournaments/admin-tournaments.component';
 import { AdminTournamentsDashboardComponent } from './pages/adminTournaments/admin-tournaments-dashboard/admin-tournaments-dashboard.component';
 import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-tournament/admin-new-tournament.component';
+import { ACreateNewPostComponent } from './pages/posts/a-create-new-post/a-create-new-post.component';
+import { CreateNewPostsModule } from '../uikit/posts/create-new-posts/create-new-posts.module';
+import { AAssociationsCriteriaComponent } from './pages/associations/a-associations-criteria/a-associations-criteria.component';
+import { TagChipsModule } from '../uikit/global/tag-chips/tag-chips.module';
+import { CreateEditTournamentModule } from '../uikit/tournaments/create-edit-tournament/create-edit-tournament.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,9 @@ import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-
     SurveysDashboardComponent,
     AdminTournamentsComponent,
     AdminTournamentsDashboardComponent,
-    AdminNewTournamentComponent
+    AdminNewTournamentComponent,
+    ACreateNewPostComponent,
+    AAssociationsCriteriaComponent
   ],
   imports: [
     CommonModule,
@@ -65,7 +72,10 @@ import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-
     ViewSurveysModule,
     ViewPostsModule,
     ActivitiesModule,
-    RegionstatsModule,
+    AssociationsModule,
+    CreateNewPostsModule,
+    TagChipsModule,
+    CreateEditTournamentModule,
     // mat 
     MatButtonModule,
     MatDialogModule,

@@ -16,6 +16,8 @@ import { SurveysDashboardComponent } from './pages/surveys/surveys-dashboard/sur
 import { SurveysComponent } from './pages/surveys/surveys.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-tournament/admin-new-tournament.component';
+import { ACreateNewPostComponent } from './pages/posts/a-create-new-post/a-create-new-post.component';
+import { AAssociationsCriteriaComponent } from './pages/associations/a-associations-criteria/a-associations-criteria.component';
 
 const routes: Routes = [
   {
@@ -48,6 +50,10 @@ const routes: Routes = [
         path: '',
         component: PostsDashboardComponent
       },
+      {
+        path: 'create',
+        component: ACreateNewPostComponent,
+      },
      
     ],
   },
@@ -62,6 +68,10 @@ const routes: Routes = [
       {
         path: '',
         component: AssociationsDashboardComponent
+      },
+      {
+        path: 'criteria',
+        component: AAssociationsCriteriaComponent,
       },
      
     ],

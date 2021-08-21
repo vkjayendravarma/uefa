@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { SidebarServiceService } from 'src/app/globalServices/sidebar-service.service';
 import { CreateNewEventModelComponent } from 'src/app/modules/uikit/header/models/create-new-event-model/create-new-event-model.component';
 import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/create-new-survey-model.component';
+import { CreateNewTeamComponent } from './models/create-new-team/create-new-team.component';
 import { InviteUserModelComponent } from './models/invite-user-model/invite-user-model.component';
 
 
@@ -65,7 +66,7 @@ export class HeaderComponent implements OnInit {
   }
 
   quickActionsConfig() {
-    let supportedQuickActions = ['createNewEvent', 'inviteNewUsers', 'createNewSurvey'];
+    let supportedQuickActions = ['createNewEvent', 'inviteNewUsers', 'createNewSurvey', 'createNewTeam'];
     if (
       this.quickActionType !== undefined &&
       this.quickActionType in supportedQuickActions
@@ -85,6 +86,10 @@ export class HeaderComponent implements OnInit {
     }
     if (this.quickActionType == 'createNewSurvey') {
       this.quickActionComponent = CreateNewSurveyModelComponent;
+      return;
+    }
+    if (this.quickActionType == 'createNewTeam') {
+      this.quickActionComponent = CreateNewTeamComponent;
       return;
     }
   }

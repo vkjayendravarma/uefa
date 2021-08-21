@@ -1,0 +1,62 @@
+<section class="uiComponent newPost pl ">
+    <div class=" uiComponentBody ptr pbl ">
+        <div class="newEventTitle">
+            <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  "> RA Registration Criteria</h2>
+        </div>
+
+        <div class="newPostBuilder darkStepperContainer mtl">
+            <form class="postData mtl formControlTopBorderUnset">
+                <div class="inputGroup mtr">
+                    <div class="row">
+
+                        <div class="col-8">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Name of the Association</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-8">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Name of the Association</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput type="text" class="ff-r fs(14)" />
+                                    <mat-icon matSuffix >search</mat-icon>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="formControl wdt(100) mbr">
+                                <label class="display-block fc(EDEEEF) fs(14) mbl">Documentation <span class=" fs(14) fc(9B9B9B) ff-r ">(Suggested formats pdf, txt) </span> </label>
+                                <app-file-uploader></app-file-uploader>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+</section>
+
+
+<div class="form-actions mtr pr bgc(161F26) ">
+    <div class="container ">
+        <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent">
+            Back
+        </button>    
+    </div>
+</div>

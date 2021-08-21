@@ -12,6 +12,8 @@ import { InviteUserModelComponent } from './models/invite-user-model/invite-user
 import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.module';
 import { RouterModule } from '@angular/router';
 import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/create-new-survey-model.component';
+import { CreateNewTeamComponent } from './models/create-new-team/create-new-team.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 
@@ -20,7 +22,8 @@ import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/
     HeaderComponent,
     CreateNewEventModelComponent,
     InviteUserModelComponent,
-    CreateNewSurveyModelComponent
+    CreateNewSurveyModelComponent,
+    CreateNewTeamComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,8 @@ import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/
     MatInputModule,
     MatIconModule,
     FormUiElementsModule,
-    RouterModule
+    RouterModule,
+    MatRadioModule,
   ],
   exports: [HeaderComponent],
   entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent, CreateNewSurveyModelComponent]

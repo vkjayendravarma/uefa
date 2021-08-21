@@ -1,0 +1,37 @@
+<app-header backgroundImage='2_player' headerTitle='Institute Events'  quickActionType='createNewEvent' quickActionButtonText='Create Event'></app-header>
+
+<section class="eventsWrapper ">
+    <div class="container-fluid">
+        <div class=" ptl plr pbl ">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="eventsOrganisedView ">
+                        <app-organized-view componentTitle="Events"></app-organized-view>
+                    </div>
+                    <div class="pastEvents mtl">
+                        <app-single-category-events-view componentTitle="Past Events"></app-single-category-events-view>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="activitiesView ">
+                        <app-global-activities></app-global-activities>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="allEvents mtl">
+                        <app-organized-view componentTitle="Your Events"></app-organized-view>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

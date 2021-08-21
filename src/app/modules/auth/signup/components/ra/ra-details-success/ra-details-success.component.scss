@@ -1,0 +1,27 @@
+@import '../../../signup.module';
+
+.signupComponent{ 
+    background-image: url('../../../../../../../assets/images/backgrounds/signup/rocket1.svg');
+}
+.btn-submit {
+    height: 56px;
+}
+
+.successMessageNextStep {
+    line-height: 38px
+}
+
+.successMessage {
+    line-height: 44px;
+}
+
+.successMeasageWrapper {
+    width: 90%;
+}
+
+.componentBody {
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+}

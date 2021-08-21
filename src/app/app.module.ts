@@ -11,12 +11,12 @@ import { SideNavDashboardLayoutComponent } from './components/side-nav-dashboard
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     DashboardLayoutComponent,
-    SideNavDashboardLayoutComponent,
-    
+    SideNavDashboardLayoutComponent,    
   ],
   imports: [
     BrowserModule,
