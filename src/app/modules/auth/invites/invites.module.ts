@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InviteToPlatformComponent } from './invite-to-platform/invite-to-platform.component';
+import { InvitesRouterModule } from './invites-routing.module';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -9,7 +11,9 @@ import { InviteToPlatformComponent } from './invite-to-platform/invite-to-platfo
     InviteToPlatformComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    InvitesRouterModule,
+    MatButtonModule
   ]
 })
 export class InvitesModule { }

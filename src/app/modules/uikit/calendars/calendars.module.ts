@@ -12,6 +12,7 @@ import { WeekViewComponent } from './week-view/week-view.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [MonthViewComponent, WeekViewComponent]
 })
 export class CalendarsModule { }

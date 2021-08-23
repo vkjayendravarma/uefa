@@ -23,7 +23,10 @@ const routes: Routes = [
       {
         path: 'facilitator',
         loadChildren: () => import("./modules/facilitators/facilitators.module").then(module=> module.FacilitatorsModule)
-      },
+      },{ 
+        path: 'player',
+        loadChildren: () => import("./modules/players/players.module").then(module=> module.PlayersModule)
+      }
      
     ]
   },
@@ -33,6 +36,9 @@ const routes: Routes = [
   }, { 
     path: 'signup',
     loadChildren: () => import("./modules/auth/signup/signup.module").then(module=> module.SignupModule)
+  },{
+    path: 'inviteToPlatform',
+    loadChildren: () => import("./modules/auth/invites/invites.module").then(module=> module.InvitesModule)
   }
 ];
 

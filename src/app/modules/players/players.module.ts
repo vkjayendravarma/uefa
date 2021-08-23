@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PDashboardComponent } from './pages/p-dashboard/p-dashboard.component';
+import { CalendarsModule } from '../uikit/calendars/calendars.module';
+import { PlayerRouterModule } from './players-routing.module';
 
 
 
@@ -9,7 +11,9 @@ import { PDashboardComponent } from './pages/p-dashboard/p-dashboard.component';
     PDashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PlayerRouterModule,
+    CalendarsModule
   ]
 })
 export class PlayersModule { }

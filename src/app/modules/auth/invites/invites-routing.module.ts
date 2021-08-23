@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PDashboardComponent } from './pages/p-dashboard/p-dashboard.component';
+import { InviteToPlatformComponent } from './invite-to-platform/invite-to-platform.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: PDashboardComponent,
+    path: '',
+    component: InviteToPlatformComponent,
   },
   
 ];
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PlayerRouterModule {}
+export class InvitesRouterModule {}
