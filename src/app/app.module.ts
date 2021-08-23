@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { SideNavDashboardLayoutComponent } from './components/side-nav-dashboard-layout/side-nav-dashboard-layout.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardLayoutComponent,
     SideNavDashboardLayoutComponent,
-    
+    LandingPageComponent,    
   ],
   imports: [
     BrowserModule,

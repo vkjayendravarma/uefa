@@ -1,0 +1,17 @@
+.signupComponent{ 
+    min-height: 100vh;
+    // background-image: url('../../../../assets/images/backgrounds/signup/rocket.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 90%;
+    background-size:  auto 60%;
+    position: relative;
+}
+
+.componentBody{
+    padding-bottom: 5em;
+}
+
+.componentActions{
+    position: absolute;
+    bottom: 0;
+}

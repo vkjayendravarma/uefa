@@ -1,0 +1,111 @@
+<section class="uiComponent newPost pl ">
+    <div class=" uiComponentBody ptr pbl ">
+        <div class="newEventTitle">
+            <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  "> Create Post</h2>
+        </div>
+
+        <div class="newPostBuilder darkStepperContainer mtl">
+            <form class="postData mtl formControlTopBorderUnset">
+                <div class="inputGroup mtr">
+                    <div class="row">
+
+                        <div class="col-8">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Post Title</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput type="text" class="ff-r fs(14)" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF) ">Description</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <textarea matInput name="" rows="10" class="ff-r fs(14)"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="inputGroup mtr">
+                    <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Institution Types</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Invitee Type</label>
+                                <div class="formControl-chiplist">
+                                    <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                        <mat-chip-list #chipList aria-label="Invitee Type">
+                                            <mat-chip *ngFor="let Invitee of Invitees" [selectable]="selectable"
+                                                [removable]="removable" (removed)="remove(Invitee)">
+                                                {{Invitee.name}}
+                                                <mat-icon matChipRemove *ngIf="removable">cancel
+                                                </mat-icon>
+                                            </mat-chip>
+                                            <input [matChipInputFor]="chipList"
+                                                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                                [matChipInputAddOnBlur]="addOnBlur"
+                                                (matChipInputTokenEnd)="add($event)">
+                                        </mat-chip-list>
+
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Select Region</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+</section>
+
+
+<div class="form-actions mtr pr bgc(161F26) ">
+    <div class="container ">
+        <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent">
+            Publish Post
+        </button>
+        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
+            Cancel
+        </button>       
+    </div>
+
+</div>

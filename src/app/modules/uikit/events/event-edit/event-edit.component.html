@@ -3,19 +3,24 @@
 <section class="createNewEventWrapper ">
     <div class="container ">
         <div class=" ptl plr pbl ">
-            <div class="newEventTitle">
-                <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  "> National Association Training: Women
-                </h2>
-                <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
-                <mat-icon svgIcon="horizontalDots" class="eventBodyIcons"></mat-icon>
-
+            <div class="d-flex newTournamentTitle">
+                <div class="eventTitleWrapper">
+                    <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  "> National Association Training: Women</h2>
+                </div>
+                <div class="tags">
+                    <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
+                </div>
+                <div class="inComponentNavigation ml-auto">
+                    <mat-icon svgIcon="horizontalDots" class="eventBodyIcons"></mat-icon>
+                </div>
             </div>
+  
 
             <div class="newEventBuilder darkStepperContainer mtl">
                 <mat-stepper #stepper color="accent">
                     <!-- ---------------------------------------------------------------- Basic Info  -->
                     <mat-step label="Basic Information">
-                        <form class="basicInfo mtl">
+                        <form class="basicInfo mtl formControlTopBorderUnset">
                             <div class="inputGroup mtr">
                                 <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Event Title</h3>
 
@@ -190,7 +195,7 @@
 
                     <!-- ---------------------------------------------------------------- Event Details -->
                     <mat-step label="Event Details">
-                        <form class="eventDetails mtl">
+                        <form class="eventDetails mtl formControlTopBorderUnset">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="formControl wdt(100)">
@@ -245,7 +250,7 @@
                                 </div>
                             </div>
                             <div class="publishingOptions">
-                                <form class="publishingOptionsForm">
+                                <form class="publishingOptionsForm formControlTopBorderUnset">
                                     <div class="inputGroup mtr">
                                         <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options
                                         </h3>
@@ -338,7 +343,7 @@
 
                     <mat-step label="Attendees">
                         <div class="attendeesWrapper">
-                            <form class="basicInfo mtl">
+                            <form class="basicInfo mtl formControlTopBorderUnset">
 
                                 <div class="inputGroup ">
                                     <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mrr display-inline">Attendance
@@ -387,7 +392,7 @@
                                         <mat-icon svgIcon="Icon"></mat-icon>
                                     </div>
                                     <div class="table-responsive-md">
-                                    <table class="table table-style fs(14)">
+                                    <table class="table table-style fs(14) fc(ffffff)">
                                         <thead>
                                           <tr>
                                             <th scope="col">Name</th>

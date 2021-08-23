@@ -1,0 +1,34 @@
+<app-header backgroundImage='3_survey' headerTitle='Welcome back Andrew' ></app-header>
+
+<section class="surveysDashboard ">
+    <div class="container-fluid">
+        <div class=" ptl plr pbl ">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="surveysOrganisedView ">
+                        <app-tournaments-tab-view componentTitle="Tournaments"></app-tournaments-tab-view>
+                    </div>
+                    <div class="surveysForYou mtl">
+                       
+                        <app-tournaments-tab-view componentTitle="Tournaments hosted by St.Xaviers"></app-tournaments-tab-view>
+                    </div>
+                    <div class="surveysForYou mtl">
+                       
+                        <app-tournaments-list-view [isCompleted]='true'></app-tournaments-list-view>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="activitiesView ">
+                        <app-global-activities></app-global-activities>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,136 @@
+<h2 class="fc(EDEEEF) ff-sb fs(20) mbr">
+    Generate Fixtures
+    <span class="float-right display-button mlxxl" mat-dialog-close>
+        <mat-icon class="fc(82898E)">close</mat-icon>
+    </span>
+</h2>
+<mat-dialog-content class="mat-typography custom-dialog-content" color="primary">
+    <div class="horizontalLine">
+        <div class="horizontal-line bdrt"></div>
+    </div>
+    <div class="newFixtureFormWrapper mtr">
+        <form class="newEventForm formControlTopBorderUnset" autocomplete="off">
+            <div class="row">
+                <div class="col-12">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Event Type</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Start Date</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+
+                            <input matInput [matDatepicker]="startDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #startDatePicker></mat-datepicker>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">End Date</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+
+                            <input matInput [matDatepicker]="endDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="endDatePicker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #endDatePicker></mat-datepicker>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Format</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Total Teams</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Total Groups</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Number of Rounds</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label class="display-block fc(EDEEEF)">Teams proceeding to next round</label>
+                    <mat-form-field appearance="outline" class="formControl wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+
+        </form>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="start">
+    <div class="actionsWrapper pll">
+        <button class="btn-dialog-action ff-sb fs(16)" color="accent" mat-raised-button mat-dialog-close>
+            Generate
+        </button>
+        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button mat-dialog-close>
+            Cancel
+        </button>
+    </div>
+</mat-dialog-actions>

@@ -95,6 +95,13 @@ $xxl: 4em;
 .pbxl {
     padding-bottom: $xl;
 }
+
+
+// ------------------------------ padding xxl ----------------
+
+.pbxxl{
+    padding-bottom: $xxl;
+}
 //----------------------------------------------------------------
 // margin 
 
@@ -120,6 +127,10 @@ $xxl: 4em;
     margin-right: $s;
 }
 
+.mts{
+    margin-top: $s;
+}
+
 // ------------------------------// margin r..
 .mtr{
     margin-top: $r;
@@ -136,7 +147,9 @@ $xxl: 4em;
 .mrr{
     margin-right: $r;
 }
-
+.mr{
+    margin: $r;
+}
 // ------------------------------ margin l
 
 .mtl{
@@ -150,6 +163,13 @@ $xxl: 4em;
 .mrl{
     margin-right: $l ;
 }
+
+.ml{
+    margin: $l;
+}
+.mbl{
+    margin-bottom: $l;
+}
 // ------------------------------// margin xl
 .mtxl{
     margin-top: $xl;
@@ -157,6 +177,10 @@ $xxl: 4em;
 
 .mlxl{
     margin-left: $xl;
+}
+
+.mbxl{
+    margin-bottom: $xl;
 }
 
 // ------------------------------// margin xxl
@@ -169,7 +193,9 @@ $xxl: 4em;
     margin-top: $xxl;
 }
 
-
+.mrxxl{
+    margin-right: $xxl;
+}
 
 
 

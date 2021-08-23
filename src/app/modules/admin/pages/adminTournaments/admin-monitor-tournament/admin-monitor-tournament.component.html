@@ -1,0 +1,77 @@
+<app-header backgroundImage='2_player' headerTitle='Back'></app-header>
+<section class="monitorTournamentTitleWrapper ">
+    <div class=" ml ">
+        <div class="d-flex monitorTournamentTitle bdrb pbl">
+            <div class="TournamentTitleWrapper">
+                <h2 class="TournamentTitle display-inline  ff-sb fs(24) fc(ffffff)  "> New Tournament</h2>
+            </div>
+            <div class="tags">
+                <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="monitorTournamentBodyWrapper pll prl">
+    <mat-tab-group [selectedIndex]="2" dynamicHeight>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                Information
+                <mat-icon svgIcon='tabCompleteCheck' class='mlr'>thumb_up</mat-icon>
+            </ng-template>
+            <ng-template matTabContent>
+                <uikit-create-edit-tournament></uikit-create-edit-tournament>
+            </ng-template>
+        </mat-tab>
+
+        <!-- participents  -->
+
+        <mat-tab >
+            <ng-template mat-tab-label>
+                Participants
+                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
+            </ng-template>
+            <ng-template matTabContent>
+                <app-tournament-participants></app-tournament-participants>
+            </ng-template>
+        </mat-tab>
+
+        <!-- Fixtures  -->
+        <mat-tab>
+            <ng-template mat-tab-label>
+                Fixtures
+                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
+            </ng-template>
+            <ng-template matTabContent>
+                <app-tournament-fixtures></app-tournament-fixtures>
+            </ng-template>
+        </mat-tab>
+
+
+        <!-- Scoring  -->
+        <mat-tab>
+            <ng-template mat-tab-label>
+                Scoring
+                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
+            </ng-template>
+            <ng-template matTabContent>
+                <uikit-create-edit-tournament></uikit-create-edit-tournament>
+            </ng-template>
+        </mat-tab>
+
+        <!-- Final Result  -->
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                Final Result
+                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
+            </ng-template>
+            <ng-template matTabContent>
+                <uikit-create-edit-tournament></uikit-create-edit-tournament>
+            </ng-template>
+        </mat-tab>
+
+
+    </mat-tab-group>
+</section>
