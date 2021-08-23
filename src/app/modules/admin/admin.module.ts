@@ -38,6 +38,17 @@ import { CreateNewPostsModule } from '../uikit/posts/create-new-posts/create-new
 import { AAssociationsCriteriaComponent } from './pages/associations/a-associations-criteria/a-associations-criteria.component';
 import { TagChipsModule } from '../uikit/global/tag-chips/tag-chips.module';
 import { CreateEditTournamentModule } from '../uikit/tournaments/create-edit-tournament/create-edit-tournament.module';
+import { AdminMonitorTournamentComponent } from './pages/adminTournaments/admin-monitor-tournament/admin-monitor-tournament.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { TournamentParticipantsComponent } from './components/tournamentMonitor/tournament-participants/tournament-participants.component';
+import { AddNewTeamToTournamentComponent } from './components/tournamentMonitor/tournament-participants/add-new-team-to-tournament/add-new-team-to-tournament.component';
+import { TournamentFixturesComponent } from './components/tournamentMonitor/tournament-fixtures/tournament-fixtures.component';
+import { GenerateNewFixturesComponent } from './components/tournamentMonitor/tournament-fixtures/generate-new-fixtures/generate-new-fixtures.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FixtureListViewComponent } from './components/tournamentMonitor/tournament-fixtures/fixture-list-view/fixture-list-view.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +68,13 @@ import { CreateEditTournamentModule } from '../uikit/tournaments/create-edit-tou
     AdminTournamentsDashboardComponent,
     AdminNewTournamentComponent,
     ACreateNewPostComponent,
-    AAssociationsCriteriaComponent
+    AAssociationsCriteriaComponent,
+    AdminMonitorTournamentComponent,
+    TournamentParticipantsComponent,
+    AddNewTeamToTournamentComponent,
+    TournamentFixturesComponent,
+    GenerateNewFixturesComponent,
+    FixtureListViewComponent
   ],
   imports: [
     CommonModule,
@@ -83,7 +100,12 @@ import { CreateEditTournamentModule } from '../uikit/tournaments/create-edit-tou
     MatSortModule,
     MatIconModule,
     MatMenuModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  entryComponents: [],
+  entryComponents: [AddNewTeamToTournamentComponent, GenerateNewFixturesComponent],
 })
 export class AdminModule {}

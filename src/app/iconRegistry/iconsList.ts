@@ -22,4 +22,8 @@ export enum Icons {
   websiteIcon = 'website',
   linkedinIcon = 'linkedin',
   facebookIcon = 'facebook',
+  matTabCompleteCheckIcon = 'tabCompleteCheck',
+  crossCirclIcon = 'crossCircle',
+  listviewIcon = 'listView',
+  chartViewIcon = 'chartView',
 }

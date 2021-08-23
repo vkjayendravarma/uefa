@@ -18,6 +18,7 @@ import { UserManagementComponent } from './pages/user-management/user-management
 import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-tournament/admin-new-tournament.component';
 import { ACreateNewPostComponent } from './pages/posts/a-create-new-post/a-create-new-post.component';
 import { AAssociationsCriteriaComponent } from './pages/associations/a-associations-criteria/a-associations-criteria.component';
+import { AdminMonitorTournamentComponent } from './pages/adminTournaments/admin-monitor-tournament/admin-monitor-tournament.component';
 
 const routes: Routes = [
   {
@@ -98,6 +99,10 @@ const routes: Routes = [
       {
         path: 'new',
         component: AdminNewTournamentComponent,
+      },
+      {
+        path: 'monitor',
+        component: AdminMonitorTournamentComponent,
       }
      
     ],

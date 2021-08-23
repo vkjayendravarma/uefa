@@ -1,191 +1,23 @@
 <section class="createNewTournamentWrapper ">
-    <div class="container ">
+    <div class="newTournamentBuilder darkStepperContainer mtl">
+        <mat-stepper #stepper color="accent">
+            <!-- ---------------------------------------------------------------- Basic Info  -->
+            <mat-step label="Details">
+                <form class="basicInfo mtl formControlTopBorderUnset ">
+                    <div class="inputGroup mtr">
 
-
-        <div class="newTournamentBuilder darkStepperContainer mtl">
-            <mat-stepper #stepper color="accent">
-                <!-- ---------------------------------------------------------------- Basic Info  -->
-                <mat-step label="Details">
-                    <form class="basicInfo mtl formControlTopBorderUnset ">
-                        <div class="inputGroup mtr">
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Tournament Name</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="text" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                            <mat-select panelClass="matSelectCustomFocus">
-                                                <mat-option>None</mat-option>
-                                                <mat-option value="option1">Option 1</mat-option>
-                                                <mat-option value="option2">Option 2</mat-option>
-                                                <mat-option value="option3">Option 3</mat-option>
-                                            </mat-select>
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Tournament Description</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <textarea matInput rows="10"></textarea>
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="inputGroup mtr">
-                            <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Date & Time</h3>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Start Date</label>
-                                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                            <input matInput [matDatepicker]="startDatePicker">
-                                            <mat-datepicker-toggle matSuffix [for]="startDatePicker">
-                                            </mat-datepicker-toggle>
-                                            <mat-datepicker #startDatePicker></mat-datepicker>
-
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Start Time</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="text" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                            <input matInput [matDatepicker]="endDatePicker">
-                                            <mat-datepicker-toggle matSuffix [for]="endDatePicker">
-                                            </mat-datepicker-toggle>
-                                            <mat-datepicker #endDatePicker></mat-datepicker>
-
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">End Time</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="text" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                        </div>
-                        <div class="inputGroup mtr">
-                            <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Registration End Date & Time
-                            </h3>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                            <input matInput [matDatepicker]="registrationEndDatePicker">
-                                            <mat-datepicker-toggle matSuffix [for]="registrationEndDatePicker">
-                                            </mat-datepicker-toggle>
-                                            <mat-datepicker #registrationEndDatePicker></mat-datepicker>
-
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">End Time</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="text" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="inputGroup mtr">
-                            <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Contact Details
-                            </h3>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Contact Name</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="text" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Contact Email</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="email" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)   ">Contact Phone</label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <input matInput type="tel" class="ff-r fs(14)" />
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </form>
-
-                    <div class="stepper-controller mtr pr bgc(161F26) ">
-                        <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" matStepperNext>
-                            Next
-                        </button>
-                        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
-                            Cancel
-                        </button>
-                    </div>
-                </mat-step>
-
-                <!-- ---------------------------------------------------------------- Tournament Details -->
-                <mat-step label="Division">
-                    <form class="TournamentDivision mtl formControlTopBorderUnset">
                         <div class="row">
-
                             <div class="col-6">
                                 <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)  ">Division Name </label>
+                                    <label class="display-block fc(EDEEEF)   ">Tournament Name</label>
                                     <mat-form-field appearance="outline" class=" wdt(100)">
-                                        <input matInput rows="5" class="ff-r fs(14)">
+                                        <input matInput type="text" class="ff-r fs(14)" />
                                     </mat-form-field>
                                 </div>
                             </div>
-
                             <div class="col-6">
                                 <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)   ">Division Format</label>
+                                    <label class="display-block fc(EDEEEF)   ">Event Type</label>
                                     <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
                                         <mat-select panelClass="matSelectCustomFocus">
                                             <mat-option>None</mat-option>
@@ -196,173 +28,336 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)   ">Institute Type</label>
-                                    <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                        <mat-select panelClass="matSelectCustomFocus">
-                                            <mat-option>None</mat-option>
-                                            <mat-option value="option1">Option 1</mat-option>
-                                            <mat-option value="option2">Option 2</mat-option>
-                                            <mat-option value="option3">Option 3</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="formControl wdt(100) mtl">
-                                    <label class="display-block fc(EDEEEF) fs(14)  ">Gender</label>
-                                    <mat-radio-group aria-label="Select an option" class="fc(EDEEEF) fs(14) ">
-                                        <mat-radio-button value="1" class="mrxxl">Male</mat-radio-button>
-                                        <mat-radio-button value="2" class="mrxxl">Female</mat-radio-button>
-                                        <mat-radio-button value="3">Prefer not to say</mat-radio-button>
-                                    </mat-radio-group>
-
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)  mtl ">Maximum Teams</label>
+                                    <label class="display-block fc(EDEEEF)   ">Tournament Description</label>
                                     <mat-form-field appearance="outline" class=" wdt(100)">
-                                        <input matInput rows="5" class="ff-r fs(14)">
+                                        <textarea matInput rows="10"></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="inputGroup mtr">
+                        <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Date & Time</h3>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="formControl wdt(100)">
+                                    <label class="display-block fc(EDEEEF)   ">Start Date</label>
+                                    <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+
+                                        <input matInput [matDatepicker]="startDatePicker">
+                                        <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #startDatePicker></mat-datepicker>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="formControl wdt(100)">
+                                    <label class="display-block fc(EDEEEF)   ">Start Time</label>
+                                    <mat-form-field appearance="outline" class=" wdt(100)">
+                                        <input matInput type="text" class="ff-r fs(14)" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="formControl wdt(100)">
+                                    <label class="display-block fc(EDEEEF)   ">End Date</label>
+                                    <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+
+                                        <input matInput [matDatepicker]="endDatePicker">
+                                        <mat-datepicker-toggle matSuffix [for]="endDatePicker">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #endDatePicker></mat-datepicker>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="formControl wdt(100)">
+                                    <label class="display-block fc(EDEEEF)   ">End Time</label>
+                                    <mat-form-field appearance="outline" class=" wdt(100)">
+                                        <input matInput type="text" class="ff-r fs(14)" />
                                     </mat-form-field>
                                 </div>
                             </div>
 
 
+
+
+                        </div>
+                    </div>
+                    <div class="inputGroup mtr">
+                        <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Registration End Date & Time
+                        </h3>
+                        <div class="row">
                             <div class="col-6">
                                 <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)  mtl ">Football Type</label>
+                                    <label class="display-block fc(EDEEEF)   ">End Date</label>
                                     <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                        <mat-select panelClass="matSelectCustomFocus">
-                                            <mat-option>None</mat-option>
-                                            <mat-option value="option1">Option 1</mat-option>
-                                            <mat-option value="option2">Option 2</mat-option>
-                                            <mat-option value="option3">Option 3</mat-option>
-                                        </mat-select>
+
+                                        <input matInput [matDatepicker]="registrationEndDatePicker">
+                                        <mat-datepicker-toggle matSuffix [for]="registrationEndDatePicker">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #registrationEndDatePicker></mat-datepicker>
+
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="formControl wdt(100)">
+                                    <label class="display-block fc(EDEEEF)   ">End Time</label>
+                                    <mat-form-field appearance="outline" class=" wdt(100)">
+                                        <input matInput type="text" class="ff-r fs(14)" />
                                     </mat-form-field>
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
 
-                            <div class="col-6">
+                    <div class="inputGroup mtr">
+                        <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Contact Details
+                        </h3>
+                        <div class="row">
+                            <div class="col-12">
                                 <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)   ">Age Range</label>
-                                    <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                        <mat-select panelClass="matSelectCustomFocus">
-                                            <mat-option>None</mat-option>
-                                            <mat-option value="option1">Option 1</mat-option>
-                                            <mat-option value="option2">Option 2</mat-option>
-                                            <mat-option value="option3">Option 3</mat-option>
-                                        </mat-select>
+                                    <label class="display-block fc(EDEEEF)   ">Contact Name</label>
+                                    <mat-form-field appearance="outline" class=" wdt(100)">
+                                        <input matInput type="text" class="ff-r fs(14)" />
                                     </mat-form-field>
                                 </div>
                             </div>
-
-
                             <div class="col-6">
                                 <div class="formControl wdt(100)">
-                                    <label class="display-block fc(EDEEEF)   ">Player Count</label>
-                                    <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                        <mat-select panelClass="matSelectCustomFocus">
-                                            <mat-option>None</mat-option>
-                                            <mat-option value="option1">Option 1</mat-option>
-                                            <mat-option value="option2">Option 2</mat-option>
-                                            <mat-option value="option3">Option 3</mat-option>
-                                        </mat-select>
+                                    <label class="display-block fc(EDEEEF)   ">Contact Email</label>
+                                    <mat-form-field appearance="outline" class=" wdt(100)">
+                                        <input matInput type="email" class="ff-r fs(14)" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="formControl wdt(100)">
+                                    <label class="display-block fc(EDEEEF)   ">Contact Phone</label>
+                                    <mat-form-field appearance="outline" class=" wdt(100)">
+                                        <input matInput type="tel" class="ff-r fs(14)" />
                                     </mat-form-field>
                                 </div>
                             </div>
 
 
                         </div>
-                        <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add Division</p>
-                    </form>
-                    <div class="stepper-controller mtr pr bgc(161F26) ">
-                        <button class="btn-dialog-action  fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent"
-                            matStepperNext>
-                            Next
-                        </button>
-                        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                            matStepperPrevious>
-                            Back
-                        </button>
                     </div>
-                </mat-step>
-                <!-- ---------------------------------------------------------------- Publish -->
-                <mat-step label="Publish">
-                    <div class="finalizing">
 
-                        <div class="publishingOptions">
-                            <form class="publishingOptionsForm formControlTopBorderUnset">
-                                <div class="inputGroup mtr">
-                                    <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Regions
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="formControl wdt(100)">
-                                                <label class="display-block fc(EDEEEF)   ">Select Regions</label>
-                                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                                    <mat-select panelClass="matSelectCustomFocus">
-                                                        <mat-option>None</mat-option>
-                                                        <mat-option value="option1">Option 1</mat-option>
-                                                        <mat-option value="option2">Option 2</mat-option>
-                                                        <mat-option value="option3">Option 3</mat-option>
-                                                    </mat-select>
-                                                </mat-form-field>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="formControl wdt(100)">
-                                                <label class="display-block fc(EDEEEF)   ">All Regions Selected</label>
-                                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                                    <input matInput type="text" name="" id="">
-                                                </mat-form-field>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                </form>
 
-                                <div class="inputGroup mtr">
-                                    <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="formControl wdt(100)">
-                                                <label class="display-block fc(EDEEEF)   ">Shareable
-                                                    Link</label>
-                                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                                    <input matInput type="text" value="www.uefa/newtournament">
-                                                    <button matSuffix mat-icon-button>
-                                                        <mat-icon svgIcon="copy"></mat-icon>
-                                                    </button>
+                <div class="stepper-controller mtr pr bgc(161F26) ">
+                    <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" matStepperNext>
+                        Next
+                    </button>
+                    <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
+                        Cancel
+                    </button>
+                </div>
+            </mat-step>
 
-                                                </mat-form-field>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            <!-- ---------------------------------------------------------------- Tournament Details -->
+            <mat-step label="Division">
+                <form class="TournamentDivision mtl formControlTopBorderUnset">
+                    <div class="row">
 
-                            </form>
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)  ">Division Name </label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput rows="5" class="ff-r fs(14)">
+                                </mat-form-field>
+                            </div>
                         </div>
-                    </div>
-                    <div class="stepper-controller mtr pr bgc(161F26) ">
-                        <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent">
-                            Publish
-                        </button>
-                        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                            matStepperPrevious>
-                            Back
-                        </button>
-                    </div>
-                </mat-step>
 
-            </mat-stepper>
-        </div>
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Division Format</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Institute Type</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100) mtl">
+                                <label class="display-block fc(EDEEEF) fs(14)  ">Gender</label>
+                                <mat-radio-group aria-label="Select an option" class="fc(EDEEEF) fs(14) ">
+                                    <mat-radio-button value="1" class="mrxxl">Male</mat-radio-button>
+                                    <mat-radio-button value="2" class="mrxxl">Female</mat-radio-button>
+                                    <mat-radio-button value="3">Prefer not to say</mat-radio-button>
+                                </mat-radio-group>
+
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)  mtl ">Maximum Teams</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput rows="5" class="ff-r fs(14)">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)  mtl ">Football Type</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Age Range</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Player Count</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <mat-select panelClass="matSelectCustomFocus">
+                                        <mat-option>None</mat-option>
+                                        <mat-option value="option1">Option 1</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add Division</p>
+                </form>
+                <div class="stepper-controller mtr pr bgc(161F26) ">
+                    <button class="btn-dialog-action  fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent"
+                        matStepperNext>
+                        Next
+                    </button>
+                    <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
+                        matStepperPrevious>
+                        Back
+                    </button>
+                </div>
+            </mat-step>
+            <!-- ---------------------------------------------------------------- Publish -->
+            <mat-step label="Publish">
+                <div class="finalizing">
+
+                    <div class="publishingOptions">
+                        <form class="publishingOptionsForm formControlTopBorderUnset">
+                            <div class="inputGroup mtr">
+                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Regions
+                                </h3>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="formControl wdt(100)">
+                                            <label class="display-block fc(EDEEEF)   ">Select Regions</label>
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                                <mat-select panelClass="matSelectCustomFocus">
+                                                    <mat-option>None</mat-option>
+                                                    <mat-option value="option1">Option 1</mat-option>
+                                                    <mat-option value="option2">Option 2</mat-option>
+                                                    <mat-option value="option3">Option 3</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="formControl wdt(100)">
+                                            <label class="display-block fc(EDEEEF)   ">All Regions Selected</label>
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                                <input matInput type="text" name="" id="">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inputGroup mtr">
+                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options
+                                </h3>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="formControl wdt(100)">
+                                            <label class="display-block fc(EDEEEF)   ">Shareable
+                                                Link</label>
+                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                                <input matInput type="text" value="www.uefa/newtournament">
+                                                <button matSuffix mat-icon-button>
+                                                    <mat-icon svgIcon="copy"></mat-icon>
+                                                </button>
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="stepper-controller mtr pr bgc(161F26) ">
+                    <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent">
+                        Publish
+                    </button>
+                    <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
+                        matStepperPrevious>
+                        Back
+                    </button>
+                </div>
+            </mat-step>
+
+        </mat-stepper>
     </div>
-
 
 </section>

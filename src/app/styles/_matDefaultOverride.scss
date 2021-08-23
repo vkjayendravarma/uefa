@@ -51,6 +51,12 @@
 
 }
 
+.formControlTopBorderUnsetArrowTopUnset {
+  .mat-select-arrow-wrapper {
+    top: 4px !important;
+  }
+}
+
 
 // ------------------------------ mat input ----------------
 

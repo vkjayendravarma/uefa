@@ -1,0 +1,22 @@
+
+
+.table{
+    td,th{
+        padding-left: 4em;
+        padding-right: 4em;
+       
+        vertical-align: middle;
+        border-color: rgba(56, 60, 64, 0.5);
+    }
+    
+}
+.table-hover{
+   
+    tbody{
+        tr{
+            &:hover{
+                background-color: #E5F4FF0D;
+            }
+        }
+    }
+}
