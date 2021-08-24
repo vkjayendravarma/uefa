@@ -16,6 +16,7 @@
           align-items-center
         "
       >
+        <!-- First Matches  -->
         <tr class="d-flex flex-column">
           <td class="" *ngFor="let team of matches.first">
             <div class="label mtr">
@@ -36,6 +37,7 @@
             </div>
           </td>
         </tr>
+        <!-- Semi-FInals Column  -->
         <tr class="d-flex flex-column">
           <td class="mbsemi" *ngFor="let team of matches.semi">
             <div class="label mtr">
@@ -56,6 +58,7 @@
             </div>
           </td>
         </tr>
+        <!-- Finals Column  -->
         <tr class="d-flex flex-column">
           <td class="mbfinal" *ngFor="let team of matches.final">
             <div class="label mtr">
@@ -76,6 +79,7 @@
             </div>
           </td>
         </tr>
+        <!-- Winner Column  -->
         <tr class="d-flex flex-column">
           <td class="" *ngFor="let team of matches.winner">
             <div class="label mtr">
