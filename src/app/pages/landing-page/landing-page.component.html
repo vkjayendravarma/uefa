@@ -3,6 +3,7 @@
   rel="stylesheet/scss"
   type="text/css"
 />
+<link href="../../styles/_fonts.scss" rel="stylesheet/scss" type="text/css" />
 <link
   href="./landing-page.component.scss"
   rel="stylesheet/scss"
@@ -53,40 +54,31 @@
     </div>
   </form>
 </nav>
-<div class="vertical-center">
+<div class="">
   <img
     src="../../../assets/images/backgrounds/landing/Banner.png"
-    class="img-fluid"
+    class="img-fluid backgroundImage"
     alt="Banner"
   />
-  <div class="carousel-caption caption">
-    <p class="col-md-7 col-sm-6 d-flex caption text-left ml-md-5">
+  <div class="wrapper">
+    <p class="caption text-left ml-md-5">
       Register yourself on the platform to be part of the largest ecosystem for
       Grassroots football in Europe.
       <br />
     </p>
     <button
-      class="
-        row
-        col-md-3 col-sm-3
-        d-flex
-        carousel-caption
-        btn btn btn-outline-success
-        justify-content-end
-        text-center
-        button
-        my-5
-      "
+      class="btn btn btn-outline-success wrapperButton ml-md-5 px-4 mt-3"
       type="button"
     >
       SignUp
     </button>
   </div>
-
+</div>
+<div>
   <hr class="mt-0 mb-0 lineBreak" />
   <div class="container-fluid bgc(0F171D)">
-    <div class="row text-center landingContent mb-4">
-      <div class="col-sm-6 col-md-6">
+    <div class="row text-center landingContent">
+      <div class="col-sm-6 col-md-6 mb-md-5 mb-sm-5">
         <div class="text-left align-items-center ml-md-5">
           <p class="content pt-5 mt-4 pb-3 pr-5">
             Why register for on the platform?
@@ -101,8 +93,20 @@
           </p>
         </div>
       </div>
-      <div class="col-sm-6 col-md-6">
-        <div class="d-flex flex-column row pt-5 mt-4 pb-3">
+      <div class="col-sm-6 col-md-6 mb-md-5 mb-sm-5">
+        <div
+          class="
+            d-flex
+            flex-column
+            row
+            pt-5
+            pb-5
+            mt-4
+            mb-4
+            pb-3
+            align-items-center
+          "
+        >
           <div
             class="d-flex justify-content-between w-75 align-items-center mb-3"
           >
@@ -147,62 +151,103 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4 footer">
-      <div class="branding ptr pbr pll prl pl-5">
-        <a [routerLink]="['/']">
+    <div class="d-flex flex-column pb-5 bgc(0F171D)">
+      <div
+        class="
+          card
+          row
+          d-flex
+          mx-auto
+          flex-column
+          justify-content-start
+          text-center
+          cardStyle
+          align-items-center
+          px-4
+          bgc(0F171D)
+        "
+      >
+        <div class="d-flex w-100">
           <img
-            src="../../../assets/images/logos/blueLogo.svg"
-            alt="verdentrum"
-            class=""
+            src="../../../assets/images/icons/quotes.svg"
+            class="img-fluid quotes"
+            alt="Banner"
           />
-        </a>
-      </div>
-      <div class="container-fluid text-center text-md-left pb-5">
-        <div class="row">
-          <div class="col-md-6 col-sm-7 mt-md-0 mt-3 pl-0">
-            <p class="w-75 px-5 text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              alicommodo
-            </p>
-          </div>
-          <div class="col-md-6 col-sm-5 mt-md-0 mt-3 pl-0 text-center">
-            <div class="row ml-sm-2 buttonRow justify-content-end mr-2">
-              <button
-                class="
-                  btn btn btn-outline-success
-                  navbar-right
-                  button
-                  col-3 col-md-3 col-sm-4 col-xs-6
-                  px-2
-                "
-                type="button"
-              >
-                Login
-              </button>
-              <button
-                class="
-                  btn btn btn-outline-success
-                  justify-content-end
-                  mx-2
-                  text-center
-                  button
-                  col-3 col-md-3 col-sm-5 col-xs-6
-                  px-4
-                  mr-md-0
-                "
-                type="button"
-              >
-                SignUp
-              </button>
-            </div>
+          <div class="d-flex card-body p-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate
           </div>
         </div>
       </div>
-    </footer>
-    <!-- Footer -->
+      <div class="d-flex flex-column align-items-center testimonial">
+        <img
+          src="../../../assets/images/users/Headshot.svg"
+          class="img-fluid d-flex"
+          alt="Banner"
+        />
+        <p class="d-flex fc(ffffff)">Sairam Koduri</p>
+        <p class="d-flex fc(9B9B9B) pb-5">Designation goes here</p>
+      </div>
+    </div>
   </div>
+  <div class="container bgc(0F171D)"></div>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue pt-4 footer">
+    <div class="branding ptr pbr pll prl pl-5">
+      <a [routerLink]="['/']">
+        <img
+          src="../../../assets/images/logos/blueLogo.svg"
+          alt="verdentrum"
+          class=""
+        />
+      </a>
+    </div>
+    <div class="container-fluid text-center text-md-left pb-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-7 mt-md-0 mt-3 pl-0">
+          <p class="w-75 px-5 text-left">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            alicommodo
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-5 mt-md-0 mt-3 pl-0 text-center">
+          <div class="row ml-sm-2 buttonRow justify-content-end mr-2">
+            <button
+              class="
+                btn btn btn-outline-success
+                navbar-right
+                button
+                col-3 col-md-3 col-sm-4 col-xs-6
+                px-2
+              "
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              class="
+                btn btn btn-outline-success
+                justify-content-end
+                mx-2
+                text-center
+                button
+                col-3 col-md-3 col-sm-5 col-xs-6
+                px-4
+                mr-md-0
+              "
+              type="button"
+            >
+              SignUp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
 </div>
