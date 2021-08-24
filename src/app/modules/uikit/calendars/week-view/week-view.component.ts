@@ -18,6 +18,12 @@ export class WeekViewComponent implements OnInit {
     { day: 'SUN', date: '23' },
     { day: 'SUN', date: '24' },
     { day: 'SUN', date: '25' },
+    { day: 'SUN', date: '24' },
+    { day: 'SUN', date: '25' },
+    { day: 'SUN', date: '24' },
+    { day: 'SUN', date: '25' },
+    { day: 'SUN', date: '24' },
+    { day: 'SUN', date: '25' },
   ];
 
   task = [
@@ -45,14 +51,7 @@ export class WeekViewComponent implements OnInit {
           name: 'Task 1',
           time: '10:00AM - 12:00PM',
         },
-        {
-          name: 'Task 1',
-          time: '10:00AM - 12:00PM',
-        },
-        {
-          name: 'Task 1',
-          time: '10:00AM - 12:00PM',
-        },
+
         {
           name: 'Task 1',
           time: '10:00AM - 12:00PM',
@@ -108,6 +107,98 @@ export class WeekViewComponent implements OnInit {
           name: 'Task 1',
           time: '10:00AM - 12:00PM',
         },
+      ],
+      notDone: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+    },
+    {
+      done: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+      notDone: [],
+    },
+    {
+      done: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+      notDone: [],
+    },
+    {
+      done: [],
+      notDone: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+    },
+    {
+      done: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+      notDone: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+    },
+    {
+      done: [
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+        {
+          name: 'Task 1',
+          time: '10:00AM - 12:00PM',
+        },
+      ],
+      notDone: [],
+    },
+    {
+      done: [
         {
           name: 'Task 1',
           time: '10:00AM - 12:00PM',
