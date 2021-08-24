@@ -1,157 +1,95 @@
-<div class="wrapper">
-  <div class="matchResultsemi">
-    <div class="wrapper match mr-0">
-      <div class="matchResultstart">
-        <div class="match">
-          <div class="label">
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 1</div>
+<div class="uiComponent mtl">
+  <div class="bdr-rounded bgc(161F26)">
+    <table class="wdt(100)">
+      <thead class="componentHeader pl d-flex wdt(100) justify-content-between">
+        <tr class="prl pll wl" *ngFor="let item of headers">
+          <p class="text-center fs(14)">{{ item }}</p>
+        </tr>
+      </thead>
+      <tbody
+        class="
+          componentBody
+          pl
+          d-flex
+          wdt(100)
+          justify-content-between
+          align-items-center
+        "
+      >
+        <tr class="d-flex flex-column">
+          <td class="" *ngFor="let team of matches.first">
+            <div class="label mtr">
+              <div class="team">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teama }}</div>
+              </div>
+              <div class="team">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teamb }}</div>
+              </div>
             </div>
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 2</div>
+          </td>
+        </tr>
+        <tr class="d-flex flex-column">
+          <td class="mbsemi" *ngFor="let team of matches.semi">
+            <div class="label mtr">
+              <div class="team">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teama }}</div>
+              </div>
+              <div class="team">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teamb }}</div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="match">
-          <div class="label">
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 3</div>
+          </td>
+        </tr>
+        <tr class="d-flex flex-column">
+          <td class="mbfinal" *ngFor="let team of matches.final">
+            <div class="label mtr">
+              <div class="team">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teama }}</div>
+              </div>
+              <div class="team">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teamb }}</div>
+              </div>
             </div>
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 4</div>
+          </td>
+        </tr>
+        <tr class="d-flex flex-column">
+          <td class="" *ngFor="let team of matches.winner">
+            <div class="label mtr">
+              <div class="team winner">
+                <img
+                  src="../../../../../../assets/images/clubsLogos/manchester.png"
+                  class="teamLogo"
+                />
+                <div class="teamName">{{ team.teama }}</div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="matchResultstart end">
-        <div class="match end">
-          <div class="label">
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Winners 1</div>
-            </div>
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Winners 2</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="wrapper match mr-0">
-      <div class="matchResultstart">
-        <div class="match">
-          <div class="label">
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 5</div>
-            </div>
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 6</div>
-            </div>
-          </div>
-        </div>
-        <div class="match">
-          <div class="label">
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 7</div>
-            </div>
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Team 8</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="matchResultstart end">
-        <div class="match end">
-          <div class="label">
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Winners 1</div>
-            </div>
-            <div class="team">
-              <img
-                src="../../../../../../assets/images/clubsLogos/manchester.png"
-                class="teamLogo"
-              />
-              <div class="teamName">Winners 2</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="matchResultstart end">
-    <div class="match">
-      <div class="label">
-        <div class="team">
-          <img
-            src="../../../../../../assets/images/clubsLogos/manchester.png"
-            class="teamLogo"
-          />
-          <div class="teamName">Finals 1</div>
-        </div>
-        <div class="team">
-          <img
-            src="../../../../../../assets/images/clubsLogos/manchester.png"
-            class="teamLogo"
-          />
-          <div class="teamName">Finals 2</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="matchResultstart end">
-    <div class="match end">
-      <div class="label">
-        <div class="team winner">
-          <img
-            src="../../../../../../assets/images/clubsLogos/manchester.png"
-            class="teamLogo"
-          />
-          <div class="teamName">Winners</div>
-        </div>
-      </div>
-    </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
