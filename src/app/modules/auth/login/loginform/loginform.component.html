@@ -1,8 +1,8 @@
 <div class="loginFormWrapper" align="left">
     <h1 class="formTitle fs(32)">
-      <span class="fc(575D61) ff-sb mrr"> Sign up </span>
+      <span class="fc(575D61) ff-sb mrr cursor-pointer" [routerLink]="['/auth/session/signup']" routerLinkActive="fc(ffffff)"   > Sign up </span>
       <span class="fc(575D61) fs(24) ff-sb mrr"> or </span>
-      <span class="fc(ffffff) ff-sb"> Login </span>
+      <span class="fc(575D61) ff-sb cursor-pointer" [routerLink]="['/auth/session/login']" routerLinkActive="fc(ffffff)"  > Login </span>
     </h1>
     <form class="loginForm mtl fc(C3C5C7) ff-r fs(14)">
       <div class="row">
@@ -38,7 +38,9 @@
           <mat-checkbox class="agreeTerms mtr mbr" color="accent">I agree to terms & conditions</mat-checkbox>
         </div>
         <div class="col-md-12">
-          <button mat-raised-button color="accent" type="submit" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs  ">Login</button>
+          <button mat-raised-button color="accent" type="submit" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs" *ngIf="authType==='signup'">Sign Up</button>
+
+          <button mat-raised-button color="accent" type="submit" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs" *ngIf="authType==='login'" >Login</button>
         </div>
       </div>
     </form>
