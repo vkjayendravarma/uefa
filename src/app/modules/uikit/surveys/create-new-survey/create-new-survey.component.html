@@ -1,0 +1,36 @@
+<section class="createNewEventWrapper ">
+    <div class="container">
+        <div class=" ptl pll pbr ">
+            <div class="d-flex newSurveyTitle">
+                <div class="eventTitleWrapper">
+                    <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  ">New Survey 1234</h2>
+                </div>
+                <div class="tags">
+                    <app-tag-chips [tags]="[{name: 'Draft',bgColor: '#D5DFEF'}]" class=" tag mlr display-inline">
+                    </app-tag-chips>
+                </div>
+            </div>
+        </div>
+
+        <div class="componentBody darkStepperContainer mtr">
+            <mat-stepper #stepper color="accent" >
+                <mat-step label="Suvrey Details">
+                    <uikit-survey-details></uikit-survey-details>
+                </mat-step>
+                <mat-step label="Preview">
+                    <uikit-survey-preview></uikit-survey-preview>
+                </mat-step>
+                <mat-step label="Publish">
+                    <uikit-survey-publish></uikit-survey-publish>
+                </mat-step>
+                <mat-step label="Responses">
+                    <uikit-survey-responces></uikit-survey-responces>
+                </mat-step>
+            </mat-stepper>
+        </div>
+    </div>
+
+
+
+
+</section>
