@@ -1,0 +1,37 @@
+<div class="uiComponent surveyResponces mtl">
+    <h2 class="title fs(20) ff-sb fc(ffffff) ">Survey is Open <span class="fc(9B9B9B)" >(till 21 Jun’21 <span class="fc(77B7FD)">Change</span> )</span> </h2>
+
+    <div class="responces  bgc(161F26) bgshadow1 bdr-rounded mtl">
+        <div class="sectionHeader pr">
+            <p class="sectionTitle display-inline ">Responses (73)</p>
+            <button mat-button class="download float-right fc(77B7FD)" type="button">Download All</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="scoresTable table table-hover table-dark bdrb ">
+                <thead class='thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r'>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody class='bgc(161F26) fc(9B9B9B) fs(14) '>
+                    <tr *ngFor="let team of responces">
+                        <td class=' fc(EDEEEF) ff-r fs(14) '> Romelu Lukaku </td>
+                        <td class=' fc(EDEEEF) ff-r fs(14)'> abc@gmail.com</td>
+                        <td class=' fc(77B7FD) ff-r fs(14)'> Download </td>
+                        <td class='fc(77B7FD) ff-r fs(14)'> View Responses</td>
+                       
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>

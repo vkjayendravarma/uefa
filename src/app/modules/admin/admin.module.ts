@@ -50,6 +50,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FixtureListViewComponent } from './components/tournamentMonitor/tournament-fixtures/fixture-list-view/fixture-list-view.component';
 import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart/tournament-flow-chart.module';
+import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
+import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
+import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 
 @NgModule({
   declarations: [
@@ -75,7 +78,8 @@ import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart
     AddNewTeamToTournamentComponent,
     TournamentFixturesComponent,
     GenerateNewFixturesComponent,
-    FixtureListViewComponent
+    FixtureListViewComponent,
+    ANewSurveyComponent
   ],
   imports: [
     CommonModule,
@@ -95,6 +99,8 @@ import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart
     TagChipsModule,
     CreateEditTournamentModule,
     TournamentFlowChartModule,
+    CreateNewSurveyModule,
+    TournamentsElevatedModule,
     // mat 
     MatButtonModule,
     MatDialogModule,
