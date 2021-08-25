@@ -29,4 +29,5 @@ export enum Icons {
   calenderWeek = 'calender-week',
   taskDone = 'weekcheck',
   taskNotDone = 'weekcross',
+  rearrangeIcon = 'rearrange',
 }

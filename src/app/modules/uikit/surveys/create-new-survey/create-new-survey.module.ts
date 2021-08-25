@@ -18,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TagChipsModule } from '../../global/tag-chips/tag-chips.module';
 import { MatStepperModule } from '@angular/material/stepper';
+import { FormBuilderModule } from '../../form-builder/form-builder.module';
 
 
 
@@ -45,7 +46,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSelectModule,
     MatChipsModule,
     TagChipsModule,
-    MatStepperModule
+    MatStepperModule,
+    FormBuilderModule
   ],
   exports: [CreateNewSurveyComponent]
 })
