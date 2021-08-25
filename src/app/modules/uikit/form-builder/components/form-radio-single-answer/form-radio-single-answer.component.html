@@ -1,16 +1,31 @@
 <div class="uiCompnent answerComponent wdt(100) prl ">
-    <form class="options" *ngFor="let option of optionsIterator; let index = index">
-        <div class="option flex-grow-1 ">
-            <mat-radio-button class="formBuilderElement wdt(100)">
-                <mat-form-field appearance="standard" class=" wdt(100)">
-                    <input matInput type="text" class="ff-r fs(14)" 
-                        [(ngModel)]="optionsList[index]" [name]="'option' + index"   placeholder="Enter your Question" (ngModelChange)="valueChanges()"  />
-                    <button mat-button matSuffix>
-                        <mat-icon (click)="deleteOption(index)" class="fc(ffffff)">close</mat-icon>
-                    </button>
-                </mat-form-field>
-            </mat-radio-button>
+    <form class="options">
+        <div cdkDropList class="answerOptionsWrapper" (cdkDropListDropped)="drop($event)">
+
+            <div class="answerOption " *ngFor="let option of optionsIterator; let index = index" cdkDrag>
+                <div class="dragControl-placeholder" *cdkDragPlaceholder></div>
+                <div class="dragControl d-flex">
+                    <div class="rearrangeIcon  mrr" cdkDragHandle>
+                        <mat-icon matPrefix svgIcon="rearrange" class="rearrange"></mat-icon>
+                    </div>
+                    <div class="option flex-grow-1 ">
+                        <mat-radio-button class="formBuilderElement wdt(100)" aria-disabled="true" [disabled]="true">
+                            <mat-form-field appearance="standard" class=" wdt(100)">
+                                <input matInput type="text" class="ff-r fs(14)" [(ngModel)]="optionsList[index]"
+                                    [name]="'option' + index" placeholder="Enter your Question"
+                                    (ngModelChange)="valueChanges()" [disabled]="false" />
+                                <button mat-button matSuffix [disabled]="false">
+                                    <mat-icon (click)="deleteOption(index)" class="fc(ffffff)">close</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </mat-radio-button>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+        <button class="addOption" mat-button (click)="addOption()"> + Add Option </button>
+
     </form>
-    <button class="addOption" mat-button (click)="addOption()"> + Add Option </button>
 </div>
