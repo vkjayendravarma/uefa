@@ -140,7 +140,26 @@ export class WeekViewComponent implements OnInit {
     ],
   ];
 
-  constructor() {}
+  sortTasks = function (arr: Array<Array<Object>>) {
+    for (let i = 0; i < arr.length; i++) {
+      let element = arr[i];
+      let newarr = element.sort((obj1: any, obj2: any) => {
+        if (obj1.start > obj2.start) {
+          return 1;
+        }
+        if (obj1.start < obj2.start) {
+          return -1;
+        }
+
+        return 0;
+      });
+      arr[i] = newarr;
+    }
+  };
+
+  constructor() {
+    this.sortTasks(this.task);
+  }
 
   ngOnInit(): void {}
 }
