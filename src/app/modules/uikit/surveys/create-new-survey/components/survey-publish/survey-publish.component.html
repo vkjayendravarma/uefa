@@ -1,0 +1,113 @@
+<div class="uiComponet SurveyPreview mtl mbl">
+    <form class="publishingOptionsForm formControlTopBorderUnset">
+        <div class="inputGroup mtr">
+            <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options
+            </h3>
+            <div class="row">
+                <div class="col-12">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Survey Link</label>
+                        <mat-form-field appearance="outline" color="primary"
+                            class=" wdt(100)">
+                            <input matInput type="text" value="www.uefa/newtournament">
+                            <button matSuffix mat-icon-button>
+                                <mat-icon svgIcon="copy"></mat-icon>
+                            </button>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Survey Published to</label>
+                        <div class="formControl-chiplist">
+                            <mat-form-field appearance="outline" color="primary"
+                                class=" wdt(100)">
+                                <mat-chip-list #chipList aria-label="Invitee Type">
+                                    <mat-chip *ngFor="let Invitee of Invitees"
+                                        [selectable]="selectable" [removable]="removable"
+                                        (removed)="remove(Invitee)">
+                                        {{Invitee.name}}
+                                        <mat-icon matChipRemove *ngIf="removable">cancel
+                                        </mat-icon>
+                                    </mat-chip>
+                                    <input [matChipInputFor]="chipList"
+                                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                        [matChipInputAddOnBlur]="addOnBlur"
+                                        (matChipInputTokenEnd)="add($event)">
+                                </mat-chip-list>
+
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Institution </label>
+                        <mat-form-field appearance="outline" color="primary"
+                            class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+            
+
+            </div>
+        </div>
+        <div class="inputGroup mtr">
+            <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Regions
+            </h3>
+            <div class="row">
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Select Region</label>
+                        <mat-form-field appearance="outline" color="primary"
+                            class=" wdt(100)">
+                            <mat-select panelClass="matSelectCustomFocus">
+                                <mat-option>None</mat-option>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="formControl wdt(100)">
+                        <mat-form-field appearance="outline" color="primary"
+                            class=" wdt(100)">
+                            <textarea matInput  placeholder="All Regions Selected"></textarea>                            
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="formControl wdt(100)">
+                        <label class="display-block fc(EDEEEF)   ">Survey Close Date</label>
+                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+    
+                            <input matInput [matDatepicker]="surveyEndDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="surveyEndDatePicker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #surveyEndDatePicker></mat-datepicker>
+    
+                        </mat-form-field>
+                    </div>
+                </div>
+      
+
+            </div>
+        </div>
+    </form>
+
+</div>
