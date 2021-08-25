@@ -52,6 +52,7 @@ import { FixtureListViewComponent } from './components/tournamentMonitor/tournam
 import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart/tournament-flow-chart.module';
 import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
 import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
+import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create
     CreateEditTournamentModule,
     TournamentFlowChartModule,
     CreateNewSurveyModule,
+    TournamentsElevatedModule,
     // mat 
     MatButtonModule,
     MatDialogModule,

@@ -18,6 +18,7 @@ import { FinalResultComponent } from './final-result/final-result.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ScoreTableComponent, FinalResultComponent, FixturesListViewComponent]
 })
 export class TournamentsElevatedModule { }
