@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./survey-responces.component.scss']
 })
 export class SurveyResponcesComponent implements OnInit {
+<<<<<<< HEAD
   responces = [1, 2, 3]
+=======
+>>>>>>> temp
   constructor() { }
 
   ngOnInit(): void {
   }
 
+<<<<<<< HEAD
+=======
+  responces = [1, 2, 3]
+
+>>>>>>> temp
 }

@@ -26,4 +26,7 @@ export enum Icons {
   crossCirclIcon = 'crossCircle',
   listviewIcon = 'listView',
   chartViewIcon = 'chartView',
+  calenderWeek = 'calender-week',
+  taskDone = 'weekcheck',
+  taskNotDone = 'weekcross',
 }
