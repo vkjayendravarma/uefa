@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FixturesListViewComponent } from './fixtures-list-view.component';
+import { AProfileComponent } from './a-profile.component';
 
-describe('FixturesListViewComponent', () => {
-  let component: FixturesListViewComponent;
-  let fixture: ComponentFixture<FixturesListViewComponent>;
+describe('AProfileComponent', () => {
+  let component: AProfileComponent;
+  let fixture: ComponentFixture<AProfileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FixturesListViewComponent ]
+      declarations: [ AProfileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FixturesListViewComponent);
+    fixture = TestBed.createComponent(AProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

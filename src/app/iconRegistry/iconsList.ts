@@ -34,4 +34,5 @@ export enum Icons {
   trophy = 'trophy',
   pic = 'Headshot',
   quote = 'quotes',
+  rearrangeIcon = 'rearrange',
 }

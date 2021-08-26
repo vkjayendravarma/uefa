@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SurveyPreviewComponent } from './survey-preview.component';
+import { FormInputTextComponent } from './form-input-text.component';
 
-describe('SurveyPreviewComponent', () => {
-  let component: SurveyPreviewComponent;
-  let fixture: ComponentFixture<SurveyPreviewComponent>;
+describe('FormInputTextComponent', () => {
+  let component: FormInputTextComponent;
+  let fixture: ComponentFixture<FormInputTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SurveyPreviewComponent ]
+      declarations: [ FormInputTextComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SurveyPreviewComponent);
+    fixture = TestBed.createComponent(FormInputTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
