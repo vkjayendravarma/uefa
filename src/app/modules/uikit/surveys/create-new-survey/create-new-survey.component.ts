@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilderValuesInterface } from 'src/app/prototypes/formBuilderValues.interface';
 
 @Component({
   selector: 'uikit-create-new-survey',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNewSurveyComponent implements OnInit {
 
+  formBluePrint!: FormBuilderValuesInterface[]
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  formBuildChangeEventHandler(event:FormBuilderValuesInterface[]){
+    this.formBluePrint = event;
   }
 
 }

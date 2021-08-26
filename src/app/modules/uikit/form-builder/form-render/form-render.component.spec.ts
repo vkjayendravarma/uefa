@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FixturesListViewComponent } from './fixtures-list-view.component';
+import { FormRenderComponent } from './form-render.component';
 
-describe('FixturesListViewComponent', () => {
-  let component: FixturesListViewComponent;
-  let fixture: ComponentFixture<FixturesListViewComponent>;
+describe('FormRenderComponent', () => {
+  let component: FormRenderComponent;
+  let fixture: ComponentFixture<FormRenderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FixturesListViewComponent ]
+      declarations: [ FormRenderComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FixturesListViewComponent);
+    fixture = TestBed.createComponent(FormRenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

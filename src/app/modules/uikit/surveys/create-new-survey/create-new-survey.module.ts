@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SurveyDetailsComponent } from './components/survey-details/survey-details.component';
-import { SurveyPreviewComponent } from './components/survey-preview/survey-preview.component';
 import { SurveyPublishComponent } from './components/survey-publish/survey-publish.component';
 import { SurveyResponcesComponent } from './components/survey-responces/survey-responces.component';
 import { CreateNewSurveyComponent } from './create-new-survey.component';
@@ -18,13 +16,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TagChipsModule } from '../../global/tag-chips/tag-chips.module';
 import { MatStepperModule } from '@angular/material/stepper';
+import { FormBuilderModule } from '../../form-builder/form-builder.module';
 
 
 
 @NgModule({
   declarations: [
-    SurveyDetailsComponent,
-    SurveyPreviewComponent,
     SurveyPublishComponent,
     SurveyResponcesComponent,
     CreateNewSurveyComponent
@@ -45,7 +42,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSelectModule,
     MatChipsModule,
     TagChipsModule,
-    MatStepperModule
+    MatStepperModule,
+    FormBuilderModule
   ],
   exports: [CreateNewSurveyComponent]
 })

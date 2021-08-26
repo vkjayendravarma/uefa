@@ -1,0 +1,49 @@
+<div class="uiComponent formBuilderComponent">
+ 
+
+    <div class="formBuilder">
+
+        <form autocomplete="off">
+            <div class="questionList mtl pl wdt(100) bgshadow1 bdr-rounded bgc(161F26)" *ngFor="let item of formListIterator, let index = index">
+                <div class="questionWrapper">
+                    <div class="questionHeader ">
+                        <div class="sno display-inline">Question {{index + 1}}</div>
+                        <div
+                            class="questionType  display-inline float-right language-control formControlTopBorderUnset formControlTopBorderUnsetArrowTopUnsetLegacy">
+                            <div class="formControl ">
+                                <mat-form-field appearance="legacy" color="primary" class=" ">
+                                    <mat-select value="Multiple Choice" panelClass="matSelectCustomFocus"  [(ngModel)]="formList[index].viewType" [name]="'viewType' + index" >
+                                        <mat-option value="Multiple Choice">Multiple Choice</mat-option>
+                                        <mat-option value="option2">Option 2</mat-option>
+                                        <mat-option value="option3">Option 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questionBody ">
+                        <div class="formControl wdt(100)  question">
+                            <mat-form-field appearance="outline" class=" wdt(100)">
+                                <input matInput type="text" class="ff-r fs(14)" placeholder="Enter your Question" [(ngModel)]="formList[index].question" [name]="'question' + index"/>
+                            </mat-form-field>
+                        </div>        
+                        <uikit-form-radio-single-answer (radioOptionsChangeEvent)="formListOptionsListChangeEventHandler(index, $event)" *ngIf="formList[index].viewType == 'Multiple Choice'" ></uikit-form-radio-single-answer>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+
+        <div class="addQuestion mtl mbl">
+            <button mat-raised-button class="btn btn-lg  btn-addQuestion wdt(100) fc(77B7FD) fs(14) pts pbs  " (click)="addQuestion()" >+ Add
+                Question</button>
+        </div>
+
+        <button mat-raised-button class="btn  btn-addQuestion wdt(100) fc(77B7FD) fs(14) pts pbs  " (click)="logNow()" >Log Now</button>
+
+    </div>
+
+</div>

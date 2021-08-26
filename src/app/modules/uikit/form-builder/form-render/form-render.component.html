@@ -1,0 +1,17 @@
+<div class="uiComponent formRendering">
+    <form action="" class="customForm">
+        <div class="questions ">
+            <div class="question bgc(161F26) pl bgshadow1 bdr-rounded mtl" *ngFor="let formBluePrintItem of formBluePrint" >
+                <div class="questionTitle fs(16) fc(EDEEEF) ff-r"> {{formBluePrintItem.question}} </div>
+                <div class="answer mtl" *ngIf="formBluePrintItem.viewType === 'Multiple Choice' " >
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button [value]="option" class="display-block fs(14) fc(EDEEEF) mbr" *ngFor="let option of formBluePrintItem.optionsList" > {{option}}</mat-radio-button> 
+                    
+                      </mat-radio-group>
+                </div>
+            </div>
+    
+            
+        </div>
+    </form>
+</div>

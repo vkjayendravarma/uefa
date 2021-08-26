@@ -1,0 +1,30 @@
+.horizontalLine{
+    width: 100%;
+
+    .horizontal-line{
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}
+
+
+.table{
+    td,th{
+        padding-left: 3em;
+        padding-right: 3em;
+       
+        vertical-align: middle;
+    }
+    
+}
+.table-hover{
+   
+    tbody{
+        tr{
+            &:hover{
+                background-color: #E5F4FF0D;
+            }
+        }
+    }
+}
