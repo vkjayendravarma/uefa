@@ -1,0 +1,20 @@
+.iconSmall{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -2px;
+}
+
+
+.clubsInGroupLogo{
+    width: 24px;
+    height: auto;
+}
+
+.match:last-child {
+    border-bottom: unset !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
