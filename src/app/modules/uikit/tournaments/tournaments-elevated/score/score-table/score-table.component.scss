@@ -1,0 +1,30 @@
+.iconSmall{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -2px;
+}
+
+
+.clubsInGroupLogo{
+    width: 24px;
+    height: auto;
+}
+
+.match:last-child {
+    border-bottom: unset !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.horizontalLine{
+    width: 100%;
+
+    .horizontal-line{
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}

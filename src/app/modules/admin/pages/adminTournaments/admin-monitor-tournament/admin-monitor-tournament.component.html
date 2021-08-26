@@ -14,7 +14,7 @@
 </section>
 
 <section class="monitorTournamentBodyWrapper pll prl">
-    <mat-tab-group [selectedIndex]="2" dynamicHeight>
+    <mat-tab-group  >
         <mat-tab>
             <ng-template mat-tab-label>
                 Information
@@ -44,7 +44,7 @@
                 <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
             </ng-template>
             <ng-template matTabContent>
-                <app-tournament-fixtures></app-tournament-fixtures>
+                <uikit-tournament-fixtures></uikit-tournament-fixtures>
             </ng-template>
         </mat-tab>
 
@@ -56,7 +56,7 @@
                 <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
             </ng-template>
             <ng-template matTabContent>
-                <uikit-create-edit-tournament></uikit-create-edit-tournament>
+                <uikit-score-table></uikit-score-table>
             </ng-template>
         </mat-tab>
 
@@ -68,7 +68,7 @@
                 <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
             </ng-template>
             <ng-template matTabContent>
-                <uikit-create-edit-tournament></uikit-create-edit-tournament>
+                <uikit-final-result></uikit-final-result>
             </ng-template>
         </mat-tab>
 

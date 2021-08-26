@@ -44,12 +44,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TournamentParticipantsComponent } from './components/tournamentMonitor/tournament-participants/tournament-participants.component';
 import { AddNewTeamToTournamentComponent } from './components/tournamentMonitor/tournament-participants/add-new-team-to-tournament/add-new-team-to-tournament.component';
-import { TournamentFixturesComponent } from './components/tournamentMonitor/tournament-fixtures/tournament-fixtures.component';
-import { GenerateNewFixturesComponent } from './components/tournamentMonitor/tournament-fixtures/generate-new-fixtures/generate-new-fixtures.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { FixtureListViewComponent } from './components/tournamentMonitor/tournament-fixtures/fixture-list-view/fixture-list-view.component';
-import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart/tournament-flow-chart.module';
+import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
+import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
+import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 
 @NgModule({
   declarations: [
@@ -73,9 +72,8 @@ import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart
     AdminMonitorTournamentComponent,
     TournamentParticipantsComponent,
     AddNewTeamToTournamentComponent,
-    TournamentFixturesComponent,
-    GenerateNewFixturesComponent,
-    FixtureListViewComponent
+  
+    ANewSurveyComponent
   ],
   imports: [
     CommonModule,
@@ -94,7 +92,8 @@ import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart
     CreateNewPostsModule,
     TagChipsModule,
     CreateEditTournamentModule,
-    TournamentFlowChartModule,
+    CreateNewSurveyModule,
+    TournamentsElevatedModule,
     // mat 
     MatButtonModule,
     MatDialogModule,
@@ -108,6 +107,6 @@ import { TournamentFlowChartModule } from '../uikit/charts/tournament-flow-chart
     MatDatepickerModule,
     MatNativeDateModule
   ],
-  entryComponents: [AddNewTeamToTournamentComponent, GenerateNewFixturesComponent],
+  entryComponents: [AddNewTeamToTournamentComponent],
 })
 export class AdminModule {}
