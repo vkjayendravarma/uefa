@@ -49,6 +49,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
 import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
 import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
+import { AProfileComponent } from './pages/a-profile/a-profile.component';
+import { ProfileModule } from '../uikit/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -72,8 +74,9 @@ import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elev
     AdminMonitorTournamentComponent,
     TournamentParticipantsComponent,
     AddNewTeamToTournamentComponent,
-  
-    ANewSurveyComponent
+
+    ANewSurveyComponent,
+    AProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -94,7 +97,8 @@ import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elev
     CreateEditTournamentModule,
     CreateNewSurveyModule,
     TournamentsElevatedModule,
-    // mat 
+    ProfileModule,
+    // mat
     MatButtonModule,
     MatDialogModule,
     MatTabsModule,
@@ -105,7 +109,7 @@ import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elev
     MatInputModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
   entryComponents: [AddNewTeamToTournamentComponent],
 })

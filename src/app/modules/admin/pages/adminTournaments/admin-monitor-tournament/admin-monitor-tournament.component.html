@@ -14,7 +14,7 @@
 </section>
 
 <section class="monitorTournamentBodyWrapper pll prl">
-    <mat-tab-group  >
+    <mat-tab-group>
         <mat-tab>
             <ng-template mat-tab-label>
                 Information
@@ -27,7 +27,7 @@
 
         <!-- participents  -->
 
-        <mat-tab >
+        <mat-tab>
             <ng-template mat-tab-label>
                 Participants
                 <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
@@ -57,6 +57,18 @@
             </ng-template>
             <ng-template matTabContent>
                 <uikit-score-table></uikit-score-table>
+                <div class="stepper-actions mtr pr bgc(161F26) ">
+                    <div class="container ">
+                        <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" >
+                            Conclude Tournament
+                        </button>
+                        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
+                            >
+                            Cancel
+                        </button>
+                    </div>
+
+                </div>
             </ng-template>
         </mat-tab>
 
