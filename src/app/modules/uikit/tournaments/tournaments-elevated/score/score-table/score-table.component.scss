@@ -18,3 +18,13 @@
 .cursor-pointer{
     cursor: pointer;
 }
+
+.horizontalLine{
+    width: 100%;
+
+    .horizontal-line{
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}
