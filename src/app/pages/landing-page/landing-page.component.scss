@@ -80,30 +80,33 @@
   }
 }
 
-.testimonial {
-  display: flex;
-  flex-direction: column;
-  padding: 3em 6em;
-  align-items: center;
-  .quote {
-    display: flex;
-    width: 75%;
-    border: 1px solid #2d3c48;
-    padding: 3em 6em;
-    text-align: center;
-  }
-  .pic {
+.testimonials {
+  padding-top: 3em;
+  .testimonial {
     display: flex;
     flex-direction: column;
+    padding: 3em 6em;
     align-items: center;
-    margin-top: -2em;
-  }
-
-  @media only screen and (max-width: 768px) {
-    padding: 3em;
     .quote {
+      display: flex;
       width: 100%;
-      padding: 2em;
+      border: 1px solid #2d3c48;
+      padding: 3em 6em;
+      text-align: center;
+    }
+    .pic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -2em;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding: 3em 0em;
+      .quote {
+        width: 90%;
+        padding: 2em;
+      }
     }
   }
 }
@@ -131,4 +134,31 @@ footer {
       margin-bottom: 2em;
     }
   }
+}
+
+.videoHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 6em;
+
+  @media only screen and (max-width: 768px) {
+    padding: 3em;
+  }
+}
+
+// Slick Slider
+
+.slick-slider {
+  width: 85%;
+  margin: auto;
+  background: transparent;
+}
+
+.slick-prev,
+.slick-next {
+  height: 45px;
+  width: 40px;
+  background: white !important;
+  z-index: 100;
 }

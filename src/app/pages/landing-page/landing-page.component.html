@@ -81,29 +81,54 @@
   </section>
 
   <!-- Video  -->
-  <!-- <section class="videoCarousel">
-    <div class="bgc(0F171D) video">videos</div>
-  </section> -->
+  <section class="videoCarousel">
+    <div class="bgc(0F171D) video">
+      <div class="videoHeading">
+        <p class="fs(32) fc(ffffff)">Video Resources</p>
+      </div>
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="videoConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <img src="{{ slide.img }}" alt="" width="90%" class="" />
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
 
   <!-- Testimonials -->
   <section class="testimonials">
-    <div class="bgc(0F171D) testimonial">
-      <div class="quote bdr-rounded">
-        <mat-icon svgIcon="quotes" class="icons"></mat-icon>
-        <p class="fs(16) fc(ffffff) mlr">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate
-        </p>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModal="slick-carousel"
+      [config]="testimonialConfig"
+      (init)="slickInit($event)"
+      (breakpoint)="breakpoint($event)"
+      (afterChange)="afterChange($event)"
+      (beforeChange)="beforeChange($event)"
+    >
+      <div class="slide" ngxSlickItem *ngFor="let item of testimonials">
+        <div class="bgc(0F171D) testimonial">
+          <div class="quote bdr-rounded">
+            <mat-icon svgIcon="quotes" class="icons"></mat-icon>
+            <p class="fs(16) fc(ffffff) mlr">
+              {{ item.quote }}
+            </p>
+          </div>
+          <div class="pic">
+            <img src="{{ item.imgUrl }}" />
+            <p class="fc(ffffff)">{{ item.name }}</p>
+            <p class="fc(9B9B9B) pb-5">{{ item.title }}</p>
+          </div>
+        </div>
       </div>
-      <div class="pic">
-        <img src="../../../assets/images/users/person.png" />
-        <p class="fc(ffffff)">Sairam Koduri</p>
-        <p class="fc(9B9B9B) pb-5">Designation goes here</p>
-      </div>
-    </div>
+    </ngx-slick-carousel>
   </section>
   <!-- Footer  -->
   <footer>
