@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SurveyDetailsComponent } from './components/survey-details/survey-details.component';
-import { SurveyPreviewComponent } from './components/survey-preview/survey-preview.component';
 import { SurveyPublishComponent } from './components/survey-publish/survey-publish.component';
 import { SurveyResponcesComponent } from './components/survey-responces/survey-responces.component';
 import { CreateNewSurveyComponent } from './create-new-survey.component';
@@ -24,8 +22,6 @@ import { FormBuilderModule } from '../../form-builder/form-builder.module';
 
 @NgModule({
   declarations: [
-    SurveyDetailsComponent,
-    SurveyPreviewComponent,
     SurveyPublishComponent,
     SurveyResponcesComponent,
     CreateNewSurveyComponent

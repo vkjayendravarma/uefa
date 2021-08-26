@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {FormBuilderValuesInterface} from 'src/app/prototypes/formBuilderValues.interface';
 @Component({
   selector: 'uikit-form-builder',
@@ -6,6 +6,11 @@ import {FormBuilderValuesInterface} from 'src/app/prototypes/formBuilderValues.i
   styleUrls: ['./form-builder.component.scss']
 })
 export class FormBuilderComponent implements OnInit {
+
+  @Output()
+  formBuildChangeEvent = new EventEmitter();
+
+
   index: number = 0;
   formList: FormBuilderValuesInterface[] = [];
   formListIterator: number[] = [];
@@ -18,6 +23,8 @@ export class FormBuilderComponent implements OnInit {
 
   formListOptionsListChangeEventHandler(index: number, event:any){
     this.formList[index].optionsList = event;
+
+    this.formBuildChangeEvent.emit(this.formList);
   }
 
   addQuestion(){
