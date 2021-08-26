@@ -130,6 +130,12 @@
   }
 }
 
+.formControlTopBorderUnsetArrowTopUnsetLegacy{
+  .mat-select-arrow-wrapper{
+    top: 0px;
+  }
+}
+
 .formControl-chiplist {
   .mat-form-field-infix {
     height        : 50px !important;
@@ -244,4 +250,17 @@
     }
   }
 
+}
+
+// ------------------------------ form builder ------------------------------
+
+.formBuilderElement{
+  .mat-radio-label-content{
+    width: 100%;
+  }
+
+  .mat-form-field-infix {
+    padding-top: 0px !important;
+    border-top: unset !important;
+  }
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: () => import("./modules/auth/login/auth.module").then(module => module.AuthModule)
   },
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
     path: 'event/regester',
     loadChildren: () => import("./modules/uikit/events/event-register/event-register.module").then(module=> module.EventRegisterModule)
   }, { 
-    path: 'signup',
+    path: 'onboard',
     loadChildren: () => import("./modules/auth/signup/signup.module").then(module=> module.SignupModule)
   },{
     path: 'inviteToPlatform',

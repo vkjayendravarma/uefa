@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -38,6 +38,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatRadioModule,
   ],
   exports: [HeaderComponent],
-  entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent, CreateNewSurveyModelComponent]
+  entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent, CreateNewSurveyModelComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class HeaderModule { }

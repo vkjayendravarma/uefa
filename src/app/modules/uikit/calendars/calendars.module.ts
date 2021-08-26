@@ -23,4 +23,4 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   exports: [MonthViewComponent, WeekViewComponent]
 })
-export class CalendarsModule { }
+export class CalendarsModule {}

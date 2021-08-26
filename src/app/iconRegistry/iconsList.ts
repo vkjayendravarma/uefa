@@ -27,4 +27,8 @@ export enum Icons {
   listviewIcon = 'listView',
   chartViewIcon = 'chartView',
   searchIcon = 'Icon',
+  calenderWeek = 'calender-week',
+  taskDone = 'weekcheck',
+  taskNotDone = 'weekcross',
+  rearrangeIcon = 'rearrange',
 }

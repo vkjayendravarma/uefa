@@ -1,0 +1,16 @@
+<div class="uiCompnent answerComponent wdt(100) prl ">
+    <form class="options" *ngFor="let option of optionsIterator; let index = index">
+        <div class="option flex-grow-1 ">
+            <mat-radio-button class="formBuilderElement wdt(100)">
+                <mat-form-field appearance="standard" class=" wdt(100)">
+                    <input matInput type="text" class="ff-r fs(14)" 
+                        [(ngModel)]="optionsList[index]" [name]="'option' + index"   placeholder="Enter your Question" (ngModelChange)="valueChanges()"  />
+                    <button mat-button matSuffix>
+                        <mat-icon (click)="deleteOption(index)" class="fc(ffffff)">close</mat-icon>
+                    </button>
+                </mat-form-field>
+            </mat-radio-button>
+        </div>
+    </form>
+    <button class="addOption" mat-button (click)="addOption()"> + Add Option </button>
+</div>
