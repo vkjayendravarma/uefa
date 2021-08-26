@@ -7,16 +7,16 @@
     <div class="allFixtures mtl">
         <div class="fixturesHeader d-flex ">
             <div class="title fc(EDEEEF) fs(16) align-self-center ">Matches</div>
-            <div class="edit mll fc(77B7FD) fs(14) align-self-center ">Edit Groups</div>
+            <div class="edit mll fc(77B7FD) fs(14) align-self-center " *ngIf="fixturesViewType === 'listView'">Edit Groups</div>
             <div class="viewConfig ml-auto ">
-                <mat-icon svgIcon='listView' class='mrr' ></mat-icon>
-                <mat-icon svgIcon='chartView' ></mat-icon>
+                <mat-icon svgIcon='listView' class='mrr' (click)="fixturesViewType = 'listView'" ></mat-icon>
+                <mat-icon svgIcon='chartView' (click)="fixturesViewType = 'chart'" ></mat-icon>
             </div>
         </div>
 
         <div class="fixturesListView">
-            <app-fixture-list-view></app-fixture-list-view>
-            <app-matches-flow></app-matches-flow>
+            <app-fixture-list-view *ngIf="fixturesViewType === 'listView'" ></app-fixture-list-view>
+            <app-matches-flow *ngIf="fixturesViewType === 'chart'"></app-matches-flow>
         </div>
     </div>
 </div>

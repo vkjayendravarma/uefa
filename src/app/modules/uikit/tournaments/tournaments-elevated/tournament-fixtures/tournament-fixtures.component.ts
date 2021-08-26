@@ -3,11 +3,13 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { GenerateNewFixturesComponent } from './generate-new-fixtures/generate-new-fixtures.component';
 
 @Component({
-  selector: 'app-tournament-fixtures',
+  selector: 'uikit-tournament-fixtures',
   templateUrl: './tournament-fixtures.component.html',
   styleUrls: ['./tournament-fixtures.component.scss']
 })
 export class TournamentFixturesComponent implements OnInit {
+
+  fixturesViewType: string = 'listView';
 
   constructor(private dialog: MatDialog,) { }
 
