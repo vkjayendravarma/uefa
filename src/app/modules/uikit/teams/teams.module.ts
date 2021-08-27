@@ -4,6 +4,7 @@ import { TeamsGalaryViewComponent } from './teams-galary-view/teams-galary-view.
 import { TeamsElementComponent } from './teams-element/teams-element.component';
 import { MatIconModule } from '@angular/material/icon';
 import { TeamsSingleViewComponent } from './teams-single-view/teams-single-view.component';
+import { TeamAttendanceComponent } from './team-attendance/team-attendance.component';
 
 
 
@@ -11,12 +12,13 @@ import { TeamsSingleViewComponent } from './teams-single-view/teams-single-view.
   declarations: [
     TeamsGalaryViewComponent,
     TeamsElementComponent,
-    TeamsSingleViewComponent
+    TeamsSingleViewComponent,
+    TeamAttendanceComponent
   ],
   imports: [
     CommonModule,
     MatIconModule
   ],
-  exports: [TeamsGalaryViewComponent]
+  exports: [TeamsGalaryViewComponent, TeamAttendanceComponent]
 })
 export class TeamsModule { }
