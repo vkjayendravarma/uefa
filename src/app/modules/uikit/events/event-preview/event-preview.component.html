@@ -1,299 +1,117 @@
-<section class="eventPreviewWrapper">
-  <div class="createSurvey darkStepperContainer mtl">
-    <mat-stepper #stepper color="accent">
-      <!-- Survey Details  -->
-
-      <mat-step label="Survey Details">
-        <form class="surveyDetails mtl formControlTopBorderUnset">
-          <div class="inputGroup mtr">
-            <div class="row">
-              <div class="col-12">
-                <div class="formControl wdt(100)">
-                  <label class="display-block fc(EDEEEF)">Title</label>
-                  <mat-form-field appearance="outline" class="wdt(100)">
-                    <input
-                      matInput
-                      type="text"
-                      class="ff-r fs(14)"
-                      placeholder="Enter Here"
-                    />
-                  </mat-form-field>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Questions for survey  -->
-
-          <div class="inputGroup mtr">
-            <div class="row">
-              <div class="col-12">
-                <div class="formControl wdt(100) bgc(161F26) bdr-rounded pl">
-                  <div class="mbl">
-                    <h1 class="formTitle ff-sb fc(ffffff) fs(24)">
-                      Question 1
-                    </h1>
-                  </div>
-                  <div class="">
-                    <mat-form-field appearance="outline" class="wdt(100)">
-                      <input
-                        matInput
-                        type="text"
-                        class="ff-r fs(14)"
-                        placeholder="Enter your Question"
-                      />
-                    </mat-form-field>
-                  </div>
-                  <div class="mbl mlr">
-                    <div class="formControl wdt(100)">
-                      <mat-radio-group
-                        aria-label="Select an option"
-                        class="fc(EDEEEF) fs(16) d-flex flex-column"
-                      >
-                        <mat-radio-button value="1" class=""
-                          >Option 1</mat-radio-button
-                        >
-                        <mat-radio-button value="2" class=""
-                          >Option 2</mat-radio-button
-                        >
-                        <mat-radio-button value="3">Option 3</mat-radio-button>
-                      </mat-radio-group>
-                    </div>
-                  </div>
-                  <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">
-                    + Add Option
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add a new question  -->
-          <div class="row">
-            <div class="col-12">
-              <div
-                class="formControl wdt(100) bgc(161F26) bdr-rounded pr mbl mtl"
-              >
-                <p class="fc(77B7FD) fs(16) text-center">+ Add Question</p>
-              </div>
-            </div>
-          </div>
-        </form>
-        <div class="stepper-controller mtr pl bgc(161F26) btnsDiv">
+<section class="createNewEventWrapper">
+  <div class="container-fluid">
+    <div class="ptl plr pbl prr">
+      <div class="eventHeading bdrb pbr">
+        <h2 class="eventRegion text-upper fc(C3C5C7) ff-sb fs(16)">
+          National Region
+        </h2>
+        <h1 class="eventName fc(ffffff) ff-sb fs(24) m-unset">
+          National Association Training: Women
+        </h1>
+      </div>
+      <div class="eventDescriptionWrapper mtl">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="eventName fc(ffffff) ff-sb fs(24) m-unset">
+            Event Description
+          </h1>
           <button
-            class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
-            mat-raised-button
+            class="btn-dialog-action ff-sb"
             color="accent"
-            matStepperNext
-          >
-            Next
-          </button>
-          <button
-            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-            mat-button
-            matStepperPrevious
-          >
-            Back
-          </button>
-        </div>
-      </mat-step>
-      <!-- Preview  -->
-      <mat-step label="Preview">
-        <form class="PreviewDetails mtl formControlTopBorderUnset">
-          <div class="row">
-            <div class="col-12">
-              <h1 class="formTitle ff-sb fc(ffffff) fs(20)">Publish Options</h1>
-            </div>
-            <div class="col-12">
-              <div class="formControl wdt(100)">
-                <label class="display-block fc(EDEEEF)">Survey Link</label>
-                <mat-form-field
-                  appearance="outline"
-                  color="primary"
-                  class="wdt(100)"
-                >
-                  <input matInput type="text" value="www.uefa/newtournament" />
-                  <button matSuffix mat-icon-button>
-                    <mat-icon svgIcon="copy"></mat-icon>
-                  </button>
-                </mat-form-field>
-              </div>
-            </div>
-            <!-- Multi select  -->
-            <div class="col-6">
-              <div class="formControl wdt(100)">
-                <label class="display-block fc(EDEEEF)"
-                  >Survey Published To</label
-                >
-                <mat-form-field
-                  appearance="outline"
-                  color="primary"
-                  class="wdt(100)"
-                >
-                  <mat-select panelClass="matSelectCustomFocus" multiple>
-                    <mat-option>None</mat-option>
-                    <mat-option value="option1">Option 1</mat-option>
-                    <mat-option value="option2">Option 2</mat-option>
-                    <mat-option value="option3">Option 3</mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="formControl wdt(100)">
-                <label class="display-block fc(EDEEEF)">Institution</label>
-                <mat-form-field
-                  appearance="outline"
-                  color="primary"
-                  class="wdt(100)"
-                >
-                  <mat-select panelClass="matSelectCustomFocus">
-                    <mat-option>None</mat-option>
-                    <mat-option value="option1">Option 1</mat-option>
-                    <mat-option value="option2">Option 2</mat-option>
-                    <mat-option value="option3">Option 3</mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <h1 class="formTitle ff-sb fc(ffffff) fs(20)">Regions</h1>
-            </div>
-
-            <div class="col-12">
-              <div class="formControl wdt(50)">
-                <label class="display-block fc(EDEEEF)">Select Regions</label>
-                <mat-form-field
-                  appearance="outline"
-                  color="primary"
-                  class="wdt(100)"
-                >
-                  <mat-select panelClass="matSelectCustomFocus">
-                    <mat-option>None</mat-option>
-                    <mat-option value="option1">Option 1</mat-option>
-                    <mat-option value="option2">Option 2</mat-option>
-                    <mat-option value="option3">Option 3</mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div class="formControl wdt(100)">
-                <label class="display-block fc(EDEEEF)"
-                  >All Regions Selected</label
-                >
-                <mat-form-field appearance="outline" class="wdt(100)">
-                  <textarea matInput rows="10"></textarea>
-                </mat-form-field>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="formControl wdt(100)">
-                <label class="display-block fc(EDEEEF)"
-                  >Survey Close Date</label
-                >
-                <mat-form-field
-                  appearance="outline"
-                  color="primary"
-                  class="wdt(100)"
-                >
-                  <input matInput [matDatepicker]="startDatePicker" />
-                  <mat-datepicker-toggle matSuffix [for]="startDatePicker">
-                  </mat-datepicker-toggle>
-                  <mat-datepicker #startDatePicker></mat-datepicker>
-                </mat-form-field>
-              </div>
-            </div>
-          </div>
-        </form>
-        <div class="stepper-controller mtr pl bgc(161F26) btnsDiv">
-          <button
-            class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
             mat-raised-button
-            color="accent"
-            matStepperNext
           >
-            Publish
-          </button>
-          <button
-            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-            mat-button
-            matStepperPrevious
-          >
-            Back
+            Register
           </button>
         </div>
-      </mat-step>
-
-      <!-- Publish  -->
-      <mat-step label="Publish">
-        <div class="publishingList">
-          <div class="uiComponent surveyResponces mtl">
-            <h2 class="title fs(20) ff-sb fc(ffffff)">
-              Survey is Open
-              <span class="fc(9B9B9B)"
-                >(till 21 Jun’21 <span class="fc(77B7FD)">Change</span> )</span
-              >
-            </h2>
-
-            <div class="responces bgc(161F26) bgshadow1 bdr-rounded mtl">
-              <div class="sectionHeader pr">
-                <p class="sectionTitle display-inline">Responses (73)</p>
-                <button
-                  mat-button
-                  class="download float-right fc(77B7FD)"
-                  type="button"
-                >
-                  Download All
-                </button>
-              </div>
-
-              <div class="table-responsive">
-                <table class="scoresTable table table-hover table-dark bdrb">
-                  <thead class="thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r">
-                    <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Email</th>
-                      <th scope="col"></th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
-                    <tr *ngFor="let res of responses">
-                      <td class="fc(EDEEEF) ff-r fs(14)">Romelu Lukaku</td>
-                      <td class="fc(EDEEEF) ff-r fs(14)">abc@gmail.com</td>
-                      <td class="fc(77B7FD) ff-r fs(14)">Download</td>
-                      <td class="fc(77B7FD) ff-r fs(14)">View Responses</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="eventDetailsWrapper mtl">
+        <div class="d-flex justify-content-start align-items-center">
+          <p class="eventDate fs(16) fc(EDEEEF) mrl">
+            <mat-icon
+              svgIcon="calendar"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
+            14 March 2021
+          </p>
+          <p class="eventTime fs(16) fc(EDEEEF) mrl">
+            <mat-icon
+              svgIcon="time"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
+            8:30 Am - 10:30 AM
+          </p>
+          <p class="eventTime fs(16) fc(EDEEEF) mrl">
+            <mat-icon
+              svgIcon="location"
+              class="uiComponent-small-icon"
+            ></mat-icon>
+            #2492 Anfield Stadium, Liverpool
+            <a href="" class="fc(77B7FD) mlxs">Google Maps</a>
+          </p>
         </div>
-
-        <div class="stepper-controller mtr pl bgc(161F26) btnsDiv">
-          <button
-            class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
-            mat-raised-button
-            color="accent"
-            matStepperNext
-          >
-            Publish
+      </div>
+      <div class="eventInfoWrapper mtl">
+        <p class="fs(16) fc(EDEEEF)">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+        </p>
+        <img
+          src="../../../../../assets/images/others/eventpreview.png"
+          class="wdt(100) mtr mbr"
+        />
+        <p class="fs(16) fc(EDEEEF)">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+        </p>
+      </div>
+      <h1 class="registration fc(ffffff) ff-sb fs(20) mtl">Registration End</h1>
+      <div class="registrationEndDetails mtr">
+        <div class="d-flex justify-content-start align-items-center">
+          <p class="endDate fs(16) fc(EDEEEF) mrl">
+            <mat-icon
+              svgIcon="calendar"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
+            14 March 2021
+          </p>
+          <p class="endTime fs(16) fc(EDEEEF) mrl">
+            <mat-icon
+              svgIcon="time"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
+            8:30 Am - 10:30 AM
+          </p>
+        </div>
+      </div>
+      <div class="invitees mtl">
+        <h1 class="title fc(ffffff) ff-sb fs(20)">Invitees</h1>
+        <p class="fs(16) fc(EDEEEF) mrl">Facilitators, Players</p>
+      </div>
+      <div class="divisions mtl">
+        <h1 class="title fc(ffffff) ff-sb fs(20) mbr">Divisions</h1>
+        <div
+          class="divisionsGroup d-flex justify-content-start align-items-center"
+        >
+          <button class="btn-dialog-action ff-sb" mat-raised-button>
+            Women U15
           </button>
-          <button
-            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-            mat-button
-            matStepperPrevious
-          >
-            Back
+          <button class="btn-dialog-action ff-sb mll" mat-raised-button>
+            Women U17
+          </button>
+          <button class="btn-dialog-action ff-sb mll" mat-raised-button>
+            Women U21
           </button>
         </div>
-      </mat-step>
-    </mat-stepper>
+      </div>
+    </div>
   </div>
 </section>
