@@ -1,9 +1,299 @@
-<section class="createNewEventWrapper ">
-    <div class="container-fluid ">
-        <div class=" ptl plr pbl ">
-            <!-- code here  -->
+<section class="eventPreviewWrapper">
+  <div class="createSurvey darkStepperContainer mtl">
+    <mat-stepper #stepper color="accent">
+      <!-- Survey Details  -->
+
+      <mat-step label="Survey Details">
+        <form class="surveyDetails mtl formControlTopBorderUnset">
+          <div class="inputGroup mtr">
+            <div class="row">
+              <div class="col-12">
+                <div class="formControl wdt(100)">
+                  <label class="display-block fc(EDEEEF)">Title</label>
+                  <mat-form-field appearance="outline" class="wdt(100)">
+                    <input
+                      matInput
+                      type="text"
+                      class="ff-r fs(14)"
+                      placeholder="Enter Here"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Questions for survey  -->
+
+          <div class="inputGroup mtr">
+            <div class="row">
+              <div class="col-12">
+                <div class="formControl wdt(100) bgc(161F26) bdr-rounded pl">
+                  <div class="mbl">
+                    <h1 class="formTitle ff-sb fc(ffffff) fs(24)">
+                      Question 1
+                    </h1>
+                  </div>
+                  <div class="">
+                    <mat-form-field appearance="outline" class="wdt(100)">
+                      <input
+                        matInput
+                        type="text"
+                        class="ff-r fs(14)"
+                        placeholder="Enter your Question"
+                      />
+                    </mat-form-field>
+                  </div>
+                  <div class="mbl mlr">
+                    <div class="formControl wdt(100)">
+                      <mat-radio-group
+                        aria-label="Select an option"
+                        class="fc(EDEEEF) fs(16) d-flex flex-column"
+                      >
+                        <mat-radio-button value="1" class=""
+                          >Option 1</mat-radio-button
+                        >
+                        <mat-radio-button value="2" class=""
+                          >Option 2</mat-radio-button
+                        >
+                        <mat-radio-button value="3">Option 3</mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                  <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">
+                    + Add Option
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add a new question  -->
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="formControl wdt(100) bgc(161F26) bdr-rounded pr mbl mtl"
+              >
+                <p class="fc(77B7FD) fs(16) text-center">+ Add Question</p>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="stepper-controller mtr pl bgc(161F26) btnsDiv">
+          <button
+            class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+            mat-raised-button
+            color="accent"
+            matStepperNext
+          >
+            Next
+          </button>
+          <button
+            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+            mat-button
+            matStepperPrevious
+          >
+            Back
+          </button>
+        </div>
+      </mat-step>
+      <!-- Preview  -->
+      <mat-step label="Preview">
+        <form class="PreviewDetails mtl formControlTopBorderUnset">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="formTitle ff-sb fc(ffffff) fs(20)">Publish Options</h1>
+            </div>
+            <div class="col-12">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)">Survey Link</label>
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <input matInput type="text" value="www.uefa/newtournament" />
+                  <button matSuffix mat-icon-button>
+                    <mat-icon svgIcon="copy"></mat-icon>
+                  </button>
+                </mat-form-field>
+              </div>
+            </div>
+            <!-- Multi select  -->
+            <div class="col-6">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)"
+                  >Survey Published To</label
+                >
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <mat-select panelClass="matSelectCustomFocus" multiple>
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)">Institution</label>
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <mat-select panelClass="matSelectCustomFocus">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <h1 class="formTitle ff-sb fc(ffffff) fs(20)">Regions</h1>
+            </div>
+
+            <div class="col-12">
+              <div class="formControl wdt(50)">
+                <label class="display-block fc(EDEEEF)">Select Regions</label>
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <mat-select panelClass="matSelectCustomFocus">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)"
+                  >All Regions Selected</label
+                >
+                <mat-form-field appearance="outline" class="wdt(100)">
+                  <textarea matInput rows="10"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)"
+                  >Survey Close Date</label
+                >
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <input matInput [matDatepicker]="startDatePicker" />
+                  <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                  </mat-datepicker-toggle>
+                  <mat-datepicker #startDatePicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="stepper-controller mtr pl bgc(161F26) btnsDiv">
+          <button
+            class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+            mat-raised-button
+            color="accent"
+            matStepperNext
+          >
+            Publish
+          </button>
+          <button
+            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+            mat-button
+            matStepperPrevious
+          >
+            Back
+          </button>
+        </div>
+      </mat-step>
+
+      <!-- Publish  -->
+      <mat-step label="Publish">
+        <div class="publishingList">
+          <div class="uiComponent surveyResponces mtl">
+            <h2 class="title fs(20) ff-sb fc(ffffff)">
+              Survey is Open
+              <span class="fc(9B9B9B)"
+                >(till 21 Jun’21 <span class="fc(77B7FD)">Change</span> )</span
+              >
+            </h2>
+
+            <div class="responces bgc(161F26) bgshadow1 bdr-rounded mtl">
+              <div class="sectionHeader pr">
+                <p class="sectionTitle display-inline">Responses (73)</p>
+                <button
+                  mat-button
+                  class="download float-right fc(77B7FD)"
+                  type="button"
+                >
+                  Download All
+                </button>
+              </div>
+
+              <div class="table-responsive">
+                <table class="scoresTable table table-hover table-dark bdrb">
+                  <thead class="thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r">
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
+                    <tr *ngFor="let res of responses">
+                      <td class="fc(EDEEEF) ff-r fs(14)">Romelu Lukaku</td>
+                      <td class="fc(EDEEEF) ff-r fs(14)">abc@gmail.com</td>
+                      <td class="fc(77B7FD) ff-r fs(14)">Download</td>
+                      <td class="fc(77B7FD) ff-r fs(14)">View Responses</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
 
-    </div>
-
+        <div class="stepper-controller mtr pl bgc(161F26) btnsDiv">
+          <button
+            class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+            mat-raised-button
+            color="accent"
+            matStepperNext
+          >
+            Publish
+          </button>
+          <button
+            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+            mat-button
+            matStepperPrevious
+          >
+            Back
+          </button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
 </section>
