@@ -27,6 +27,7 @@ import { FTeamsComponent } from './pages/f-teams/f-teams.component';
 import { FTeamsDashboardComponent } from './pages/f-teams/f-teams-dashboard/f-teams-dashboard.component';
 import { FTeamViewComponent } from './pages/f-teams/f-team-view/f-team-view.component';
 import { TeamsModule } from '../uikit/teams/teams.module';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -66,6 +67,7 @@ import { TeamsModule } from '../uikit/teams/teams.module';
 
     // mat
     MatIconModule,
+    MatTabsModule
   ]
 })
 export class FacilitatorsModule { }
