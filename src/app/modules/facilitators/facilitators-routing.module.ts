@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TeamMemberDetailsEditComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
+import { TeamMemberDetailsComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details/team-member-details.component';
+import { FTeamManagementHomeComponent } from './components/team-management/f-team-management-home/f-team-management-home.component';
+import { FTeamManagementMembersComponent } from './components/team-management/f-team-management-members/f-team-management-members.component';
 import { FEventsDashboardComponent } from './pages/f-events/f-events-dashboard/f-events-dashboard.component';
 import { FEventsIndividualComponent } from './pages/f-events/f-events-individual/f-events-individual.component';
 import { FEventsPreviewComponent } from './pages/f-events/f-events-preview/f-events-preview.component';
@@ -103,6 +107,29 @@ const routes: Routes = [
       {
         path: 'team',
         component: FTeamViewComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'home'
+          },
+          {
+            path: 'home',
+            component: FTeamManagementHomeComponent,
+          },{
+            path: 'members',
+            component: FTeamManagementMembersComponent, 
+            children: [
+              {
+                path: 'details/:id',
+                component: TeamMemberDetailsComponent,              
+              },
+              {
+                path: 'details/:id/edit',
+                component: TeamMemberDetailsEditComponent,              
+              }
+            ]
+          }
+        ]
       }
      
     ],

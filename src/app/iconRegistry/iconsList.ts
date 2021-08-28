@@ -35,4 +35,5 @@ export enum Icons {
   pic = 'Headshot',
   quote = 'quotes',
   rearrangeIcon = 'rearrange',
+  pencilIcon = 'pencil',
 }
