@@ -130,8 +130,8 @@
   }
 }
 
-.formControlTopBorderUnsetArrowTopUnsetLegacy{
-  .mat-select-arrow-wrapper{
+.formControlTopBorderUnsetArrowTopUnsetLegacy {
+  .mat-select-arrow-wrapper {
     top: 0px;
   }
 }
@@ -219,18 +219,14 @@
 }
 
 .navLinkInActive {
+ 
   .icon {
     svg {
       path {
         fill: #82898E !important;
       }
     }
-
-    position: relative;
-    top     : -6px;
   }
-
-
 }
 
 .navLinkActive {
@@ -250,17 +246,29 @@
     }
   }
 
+
+
 }
+
+.iconLinkInactive {
+  svg {
+    path {
+      fill: #82898E !important;
+    }
+  }
+}
+
+
 
 // ------------------------------ form builder ------------------------------
 
-.formBuilderElement{
-  .mat-radio-label-content{
+.formBuilderElement {
+  .mat-radio-label-content {
     width: 100%;
   }
 
   .mat-form-field-infix {
     padding-top: 0px !important;
-    border-top: unset !important;
+    border-top : unset !important;
   }
 }

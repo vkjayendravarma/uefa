@@ -1,1 +1,188 @@
-<p>institute-profile works!</p>
+<div class="signupComponent bgc(0F171D) wdt(100)">
+  <div class="componentHeader bdrb">
+    <div class="container">
+      <div class="header ptr pbs">
+        <div class="branding">
+          <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="componentBody">
+    <div class="registrationFormWrapper container">
+      <form
+        action=""
+        class="registrationForm mtxl formControlTopBorderUnset wdt(50)"
+      >
+        <h1 class="formTitle ff-sb fc(ffffff) fs(32)">Institute Details</h1>
+        <h1 class="formTitle ff-sb fc(9B9B9B) fs(16)">
+          Search and join an Institute or create a new if you haven't registered
+          it yet
+        </h1>
+        <div class="row mtl">
+          <div class="col-12">
+            <div class="formControl wdt(100) mbr">
+              <label class="display-block fc(EDEEEF) fs(14) mbl"
+                >Profile Picture</label
+              >
+              <app-file-uploader></app-file-uploader>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Institute Name</label
+              >
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input
+                  matInput
+                  type="text"
+                  class="ff-r fs(14)"
+                  placeholder="Enter Name"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Institute Type</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <mat-select panelClass="matSelectCustomFocus">
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Region</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <mat-select panelClass="matSelectCustomFocus">
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)">Location</label>
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input matInput type="text" class="ff-r fs(14)" />
+                <mat-icon
+                  matSuffix
+                  svgIcon="location"
+                  class="location"
+                ></mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Date of Establishment
+              </label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <input
+                  matInput
+                  [matDatepicker]="startDatePicker"
+                  class="ff-r fs(14)"
+                />
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="formControl wdt(100) mbr">
+              <label class="display-block fc(EDEEEF) fs(14) mbl"
+                >Registration Documentation
+                <small class="formTitle ff-sb fc(9B9B9B) fs(16)">
+                  (Suggested formats pdfs,txt)
+                </small></label
+              >
+              <app-file-uploader></app-file-uploader>
+            </div>
+          </div>
+
+          <h1 class="formTitle ff-sb fc(ffffff) fs(24)">Coaches</h1>
+          <div
+            class="coaches wdt(100) d-flex justify-content-between"
+            *ngFor="let coach of coaches"
+          >
+            <div class="wdt(50) mrr">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF) fs(14)">Full Name</label>
+                <mat-form-field appearance="outline" class="wdt(100)">
+                  <input
+                    matInput
+                    type="text"
+                    class="ff-r fs(14)"
+                    placeholder="Enter Name"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="wdt(50) mlr">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF) fs(14)"
+                  >Certification</label
+                >
+                <mat-form-field appearance="outline" class="wdt(100)">
+                  <input
+                    matInput
+                    type="text"
+                    class="ff-r fs(14)"
+                    placeholder="Enter"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add More</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="componentActions bgc(161F26) mb-auto wdt(100)">
+    <div class="actionsWrapper container ptr pbr">
+      <button
+        class="btn-dialog-action ff-sb fs(16)"
+        color="accent"
+        type="submit"
+        mat-raised-button
+      >
+        Next
+      </button>
+      <button
+        class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+        mat-button
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

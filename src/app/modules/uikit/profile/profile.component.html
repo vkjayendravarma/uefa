@@ -1,0 +1,100 @@
+<div class="profileUpdate bgc(0F171D) wdt(100)">
+  <div class="componentBody">
+    <div class="profileUpdateWrapper container mlxl">
+      <form action="" class="wdt(50)">
+        <div class="row mtl">
+          <div class="col-12">
+            <div class="formControl wdt(100) mbr">
+              <label class="display-block fc(EDEEEF) fs(14) mbl"
+                >Profile Picture</label
+              >
+              <app-file-uploader></app-file-uploader>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)">Full Name</label>
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input matInput type="text" class="ff-r fs(14)" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Work Email Address</label
+              >
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input matInput type="email" class="ff-r fs(14)" />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="formControl wdt(100) mbr">
+              <label class="display-block fc(EDEEEF) fs(14) mbr">Gender</label>
+              <mat-radio-group
+                aria-label="Select an option"
+                class="fc(EDEEEF) fs(14)"
+              >
+                <mat-radio-button value="1" class="mrxxl"
+                  >Male</mat-radio-button
+                >
+                <mat-radio-button value="2" class="mrxxl"
+                  >Female</mat-radio-button
+                >
+                <mat-radio-button value="3">Prefer not to say</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)">Post Code</label>
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input matInput type="text" class="ff-r fs(14)" />
+                <mat-icon
+                  matSuffix
+                  svgIcon="location"
+                  class="location"
+                ></mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Date of Birth
+              </label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <input
+                  matInput
+                  [matDatepicker]="startDatePicker"
+                  class="ff-r fs(14)"
+                />
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="componentActions mb-auto wdt(100)">
+        <button
+          class="btn-dialog-action ff-sb fs(16)"
+          color="accent"
+          type="submit"
+          mat-raised-button
+        >
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

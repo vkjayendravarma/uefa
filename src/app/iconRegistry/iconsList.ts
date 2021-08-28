@@ -30,5 +30,10 @@ export enum Icons {
   calenderWeek = 'calender-week',
   taskDone = 'weekcheck',
   taskNotDone = 'weekcross',
+  flag = 'landingFlag',
+  events = 'landingEvents',
+  trophy = 'trophy',
+  pic = 'Headshot',
+  quote = 'quotes',
   rearrangeIcon = 'rearrange',
 }

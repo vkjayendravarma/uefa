@@ -1,10 +1,5 @@
 <div class="uiComponent formBuilderComponent">
-    <div class="formControl wdt(100)">
-        <label class="display-block fc(EDEEEF)   ">Title</label>
-        <mat-form-field appearance="outline" class=" wdt(100)">
-            <input matInput type="text" class="ff-r fs(14)" placeholder="Enter here" />
-        </mat-form-field>
-    </div>
+ 
 
     <div class="formBuilder">
 
@@ -12,7 +7,7 @@
             <div class="questionList mtl pl wdt(100) bgshadow1 bdr-rounded bgc(161F26)" *ngFor="let item of formListIterator, let index = index">
                 <div class="questionWrapper">
                     <div class="questionHeader ">
-                        <div class="sno display-inline">Question 1</div>
+                        <div class="sno display-inline">Question {{index + 1}}</div>
                         <div
                             class="questionType  display-inline float-right language-control formControlTopBorderUnset formControlTopBorderUnsetArrowTopUnsetLegacy">
                             <div class="formControl ">

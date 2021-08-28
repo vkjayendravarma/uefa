@@ -1,6 +1,6 @@
 import { EventEmitter, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'uikit-form-radio-single-answer',
@@ -38,7 +38,10 @@ export class FormRadioSingleAnswerComponent implements OnInit {
   }
 
   valueChanges(): void {
-    this.radioOptionsChangeEvent.emit(this.optionsList)
-   
+    this.radioOptionsChangeEvent.emit(this.optionsList)   
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.optionsList, event.previousIndex, event.currentIndex);
   }
 }
