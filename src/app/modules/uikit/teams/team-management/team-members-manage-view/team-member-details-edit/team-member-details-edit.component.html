@@ -1,0 +1,95 @@
+<div class="uiComponent teamMemberDetailsView mtl mlr pbl">
+    <div class="details d-flex">
+        <div class="profilePicWrapper">
+            <img src="../../../../../../../assets/images/users/userimg1.jpg" alt="" class="profilePic">
+        </div>
+        <form class="editPlayerDetails">
+            <div class="profileDetails mlr mrl">
+                <div class="profileDetailsCategory  mts">
+                    <h3 class="playerName fs(20) ff-sb fc(EDEEEF) display-inline ">Colt McCoy </h3>
+                </div>
+                <div class="profileDetailsCategory mtr">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Email Address</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput type="text" class="ff-r fs(14)" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Phone Number</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput type="tel" class="ff-r fs(14)" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Date of Birth</label>
+                                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                                    <input matInput [matDatepicker]="startDatePicker">
+                                    <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #startDatePicker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="profileDetailsCategory mtl">
+                    <h3 class="profileDetailsCategoryLabel fs(16) ff-sb  fc(9B9B9B) mbl ">Contact Details</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Parent Name</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput type="text" class="ff-r fs(14)" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Phone Number</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <input matInput type="text" class="ff-r fs(14)" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Venue Address</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <textarea matInput type="text" class="ff-r fs(14)"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="formControl wdt(100)">
+                                <label class="display-block fc(EDEEEF)   ">Notes</label>
+                                <mat-form-field appearance="outline" class=" wdt(100)">
+                                    <textarea matInput type="text" class="ff-r fs(14)"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actionsWrapper ">
+                    <button class="btn-dialog-action ff-sb fs(16)" type="submit" color="accent" mat-raised-button>
+                        Save
+                    </button>
+                    <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+
+        </form>
+
+
+    </div>
+</div>

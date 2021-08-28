@@ -30,4 +30,5 @@ export enum Icons {
   taskDone = 'weekcheck',
   taskNotDone = 'weekcross',
   rearrangeIcon = 'rearrange',
+  pencilIcon = 'pencil',
 }

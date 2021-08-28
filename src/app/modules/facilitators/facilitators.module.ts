@@ -28,6 +28,9 @@ import { FTeamsDashboardComponent } from './pages/f-teams/f-teams-dashboard/f-te
 import { FTeamViewComponent } from './pages/f-teams/f-team-view/f-team-view.component';
 import { TeamsModule } from '../uikit/teams/teams.module';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FTeamManagementHomeComponent } from './components/team-management/f-team-management-home/f-team-management-home.component';
+import { FTeamManagementMembersComponent } from './components/team-management/f-team-management-members/f-team-management-members.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -48,6 +51,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     FTeamsComponent,
     FTeamsDashboardComponent,
     FTeamViewComponent,
+    FTeamManagementHomeComponent,
+    FTeamManagementMembersComponent,
   ],
   imports: [
     CommonModule,
@@ -67,7 +72,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 
     // mat
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule,
   ]
 })
 export class FacilitatorsModule { }

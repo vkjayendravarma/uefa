@@ -11,6 +11,11 @@
   src: url("../../assets/fonts/NunitoSans-SemiBold.ttf");
 }
 
+@font-face {
+  font-family: "Nunito-bold";
+  src: url("../../assets/fonts/NunitoSans-Bold.ttf");
+}
+
 //------------------------------
 // font family
 
@@ -20,6 +25,10 @@
 
 .ff-sb {
   font-family: "Nunito-semibold";
+}
+
+.ff-b {
+  font-family: "Nunito-bold";
 }
 
 input {
@@ -106,6 +115,11 @@ input {
 .fc\(FFC107\){
   color: #FFC107;
 }
+
+.fc\(000000\){
+  color: #000000;
+}
+
 // ------------------------------
 // text align
 
@@ -115,6 +129,10 @@ input {
 
 .talign-right{
   text-align: right;
+}
+
+.talign-center{
+  text-align: center;
 }
 // ------------------------------
 

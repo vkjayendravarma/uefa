@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-team-sessions',
+  selector: 'uikit-team-sessions',
   templateUrl: './team-sessions.component.html',
   styleUrls: ['./team-sessions.component.scss']
 })

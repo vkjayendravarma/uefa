@@ -1,29 +1,11 @@
 <app-header backgroundImage='1_football' headerTitle='U 13 Boys Team'></app-header>
 
-<div class="teamManagerSection mr">
-    <mat-tab-group>
-        <mat-tab label="Home">
-            <div class="teamDashboard mtl mlr mrr mbl">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="teamInfo">
-                            <uikit-teams-single-view></uikit-teams-single-view>
-
-                        </div>
-                        <div class="teamMembers mtl">
-                            <uikit-team-members ></uikit-team-members>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </mat-tab>
-        <mat-tab label="Members"> Content 2 </mat-tab>
-        <mat-tab label="Sessions"> Content 3 </mat-tab>
-        <mat-tab label="Documents"> Content 3 </mat-tab>
-        <mat-tab label="Squads"> Content 3 </mat-tab>
-        <mat-tab label="Attendance"> <uikit-team-attendance></uikit-team-attendance> </mat-tab>
-        <mat-tab label="Announcements"> Content 3 </mat-tab>
-
-    </mat-tab-group>
+<div class="teamManagerSection ">
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link  *ngFor="let link of matTabLinks" [routerLink]="link.path" routerLinkActive
+            #rla="routerLinkActive" [active]="rla.isActive" class="mat-router-tab-link" > 
+            {{link.label}}
+        </a>
+    </nav>
+    <router-outlet></router-outlet>
 </div>
-

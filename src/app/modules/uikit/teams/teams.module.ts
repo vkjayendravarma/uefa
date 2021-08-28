@@ -8,7 +8,6 @@ import { TeamAttendanceComponent } from './team-attendance/team-attendance.compo
 import { TeamMembersComponent } from './team-management/team-members/team-members.component';
 import { TeamSessionsComponent } from './team-management/team-sessions/team-sessions.component';
 import { AddTeamMemberModelComponent } from './team-management/models/add-team-member-model/add-team-member-model.component';
-import { TeamMembersManageViewComponent } from './team-management/team-members-manage-view/team-members-manage-view.component';
 import { TeamSessionManageMembersComponent } from './team-management/team-sessions/team-session-manage-members/team-session-manage-members.component';
 import { CreateTeamSessionComponent } from './team-management/models/create-team-session/create-team-session.component';
 import { TeamDocumentsComponent } from './team-management/team-documents/team-documents.component';
@@ -16,6 +15,15 @@ import { TeamSquadComponent } from './team-management/team-squad/team-squad.comp
 import { TeamAnnouncementsComponent } from './team-management/team-announcements/team-announcements.component';
 import { CreateSquadModelComponent } from './team-management/models/create-squad-model/create-squad-model.component';
 import { TeamMembersElementComponent } from './team-management/team-members-element/team-members-element.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { TeamMemberDetailsComponent } from './team-management/team-members-manage-view/team-member-details/team-member-details.component';
+import { TeamMemberDetailsEditComponent } from './team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,7 +34,6 @@ import { TeamMembersElementComponent } from './team-management/team-members-elem
     TeamMembersComponent,
     TeamSessionsComponent,
     AddTeamMemberModelComponent,
-    TeamMembersManageViewComponent,
     TeamSessionManageMembersComponent,
     CreateTeamSessionComponent,
     TeamDocumentsComponent,
@@ -34,19 +41,39 @@ import { TeamMembersElementComponent } from './team-management/team-members-elem
     TeamAnnouncementsComponent,
     CreateSquadModelComponent,
     TeamMembersElementComponent,
+    TeamMemberDetailsComponent,
+    TeamMemberDetailsEditComponent
   ],
-  imports: [CommonModule, MatIconModule],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatSelectModule,
+    RouterModule
+  ],
   exports: [
     TeamsGalaryViewComponent,
     TeamAttendanceComponent,
     TeamsSingleViewComponent,
     TeamMembersComponent,
     TeamSessionsComponent,
-    TeamMembersManageViewComponent,
     TeamSessionManageMembersComponent,
     TeamDocumentsComponent,
     TeamSquadComponent,
     TeamAnnouncementsComponent,
+    TeamMemberDetailsComponent,
+    TeamMembersElementComponent,
+    TeamMemberDetailsEditComponent
+  ],
+
+  entryComponents: [
+    AddTeamMemberModelComponent,
+    CreateTeamSessionComponent,
+    CreateSquadModelComponent,
   ],
 })
 export class TeamsModule {}
