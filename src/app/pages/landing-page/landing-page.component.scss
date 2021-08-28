@@ -8,7 +8,7 @@
 
   @media only screen and (max-width: 768px) {
     max-height: 60px;
-    button {
+    .singInUpButtons {
       visibility: hidden;
     }
   }
@@ -98,7 +98,7 @@
   }
 }
 
-footer {
+.landingFooter {
   background-color: #23272c;
   display: flex;
   padding: 3em 6em;
