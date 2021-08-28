@@ -3,19 +3,32 @@
     <div class="bdr-rounded bgc(161F26)">
       <div class="componentHeader bdrb">
         <div class="d-flex pr fs(16) justify-content-between bgc(0f171D)">
-          <div>Cumulative - {{ date | date: "d/M" }}</div>
+          <div>Cumulative - {{ viewDate | date: "d/M" }}</div>
           <div class="d-flex">
-            <mat-icon svgIcon="calender-week" class=""></mat-icon>
-            <p class="mlr fc(EDEEEF)">
-              {{ firstDay | date: "longDate" }} -
-              {{ lastDay | date: "longDate" }}
+            <div mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate">
+              <mat-icon>navigate_before</mat-icon>
+            </div>
+            <p class="fc(EDEEEF)">
+              {{ viewDate | calendarDate: view + "ViewTitle":"en" }}
             </p>
+            <div mwlCalendarNextView [view]="view" [(viewDate)]="viewDate">
+              <mat-icon>navigate_next</mat-icon>
+            </div>
           </div>
         </div>
       </div>
       <div class="days componentBody">
+        <div [ngSwitch]="view">
+          <mwl-calendar-week-view
+            *ngSwitchCase="'week'"
+            [viewDate]="viewDate"
+            [events]="events"
+          >
+          </mwl-calendar-week-view>
+        </div>
+
         <!-- This has the Days of the week  -->
-        <table class="wdt(100)">
+        <!-- <table class="wdt(100)">
           <thead>
             <tr class="d-flex">
               <td
@@ -82,7 +95,7 @@
               </td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
       </div>
     </div>
   </div>

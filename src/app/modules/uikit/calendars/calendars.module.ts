@@ -8,19 +8,17 @@ import { CalendarModule } from 'angular-calendar';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 
-
-
 @NgModule({
-  declarations: [
-    MonthViewComponent,
-    WeekViewComponent
-  ],
+  declarations: [MonthViewComponent, WeekViewComponent],
   imports: [
     CommonModule,
     FormsModule,
     MatIconModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
-  exports: [MonthViewComponent, WeekViewComponent]
+  exports: [MonthViewComponent, WeekViewComponent],
 })
 export class CalendarsModule {}

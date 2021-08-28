@@ -1,3 +1,60 @@
+@import "~angular-calendar/scss/angular-calendar.scss";
+
+.dark-theme {
+  $bg-dark-primary: #0f171d;
+  $bg-dark-secondary: #161f26;
+  $bg-active: #0f171d;
+  $text-color: #ffffff;
+  $border-color: #383c4080;
+
+  @include cal-theme(
+    (
+      bg-primary: $bg-dark-primary,
+      bg-secondary: $bg-dark-secondary,
+      weekend-color: $text-color,
+      bg-active: $bg-active,
+      border-color: $border-color,
+      gray: $bg-dark-secondary,
+      today-bg: $bg-dark-secondary,
+      event-color-primary: $bg-dark-secondary,
+    )
+  );
+
+  .cal-month-view .cal-day-cell.cal-out-month .cal-day-number {
+    opacity: 0.15;
+  }
+
+  background-color: $bg-dark-primary;
+  color: $text-color;
+
+  .card {
+    border-color: $border-color;
+  }
+
+  .card-header {
+    background-color: $bg-dark-secondary;
+  }
+
+  .card-body {
+    background-color: $bg-dark-primary;
+  }
+
+  .nav-tabs {
+    border-bottom-color: $border-color;
+  }
+
+  .nav-tabs .nav-link.active {
+    background-color: $bg-dark-primary;
+    color: $text-color;
+    border-color: $border-color;
+  }
+
+  .nav-tabs .nav-link:hover,
+  .nav-tabs .nav-link:focus {
+    border-color: $border-color;
+  }
+}
+
 .taskDone {
   padding: 0.5rem;
   background: #fffbdb;
@@ -5,19 +62,11 @@
   width: 10rem;
 }
 
-.wdt\(180px\) {
-  width: 180px;
-}
-
 .taskNotDone {
   padding: 0.5rem;
   background: #ffd9d9;
   border-radius: 4px;
   width: 10rem;
-
-  del {
-    color: #575d61 !important;
-  }
 }
 
 .date {
@@ -26,4 +75,12 @@
 
 .days {
   overflow-x: auto;
+}
+
+.cal-week-view .cal-time-events .cal-day-column {
+  margin-right: 10px;
+}
+
+.cal-week-view .cal-hour {
+  width: calc(100% + 10px);
 }
