@@ -1,0 +1,40 @@
+<div class="manageTeamMembersData pl">
+    <div class="teamMembersManageView bgc(161F26) bgshadow1 bdr-rounded">
+        <div class="componentHeader bdrb plr prr pts pbs">
+            <div class="d-flex">
+                <div class=" align-self-center mrl">
+                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Team Members</h2>
+                </div>
+                <div class="inviteUrl bgc(0F171D) fs(12) align-self-center">
+                    Invite using - <span class="inviteUrlLink fc(77B7FD) "> htttp.tinyurl.com</span>
+                    <mat-icon svgIcon="copy" class="icon icon-small mls"></mat-icon>
+                </div>
+
+                <div class="addMember ml-auto">
+                    <button mat-button class="addMemberAction fc(77B7FD) fs(14) cursor-pointer">+ Add Member</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="componentBody">
+            <div class="row">
+                <div class="col-3 bdrr">
+                    <div class="teamMembersList  ">
+                        <a [routerLink]="['details', member]" routerLinkActive="router-link-active" class="teamMember"
+                            *ngFor="let member of membersData">
+                            <div class="teamMemberShortInfo">
+                                <uikit-team-members-element></uikit-team-members-element>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="viewOrEditDetails">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
