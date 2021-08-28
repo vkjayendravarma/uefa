@@ -31,4 +31,9 @@ export enum Icons {
   taskNotDone = 'weekcross',
   rearrangeIcon = 'rearrange',
   pencilIcon = 'pencil',
+  flag = 'landingFlag',
+  events = 'landingEvents',
+  trophy = 'trophy',
+  pic = 'Headshot',
+  quote = 'quotes',
 }
