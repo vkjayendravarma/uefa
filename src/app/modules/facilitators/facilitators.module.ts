@@ -31,6 +31,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { FTeamManagementHomeComponent } from './components/team-management/f-team-management-home/f-team-management-home.component';
 import { FTeamManagementMembersComponent } from './components/team-management/f-team-management-members/f-team-management-members.component';
 import { MatButtonModule } from '@angular/material/button';
+import { FTeamManagementSessionsComponent } from './components/team-management/f-team-management-sessions/f-team-management-sessions.component';
+import { FTeamManagementDocumentsComponent } from './components/team-management/f-team-management-documents/f-team-management-documents.component';
+import { FTeamManagementAttendanceComponent } from './components/team-management/f-team-management-attendance/f-team-management-attendance.component';
+import { FTeamManagementSquadsComponent } from './components/team-management/f-team-management-squads/f-team-management-squads.component';
+import { FTeamManagementAnnouncementsComponent } from './components/team-management/f-team-management-announcements/f-team-management-announcements.component';
 
 
 
@@ -53,6 +58,11 @@ import { MatButtonModule } from '@angular/material/button';
     FTeamViewComponent,
     FTeamManagementHomeComponent,
     FTeamManagementMembersComponent,
+    FTeamManagementSessionsComponent,
+    FTeamManagementDocumentsComponent,
+    FTeamManagementAttendanceComponent,
+    FTeamManagementSquadsComponent,
+    FTeamManagementAnnouncementsComponent,
   ],
   imports: [
     CommonModule,
