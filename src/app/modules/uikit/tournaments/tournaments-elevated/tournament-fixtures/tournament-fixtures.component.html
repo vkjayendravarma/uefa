@@ -1,7 +1,21 @@
 <div class="adminComponent fixtures">
-    <div class="generateOrUplooadFixtures bgc(161F26) wdt(100) bdr-rounded mtl " (click)="addNewTeam()">
+    <div class="generateOrUplooadFixtures bgc(161F26) wdt(100) bdr-rounded mtl " (click)="addNewTeam()" *ngIf="user !=='facilitator'" >
         <p class="uploadInfo"> <span class="fc(77B7FD) ">Generate</span> or <span class="fc(77B7FD) "> Upload
             </span> Fixtures</p>
+    </div>
+
+    <div class="division" *ngIf="user ==='facilitator'">
+        <div class="formControl wdt(50)">
+            <label class="display-block fc(EDEEEF)   ">Division</label>
+            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
+                <mat-select panelClass="matSelectCustomFocus">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
     </div>
 
     <div class="allFixtures mtl">
@@ -9,7 +23,7 @@
             <div class="title fc(EDEEEF) fs(16) align-self-center ">Matches</div>
             <div class="edit mll fc(77B7FD) fs(14) align-self-center " *ngIf="fixturesViewType === 'listView'">Edit
                 Groups</div>
-            <div class="viewConfig ml-auto ">
+            <div class="viewConfig ml-auto " *ngIf="user !=='facilitator'">
                 <button mat-icon-button class='mrr'>
                     <mat-icon svgIcon='listView'  (click)="fixturesViewType = 'listView'"
                         [ngClass]="{'iconLinkInactive': fixturesViewType === 'chart'}"></mat-icon>

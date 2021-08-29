@@ -9,14 +9,18 @@ import { FEventsIndividualComponent } from './pages/f-events/f-events-individual
 import { FEventsPreviewComponent } from './pages/f-events/f-events-preview/f-events-preview.component';
 import { FEventsComponent } from './pages/f-events/f-events.component';
 import { FHomeComponent } from './pages/f-home/f-home.component';
+import { FCreateNewPostComponent } from './pages/f-posts/f-create-new-post/f-create-new-post.component';
 import { FPostsDashboardComponent } from './pages/f-posts/f-posts-dashboard/f-posts-dashboard.component';
 import { FPostsComponent } from './pages/f-posts/f-posts.component';
+import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey/f-create-new-survey.component';
 import { FSurveysDashboardComponent } from './pages/f-surveys/f-surveys-dashboard/f-surveys-dashboard.component';
 import { FSurveysComponent } from './pages/f-surveys/f-surveys.component';
 import { FTeamViewComponent } from './pages/f-teams/f-team-view/f-team-view.component';
 import { FTeamsDashboardComponent } from './pages/f-teams/f-teams-dashboard/f-teams-dashboard.component';
 import { FTeamsComponent } from './pages/f-teams/f-teams.component';
 import { FTournamentsDashboardComponent } from './pages/f-tournaments/f-tournaments-dashboard/f-tournaments-dashboard.component';
+import { FTournamentsMonitorComponent } from './pages/f-tournaments/f-tournaments-monitor/f-tournaments-monitor.component';
+import { FTournamentsPreviewComponent } from './pages/f-tournaments/f-tournaments-preview/f-tournaments-preview.component';
 import { FTournamentsRegisterComponent } from './pages/f-tournaments/f-tournaments-register/f-tournaments-register.component';
 import { FTournamentsComponent } from './pages/f-tournaments/f-tournaments.component';
 
@@ -52,6 +56,10 @@ const routes: Routes = [
         path: '',
         component: FPostsDashboardComponent
       },
+      {
+        path: 'create',
+        component: FCreateNewPostComponent
+      },
      
     ],
   },
@@ -78,6 +86,10 @@ const routes: Routes = [
         path: '',
         component: FSurveysDashboardComponent,
       },
+      {
+        path: 'new',
+        component: FCreateNewSurveyComponent
+      }
      
     ],
   },
@@ -88,10 +100,17 @@ const routes: Routes = [
       {
         path: '',
         component: FTournamentsDashboardComponent,
+      },{
+        path: 'preview',
+        component: FTournamentsPreviewComponent,
       },
       {
         path: 'register',
         component: FTournamentsRegisterComponent,
+      },
+      {
+        path: 'monitor',
+        component: FTournamentsMonitorComponent,
       }
      
     ],
