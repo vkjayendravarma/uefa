@@ -1,1 +1,94 @@
-<p>institute-preset works!</p>
+<div class="signupComponent bgc(0F171D) wdt(100)">
+  <div class="componentHeader bdrb">
+    <div class="container">
+      <div class="header ptr pbs">
+        <div class="branding">
+          <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="componentBody">
+    <div class="institutePresetFormWrapper container">
+      <form
+        action=""
+        class="institutePresetForm mtxl formControlTopBorderUnset wdt(100)"
+      >
+        <h1 class="formTitle ff-sb fc(ffffff) fs(32)">
+          You have successfully signed up for Futbol!
+        </h1>
+        <h3 class="ff-sb fc(9B9B9B) fs(16)">
+          Search and join an Institute or create a new if you haven't registered
+          it yet
+        </h3>
+
+        <div class="mtl wdt(50)">
+          <div class="selectRegion">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Select Region</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <mat-select panelClass="matSelectCustomFocus">
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="instituteType">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Institute Type</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <mat-select panelClass="matSelectCustomFocus">
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="searchInstitute">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Search Institutes</label>
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input matInput type="text" class="ff-r fs(14)" />
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="componentActions bgc(161F26) mb-auto wdt(100)">
+    <div class="actionsWrapper container ptr pbr">
+      <button
+        class="btn-dialog-action ff-sb fs(16)"
+        color="accent"
+        type="submit"
+        mat-raised-button
+      >
+        Next
+      </button>
+      <button
+        class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+        mat-button
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

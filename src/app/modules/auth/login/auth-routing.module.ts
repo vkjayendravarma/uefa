@@ -11,6 +11,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
+            redirectTo: 'session/:authType',
+            pathMatch: 'full'
+          },
+          {
+            path: 'session/:authType',
             component: LoginformComponent
           },
           {

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PointsTableModelComponent implements OnInit {
 
+  points = [ 1, 2, 3]
+
   constructor() { }
 
   ngOnInit(): void {

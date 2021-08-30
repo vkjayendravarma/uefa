@@ -19,6 +19,8 @@ import { AdminNewTournamentComponent } from './pages/adminTournaments/admin-new-
 import { ACreateNewPostComponent } from './pages/posts/a-create-new-post/a-create-new-post.component';
 import { AAssociationsCriteriaComponent } from './pages/associations/a-associations-criteria/a-associations-criteria.component';
 import { AdminMonitorTournamentComponent } from './pages/adminTournaments/admin-monitor-tournament/admin-monitor-tournament.component';
+import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
+import { AProfileComponent } from './pages/a-profile/a-profile.component';
 
 const routes: Routes = [
   {
@@ -84,7 +86,10 @@ const routes: Routes = [
       {
         path: '',
         component: SurveysDashboardComponent,
-      },
+      },{
+        path: 'new',
+        component: ANewSurveyComponent,
+      }
      
     ],
   },
@@ -107,6 +112,10 @@ const routes: Routes = [
      
     ],
   },
+  {
+    path: 'profile',
+    component: AProfileComponent
+  }
 ];
 
 @NgModule({

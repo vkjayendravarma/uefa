@@ -1,0 +1,29 @@
+.taskDone {
+  padding: 0.5rem;
+  background: #fffbdb;
+  border-radius: 4px;
+  width: 10rem;
+}
+
+.wdt\(180px\) {
+  width: 180px;
+}
+
+.taskNotDone {
+  padding: 0.5rem;
+  background: #ffd9d9;
+  border-radius: 4px;
+  width: 10rem;
+
+  del {
+    color: #575d61 !important;
+  }
+}
+
+.date {
+  background-color: #121b22;
+}
+
+.days {
+  overflow-x: auto;
+}
