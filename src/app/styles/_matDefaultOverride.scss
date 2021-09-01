@@ -22,6 +22,12 @@
 // }
 
 // ------------------------------ checkbox ----------------
+
+.attandanceTable {
+  .mat-checkbox-layout{
+    margin-bottom: 0 !important;
+  }
+}
 .mat-pseudo-checkbox::after {
   color: #ffffff;
 }

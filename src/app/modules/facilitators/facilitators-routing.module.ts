@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TeamMemberDetailsEditComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
 import { TeamMemberDetailsComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details/team-member-details.component';
 import { TeamSessionManageMembersComponent } from '../uikit/teams/team-management/team-sessions/team-session-manage-members/team-session-manage-members.component';
+import { TeamSquadComponent } from '../uikit/teams/team-management/team-squad/team-squad.component';
 import { FTeamManagementAnnouncementsComponent } from './components/team-management/f-team-management-announcements/f-team-management-announcements.component';
 import { FTeamManagementAttendanceComponent } from './components/team-management/f-team-management-attendance/f-team-management-attendance.component';
 import { FTeamManagementDocumentsComponent } from './components/team-management/f-team-management-documents/f-team-management-documents.component';
@@ -170,6 +171,12 @@ const routes: Routes = [
           },{ 
             path: 'squads',
             component: FTeamManagementSquadsComponent,
+            children: [
+              {
+                path: 'details/:id',
+                component: TeamSquadComponent,
+              },             
+            ],
           },{
             path: 'attendance',
             component: FTeamManagementAttendanceComponent,

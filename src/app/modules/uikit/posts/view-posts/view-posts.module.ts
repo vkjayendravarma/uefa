@@ -15,6 +15,6 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatTabsModule,
   ],
-  exports: [PostsListViewComponent, PostTabsViewComponent]
+  exports: [PostsListViewComponent, PostTabsViewComponent, PostElementComponent]
 })
 export class ViewPostsModule { }

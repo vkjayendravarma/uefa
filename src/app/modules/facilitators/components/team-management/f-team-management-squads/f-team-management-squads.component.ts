@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./f-team-management-squads.component.scss']
 })
 export class FTeamManagementSquadsComponent implements OnInit {
+  squadsData = [1, 2, 3]
 
   constructor() { }
 
