@@ -36,4 +36,5 @@ export enum Icons {
   trophy = 'trophy',
   pic = 'Headshot',
   quote = 'quotes',
+  addIcon = 'add'
 }

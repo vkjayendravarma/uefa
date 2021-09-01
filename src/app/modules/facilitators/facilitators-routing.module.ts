@@ -2,8 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TeamMemberDetailsEditComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
 import { TeamMemberDetailsComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details/team-member-details.component';
+import { TeamSessionManageMembersComponent } from '../uikit/teams/team-management/team-sessions/team-session-manage-members/team-session-manage-members.component';
+import { FTeamManagementAnnouncementsComponent } from './components/team-management/f-team-management-announcements/f-team-management-announcements.component';
+import { FTeamManagementAttendanceComponent } from './components/team-management/f-team-management-attendance/f-team-management-attendance.component';
+import { FTeamManagementDocumentsComponent } from './components/team-management/f-team-management-documents/f-team-management-documents.component';
 import { FTeamManagementHomeComponent } from './components/team-management/f-team-management-home/f-team-management-home.component';
 import { FTeamManagementMembersComponent } from './components/team-management/f-team-management-members/f-team-management-members.component';
+import { FTeamManagementSessionsComponent } from './components/team-management/f-team-management-sessions/f-team-management-sessions.component';
+import { FTeamManagementSquadsComponent } from './components/team-management/f-team-management-squads/f-team-management-squads.component';
 import { FEventsDashboardComponent } from './pages/f-events/f-events-dashboard/f-events-dashboard.component';
 import { FEventsIndividualComponent } from './pages/f-events/f-events-individual/f-events-individual.component';
 import { FEventsPreviewComponent } from './pages/f-events/f-events-preview/f-events-preview.component';
@@ -24,7 +30,6 @@ import { FTournamentsPreviewComponent } from './pages/f-tournaments/f-tournament
 import { FTournamentsRegisterComponent } from './pages/f-tournaments/f-tournaments-register/f-tournaments-register.component';
 import { FTournamentsComponent } from './pages/f-tournaments/f-tournaments.component';
 
-
 const routes: Routes = [
   {
     path: 'home',
@@ -36,7 +41,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: FEventsDashboardComponent
+        component: FEventsDashboardComponent,
       },
       {
         path: 'individualevent',
@@ -54,30 +59,29 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: FPostsDashboardComponent
+        component: FPostsDashboardComponent,
       },
       {
         path: 'create',
-        component: FCreateNewPostComponent
+        component: FCreateNewPostComponent,
       },
-     
     ],
   },
-//   {
-//     path: 'users',
-//     component: UserManagementComponent,
-//   },
-//   {
-//     path: 'associations',
-//     component: AssociationsComponent,
-//     children: [
-//       {
-//         path: '',
-//         component: AssociationsDashboardComponent
-//       },
-     
-//     ],
-//   },
+  //   {
+  //     path: 'users',
+  //     component: UserManagementComponent,
+  //   },
+  //   {
+  //     path: 'associations',
+  //     component: AssociationsComponent,
+  //     children: [
+  //       {
+  //         path: '',
+  //         component: AssociationsDashboardComponent
+  //       },
+
+  //     ],
+  //   },
   {
     path: 'surveys',
     component: FSurveysComponent,
@@ -88,9 +92,8 @@ const routes: Routes = [
       },
       {
         path: 'new',
-        component: FCreateNewSurveyComponent
-      }
-     
+        component: FCreateNewSurveyComponent,
+      },
     ],
   },
   {
@@ -100,7 +103,8 @@ const routes: Routes = [
       {
         path: '',
         component: FTournamentsDashboardComponent,
-      },{
+      },
+      {
         path: 'preview',
         component: FTournamentsPreviewComponent,
       },
@@ -111,8 +115,7 @@ const routes: Routes = [
       {
         path: 'monitor',
         component: FTournamentsMonitorComponent,
-      }
-     
+      },
     ],
   },
   {
@@ -129,28 +132,53 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            redirectTo: 'home'
+            redirectTo: 'home',
           },
           {
             path: 'home',
             component: FTeamManagementHomeComponent,
-          },{
+          },
+          {
             path: 'members',
-            component: FTeamManagementMembersComponent, 
+            component: FTeamManagementMembersComponent,
             children: [
               {
                 path: 'details/:id',
-                component: TeamMemberDetailsComponent,              
+                component: TeamMemberDetailsComponent,
               },
               {
                 path: 'details/:id/edit',
-                component: TeamMemberDetailsEditComponent,              
+                component: TeamMemberDetailsEditComponent,
+              },
+            ],
+          },
+          {
+            path: 'sessions',
+            children: [
+              {
+                path: '',
+                component: FTeamManagementSessionsComponent,
+              }, { 
+                path: 'invites/:id',
+                component: TeamSessionManageMembersComponent,
               }
             ]
+          },
+          {
+            path: 'documents',
+            component: FTeamManagementDocumentsComponent,
+          },{ 
+            path: 'squads',
+            component: FTeamManagementSquadsComponent,
+          },{
+            path: 'attendance',
+            component: FTeamManagementAttendanceComponent,
+          },{
+            path: 'announcements',
+            component: FTeamManagementAnnouncementsComponent,
           }
-        ]
-      }
-     
+        ],
+      },
     ],
   },
 ];

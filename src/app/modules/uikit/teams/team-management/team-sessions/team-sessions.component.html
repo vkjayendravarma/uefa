@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-6  " align="right">
                     <div class="post-actions uiComponent-top-actions align-items-start">
-                        <button mat-button  class="actionCreateNewSession fc(77B7FD) ">+ Create Session</button>
+                        <button mat-button class="actionCreateNewSession fc(77B7FD) ">+ Create Session</button>
                     </div>
 
                 </div>
@@ -18,10 +18,15 @@
             <div class="sessions  ">
                 <div class="session d-flex pbr bdrb ">
                     <div class="dateWrapper bgc(FFECDB)">
-                        <span class="date fs(12) ff-b fw(600) fc(000000) talign-center " >16 Jan</span>
+                        <span class="date fs(12) ff-b fw(600) fc(000000) talign-center ">16 Jan</span>
                     </div>
-                    <div class="sessionInfo mlr ">
-                        <h4 class="sessionTitle ff-sb fs(14)">Training Sessions</h4>
+                    <div class="sessionInfo mlr wdt(100) ">
+                        <h4 class="sessionTitle ff-sb fs(14) display-inline">Training Sessions </h4>
+                        <a [routerLink]="['invites', '1']" routerLinkActive="router-link-active"
+                            class="editLink display-inline">
+                            <mat-icon svgIcon="pencil" class="icon icon-small mrr float-right cursor-pointer">
+                            </mat-icon>
+                        </a>
                         <div class="sessionDetails d-flex">
                             <div class="sessionTime d-flex mrl">
                                 <mat-icon svgIcon="time" class="icon icon-small mrs"></mat-icon>
@@ -31,6 +36,9 @@
                                 <mat-icon svgIcon="location" class="icon icon-small mrs"></mat-icon>
                                 <div class="sessionStartAndEndTime fs(12) fc(9B9B9B) ff-r">10.30 PM - 11.00 PM</div>
                             </div>
+                        </div>
+                        <div class="sessionNotes">
+                            <p class="notes  fs(14) fc(C3C5C7) ff-r"> Notes: Endurance training session</p>
                         </div>
                     </div>
                 </div>

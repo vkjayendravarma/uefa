@@ -62,6 +62,12 @@
 
 // select boxes
 
+.filter-dropdown{
+  .mat-form-field-wrapper{
+    padding-bottom: unset !important;
+  }
+}
+
 .matSelectCustomFocus {
   .mat-selected {
     .mat-option-text {
