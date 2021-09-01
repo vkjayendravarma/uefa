@@ -7,7 +7,7 @@ import { TeamAttendance } from 'src/app/prototypes/attandance.interface';
   styleUrls: ['./team-attendance.component.scss'],
 })
 export class TeamAttendanceComponent implements OnInit {
-  points = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  points = [1, 2, 3, 4, 5, 6];
 
   attendanceData: TeamAttendance[] = [];
   numberOfDays = 30;
@@ -41,7 +41,7 @@ export class TeamAttendanceComponent implements OnInit {
 
   updateAttandance(): void {
     console.log(this.attendanceData);
-    
   }
+
  
 }

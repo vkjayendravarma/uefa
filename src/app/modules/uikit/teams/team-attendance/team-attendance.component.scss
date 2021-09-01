@@ -14,7 +14,7 @@
         padding-right: 1em;
 
         vertical-align: middle !important;
-        border: 1px solid #383C40;
+        border        : 1px solid #383C40;
     }
 
     .thead {
@@ -31,4 +31,13 @@
 .nameCol {
     min-width: 200px;
 }
+
+
+.displayAsHoliday {
+    writing-mode    : vertical-lr;
+    -ms-writing-mode: tb-rl;
+    transform       : rotate(180deg);
+    text-align: center;
+}
+
 
