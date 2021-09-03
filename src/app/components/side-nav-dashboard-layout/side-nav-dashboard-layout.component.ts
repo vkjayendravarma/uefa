@@ -82,6 +82,30 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     }
   ]
 
+  //Menu item list for Players
+  playersFacilitators: SideBarItemsPrototype[] = [
+    {
+      label: 'Home',
+      link: '/dashboard/player/home',
+      icon: 'home',
+    },
+    {
+      label: 'Events',
+      link: '/dashboard/player/events',
+      icon: 'events',
+    },
+    {
+      label: 'Surveys',
+      link: '/dashboard/player/surveys',
+      icon: 'surveys',
+    },
+    {
+      label: 'Tournaments',
+      link: '/dashboard/facilitator/tournaments',
+      icon: 'tournaments',
+    }
+  ]
+
 
   sideBar2: SideBarItemsPrototype[] = [
     {

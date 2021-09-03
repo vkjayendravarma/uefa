@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrillsSessionsComponent implements OnInit {
 
-  drillsAndSessions= [1, 2, 3, 4, 5, 6]
+  drillsAndSessions= [1, 2, 3]
   constructor() { }
 
   ngOnInit(): void {
