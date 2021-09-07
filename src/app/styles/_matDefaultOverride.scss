@@ -22,6 +22,12 @@
 // }
 
 // ------------------------------ checkbox ----------------
+
+.attandanceTable {
+  .mat-checkbox-layout{
+    margin-bottom: 0 !important;
+  }
+}
 .mat-pseudo-checkbox::after {
   color: #ffffff;
 }
@@ -61,6 +67,12 @@
 // ------------------------------ mat input ----------------
 
 // select boxes
+
+.filter-dropdown{
+  .mat-form-field-wrapper{
+    padding-bottom: unset !important;
+  }
+}
 
 .matSelectCustomFocus {
   .mat-selected {

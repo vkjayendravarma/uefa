@@ -1,1 +1,37 @@
-<p>f-team-management-squads works!</p>
+<div class="manageTeamMembersData pl">
+    <div class="teamMembersManageView bgc(161F26) bgshadow1 bdr-rounded">
+        <div class="componentHeader bdrb plr prr pts pbs">
+            <div class="d-flex">
+                <div class=" align-self-center mrl">
+                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Squads (25)</h2>
+                </div>
+              
+
+                <div class="addMember ml-auto">
+                    <button mat-button class="addMemberAction fc(77B7FD) fs(14) cursor-pointer">+ Create Squad</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="componentBody">
+            <div class="row">
+                <div class="col-3 bdrr">
+                    <div class="teamMembersList  ">
+                        <a [routerLink]="['details', squad]" routerLinkActive="router-link-active" class="teamMember"
+                            *ngFor="let squad of squadsData">
+                            <div class="teamMemberShortInfo fc(EDEEEF) ">
+                               squad Name
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="viewOrEditDetails">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

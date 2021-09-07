@@ -24,6 +24,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { TeamMemberDetailsComponent } from './team-management/team-members-manage-view/team-member-details/team-member-details.component';
 import { TeamMemberDetailsEditComponent } from './team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
 import { RouterModule } from '@angular/router';
+import {MatTableModule} from '@angular/material/table';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,12 @@ import { RouterModule } from '@angular/router';
     MatDatepickerModule,
     MatDialogModule,
     MatSelectModule,
-    RouterModule
+    RouterModule,
+    MatTableModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     TeamsGalaryViewComponent,

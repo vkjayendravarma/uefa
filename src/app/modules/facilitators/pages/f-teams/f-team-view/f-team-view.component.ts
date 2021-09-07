@@ -20,6 +20,29 @@ export class FTeamViewComponent implements OnInit {
     {
       label: 'Members',
       path: 'members'
+    },
+    {
+      label: 'Sessions',
+      path: 'sessions'
+    },
+    {
+      label: 'Documents',
+      path: 'documents'
+    },
+    {
+      label: 'Squads',
+      path: 'squads'
+    },
+    {
+      label: 'Attendance',
+      path: 'attendance'
+    },
+    {
+      label: 'Announcements',
+      path: 'announcements'
     }
   ]
+
+
+
 }
