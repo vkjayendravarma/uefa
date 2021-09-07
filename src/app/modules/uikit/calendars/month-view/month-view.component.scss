@@ -1,83 +1,110 @@
-h3 {
-    margin: 0 0 10px;
-  }
-  
-  pre {
-    background-color: #f5f5f5;
-    padding: 15px;
-  }
+// h3 {
+//     margin: 0 0 10px;
+// }
 
-  .calendar-month-view{
-      width: 90%;
-      margin: 10px auto;
-  }
+// pre {
+//     background-color: #f5f5f5;
+//     padding         : 15px;
+// }
 
-  .month-title-container
-    {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    }
-   .month-title{
-       width: 200px;
-   }
+// .calendar-month-view {
+//     width : 90%;
+//     margin: 10px auto;
+// }
 
-  .month-before, .month-next, .current-month {
-      cursor: pointer;
-  }
+// .month-title-container {
+//     display        : flex;
+//     flex-direction : row;
+//     justify-content: flex-start;
+// }
 
-  ::ng-deep .cal-cell-row {
-      background-color: #161F26;
-      border-bottom-color: #383C4080 !important;
-    }
+// .month-title {
+//     width: 200px;
+// }
 
-::ng-deep .cal-days{
-    border: none !important;
-    border-color: #383C4080 !important;
+// .month-before,
+// .month-next,
+// .current-month {
+//     cursor: pointer;
+// }
+
+// ::ng-deep .cal-cell-row {
+//     background-color   : #161F26;
+//     border-bottom-color: #383C4080 !important;
+// }
+
+// ::ng-deep .cal-days {
+//     border      : none !important;
+//     border-color: #383C4080 !important;
+// }
+
+// ::ng-deep .cal-month-view .cal-day-cell:not(:last-child) {
+//     border-right-color: #383C4080 !important;
+// }
+
+
+// // ::ng-deep .cal-cell-top {
+// //    position: relative;
+// // }
+
+// // ::ng-deep .cal-day-number{
+// //     height: 32px;
+// //     width: 32px;
+// //     font-size: 12px;  
+// //     text-align: center; 
+
+// // }
+
+// ::ng-deep .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+//     color: #ffffff !important;
+
+
+// }
+
+// ::ng-deep .cal-cell-row:hover {
+//     background-color: #161F26 !important;
+// }
+
+// ::ng-deep .cal-cell-top {
+//     display        : flex !important;
+//     justify-content: center !important;
+// }
+
+
+// ::ng-deep .cal-today {
+//     background-color: #0F171D !important;
+// }
+
+// ::ng-deep .cal-day-badge {
+//     display: none !important; // to disable event count in cells.
+// }
+
+// ::ng-deep .cal-month-view .cal-cell-row .cal-cell:hover {
+//     background-color: #0F171D !important;
+// }
+
+// ::ng-deep .cal-month-view .cal-cell.cal-has-events.cal-open {
+//     background-color: #0F171D !important;
+// }
+
+// ::ng-deep .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+//     font-size       : 1.2em !important;
+//     background-color: #ffffff !important;
+//     border-radius   : 20px !important;
+//     padding         : 3px !important;
+//     color           : black !important;
+//     margin-bottom   : 32px !important;
+// }
+
+.eventTitleCustom {
+    padding      : 0.4em 0.6em;
+    max-width    : 140px;
+    white-space  : nowrap;
+    overflow     : hidden !important;
+    text-overflow: ellipsis;
 }
 
-::ng-deep .cal-month-view .cal-day-cell:not(:last-child){
-    border-right-color: #383C4080 !important;
-}
-
-::ng-deep .cal-month-view .cal-day-cell.cal-weekend .cal-day-number{
-    color: #ffffff !important;
-}
-
-::ng-deep .cal-cell-row:hover {
-    background-color: #161F26 !important;
-}
-
-::ng-deep .cal-cell-top {
-    display: flex !important;
-    justify-content: center !important;
-}
-
-::ng-deep .cal-cell-top:hover{
-    background-color: #0F171D !important;
-}
-
-::ng-deep .cal-today {
-    background-color: #0F171D !important;
-}
-
-::ng-deep .cal-day-badge{
-    display: none !important; // to disable event count in cells.
-}
-
-::ng-deep .cal-month-view .cal-cell-row .cal-cell:hover {
-    background-color: #0F171D !important;
-}
-
-::ng-deep .cal-month-view .cal-cell.cal-has-events.cal-open{
-    background-color: #0F171D !important;
-}
-
-::ng-deep .cal-month-view .cal-day-cell.cal-today .cal-day-number {
-    font-size: 1.2em !important;
-    background-color: #ffffff !important;
-    border-radius: 20px !important;
-    padding: 3px !important;
-    color: black !important;
-    margin-bottom: 32px !important;
+::ng-deep .cal-cell {
+    width : 140px !important;
+    height: 140px !important;
 }

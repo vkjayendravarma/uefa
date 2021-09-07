@@ -7,6 +7,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CalendarModule } from 'angular-calendar';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [MonthViewComponent, WeekViewComponent],
@@ -14,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     FormsModule,
     MatIconModule,
+    RouterModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

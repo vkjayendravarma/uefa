@@ -42,9 +42,11 @@ const colors: any = {
 export class MonthViewComponent implements OnInit {
 
   EVENT_LIMIT = 2; // Number of events limit to be displayed per day.
+
   view: CalendarView = CalendarView.Month;
   CalendarView = CalendarView;
   viewDate: Date = new Date();
+
   events: CalendarEvent[] = [ // List of static events with start and end dates.
     {
       start: subDays(startOfDay(new Date()), 1),
@@ -55,7 +57,7 @@ export class MonthViewComponent implements OnInit {
     },
     {
       start: startOfDay(new Date()),
-      title: 'An event with no end date',
+      title: 'An event with no end date asd asdsadasd asdasd',
       color: colors.tequila,
     },
     {
@@ -100,6 +102,16 @@ export class MonthViewComponent implements OnInit {
 
   // Called when '1 more' event is clicked on the day.
   handleMoreEvent(e: any , events: any) {
+  }
+
+  eventClicked(event: CalendarEvent<any>): void {
+    console.log("click event");
+    console.log(event);
+    
+    window.open(
+      `/`,
+      '_blank'
+    );
   }
 
 }
