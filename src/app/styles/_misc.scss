@@ -11,9 +11,11 @@ button {
             width : auto;
         }
     }
-    .filterIcon{
+
+    .filterIcon {
         width: 20px;
     }
+
     .uiComponent-top-actions {
         position: relative;
         height  : 100%;
@@ -24,9 +26,39 @@ button {
         }
 
     }
+
     .uiComponent-small-icon {
         width : 10px;
         height: 10px;
     }
-    
+
 }
+
+
+// scoll bar 
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #38434B;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #14212c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #38434B;
+    border-radius: 22px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #38434B;
+    border-radius: 0px;
+    width: 8px;
+    height: 8px;
+    scrollbar-width: thin;
+
+}
+

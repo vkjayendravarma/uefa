@@ -1,0 +1,71 @@
+<div class="uiComponent attandanceTable bgc(161F26) bgshadow1 bdr-rounded">
+    <div class="componentHeader d-flex ptr prr plr ">
+        <div class="calenderIcon ">
+            <mat-icon svgIcon="calendar" class="icon icon-small"></mat-icon>
+        </div>
+        <div class="timeline flex-grow-1  mlr align-self-center">
+            <p class="dates fc(EDEEEF) fs(16) ff-r  m-unset">1 April 2021 - 30 April 2021</p>
+        </div>
+        <div class="trainingSession fs(14) ff-r fc(9B9B9B) align-self-center ">TS = Training Session</div>
+        <div class="practiceMatch mll  fs(14) ff-r fc(9B9B9B) align-self-center">PM = Practice Match</div>
+    </div>
+    <div class="componentBody">
+        <div class="table-responsive">
+            <table class="table table-dark mtr">
+                <thead class='thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r '>
+                    <tr >
+                        <th scope="col" rowspan="2" class="nameCol "></th>
+                        <th scope="col" colspan="2" class="talign-center "
+                            *ngFor="let days of headerNumbers; let date = index"> {{date + 1}}
+                        </th>
+                    </tr>
+                    <tr>
+                        <ng-template ngFor let-day [ngForOf]="headerNumbers ">
+                            <th scope="col ">TS</th>
+                            <th scope="col ">PM</th>
+                        </ng-template>
+
+                    </tr>
+                </thead>
+                <tbody class='bgc(161F26) fc(9B9B9B) fs(14) '>
+                    <tr *ngFor="let item of points, let index =index">
+                        <td class='ff-r nameCol '>
+                            Mookie Betts (You)
+                        </td>
+                        <ng-template ngFor let-day let-i="index" [ngForOf]="attendanceData ">
+
+                            <td *ngIf="day.isHoliday===true && index===0;" [attr.rowspan]="points.length" colspan="2"
+                                title="Holiday" class="displayAsHoliday ">
+                                Holiday or off day goes here
+                            </td>
+                            <ng-template ngIf="day.isHoliday===false">
+                                <td class='ff-r ' *ngIf="day.isHoliday === false ">
+                                    <form>
+                                        <mat-checkbox [disabled]="day.isHoliday" color="warn"
+                                            [(ngModel)]="attendanceData[i].data.ts" [name]="'ts' + i"
+                                            [checked]="day.data.ts" (click)="updateAttandance()"></mat-checkbox>
+
+                                    </form>
+                                </td>
+                                <td class='ff-r ' *ngIf="day.isHoliday===false">
+                                    <form>
+                                        <mat-checkbox [disabled]="day.isHoliday" color="warn"
+                                            [(ngModel)]="attendanceData[i].data.pm" [name]="'pm' + i"
+                                            [checked]="day.data.pm" (click)="updateAttandance()"></mat-checkbox>
+                                    </form>
+
+                                </td>
+                            </ng-template>
+
+                        </ng-template>
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>

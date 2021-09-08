@@ -17,6 +17,10 @@
   background-color: #161F26;
 }
 
+.bgc\(FFECDB\){
+  background-color: #FFECDB;
+}
+
 .bg-img-cover {
   background-position: bottom center;
   background-repeat  : no-repeat;
@@ -35,7 +39,11 @@
 }
 
 .bdrr{
-  border-right: 1px solid rgba(56, 60, 64, 0.5);
+  border-right: 1px solid rgba(57, 61, 65, 0.5);
+}
+
+.bdr\(373A3D\){
+  border: 1px solid #373A3D;
 }
 
 

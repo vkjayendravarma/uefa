@@ -1,0 +1,21 @@
+.icon-small {
+    height: 14px;
+    width : 14px;
+    position: relative;
+    top: -4px;
+}
+
+.dateWrapper {
+    height       : 40px;
+    width        : 40px;
+    position     : relative;
+    border-radius: 4px;
+
+    .date {
+        position : absolute;
+        top      : 50%;
+        left     : 50%;
+        transform: translate(-50%, -50%);       
+    }
+
+}

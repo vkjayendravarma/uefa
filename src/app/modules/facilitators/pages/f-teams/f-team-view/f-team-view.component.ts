@@ -12,4 +12,37 @@ export class FTeamViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  matTabLinks = [
+    {
+      label: 'Home',
+      path: 'home'
+    },
+    {
+      label: 'Members',
+      path: 'members'
+    },
+    {
+      label: 'Sessions',
+      path: 'sessions'
+    },
+    {
+      label: 'Documents',
+      path: 'documents'
+    },
+    {
+      label: 'Squads',
+      path: 'squads'
+    },
+    {
+      label: 'Attendance',
+      path: 'attendance'
+    },
+    {
+      label: 'Announcements',
+      path: 'announcements'
+    }
+  ]
+
+
+
 }

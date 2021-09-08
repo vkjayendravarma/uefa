@@ -1,1 +1,49 @@
-<p>f-tournaments-register works!</p>
+<app-header backgroundImage='2_player' headerTitle='Welcome back Andrew'></app-header>
+<div class="registerationComponent ml">
+    <h2 class="componentTitle fs(24) fc(ffffff) ff-sb ">Tournament Registration</h2>
+    <div class="tournamentInfo bgc(161F26) bgshadow1 bdr-rounded pl mtl">
+        <h2 class="tournamentTitle fs(24) fc(ffffff) ff-sb">School Tournament - St. Andrew’s</h2>
+        <div class="eventDetailsWrapper mtr">
+            <div class="d-flex justify-content-start align-items-center">
+                <p class="eventDate fs(16) fc(EDEEEF) mrl">
+                    <mat-icon svgIcon="calendar" class="uiComponent-small-icon mrs"></mat-icon>
+                    14 March 2021
+                </p>
+                <p class="eventTime fs(16) fc(EDEEEF) mrl">
+                    <mat-icon svgIcon="time" class="uiComponent-small-icon mrs"></mat-icon>
+                    8:30 Am - 10:30 AM
+                </p>
+                <p class="eventTime fs(16) fc(EDEEEF) mrl">
+                    <mat-icon svgIcon="location" class="uiComponent-small-icon"></mat-icon>
+                    #2492 Anfield Stadium, Liverpool
+                    <a href="" class="fc(77B7FD) mlxs">Google Maps</a>
+                </p>
+            </div>
+        </div>
+        <div class="divisions mtxl">
+            <h1 class="title fc(ffffff) ff-sb fs(20) mbs">Divisions</h1>
+            <div
+              class="divisionsGroup d-flex justify-content-start align-items-center"
+            >
+              <div class="category ff-sb bdr-rounded fs(16)">Women U15</div>
+              <div class="category ff-sb bdr-rounded mll fs(16)">Women U17</div>
+              <div class="category ff-sb bdr-rounded mll fs(16)">Women U21</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="teams mtl">
+        <div class="teamsHeader">
+            <h2 class="componentTitle fs(20) fc(ffffff) ff-sb display-inline ">Tournament Registration</h2>
+            <button mat-button class="addTeam mll fc(77B7FD) " (click)="addNewTeam()" >+ Add Teams</button>
+        </div>
+        <div class="regesteredTeam wdt(100) d-flex fs(16) ff-r bdr(373A3D) bdr-rounded ptr pbr pll prl mtr ">
+            <div class="category mrl align-self-center">U15 - Mixed</div>
+            <div class="coach ml-auto mrl align-self-center ">Alan Rickman (Coach)</div>
+            <div class="players ml-auto mrl align-self-center">Romelu Lukaku, Bose Chadman, Another name <span class="fc(77B7FD)">+4</span></div>
+            <div class="approvalStatus ml-auto mrl fc(FFC107) align-self-center ">Pending Approval</div>
+            <button mat-icon-button class="editTeam  ml-auto"><mat-icon svgIcon="pencil" ></mat-icon> </button>
+        </div>
+        
+    </div>
+</div>
