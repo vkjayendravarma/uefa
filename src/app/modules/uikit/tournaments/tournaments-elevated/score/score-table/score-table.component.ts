@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PointsTableModelComponent } from '../points-table-model/points-table-model.component';
 import { ScoreMatchModelComponent } from '../score-match-model/score-match-model.component';
@@ -9,6 +9,8 @@ import { ScoreMatchModelComponent } from '../score-match-model/score-match-model
   styleUrls: ['./score-table.component.scss']
 })
 export class ScoreTableComponent implements OnInit {
+
+  @Input() user: string | undefined;
 
   matches = [1, 2, 3, 4, 5, 6]
 

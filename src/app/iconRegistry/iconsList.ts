@@ -36,4 +36,5 @@ export enum Icons {
   quote = 'quotes',
   rearrangeIcon = 'rearrange',
   pencilIcon = 'pencil',
+  addIcon = 'add',
 }

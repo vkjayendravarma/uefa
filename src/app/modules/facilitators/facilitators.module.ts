@@ -31,6 +31,24 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { FTeamManagementHomeComponent } from './components/team-management/f-team-management-home/f-team-management-home.component';
 import { FTeamManagementMembersComponent } from './components/team-management/f-team-management-members/f-team-management-members.component';
 import { MatButtonModule } from '@angular/material/button';
+import { FTeamManagementSessionsComponent } from './components/team-management/f-team-management-sessions/f-team-management-sessions.component';
+import { FTeamManagementDocumentsComponent } from './components/team-management/f-team-management-documents/f-team-management-documents.component';
+import { FTeamManagementAttendanceComponent } from './components/team-management/f-team-management-attendance/f-team-management-attendance.component';
+import { FTeamManagementSquadsComponent } from './components/team-management/f-team-management-squads/f-team-management-squads.component';
+import { FTeamManagementAnnouncementsComponent } from './components/team-management/f-team-management-announcements/f-team-management-announcements.component';
+import { FCreateNewPostComponent } from './pages/f-posts/f-create-new-post/f-create-new-post.component';
+import { CreateNewPostsModule } from '../uikit/posts/create-new-posts/create-new-posts.module';
+import { FTournamentsPreviewComponent } from './pages/f-tournaments/f-tournaments-preview/f-tournaments-preview.component';
+import { AddNewTeamToRegesterTournamentComponent } from './models/add-new-team-to-regester-tournament/add-new-team-to-regester-tournament.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { FTournamentsMonitorComponent } from './pages/f-tournaments/f-tournaments-monitor/f-tournaments-monitor.component';
+import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
+import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey/f-create-new-survey.component';
+import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
 
 
 
@@ -53,10 +71,22 @@ import { MatButtonModule } from '@angular/material/button';
     FTeamViewComponent,
     FTeamManagementHomeComponent,
     FTeamManagementMembersComponent,
+    FTeamManagementSessionsComponent,
+    FTeamManagementDocumentsComponent,
+    FTeamManagementAttendanceComponent,
+    FTeamManagementSquadsComponent,
+    FTeamManagementAnnouncementsComponent,
+    FCreateNewPostComponent,
+    FTournamentsPreviewComponent,
+    AddNewTeamToRegesterTournamentComponent,
+    FTournamentsMonitorComponent,
+    FCreateNewSurveyComponent,
   ],
   imports: [
     CommonModule,
     FacilitatorsRouterModule,
+    ReactiveFormsModule,
+    FormsModule,
     
     // ui kit module
     HeaderModule,
@@ -69,11 +99,19 @@ import { MatButtonModule } from '@angular/material/button';
     ViewTournamentsModule,
     ViewSurveysModule,
     TeamsModule,
+    CreateNewPostsModule,
+    TournamentsElevatedModule,
+    CreateNewSurveyModule,
 
     // mat
     MatIconModule,
     MatTabsModule,
     MatButtonModule,
-  ]
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
+  ],
+  entryComponents:[AddNewTeamToRegesterTournamentComponent]
 })
 export class FacilitatorsModule { }
