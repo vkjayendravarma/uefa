@@ -40,13 +40,15 @@
           Register yourself on the platform to be part of the largest ecosystem
           for Grassroots football in Europe.
         </h1>
-        <button
-          class="btn-dialog-action ff-sb fs(16)"
-          color="accent"
-          mat-raised-button
-        >
-          Sign Up
-        </button>
+        <a [routerLink]="['/auth/session', 'signup']">
+          <button
+            class="btn-dialog-action ff-sb fs(16)"
+            color="accent"
+            mat-raised-button
+          >
+            Sign Up
+          </button>
+        </a>
       </div>
     </div>
   </section>
@@ -134,20 +136,24 @@
       </p>
     </div>
     <div class="singInUpButtons fs(16)">
-      <button
-        class="btn-dialog-action ff-sb mrr"
-        color="accent"
-        mat-stroked-button
+      <a [routerLink]="['/auth/session', 'login']">
+        <button
+          class="btn-dialog-action ff-sb mrr"
+          color="accent"
+          mat-stroked-button
+        >
+          Login
+        </button></a
       >
-        Login
-      </button>
-      <button
-        class="btn-dialog-action ff-sb mrr"
-        color="accent"
-        mat-raised-button
-      >
-        Sign Up
-      </button>
+      <a [routerLink]="['/auth/session', 'signup']">
+        <button
+          class="btn-dialog-action ff-sb mrr"
+          color="accent"
+          mat-raised-button
+        >
+          Sign Up
+        </button>
+      </a>
     </div>
   </footer>
 </section>
