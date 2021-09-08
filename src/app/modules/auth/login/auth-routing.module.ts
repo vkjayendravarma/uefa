@@ -11,7 +11,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            redirectTo: 'session/:authType',
+            redirectTo: 'session/login',
             pathMatch: 'full'
           },
           {
