@@ -12,7 +12,12 @@
     <div class="instituteDetailsFormWrapper container">
       <form
         action=""
-        class="instituteDetailsForm mtxl formControlTopBorderUnset wdt(50)"
+        class="
+          instituteDetailsForm
+          mtxl
+          formControlTopBorderUnset
+          institutionStyle
+        "
       >
         <h1 class="formTitle ff-sb fc(ffffff) fs(32)">Institute Details</h1>
         <h3 class="ff-sb fc(9B9B9B) fs(16)">
@@ -22,7 +27,7 @@
         <div class="mtl">
           <div class="profilePic">
             <div class="formControl wdt(100) mbr">
-              <label class="display-block fc(EDEEEF) fs(14) mbl"
+              <label class="display-block fc(EDEEEF) fs(14) mb-3"
                 >Profile Picture</label
               >
               <app-file-uploader></app-file-uploader>
@@ -30,14 +35,14 @@
           </div>
           <div class="enterName">
             <div class="formControl wdt(100)">
-              <label class="display-block fc(EDEEEF) fs(14)"
+              <label class="display-block fc(EDEEEF) fs(14 )"
                 >Institute Name</label
               >
               <mat-form-field appearance="outline" class="wdt(100)">
                 <input
                   matInput
                   type="text"
-                  class="ff-r fs(14)"
+                  class="ff-r fs(14) p-1"
                   placeholder="Enter Name"
                 />
               </mat-form-field>
@@ -52,7 +57,11 @@
                 color="primary"
                 class="wdt(100)"
               >
-                <mat-select panelClass="matSelectCustomFocus">
+                <mat-select
+                  panelClass="matSelectCustomFocus"
+                  placeholder="Enter Institution Type"
+                  class="p-1"
+                >
                   <mat-option>None</mat-option>
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2</mat-option>
@@ -68,9 +77,13 @@
               <mat-form-field
                 appearance="outline"
                 color="primary"
-                class="wdt(100)"
+                class="wdt(100) p-1"
               >
-                <mat-select panelClass="matSelectCustomFocus">
+                <mat-select
+                  panelClass="matSelectCustomFocus"
+                  placeholder="Region"
+                  class="p-1"
+                >
                   <mat-option>None</mat-option>
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2</mat-option>
@@ -84,7 +97,12 @@
               <div class="formControl wdt(100)">
                 <label class="display-block fc(EDEEEF) fs(14)">Location</label>
                 <mat-form-field appearance="outline" class="wdt(100)">
-                  <input matInput type="text" class="ff-r fs(14)" />
+                  <input
+                    matInput
+                    type="text"
+                    class="ff-r fs(14) p-1"
+                    placeholder="Location"
+                  />
                   <mat-icon
                     matSuffix
                     svgIcon="location"
@@ -107,7 +125,8 @@
                   <input
                     matInput
                     [matDatepicker]="startDatePicker"
-                    class="ff-r fs(14)"
+                    class="ff-r fs(14) p-1"
+                    placeholder="DD/MM/YYYY"
                   />
                   <mat-datepicker-toggle matSuffix [for]="startDatePicker">
                   </mat-datepicker-toggle>
@@ -141,7 +160,7 @@
                   <input
                     matInput
                     type="text"
-                    class="ff-r fs(14)"
+                    class="ff-r fs(14) p-1"
                     placeholder="Enter Name"
                   />
                 </mat-form-field>
@@ -156,7 +175,7 @@
                   <input
                     matInput
                     type="text"
-                    class="ff-r fs(14)"
+                    class="ff-r fs(14) p-1"
                     placeholder="Enter"
                   />
                 </mat-form-field>
@@ -171,20 +190,24 @@
 
   <div class="componentActions bgc(161F26) mb-auto wdt(100)">
     <div class="actionsWrapper container ptr pbr">
-      <button
-        class="btn-dialog-action ff-sb fs(16)"
-        color="accent"
-        type="submit"
-        mat-raised-button
-      >
-        Next
-      </button>
-      <button
-        class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-        mat-button
-      >
-        Cancel
-      </button>
+      <a [routerLink]="['/onboard/create-profile']">
+        <button
+          class="btn-dialog-action ff-sb fs(16)"
+          color="accent"
+          type="submit"
+          mat-raised-button
+        >
+          Next
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button
+          class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+          mat-button
+        >
+          Cancel
+        </button>
+      </a>
     </div>
   </div>
 </div>

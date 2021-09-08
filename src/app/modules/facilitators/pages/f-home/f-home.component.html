@@ -1,89 +1,113 @@
-<app-header backgroundImage='1_football' headerTitle='Welcome back Andrew'></app-header>
+<app-header
+  backgroundImage="1_football"
+  headerTitle="Welcome Back, Andrew!"
+></app-header>
 
-<section class="homeWrapper ">
-    <div class="container-fluid  ">
-        <div class="statusCards mtl mlr mrr mbl ">
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="statusCards mtl mlr mrr mbl">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+          <div
+            class="statusCard ptl plr prr pbl bgc(161F26) bgshadow1 bdr-rounded"
+          >
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="statusCard ptl plr prr pbr bgc(161F26) bgshadow1 bdr-rounded">
-                        <div class="row">
-                            <div class="col-8">
-                                <h4 class="cardTitle ff-sb fs(14) fc(82898E) ">Football Players</h4>
-                                <p class="cardData ff-sb fs(32) fc(EDEEEF)">1233</p>
-                            </div>
-                            <div class="col-4 align-self-center">
-                                <mat-icon svgIcon="football-player" class="cardIcon wdtImp(100) hgtaImp"></mat-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="statusCard ptl plr prr pbr bgc(161F26) bgshadow1 bdr-rounded">
-                        <div class="row">
-                            <div class="col-8">
-                                <h4 class="cardTitle ff-sb fs(14) fc(82898E) ">Football Coaches</h4>
-                                <p class="cardData ff-sb fs(32) fc(EDEEEF)">12</p>
-                            </div>
-                            <div class="col-4 align-self-center">                                
-                                <mat-icon svgIcon="coach" class="cardIcon wdtImp(100) hgtaImp"></mat-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="statusCard ptl plr prr pbr bgc(161F26) bgshadow1 bdr-rounded">
-                        <div class="row">
-                            <div class="col-8">
-                                <h4 class="cardTitle ff-sb fs(14) fc(82898E) ">Upcoming Matches</h4>
-                                <p class="cardData ff-sb fs(32) fc(EDEEEF)">02</p>
-                            </div>
-                            <div class="col-4 align-self-center">
-                                <mat-icon svgIcon="footBall" class="cardIcon wdtImp(100) hgtaImp"></mat-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="statusCard ptl plr prr pbr bgc(161F26) bgshadow1 bdr-rounded">
-                        <div class="row">
-                            <div class="col-8">
-                                <h4 class="cardTitle ff-sb fs(14) fc(82898E) ">Upcoming Events</h4>
-                                <p class="cardData ff-sb fs(32) fc(EDEEEF)">04</p>
-                            </div>
-                            <div class="col-4 align-self-center">
-                                <mat-icon svgIcon="events" class="cardIcon wdtImp(100) hgtaImp"></mat-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+              <div class="col-8">
+                <h4 class="cardTitle ff-sb fs(14) fc(82898E)">
+                  Football Players
+                </h4>
+                <p class="cardData ff-sb fs(32) fc(EDEEEF)">1233</p>
+              </div>
+              <div class="col-4 align-self-center">
+                <mat-icon
+                  svgIcon="football-player"
+                  class="cardIcon wdtImp(100) hgtaImp"
+                ></mat-icon>
+              </div>
             </div>
-        </div>
-        <div class=" ptl plr pbl ">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                    <uikit-drills-sessions></uikit-drills-sessions>
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                    <div class="posts">
-                        <app-posts-list-view></app-posts-list-view>
-                    </div>
-                    <div class="events mtl">
-                        <app-single-category-events-view componentTitle="Upcoming Events"></app-single-category-events-view>
-
-                    </div>
-                </div>
-                
-
-
-            </div>
+          </div>
         </div>
 
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+          <div
+            class="statusCard ptl plr prr pbl bgc(161F26) bgshadow1 bdr-rounded"
+          >
+            <div class="row">
+              <div class="col-8">
+                <h4 class="cardTitle ff-sb fs(14) fc(82898E)">
+                  Football Coaches
+                </h4>
+                <p class="cardData ff-sb fs(32) fc(EDEEEF)">12</p>
+              </div>
+              <div class="col-4 align-self-center">
+                <mat-icon
+                  svgIcon="coach"
+                  class="cardIcon wdtImp(100) hgtaImp"
+                ></mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+          <div
+            class="statusCard ptl plr prr pbl bgc(161F26) bgshadow1 bdr-rounded"
+          >
+            <div class="row">
+              <div class="col-8">
+                <h4 class="cardTitle ff-sb fs(14) fc(82898E)">
+                  Upcoming Matches
+                </h4>
+                <p class="cardData ff-sb fs(32) fc(EDEEEF)">02</p>
+              </div>
+              <div class="col-4 align-self-center">
+                <mat-icon
+                  svgIcon="footBall"
+                  class="cardIcon wdtImp(100) hgtaImp"
+                ></mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+          <div
+            class="statusCard ptl plr prr pbl bgc(161F26) bgshadow1 bdr-rounded"
+          >
+            <div class="row">
+              <div class="col-8">
+                <h4 class="cardTitle ff-sb fs(14) fc(82898E)">
+                  Upcoming Events
+                </h4>
+                <p class="cardData ff-sb fs(32) fc(EDEEEF)">04</p>
+              </div>
+              <div class="col-4 align-self-center">
+                <mat-icon
+                  svgIcon="events"
+                  class="cardIcon wdtImp(100) hgtaImp"
+                ></mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <div class="ptr plr pbl">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+          <uikit-drills-sessions></uikit-drills-sessions>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+          <div class="posts">
+            <app-posts-list-view></app-posts-list-view>
+          </div>
+          <div class="events mtl">
+            <app-single-category-events-view
+              componentTitle="Upcoming Events"
+            ></app-single-category-events-view>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

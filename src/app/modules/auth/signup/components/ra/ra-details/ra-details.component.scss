@@ -1,1 +1,10 @@
-@import '../../../signup.module';
+@import "../../../signup.module";
+
+.registrationStyle {
+  width: 50% !important;
+  @media only screen and (max-width: 992px) {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
