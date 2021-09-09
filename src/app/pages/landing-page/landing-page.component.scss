@@ -8,7 +8,7 @@
 
   @media only screen and (max-width: 768px) {
     max-height: 60px;
-    button {
+    .singInUpButtons {
       visibility: hidden;
     }
   }
@@ -29,13 +29,23 @@
 }
 
 .bannerWrapper {
-  background-image: url("../../../assets/images/backgrounds/landing/Banner.png");
+  background-image: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.3),
+      rgba(27, 27, 27, 0.3)
+    ),
+    url("../../../assets/images/backgrounds/landing/Banner.png");
   height: 50vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    .bannerText {
+      font-size: 26px !important;
+    }
+  }
 }
 
 .bannerContent {
@@ -93,12 +103,12 @@
     padding: 3em;
     .quote {
       width: 100%;
-      padding: 2em;
+      padding: 2em 2em 3.5em 2em;
     }
   }
 }
 
-footer {
+.landingFooter {
   background-color: #23272c;
   display: flex;
   padding: 3em 6em;

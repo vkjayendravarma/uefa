@@ -1,94 +1,163 @@
-<div class="signupComponent  bgc(0F171D) wdt(100)">
-    <div class="componentHeader bdrb">
-        <div class="container ">
-            <div class="header ptr pbs ">
-                <div class="branding">
-                    <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="">
-                </div>
+<div class="signupComponent bgc(0F171D) wdt(100)">
+  <div class="componentHeader bdrb">
+    <div class="container">
+      <div class="header ptr pbs">
+        <div class="branding">
+          <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="componentBody">
+    <div class="registrationFormWrapper container">
+      <form
+        action=""
+        class="
+          registrationForm
+          mtxl
+          formControlTopBorderUnset
+          registrationStyle
+        "
+      >
+        <h1 class="formTitle ff-sb fc(ffffff) fs(32)">Create Profile</h1>
+
+        <div class="row mtl">
+          <div class="col-12">
+            <div class="formControl wdt(100) mbr">
+              <label class="display-block fc(EDEEEF) fs(14) mb-3"
+                >Profile Picture</label
+              >
+              <app-file-uploader></app-file-uploader>
             </div>
+          </div>
+
+          <div class="col-12">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Work Email Address</label
+              >
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input
+                  matInput
+                  type="email"
+                  class="ff-r fs(14) p-1"
+                  placeholder="andrewbernard@uefa.com"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div
+              class="
+                formControl
+                wdt(100)
+                d-flex
+                flex-column
+                justify-content-center
+              "
+            >
+              <label class="display-block fc(EDEEEF) fs(14) p-1"
+                >Enter Full Name</label
+              >
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <input
+                  matInput
+                  type="text"
+                  class="ff-r fs(14) p-1"
+                  placeholder="Enter Full Name"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="formControl wdt(100) mbr">
+              <label class="display-block fc(EDEEEF) fs(14) mbr">Gender</label>
+              <mat-radio-group
+                aria-label="Select an option"
+                class="fc(EDEEEF) fs(14)"
+              >
+                <mat-radio-button value="1" class="mrxxl"
+                  >Male</mat-radio-button
+                >
+                <mat-radio-button value="2" class="mrxxl"
+                  >Female</mat-radio-button
+                >
+                <mat-radio-button value="3">Prefer not to say</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)">Location</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <input
+                  matInput
+                  type="text"
+                  class="ff-r fs(14) p-1"
+                  placeholder="Enter Postcode"
+                />
+                <mat-icon
+                  matSuffix
+                  svgIcon="location"
+                  class="location"
+                ></mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Date of Birth
+              </label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <input
+                  matInput
+                  [matDatepicker]="startDatePicker"
+                  class="ff-r fs(14) p-1"
+                  placeholder="DD/MM/YYYY"
+                />
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
         </div>
+      </form>
     </div>
-    <div class="componentBody">
-        <div class="registrationFormWrapper container ">
-            <form action="" class="registrationForm mtxl formControlTopBorderUnset wdt(50) ">
-                <h1 class="formTitle ff-sb fc(ffffff) fs(32) ">Create Profile</h1>
+  </div>
 
-                <div class="row mtl">
-                    <div class="col-12">
-                        <div class="formControl wdt(100) mbr">
-                            <label class="display-block fc(EDEEEF) fs(14) mbl">Profile Picture</label>
-                            <app-file-uploader></app-file-uploader>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="formControl wdt(100) ">
-                            <label class="display-block fc(EDEEEF) fs(14)  ">Work Email Address</label>
-                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                <input matInput type="email" class="ff-r fs(14)" />
-                            </mat-form-field>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="formControl wdt(100) ">
-                            <label class="display-block fc(EDEEEF) fs(14)  ">Full Name</label>
-                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                <input matInput type="text" class="ff-r fs(14)" />
-                            </mat-form-field>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="formControl wdt(100) mbr">
-                            <label class="display-block fc(EDEEEF) fs(14)  mbr">Gender</label>
-                            <mat-radio-group aria-label="Select an option" class="fc(EDEEEF) fs(14) ">
-                                <mat-radio-button value="1" class="mrxxl">Male</mat-radio-button>
-                                <mat-radio-button value="2" class="mrxxl">Female</mat-radio-button>
-                                <mat-radio-button value="3">Prefer not to say</mat-radio-button>
-                            </mat-radio-group>
-
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="formControl wdt(100) ">
-                            <label class="display-block fc(EDEEEF) fs(14)  ">Location</label>
-                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                <input matInput type="text" class="ff-r fs(14)" />
-                                <mat-icon matSuffix svgIcon="location" class="location"></mat-icon>
-                            </mat-form-field>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="formControl wdt(100)">
-                            <label class="display-block fc(EDEEEF)  fs(14)   ">Date of Birth </label>
-                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                <input matInput [matDatepicker]="startDatePicker" class="ff-r fs(14)">
-                                <mat-datepicker-toggle matSuffix [for]="startDatePicker">
-                                </mat-datepicker-toggle>
-                                <mat-datepicker #startDatePicker></mat-datepicker>
-
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </div>
-
-             
-            </form>
-        </div>
+  <div class="componentActions bgc(161F26) mb-auto wdt(100)">
+    <div class="actionsWrapper container ptr pbr">
+      <a [routerLink]="['/onboard/inviteusers']">
+        <button
+          class="btn-dialog-action ff-sb fs(16)"
+          color="accent"
+          type="submit"
+          mat-raised-button
+        >
+          Create Profile
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button
+          class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+          mat-button
+        >
+          Cancel
+        </button>
+      </a>
     </div>
-
-    <div class="componentActions bgc(161F26) mb-auto wdt(100)">
-        <div class="actionsWrapper container ptr pbr">
-            <button class="btn-dialog-action ff-sb fs(16)" color="accent" type="submit"
-                mat-raised-button>
-                Create Profile
-            </button>
-            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
-                Cancel
-            </button>
-        </div>
-    </div>
+  </div>
 </div>

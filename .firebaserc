@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "caarya-uefa"
+    "default": "caarya-uefa",
+    "caarya-staging-uefa": "staging-uefa-94ee6"
   }
 }

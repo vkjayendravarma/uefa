@@ -1,126 +1,159 @@
 <section class="landingPage bgc(0F171D)">
-    <!-- Navigation  -->
-    <nav class="landingNav pr bdrb(383C40)">
-        <div class="">
-            <a [routerLink]="['/']">
-                <img src="../../../assets/images/logos/Logo.svg" alt="verdentrum" class="wdt(100)" />
-            </a>
-        </div>
-        <div class="singInUpButtons fs(16)">
-            <a [routerLink]="['/auth/session', 'login']">
-                <button class="btn-dialog-action ff-sb mrr" color="accent" mat-stroked-button>
-                    Login
-                </button>
-            </a>           
-            <a [routerLink]="['/auth/session', 'signup']">
-                <button class="btn-dialog-action ff-sb mrr" color="accent" mat-raised-button>
-                    Sign Up
-                </button>
-            </a>
-            
-        </div>
-    </nav>
+  <!-- Navigation  -->
+  <nav class="landingNav pr bdrb(383C40)">
+    <div class="">
+      <a [routerLink]="['/']">
+        <img
+          src="../../../assets/images/logos/Logo.svg"
+          alt="verdentrum"
+          class="wdt(100)"
+        />
+      </a>
+    </div>
+    <div class="singInUpButtons fs(16)">
+      <a [routerLink]="['/auth/session', 'login']">
+        <button
+          class="btn-dialog-action ff-sb mrr"
+          color="accent"
+          mat-stroked-button
+        >
+          Login
+        </button>
+      </a>
+      <a [routerLink]="['/auth/session', 'signup']">
+        <button
+          class="btn-dialog-action ff-sb mrr"
+          color="accent"
+          mat-raised-button
+        >
+          Sign Up
+        </button>
+      </a>
+    </div>
+  </nav>
 
-    <!-- Hero Image  -->
-    <section class="landingBanner">
-        <div class="bannerWrapper">
-            <div class="bannerContent">
-                <h1 class="bannerText fs(32) mbr">
-                    Register yourself on the platform to be part of the largest ecosystem
-                    for Grassroots football in Europe.
-                </h1>
-                <button class="btn-dialog-action ff-sb fs(16)" color="accent" mat-raised-button>
-                    Sign Up
-                </button>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Image  -->
+  <section class="landingBanner">
+    <div class="bannerWrapper">
+      <div class="bannerContent">
+        <h1 class="bannerText fs(32) mbr">
+          Register yourself on the platform to be part of the largest ecosystem
+          for Grassroots football in Europe.
+        </h1>
+        <a [routerLink]="['/auth/session', 'signup']">
+          <button
+            class="btn-dialog-action ff-sb fs(16)"
+            color="accent"
+            mat-raised-button
+          >
+            Sign Up
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Register -->
-    <section class="whyRegister">
-        <div class="bgc(0F171D) whyRegisterWrapper">
-            <div class="registerHeading">
-                <h1 class="fs(32) fc(ffffff)">Why register for on the platform?</h1>
-                <p class="registerText fs(16) fc(C3C5C7) mtl">
-                    Verdentum's platform for European Grassroots football gives you the
-                    opportunity to be part of various programs and initiatives by UEFA and
-                    the National Association, and make you football activities visible to
-                    the best coaches, institutes, and selectors.
-                </p>
-            </div>
-            <div class="d-flex flex-column functionalities">
-                <div class="d-flex align-items-center">
-                    <div class="svgicon">
-                        <mat-icon svgIcon="landingFlag" class="icons"></mat-icon>
-                    </div>
-                    <p class="fs(20) fc(ffffff) mlr">
-                        Track your football activities and share your achievements with the
-                        community
-                    </p>
-                </div>
-                <div class="d-flex align-items-center mtl">
-                    <div class="svgicon">
-                        <mat-icon svgIcon="landingEvents" class="icons"></mat-icon>
-                    </div>
-                    <p class="fs(20) fc(ffffff) mlr">
-                        Plan your sessions and sign-up for events under the National
-                        Association
-                    </p>
-                </div>
-                <div class="d-flex align-items-center mtl">
-                    <div class="svgicon">
-                        <mat-icon svgIcon="trophy" class="icons"></mat-icon>
-                    </div>
-                    <p class="fs(20) fc(ffffff) mlr">Compete in Tournaments</p>
-                </div>
-            </div>
+  <!-- Register -->
+  <section class="whyRegister">
+    <div class="bgc(0F171D) whyRegisterWrapper">
+      <div class="registerHeading">
+        <h1 class="fs(32) fc(ffffff)">Why register for on the platform?</h1>
+        <p class="registerText fs(16) fc(C3C5C7) mtl">
+          Verdentum's platform for European Grassroots football gives you the
+          opportunity to be part of various programs and initiatives by UEFA and
+          the National Association, and make you football activities visible to
+          the best coaches, institutes, and selectors.
+        </p>
+      </div>
+      <div class="d-flex flex-column functionalities">
+        <div class="d-flex align-items-center">
+          <div class="svgicon">
+            <mat-icon svgIcon="landingFlag" class="icons"></mat-icon>
+          </div>
+          <p class="fs(20) fc(ffffff) mlr">
+            Track your football activities and share your achievements with the
+            community
+          </p>
         </div>
-    </section>
+        <div class="d-flex align-items-center mtl">
+          <div class="svgicon">
+            <mat-icon svgIcon="landingEvents" class="icons"></mat-icon>
+          </div>
+          <p class="fs(20) fc(ffffff) mlr">
+            Plan your sessions and sign-up for events under the National
+            Association
+          </p>
+        </div>
+        <div class="d-flex align-items-center mtl">
+          <div class="svgicon">
+            <mat-icon svgIcon="trophy" class="icons"></mat-icon>
+          </div>
+          <p class="fs(20) fc(ffffff) mlr">Compete in Tournaments</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Video  -->
-    <!-- <section class="videoCarousel">
+  <!-- Video  -->
+  <!-- <section class="videoCarousel">
     <div class="bgc(0F171D) video">videos</div>
   </section> -->
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="bgc(0F171D) testimonial">
-            <div class="quote bdr-rounded">
-                <mat-icon svgIcon="quotes" class="icons"></mat-icon>
-                <p class="fs(16) fc(ffffff) mlr">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate
-                </p>
-            </div>
-            <div class="candidateProfile">
-                <img src="../../../assets/images/users/person.png" />
-                <p class="fc(ffffff)">Sairam Koduri</p>
-                <p class="fc(9B9B9B) pbl">Designation goes here</p>
-            </div>
-        </div>
-    </section>
-    <!-- Footer  -->
-    <footer>
-        <div class="companyDescription">
-            <a [routerLink]="['/']">
-                <img src="../../../assets/images/logos/blueLogo.svg" alt="verdentrum" class="" />
-            </a>
-            <p class="fs(12) fc(C3C5C7)">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut alicommodo
-            </p>
-        </div>
-        <div class="singInUpButtons fs(16)">
-            <button class="btn-dialog-action ff-sb mrr" color="accent" mat-stroked-button>
-                Login
-            </button>
-            <button class="btn-dialog-action ff-sb mrr" color="accent" mat-raised-button>
-                Sign Up
-            </button>
-        </div>
-    </footer>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="bgc(0F171D) testimonial">
+      <div class="quote bdr-rounded">
+        <mat-icon svgIcon="quotes" class="icons"></mat-icon>
+        <p class="fs(16) fc(ffffff) mlr">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate
+        </p>
+      </div>
+      <div class="candidateProfile">
+        <img src="../../../assets/images/users/person.png" />
+        <p class="fc(ffffff)">Sairam Koduri</p>
+        <p class="fc(9B9B9B) pbl">Designation goes here</p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer  -->
+  <footer class="landingFooter">
+    <div class="companyDescription">
+      <a [routerLink]="['/']">
+        <img
+          src="../../../assets/images/logos/blueLogo.svg"
+          alt="verdentrum"
+          class=""
+        />
+      </a>
+      <p class="fs(12) fc(C3C5C7)">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut alicommodo
+      </p>
+    </div>
+    <div class="singInUpButtons fs(16)">
+      <a [routerLink]="['/auth/session', 'login']">
+        <button
+          class="btn-dialog-action ff-sb mrr"
+          color="accent"
+          mat-stroked-button
+        >
+          Login
+        </button></a
+      >
+      <a [routerLink]="['/auth/session', 'signup']">
+        <button
+          class="btn-dialog-action ff-sb mrr"
+          color="accent"
+          mat-raised-button
+        >
+          Sign Up
+        </button>
+      </a>
+    </div>
+  </footer>
 </section>
