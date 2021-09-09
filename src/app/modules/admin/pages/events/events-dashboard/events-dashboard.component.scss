@@ -1,0 +1,28 @@
+.events-col-order-2 {
+  padding-right: 0px;
+}
+.events-col-order-3 {
+  padding-right: 30px;
+}
+
+// Responsive styles section
+
+@media (max-width: 994px) {
+  .events-col-order-2 {
+    order: 3;
+    margin-top: 2em;
+  }
+  .events-col-order-2,
+  .events-col-order-1 {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 432px) {
+  .events-col-order-2,
+  .events-col-order-1,
+  .events-col-order-3 {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+}

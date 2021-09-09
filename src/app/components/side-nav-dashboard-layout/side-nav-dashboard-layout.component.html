@@ -1,37 +1,50 @@
 <nav class="sideNav">
-    <div class="branding ptr pbr pll prl bdrb(383C40)  ">
-        <a [routerLink]="['/']">
-            <img src="../../../assets/images/logos/Logo.svg" alt="verdentrum" class="brandingImg wdt(100)">
+  <div class="branding ptr pbr pll prl bdrb(383C40)">
+    <a [routerLink]="['/']">
+      <img
+        src="../../../assets/images/logos/Logo.svg"
+        alt="verdentrum"
+        class="brandingImg wdt(100)"
+      />
+    </a>
+  </div>
+
+  <div class="navItems">
+    <ul class="nav navItemsUl bdrb(383C40) pr">
+      <li
+        class="navItemWrapper wdt(100) mbs"
+        *ngFor="let navItem of currentSideBar"
+      >
+        <a
+          [routerLink]="[navItem.link]"
+          routerLinkActive="navLinkActive"
+          class="navLinkInActive"
+        >
+          <button mat-button class="navItem wdt(100)">
+            <mat-icon class="icon nav-icons mrr" [svgIcon]="navItem.icon"></mat-icon>
+            <span class="navItemLabel ff-sb fc(C3C5C7)">
+              {{ navItem.label }}</span
+            >
+          </button>
         </a>
-    </div>
+      </li>
+    </ul>
 
-    <div class="navItems ">
-
-        <ul class="nav navItemsUl bdrb(383C40) pr">
-            <li class="navItemWrapper wdt(100) mbs" *ngFor="let navItem of currentSideBar">
-                <a [routerLink]="[navItem.link]" routerLinkActive="navLinkActive" class="navLinkInActive">
-                    <button mat-button class="navItem wdt(100)">
-                        <mat-icon class="icon mrr" [svgIcon]="navItem.icon"></mat-icon>
-                        <span class="navItemLabel ff-sb fc(C3C5C7) "> {{navItem.label}}</span>
-                    </button>
-                </a>
-
-            </li>
-
-        </ul>
-
-        <ul class="nav navItemsUl pr">
-            <li class="navItemWrapper wdt(100) mbs" *ngFor="let navItem of sideBar2">
-                <a [routerLink]="[navItem.link]" routerLinkActive="navLinkActive" class="navLinkInActive">
-                    <button mat-button class="navItem wdt(100)">
-                        <mat-icon class="icon mrr" [svgIcon]="navItem.icon"></mat-icon>
-                        <span class="navItemLabel ff-sb fc(C3C5C7) "> {{navItem.label}}</span>
-                    </button>
-                </a>
-
-            </li>
-
-        </ul>
-
-    </div>
+    <ul class="nav navItemsUl pr">
+      <li class="navItemWrapper wdt(100) mbs" *ngFor="let navItem of sideBar2">
+        <a
+          [routerLink]="[navItem.link]"
+          routerLinkActive="navLinkActive"
+          class="navLinkInActive"
+        >
+          <button mat-button class="navItem wdt(100)">
+            <mat-icon class="icon nav-icons mrr" [svgIcon]="navItem.icon"></mat-icon>
+            <span class="navItemLabel ff-sb fc(C3C5C7)">
+              {{ navItem.label }}</span
+            >
+          </button>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>

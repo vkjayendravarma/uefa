@@ -1,408 +1,561 @@
-
-
-<section class="createNewEventWrapper ">
-    <div class="container ">
-        <div class=" ptl plr pbl ">
-            <div class="d-flex newTournamentTitle">
-                <div class="eventTitleWrapper">
-                    <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  "> National Association Training: Women</h2>
-                </div>
-                <div class="tags">
-                    <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
-                </div>
-                <div class="inComponentNavigation ml-auto">
-                    <mat-icon svgIcon="horizontalDots" class="eventBodyIcons"></mat-icon>
-                </div>
-            </div>
-  
-
-            <div class="newEventBuilder darkStepperContainer mtl">
-                <mat-stepper #stepper color="accent">
-                    <!-- ---------------------------------------------------------------- Basic Info  -->
-                    <mat-step label="Basic Information">
-                        <form class="basicInfo mtl formControlTopBorderUnset">
-                            <div class="inputGroup mtr">
-                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Event Title</h3>
-
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Institute Name</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                                <mat-select panelClass="matSelectCustomFocus">
-                                                    <mat-option>None</mat-option>
-                                                    <mat-option value="option1">Option 1</mat-option>
-                                                    <mat-option value="option2">Option 2</mat-option>
-                                                    <mat-option value="option3">Option 3</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Event Name (optional)</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100) ">
-                                            <label class="display-block fc(EDEEEF)   ">Category</label>
-                                            <mat-form-field appearance="outline" color="primary" class="wdt(100)">
-                                                <mat-select panelClass="mat-select-grid-3" multiple>
-                                                    <mat-optgroup label="Gender">
-                                                        <mat-option value="option1">Male</mat-option>
-                                                        <mat-option value="option2">Female</mat-option>
-                                                        <mat-option value="option3">Mixed</mat-option>
-                                                    </mat-optgroup>
-                                                    <mat-optgroup label="All Groups">
-                                                        <mat-option value="option1">All Age Groups</mat-option>
-                                                        <mat-option value="option2">U-5</mat-option>
-                                                        <mat-option value="option2">U-6</mat-option>
-                                                        <mat-option value="option2">U-7</mat-option>
-                                                        <mat-option value="option2">U-8</mat-option>
-                                                        <mat-option value="option2">U-9</mat-option>
-                                                        <mat-option value="option2">U-10</mat-option>
-
-                                                    </mat-optgroup>
-
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Program Name (optional)</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Venue Address</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <textarea matInput rows="5" class="ff-r fs(14)"></textarea>
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
- 
-                            <div class="inputGroup mtr">
-                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Date & Time</h3>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Start Date</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                                <input matInput [matDatepicker]="startDatePicker">
-                                                <mat-datepicker-toggle matSuffix [for]="startDatePicker">
-                                                </mat-datepicker-toggle>
-                                                <mat-datepicker #startDatePicker></mat-datepicker>
-
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Start Time</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                                <input matInput [matDatepicker]="endDatePicker">
-                                                <mat-datepicker-toggle matSuffix [for]="endDatePicker">
-                                                </mat-datepicker-toggle>
-                                                <mat-datepicker #endDatePicker></mat-datepicker>
-
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Time</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-                            <div class="inputGroup mtr">
-                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Registration End Date & Time
-                                </h3>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                                <input matInput [matDatepicker]="registrationEndDatePicker">
-                                                <mat-datepicker-toggle matSuffix [for]="registrationEndDatePicker">
-                                                </mat-datepicker-toggle>
-                                                <mat-datepicker #registrationEndDatePicker></mat-datepicker>
-
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Time</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </form>
-
-                        <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent"
-                                matStepperNext>
-                                Next
-                            </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
-                                Cancel
-                            </button>
-                        </div>
-                    </mat-step>
-
-                    <!-- ---------------------------------------------------------------- Event Details -->
-                    <mat-step label="Event Details">
-                        <form class="eventDetails mtl formControlTopBorderUnset">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF) mbl">Main Image</label>
-                                        <app-file-uploader></app-file-uploader>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)  mtl ">Summary </label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <textarea matInput rows="5" class="ff-r fs(14)"></textarea>
-                                        </mat-form-field>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add Photo | + Add Text | + Add Video</p>
-                        </form>
-                        <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action  fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent"
-                                matStepperNext>
-                                Next
-                            </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                                matStepperPrevious>
-                                Back
-                            </button>
-                        </div>
-                    </mat-step>
-                    <!-- ---------------------------------------------------------------- Publish -->
-                    <mat-step label="Publish">
-                        <div class="finalizing">
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="banner wdt(100) hgt(100) ">
-                                        <img src="../../../../../assets/images/others/event_1.jpg" alt=""
-                                            class="bdr-rounded">
-                                    </div>
-                                </div>
-                                <div class="col-10">
-                                    <div class="eventInfo mll">
-                                        <h4 class="eventTitle ff-r fs(14) fc(ffffff) ">Women’s Group Session</h4>
-                                        <p class="summery ff-r fs(14) fc(C3C5C7) ">Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                            officia deserunt mollit anim id est laborum.</p>
-                                        <a [routerLink]="['/']" class=" ff-r fs(14) fc(77B7FD)"> Preview</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="publishingOptions">
-                                <form class="publishingOptionsForm formControlTopBorderUnset">
-                                    <div class="inputGroup mtr">
-                                        <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options
-                                        </h3>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                                    <mat-form-field appearance="outline" color="primary"
-                                                        class=" wdt(100)">
-                                                        <mat-select panelClass="matSelectCustomFocus">
-                                                            <mat-option>None</mat-option>
-                                                            <mat-option value="option1">Option 1</mat-option>
-                                                            <mat-option value="option2">Option 2</mat-option>
-                                                            <mat-option value="option3">Option 3</mat-option>
-                                                        </mat-select>
-                                                    </mat-form-field>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6">
-                                                <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Invitee Type</label>
-                                                    <div class="formControl-chiplist">
-                                                        <mat-form-field appearance="outline" color="primary"
-                                                            class=" wdt(100)">
-                                                            <mat-chip-list #chipList aria-label="Invitee Type">
-                                                                <mat-chip *ngFor="let Invitee of Invitees"
-                                                                    [selectable]="selectable" [removable]="removable"
-                                                                    (removed)="remove(Invitee)">
-                                                                    {{Invitee.name}}
-                                                                    <mat-icon matChipRemove *ngIf="removable">cancel
-                                                                    </mat-icon>
-                                                                </mat-chip>
-                                                                <input [matChipInputFor]="chipList"
-                                                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                                                    [matChipInputAddOnBlur]="addOnBlur"
-                                                                    (matChipInputTokenEnd)="add($event)">
-                                                            </mat-chip-list>
-
-                                                        </mat-form-field>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6">
-                                                <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Select Region</label>
-                                                    <mat-form-field appearance="outline" color="primary"
-                                                        class=" wdt(100)">
-                                                        <mat-select panelClass="matSelectCustomFocus">
-                                                            <mat-option>None</mat-option>
-                                                            <mat-option value="option1">Option 1</mat-option>
-                                                            <mat-option value="option2">Option 2</mat-option>
-                                                            <mat-option value="option3">Option 3</mat-option>
-                                                        </mat-select>
-                                                    </mat-form-field>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Shareable LInk</label>
-                                                    <mat-form-field appearance="outline" color="primary"
-                                                        class=" wdt(100)">
-                                                        <input matInput type="text" value="www.uefa/newtournament">
-                                                        <button matSuffix mat-icon-button>
-                                                            <mat-icon svgIcon="copy"></mat-icon>
-                                                        </button>
-
-                                                    </mat-form-field>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent">
-                                Publish
-                            </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                                matStepperPrevious>
-                                Back
-                            </button>
-                        </div>
-                    </mat-step>
-
-                    <mat-step label="Attendees">
-                        <div class="attendeesWrapper">
-                            <form class="basicInfo mtl formControlTopBorderUnset">
-
-                                <div class="inputGroup ">
-                                    <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mrr display-inline">Attendance
-                                    </h3>
-                                    <h4 class="subtitle fs(16) ff-r fc(9B9B9B) display-inline "> 3 days 2 hours until
-                                        event
-                                    </h4>
-                                    <div class="manulaAttendanceWrapper mtl">
-                                        <label class="manulaAttendance fs(16) ff-r fc(9B9B9B) mrl">Manual
-                                            Attendance</label>
-                                        <mat-slide-toggle color="accent"></mat-slide-toggle>
-                                    </div>
-
-                                    <div class="row mtl pbr">
-                                        <div class="col-4">
-                                            <div class="formControl  ">
-                                                <label class="display-block fc(EDEEEF)   ">Attendance Count</label>
-                                                <mat-form-field appearance="outline" class=" wdt(100)">
-                                                    <input matInput type="text" class="ff-r fs(14)" />
-                                                </mat-form-field>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="addBulkWrapper">
-                                                <div class="addBulk">
-                                                    <button
-                                                        class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-                                                        mat-button matStepperNext>
-                                                        Add Bulk
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-
-                            </form>
-                            <div class="stepper-controller mtxxl pr bgc(161F26) ">
-                                <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button
-                                    color="accent">
-                                    Save Changes
-                                </button>
-                                <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                                    matStepperPrevious>
-                                    Back
-                                </button>
-                            </div>
-                        </div>
-
-                    </mat-step>
-                </mat-stepper>
-            </div>
+<section class="createNewEventWrapper">
+  <div class="container">
+    <div class="ptl plr pbl">
+      <div class="d-flex newTournamentTitle">
+        <div class="eventTitleWrapper">
+          <h2 class="eventTitle display-inline ff-sb fs(24) fc(ffffff)">
+            National Association Training: Women
+          </h2>
         </div>
+        <div class="tags">
+          <app-tag-chips
+            [tags]="tags"
+            class="tag mlr display-inline"
+          ></app-tag-chips>
+        </div>
+        <div class="inComponentNavigation ml-auto">
+          <mat-icon svgIcon="horizontalDots" class="eventBodyIcons"></mat-icon>
+        </div>
+      </div>
 
+      <div class="newEventBuilder darkStepperContainer mtl">
+        <mat-stepper #stepper color="accent">
+          <!-- ---------------------------------------------------------------- Basic Info  -->
+          <mat-step label="Basic Information">
+            <form class="basicInfo mtl formControlTopBorderUnset">
+              <div class="inputGroup mtr">
+                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">
+                  Event Title
+                </h3>
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)"
+                        >Institute Name</label
+                      >
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">Event Type</label>
+                      <mat-form-field
+                        appearance="outline"
+                        color="primary"
+                        class="wdt(100)"
+                      >
+                        <mat-select panelClass="matSelectCustomFocus">
+                          <mat-option>None</mat-option>
+                          <mat-option value="option1">Option 1</mat-option>
+                          <mat-option value="option2">Option 2</mat-option>
+                          <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)"
+                        >Event Name (optional)</label
+                      >
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">Category</label>
+                      <mat-form-field
+                        appearance="outline"
+                        color="primary"
+                        class="wdt(100)"
+                      >
+                        <mat-select panelClass="mat-select-grid-3" multiple>
+                          <mat-optgroup label="Gender">
+                            <mat-option value="option1">Male</mat-option>
+                            <mat-option value="option2">Female</mat-option>
+                            <mat-option value="option3">Mixed</mat-option>
+                          </mat-optgroup>
+                          <mat-optgroup label="All Groups">
+                            <mat-option value="option1"
+                              >All Age Groups</mat-option
+                            >
+                            <mat-option value="option2">U-5</mat-option>
+                            <mat-option value="option2">U-6</mat-option>
+                            <mat-option value="option2">U-7</mat-option>
+                            <mat-option value="option2">U-8</mat-option>
+                            <mat-option value="option2">U-9</mat-option>
+                            <mat-option value="option2">U-10</mat-option>
+                          </mat-optgroup>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)"
+                        >Program Name (optional)</label
+                      >
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)"
+                        >Venue Address</label
+                      >
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <textarea
+                          matInput
+                          rows="5"
+                          class="ff-r fs(14)"
+                        ></textarea>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inputGroup mtr">
+                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">
+                  Date & Time
+                </h3>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">Start Date</label>
+                      <mat-form-field
+                        appearance="outline"
+                        color="primary"
+                        class="wdt(100)"
+                      >
+                        <input matInput [matDatepicker]="startDatePicker" />
+                        <mat-datepicker-toggle
+                          matSuffix
+                          [for]="startDatePicker"
+                        >
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #startDatePicker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">Start Time</label>
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">End Date</label>
+                      <mat-form-field
+                        appearance="outline"
+                        color="primary"
+                        class="wdt(100)"
+                      >
+                        <input matInput [matDatepicker]="endDatePicker" />
+                        <mat-datepicker-toggle matSuffix [for]="endDatePicker">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #endDatePicker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">End Time</label>
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inputGroup mtr">
+                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">
+                  Registration End Date & Time
+                </h3>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">End Date</label>
+                      <mat-form-field
+                        appearance="outline"
+                        color="primary"
+                        class="wdt(100)"
+                      >
+                        <input
+                          matInput
+                          [matDatepicker]="registrationEndDatePicker"
+                        />
+                        <mat-datepicker-toggle
+                          matSuffix
+                          [for]="registrationEndDatePicker"
+                        >
+                        </mat-datepicker-toggle>
+                        <mat-datepicker
+                          #registrationEndDatePicker
+                        ></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="formControl wdt(100)">
+                      <label class="display-block fc(EDEEEF)">End Time</label>
+                      <mat-form-field appearance="outline" class="wdt(100)">
+                        <input matInput type="text" class="ff-r fs(14)" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="stepper-controller mtr pr bgc(161F26)">
+              <button
+                class="btn-dialog-action ff-sb fs(16)"
+                mat-raised-button
+                color="accent"
+                matStepperNext
+              >
+                Next
+              </button>
+              <button
+                class="
+                  btn-dialog-action
+                  bdr(77B7FD)
+                  fc(77B7FD)
+                  ff-sb
+                  fs(16)
+                  mll
+                "
+                mat-button
+              >
+                Cancel
+              </button>
+            </div>
+          </mat-step>
+
+          <!-- ---------------------------------------------------------------- Event Details -->
+          <mat-step label="Event Details">
+            <form class="eventDetails mtl formControlTopBorderUnset">
+              <div class="row">
+                <div class="col-12">
+                  <div class="formControl wdt(100)">
+                    <label class="display-block fc(EDEEEF) mbl"
+                      >Main Image</label
+                    >
+                    <app-file-uploader></app-file-uploader>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="formControl wdt(100)">
+                    <label class="display-block fc(EDEEEF) mtl">Summary </label>
+                    <mat-form-field appearance="outline" class="wdt(100)">
+                      <textarea
+                        matInput
+                        rows="5"
+                        class="ff-r fs(14)"
+                      ></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">
+                + Add Photo | + Add Text | + Add Video
+              </p>
+            </form>
+            <div class="stepper-controller mtr pr bgc(161F26)">
+              <button
+                class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+                mat-raised-button
+                color="accent"
+                matStepperNext
+              >
+                Next
+              </button>
+              <button
+                class="
+                  btn-dialog-action
+                  bdr(77B7FD)
+                  fc(77B7FD)
+                  ff-sb
+                  fs(16)
+                  mll
+                "
+                mat-button
+                matStepperPrevious
+              >
+                Back
+              </button>
+            </div>
+          </mat-step>
+          <!-- ---------------------------------------------------------------- Publish -->
+          <mat-step label="Publish">
+            <div class="finalizing">
+              <div class="row">
+                <div class="col-2">
+                  <div class="banner wdt(100) hgt(100)">
+                    <img
+                      src="../../../../../assets/images/others/event_1.jpg"
+                      alt=""
+                      class="bdr-rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-10">
+                  <div class="eventInfo mll">
+                    <h4 class="eventTitle ff-r fs(14) fc(ffffff)">
+                      Women’s Group Session
+                    </h4>
+                    <p class="summery ff-r fs(14) fc(C3C5C7)">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a [routerLink]="['/']" class="ff-r fs(14) fc(77B7FD)">
+                      Preview</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="publishingOptions">
+                <form class="publishingOptionsForm formControlTopBorderUnset">
+                  <div class="inputGroup mtr">
+                    <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">
+                      Publish Options
+                    </h3>
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="formControl wdt(100)">
+                          <label class="display-block fc(EDEEEF)"
+                            >Event Type</label
+                          >
+                          <mat-form-field
+                            appearance="outline"
+                            color="primary"
+                            class="wdt(100)"
+                          >
+                            <mat-select panelClass="matSelectCustomFocus">
+                              <mat-option>None</mat-option>
+                              <mat-option value="option1">Option 1</mat-option>
+                              <mat-option value="option2">Option 2</mat-option>
+                              <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="formControl wdt(100)">
+                          <label class="display-block fc(EDEEEF)"
+                            >Invitee Type</label
+                          >
+                          <div class="formControl-chiplist">
+                            <mat-form-field
+                              appearance="outline"
+                              color="primary"
+                              class="wdt(100)"
+                            >
+                              <mat-chip-list
+                                #chipList
+                                aria-label="Invitee Type"
+                              >
+                                <mat-chip
+                                  *ngFor="let Invitee of Invitees"
+                                  [selectable]="selectable"
+                                  [removable]="removable"
+                                  (removed)="remove(Invitee)"
+                                >
+                                  {{ Invitee.name }}
+                                  <mat-icon matChipRemove *ngIf="removable"
+                                    >cancel
+                                  </mat-icon>
+                                </mat-chip>
+                                <input
+                                  [matChipInputFor]="chipList"
+                                  [matChipInputSeparatorKeyCodes]="
+                                    separatorKeysCodes
+                                  "
+                                  [matChipInputAddOnBlur]="addOnBlur"
+                                  (matChipInputTokenEnd)="add($event)"
+                                />
+                              </mat-chip-list>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="formControl wdt(100)">
+                          <label class="display-block fc(EDEEEF)"
+                            >Select Region</label
+                          >
+                          <mat-form-field
+                            appearance="outline"
+                            color="primary"
+                            class="wdt(100)"
+                          >
+                            <mat-select panelClass="matSelectCustomFocus">
+                              <mat-option>None</mat-option>
+                              <mat-option value="option1">Option 1</mat-option>
+                              <mat-option value="option2">Option 2</mat-option>
+                              <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="formControl wdt(100)">
+                          <label class="display-block fc(EDEEEF)"
+                            >Shareable LInk</label
+                          >
+                          <mat-form-field
+                            appearance="outline"
+                            color="primary"
+                            class="wdt(100)"
+                          >
+                            <input
+                              matInput
+                              type="text"
+                              value="www.uefa/newtournament"
+                            />
+                            <button matSuffix mat-icon-button>
+                              <mat-icon svgIcon="copy"></mat-icon>
+                            </button>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="stepper-controller mtr pr bgc(161F26)">
+              <button
+                class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+                mat-raised-button
+                color="accent"
+              >
+                Publish
+              </button>
+              <button
+                class="
+                  btn-dialog-action
+                  bdr(77B7FD)
+                  fc(77B7FD)
+                  ff-sb
+                  fs(16)
+                  mll
+                "
+                mat-button
+                matStepperPrevious
+              >
+                Back
+              </button>
+            </div>
+          </mat-step>
+
+          <mat-step label="Attendees">
+            <div class="attendeesWrapper">
+              <form class="basicInfo mtl formControlTopBorderUnset">
+                <div class="inputGroup">
+                  <h3
+                    class="
+                      inputGroupTitle
+                      ff-sb
+                      fs(20)
+                      fc(ffffff)
+                      mrr
+                      display-inline
+                    "
+                  >
+                    Attendance
+                  </h3>
+                  <h4 class="subtitle fs(16) ff-r fc(9B9B9B) display-inline">
+                    3 days 2 hours until event
+                  </h4>
+                  <div class="manulaAttendanceWrapper mtl">
+                    <label class="manulaAttendance fs(16) ff-r fc(9B9B9B) mrl"
+                      >Manual Attendance</label
+                    >
+                    <mat-slide-toggle color="accent"></mat-slide-toggle>
+                  </div>
+
+                  <div class="row mtl pbr">
+                    <div class="col-4">
+                      <div class="formControl">
+                        <label class="display-block fc(EDEEEF)"
+                          >Attendance Count</label
+                        >
+                        <mat-form-field appearance="outline" class="wdt(100)">
+                          <input matInput type="text" class="ff-r fs(14)" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="addBulkWrapper">
+                        <div class="addBulk">
+                          <button
+                            class="
+                              btn-dialog-action
+                              bdr(77B7FD)
+                              fc(77B7FD)
+                              ff-sb
+                              fs(16)
+                              mll
+                            "
+                            mat-button
+                            matStepperNext
+                          >
+                            Add Bulk
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="stepper-controller mtxxl pr bgc(161F26)">
+                <button
+                  class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+                  mat-raised-button
+                  color="accent"
+                >
+                  Save Changes
+                </button>
+                <button
+                  class="
+                    btn-dialog-action
+                    bdr(77B7FD)
+                    fc(77B7FD)
+                    ff-sb
+                    fs(16)
+                    mll
+                  "
+                  mat-button
+                  matStepperPrevious
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </mat-step>
+        </mat-stepper>
+      </div>
     </div>
-
+  </div>
 </section>

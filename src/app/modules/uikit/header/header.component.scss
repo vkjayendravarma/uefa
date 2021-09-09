@@ -1,27 +1,107 @@
 .language-control {
-
-    .formControl {
-        float: right;
-    }
-
+  .formControl {
+    float: right;
+  }
 }
 
 .globalSearchSubmitbtn {
-    display: none;
+  display: none;
 }
 
 .searchFormQueryField {
-    width: 60%;
+  width: 60%;
 }
 
 .searchIcon {
-    position: relative;
-    top     : 0.5em;
+  position: relative;
+  top: 0.4em;
 }
 
-.global-search-bar{
-    padding: 0.125em 1em;
+.global-search-bar {
+  padding: 0.125em 1em;
 }
-.menu-toggler-button{
-    cursor: pointer;
+
+.menu-toggler {
+  margin-top: -10px;
+}
+.menu-toggler-button {
+  cursor: pointer;
+}
+
+.event-btn {
+  border-radius: 6px;
+}
+
+// Responsive styles section
+
+@media (max-width: 692px) {
+  .event-btn {
+    width: 150px;
+    text-align: center;
+  }
+  .btn-text {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 448px) {
+  .event-search-form {
+    margin-right: 0;
+    padding: 0;
+  }
+  .menu-toggler {
+    padding-left: 0;
+  }
+  .event-menu-tag-wrapper {
+    padding: 0 5px 0 5px;
+  }
+
+  .searchIcon {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 412px) {
+  .event-home-title {
+    font-size: 18px;
+  }
+  .event-btn {
+    margin-top: -8px;
+    width: 120px;
+  }
+  .pageTitleWrapper {
+    padding: 1.5em 1em 1.5em 1em;
+  }
+}
+
+@media (max-width: 366px) {
+  .event-search-form {
+    margin-left: 3rem;
+  }
+  .event-language {
+    display: none;
+  }
+}
+
+@media (max-width: 289px) {
+  .event-search-form {
+    margin-left: 1rem;
+  }
+  .event-language {
+    display: none;
+  }
+}
+
+@media (max-width: 284px) {
+  .event-home-title {
+    font-size: 16px;
+  }
+  .event-btn {
+    width: 100px;
+  }
+
+  .btn-text {
+    font-size: 12px;
+  }
 }
