@@ -4,9 +4,9 @@
       <div class="componentHeader bdrb">
         <div class="d-flex pr fs(16) justify-content-between bgc(0f171D)">
           <div>Cumulative - {{ date | date: "d/M" }}</div>
-          <div class="d-flex">
-            <mat-icon svgIcon="calender-week" class=""></mat-icon>
-            <p class="mlr fc(EDEEEF)">
+          <div class="d-flex flex-row align-items-center">
+            <mat-icon svgIcon="calender-week" class="mbs"></mat-icon>
+            <p class="mlr fc(EDEEEF) pb-1">
               {{ firstDay | date: "longDate" }} -
               {{ lastDay | date: "longDate" }}
             </p>

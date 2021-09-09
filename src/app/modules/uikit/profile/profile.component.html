@@ -5,7 +5,7 @@
         <div class="row mtl">
           <div class="col-12">
             <div class="formControl wdt(100) mbr">
-              <label class="display-block fc(EDEEEF) fs(14) mbl"
+              <label class="display-block fc(EDEEEF) fs(14) mbr"
                 >Profile Picture</label
               >
               <app-file-uploader></app-file-uploader>
@@ -86,14 +86,16 @@
         </div>
       </form>
       <div class="componentActions mb-auto wdt(100)">
-        <button
-          class="btn-dialog-action ff-sb fs(16)"
-          color="accent"
-          type="submit"
-          mat-raised-button
-        >
-          Save Changes
-        </button>
+        <a [routerLink]="['/onboard/inviteusers']">
+          <button
+            class="btn-dialog-action ff-sb fs(16)"
+            color="accent"
+            type="submit"
+            mat-raised-button
+          >
+            Save Changes
+          </button>
+        </a>
       </div>
     </div>
   </div>
