@@ -1,84 +1,139 @@
-<section class="createNewEventWrapper ">
-    <div class="contrainer-fluid">
-        <div class=" ptl pll pbr ">
-            <div class="d-flex newSurveyTitle">
-                <div class="eventTitleWrapper">
-                    <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  ">New Survey 1234</h2>
-                </div>
-                <div class="tags">
-                    <app-tag-chips [tags]="[{name: 'Draft',bgColor: '#D5DFEF'}]" class=" tag mlr display-inline">
-                    </app-tag-chips>
-                </div>
-            </div>
+<section class="createNewEventWrapper">
+  <div class="contrainer-fluid">
+    <div class="ptl pll pbr">
+      <div class="d-flex newSurveyTitle">
+        <div class="eventTitleWrapper">
+          <h2 class="eventTitle display-inline ff-sb fs(24) fc(ffffff)">
+            New Survey 1234
+          </h2>
         </div>
-
-        <div class="componentBody darkStepperContainer mtr">
-            <mat-stepper #stepper color="accent" >
-                <mat-step label="Suvrey Details">
-                    <div class="formControl wdt(100)">
-                        <label class="display-block fc(EDEEEF)   ">Title</label>
-                        <mat-form-field appearance="outline" class=" wdt(100)">
-                            <input matInput type="text" #formTitle class="ff-r fs(14)" placeholder="Enter here" />
-                        </mat-form-field>
-                    </div>
-                    <uikit-form-builder (formBuildChangeEvent)="formBuildChangeEventHandler($event)" ></uikit-form-builder>
-                    <div class="stepper-actions mtr pr bgc(161F26) ">
-                        <div class="container ">
-                            <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" matStepperNext>
-                                Next
-                            </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button matStepperPrevious>
-                                Back
-                            </button>       
-                        </div>
-                    
-                    </div>
-                </mat-step>
-                <mat-step label="Preview">
-                    <div class=" SurveyPreview mtl mbl">
-                        <div class="surveyTitleWrapper ">
-                            <p class="titlelable ff-r fs(14) fc(9B9B9B)">Title  </p>
-                            <p class="surveyTitle ff-r fs(16) fc(EDEEEF) ">{{formTitle.value}}</p>
-                        </div>
-                        <uikit-form-render [formBluePrint]="formBluePrint"></uikit-form-render>
-                        <div class="stepper-actions mtr pr bgc(161F26) ">
-                            <div class="container ">
-                                <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" matStepperNext>
-                                    Next
-                                </button>
-                                <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button matStepperPrevious>
-                                    Back
-                                </button>       
-                            </div>
-                        
-                        </div>
-                    </div>
-                </mat-step>
-                <mat-step label="Publish">
-                    <uikit-survey-publish></uikit-survey-publish>
-                    <div class="stepper-actions mtr pr bgc(161F26) ">
-                        <div class="container ">
-                            <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" matStepperNext>
-                                Publish
-                            </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button matStepperPrevious>
-                                Back
-                            </button>       
-                        </div>
-                    
-                    </div>
-                </mat-step>
-                <mat-step label="Responses">
-                    <uikit-survey-responces></uikit-survey-responces>
-                  
-                </mat-step>
-            
-            </mat-stepper>
+        <div class="tags">
+          <app-tag-chips
+            [tags]="[{ name: 'Draft', bgColor: '#D5DFEF' }]"
+            class="tag mlr display-inline"
+          >
+          </app-tag-chips>
         </div>
-        
+      </div>
     </div>
 
-
-
-
+    <div class="componentBody darkStepperContainer mtr">
+      <mat-stepper #stepper color="accent">
+        <mat-step label="Suvrey Details">
+          <div class="formControl wdt(100)">
+            <label class="display-block fc(EDEEEF)">Title</label>
+            <mat-form-field appearance="outline" class="wdt(100)">
+              <input
+                matInput
+                type="text"
+                #formTitle
+                class="ff-r fs(14)"
+                placeholder="Enter here"
+              />
+            </mat-form-field>
+          </div>
+          <uikit-form-builder
+            (formBuildChangeEvent)="formBuildChangeEventHandler($event)"
+          ></uikit-form-builder>
+          <div class="stepper-actions mtr pr bgc(161F26)">
+            <div class="container">
+              <button
+                class="btn-dialog-action ff-sb fs(16)"
+                mat-raised-button
+                color="accent"
+                matStepperNext
+              >
+                Next
+              </button>
+              <button
+                class="
+                  btn-dialog-action
+                  bdr(77B7FD)
+                  fc(77B7FD)
+                  ff-sb
+                  fs(16)
+                  mll
+                "
+                mat-button
+                matStepperPrevious
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </mat-step>
+        <mat-step label="Preview">
+          <div class="SurveyPreview mtl mbl">
+            <div class="surveyTitleWrapper">
+              <p class="titlelable ff-r fs(14) fc(9B9B9B)">Title</p>
+              <p class="surveyTitle ff-r fs(16) fc(EDEEEF)">
+                {{ formTitle.value }}
+              </p>
+            </div>
+            <uikit-form-render
+              [formBluePrint]="formBluePrint"
+            ></uikit-form-render>
+            <div class="stepper-actions mtr pr bgc(161F26)">
+              <div class="container">
+                <button
+                  class="btn-dialog-action ff-sb fs(16)"
+                  mat-raised-button
+                  color="accent"
+                  matStepperNext
+                >
+                  Next
+                </button>
+                <button
+                  class="
+                    btn-dialog-action
+                    bdr(77B7FD)
+                    fc(77B7FD)
+                    ff-sb
+                    fs(16)
+                    mll
+                  "
+                  mat-button
+                  matStepperPrevious
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-step>
+        <mat-step label="Publish">
+          <uikit-survey-publish></uikit-survey-publish>
+          <div class="stepper-actions mtr pr bgc(161F26)">
+            <div class="container">
+              <button
+                class="btn-dialog-action ff-sb fs(16)"
+                mat-raised-button
+                color="accent"
+                matStepperNext
+              >
+                Publish
+              </button>
+              <button
+                class="
+                  btn-dialog-action
+                  bdr(77B7FD)
+                  fc(77B7FD)
+                  ff-sb
+                  fs(16)
+                  mll
+                "
+                mat-button
+                matStepperPrevious
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </mat-step>
+        <mat-step label="Responses">
+          <uikit-survey-responces></uikit-survey-responces>
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
 </section>

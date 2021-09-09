@@ -1,17 +1,22 @@
-.signupComponent{ 
-    min-height: 100vh;
-    // background-image: url('../../../../assets/images/backgrounds/signup/rocket.svg');
-    background-repeat: no-repeat;
-    background-position: 100% 90%;
-    background-size:  auto 60%;
-    position: relative;
+.signupComponent {
+  min-height: 100vh;
+  background-image: url("../../../../../assets/images/backgrounds/signup/rocket.svg");
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: 100% 130%;
+  background-size: auto 70%;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    background-position: 100% 110%;
+    background-size: auto 50%;
+  }
 }
 
-.componentBody{
-    padding-bottom: 5em;
+.componentBody {
+  padding-bottom: 5em;
 }
 
-.componentActions{
-    position: absolute;
-    bottom: 0;
+.componentActions {
+  position: absolute;
+  bottom: 0;
 }
