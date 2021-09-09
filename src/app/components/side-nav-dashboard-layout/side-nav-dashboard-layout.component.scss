@@ -1,36 +1,46 @@
 .sideNav {
-    max-width: 240px;
+  max-width: 240px;
 }
 
 .navItemsUl {
-    list-style-type: none !important;
+  list-style-type: none !important;
 }
 
 .navItemWrapper {
-    padding-left: unset;
+  padding-left: unset;
 }
 
 .mat-button {
-    text-align: left !important;
+  text-align: left !important;
 }
 
-
-
 .navItem {
-    background: transparent;
+  background: transparent;
 
-    svg {
-        path {
-            fill  : #82898E;
-            stroke: #82898E;
-        }
-
+  svg {
+    path {
+      fill: #82898e;
+      stroke: #82898e;
     }
-
-
+  }
 }
 
 .icon {
-    position: relative;
-    top     : -6px;
+  position: relative;
+  top: -6px;
 }
+
+// Responsive styles section
+
+@media (max-width: 628px) {
+  .sideNav {
+    max-width: 140px;
+  }
+
+  .navItemsUl {
+    padding-left: 0;
+  }
+  .nav-icons {
+    margin-right: 0;
+  }
+} ;
