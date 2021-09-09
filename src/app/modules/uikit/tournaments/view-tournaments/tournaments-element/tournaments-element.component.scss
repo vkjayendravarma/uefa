@@ -1,15 +1,24 @@
 .clubLogo {
-    height: 56px;
-    width : auto;
+  height: 56px;
+  width: auto;
 }
 
-
-.slideTeamImg{
-    width :24px;
-    height: auto;
+.slideTeamImg {
+  width: 24px;
+  height: auto;
 }
 
+.matches-today {
+  min-width: 100px;
+}
 
-.matches-today{
-    min-width: 100px;
+.intro-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

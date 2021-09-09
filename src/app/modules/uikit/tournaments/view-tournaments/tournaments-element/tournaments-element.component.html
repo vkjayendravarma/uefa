@@ -8,33 +8,41 @@
       />
     </div>
     <div class="tournament flex-grow-1 mlr">
-      <div class="tournaments-intro">
-        <app-tag-chips
-          [tags]="[{ name: 'Arsenal FC', bgColor: '#D5DFEF' }]"
-          class="display-inline"
-        >
-        </app-tag-chips>
-        <h3 class="surveyTitle ff-r fs(14) fc(EDEEEF) mlxs display-inline">
-          Tournament - 1
-        </h3>
-        <p class="time display-inline float-right ff-r fs(12) fc(9B9B9B)">
+      <div class="tournaments-intro intro-box">
+        <div class="d-flex align-items-end">
+          <app-tag-chips
+            [tags]="[{ name: 'Arsenal FC', bgColor: '#D5DFEF' }]"
+            class="display-inline"
+          >
+          </app-tag-chips>
+          <h3
+            class="surveyTitle ff-r fs(14) fc(EDEEEF) mlxs display-inline mb-0"
+          >
+            Tournament - 1
+          </h3>
+        </div>
+        <div class="d-flex align-items-baseline">
           <mat-icon
             svgIcon="calendar"
             class="uiComponent-small-icon"
           ></mat-icon>
-          14 Mar’ 21 - 15 Mar’21
-        </p>
+          <p
+            class="time display-inline float-right ff-r fs(12) fc(9B9B9B) mlxs"
+          >
+            14 Mar’ 21 - 15 Mar’21
+          </p>
+        </div>
       </div>
       <div class="tournaments-matches mts">
         <div class="d-flex align-self-center">
           <div class="matches-today">
-            <p class="time fs(12) fc(9B9B9B)">
+            <div class="d-flex align-items-baseline">
               <mat-icon
                 svgIcon="calendar"
                 class="uiComponent-small-icon"
               ></mat-icon>
-              Today (5)
-            </p>
+              <p class="time fs(12) fc(9B9B9B) mls">Today (5)</p>
+            </div>
           </div>
           <div class="matches-list">
             <div class="sliderWrapper">

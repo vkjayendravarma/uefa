@@ -37,4 +37,5 @@ export enum Icons {
   rearrangeIcon = 'rearrange',
   pencilIcon = 'pencil',
   addIcon = 'add',
+  back = 'back',
 }

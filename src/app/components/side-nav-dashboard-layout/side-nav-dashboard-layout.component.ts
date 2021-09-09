@@ -7,6 +7,7 @@ import { SideBarItemsPrototype } from 'src/app/prototypes/sidebarItems.interface
   styleUrls: ['./side-nav-dashboard-layout.component.scss'],
 })
 export class SideNavDashboardLayoutComponent implements OnInit {
+  currentSideBar: SideBarItemsPrototype[] = [];
   user = 'facilitator';
 
   sidebarAdmin: SideBarItemsPrototype[] = [
@@ -81,6 +82,14 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     },
   ];
 
+  sidebarPlayers: SideBarItemsPrototype[] = [
+    {
+      label: 'Home',
+      link: '/dashboard/player/home',
+      icon: 'home',
+    },
+  ];
+
   sideBar2: SideBarItemsPrototype[] = [
     {
       label: 'Notifications',
@@ -101,5 +110,23 @@ export class SideNavDashboardLayoutComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sideBarManager();
+  }
+
+  sideBarManager(): void {
+    let currentUserRole = window.localStorage.getItem('role');
+    if (currentUserRole == 'admin') {
+      this.currentSideBar = this.sidebarAdmin;
+      return;
+    }
+    if (currentUserRole == 'facilitator') {
+      this.currentSideBar = this.sidebarFacilitators;
+      return;
+    }
+    if (currentUserRole == 'player') {
+      this.currentSideBar = this.sidebarPlayers;
+      return;
+    }
+  }
 }
