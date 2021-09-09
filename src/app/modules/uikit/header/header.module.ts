@@ -15,15 +15,13 @@ import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/
 import { CreateNewTeamComponent } from './models/create-new-team/create-new-team.component';
 import { MatRadioModule } from '@angular/material/radio';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
     CreateNewEventModelComponent,
     InviteUserModelComponent,
     CreateNewSurveyModelComponent,
-    CreateNewTeamComponent
+    CreateNewTeamComponent,
   ],
   imports: [
     CommonModule,
@@ -38,7 +36,11 @@ import { MatRadioModule } from '@angular/material/radio';
     MatRadioModule,
   ],
   exports: [HeaderComponent],
-  entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent, CreateNewSurveyModelComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  entryComponents: [
+    CreateNewEventModelComponent,
+    InviteUserModelComponent,
+    CreateNewSurveyModelComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HeaderModule { }
+export class HeaderModule {}

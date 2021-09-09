@@ -1,24 +1,25 @@
-<app-header backgroundImage='1_football' headerTitle='Posts' linkAction="" linkActionButtonText='Create Post'></app-header>
+<app-header
+  backgroundImage="1_football"
+  headerTitle="Posts"
+  linkAction="createNewPost"
+  linkActionButtonText="Create Post"
+></app-header>
 <!-- linkAction='newpost' -->
-<section class="homeWrapper ">
-    <div class="container-fluid  ">
-        <div class=" ptl plr pbl ">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                    <div class="postsOrganisedView ">
-                        <app-post-tabs-view></app-post-tabs-view>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="activitiesView ">
-                        <app-global-activities></app-global-activities>
-                    </div>
-
-                </div>
-            </div>
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="ptl plr pbl">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+          <div class="postsOrganisedView">
+            <app-post-tabs-view></app-post-tabs-view>
+          </div>
         </div>
-
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="activitiesView">
+            <app-global-activities></app-global-activities>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </section>
