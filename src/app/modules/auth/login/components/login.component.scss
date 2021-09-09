@@ -1,15 +1,39 @@
-.router-outlet{
+.router-outlet {
+  width: 60%;
+}
+
+.authBanner {
+  height: 100vh;
+}
+
+.btn-submit {
+  height: 56px;
+}
+
+.container-fluid {
+  padding-left: unset;
+}
+
+@media (max-width: 1138px) {
+  .router-outlet {
     width: 60%;
+  }
 }
 
-.authBanner{
+@media (max-width: 801px) {
+  .imageLoginWrapper {
+    padding-top: 6rem;
+  }
+
+  .authSection {
     height: 100vh;
-}
+  }
 
-.btn-submit{
-    height: 56px;
-}
-
-.container-fluid{
-    padding-left: unset;
+  .authBanner {
+    display: none;
+  }
+  .router-outlet {
+    width: 60%;
+    margin-bottom: 40px;
+  }
 }
