@@ -33,6 +33,11 @@ import { FTournamentsComponent } from './pages/f-tournaments/f-tournaments.compo
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
     path: 'home',
     component: FHomeComponent,
   },

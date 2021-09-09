@@ -4,11 +4,10 @@ import { SideBarItemsPrototype } from 'src/app/prototypes/sidebarItems.interface
 @Component({
   selector: 'app-side-nav-dashboard-layout',
   templateUrl: './side-nav-dashboard-layout.component.html',
-  styleUrls: ['./side-nav-dashboard-layout.component.scss']
+  styleUrls: ['./side-nav-dashboard-layout.component.scss'],
 })
 export class SideNavDashboardLayoutComponent implements OnInit {
-
-  user = 'facilitator';
+  currentSideBar: SideBarItemsPrototype[] = [];
 
   sidebarAdmin: SideBarItemsPrototype[] = [
     {
@@ -41,7 +40,7 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       link: '/dashboard/admin/tournaments',
       icon: 'tournaments',
     },
-  ]
+  ];
 
   sidebarFacilitators: SideBarItemsPrototype[] = [
     {
@@ -64,7 +63,7 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       link: '/dashboard/facilitator/posts',
       icon: 'posts',
     },
-    
+
     {
       label: 'Surveys',
       link: '/dashboard/facilitator/surveys',
@@ -79,9 +78,16 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       label: 'People',
       link: '/dashboard/facilitator/people',
       icon: 'people',
-    }
-  ]
+    },
+  ];
 
+  sidebarPlayers: SideBarItemsPrototype[] = [
+    {
+      label: 'Home',
+      link: '/dashboard/player/home',
+      icon: 'home',
+    },
+  ];
 
   sideBar2: SideBarItemsPrototype[] = [
     {
@@ -98,12 +104,28 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       label: 'Logout',
       link: '/logout',
       icon: 'logout',
-    }
-  ]
+    },
+  ];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    this.sideBarManager()
   }
 
+  sideBarManager(): void {
+    let currentUserRole = window.localStorage.getItem('role');
+    if (currentUserRole == 'admin') {
+      this.currentSideBar = this.sidebarAdmin;
+      return
+    }
+    if (currentUserRole == 'facilitator') {
+      this.currentSideBar = this.sidebarFacilitators;
+      return
+    }
+    if (currentUserRole == 'player') {
+      this.currentSideBar = this.sidebarPlayers;
+      return
+    }
+  }
 }

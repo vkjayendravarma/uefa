@@ -4,14 +4,14 @@
     <span class="fc(575D61) fs(24) ff-sb mrr"> or </span>
     <span class="fc(575D61) ff-sb cursor-pointer" [routerLink]="['/auth/session/login']" routerLinkActive="fc(ffffff)"  > Login </span>
   </h1>
-  <form class="loginForm mtl fc(C3C5C7) ff-r fs(14)">
+  <form class="loginForm mtl fc(C3C5C7) ff-r fs(14)" (ngSubmit)="authHandler(id.value)" >
     <div class="row">
       <div class="col-md-12">
         <label class="display-block fc(EDEEEF)   ">Email Address</label>
         <mat-form-field color="primary"
           appearance="outline"
           class="formControl wdt(100)">
-          <input matInput type="email" class="ff-r fs(14)" />
+          <input matInput type="email" class="ff-r fs(14)" #id />
         </mat-form-field>
       </div>
       <div class="col-md-12">
