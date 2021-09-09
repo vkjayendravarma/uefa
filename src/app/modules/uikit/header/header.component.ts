@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { SidebarServiceService } from 'src/app/globalServices/sidebar-service.service';
 import { CreateNewEventModelComponent } from 'src/app/modules/uikit/header/models/create-new-event-model/create-new-event-model.component';
 import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/create-new-survey-model.component';
@@ -45,7 +46,8 @@ export class HeaderComponent implements OnInit {
     private dialog: MatDialog,
     private fb: FormBuilder,
     private sidebarService: SidebarServiceService,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -122,5 +124,9 @@ export class HeaderComponent implements OnInit {
 
   navigate() {
     if (this.linkAction) this.router.navigateByUrl(this.linkAction);
+  }
+
+  back() {
+    this.location.back();
   }
 }
