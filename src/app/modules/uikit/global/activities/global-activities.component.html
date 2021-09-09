@@ -1,27 +1,39 @@
 <section class="uiComponent OrganisedEvents bgc(161F26) bgshadow1 bdr-rounded">
-    <div class="componentWrapper pr">
-      <div class="componentHeader">
-        <h2 class="componentTitle fs(16) fc(ffffff) ff-sb "> Activity </h2>
-      </div>
-  
-      <div class="componentBody">
-        <div class="Activity mtr" *ngFor="let activity of activities" >          
-           <div class="row">
-               <div class="col-1"> 
-                   <div class="activityIcon">
-                       <img src="../../../../../assets/images/users/userimg1.jpg" alt="" class="userImg">
-                   </div>
-               </div>
-               <div class="col-11">
-                 <div class="activityBody mlr" >
-                    <p class="activity-title display-inline fc(EDEEEF) ff-r fs(14)">Ryan Reynolds created a new event - </p>
-                    <a  [routerLink]="['/']" routerLinkActive="router-link-active" class="activity-link display-inline ff-r fs(14)">Event name goes here.</a>
-                    <p class="activity-time display-inline fc(575D61) ff-r fs(14) "> 12:58 PM, Today </p>
-                 </div>                  
-               </div>
-           </div>
-        </div> 
+  <div class="componentWrapper pr">
+    <div class="componentHeader">
+      <h2 class="componentTitle fs(16) fc(ffffff) ff-sb">Activity</h2>
+    </div>
+
+    <div class="componentBody">
+      <div class="Activity mtr" *ngFor="let activity of activities">
+        <div class="row">
+          <div class="col-1">
+            <!-- <div class="activityIcon"> -->
+            <img
+              src="../../../../../assets/images/users/userimg1.jpg"
+              alt=""
+              class="userImg"
+            />
+            <!-- </div> -->
+          </div>
+          <div class="col-11">
+            <div class="activityBody mlr">
+              <p class="activity-title display-inline fc(EDEEEF) ff-r fs(14)">
+                Ryan Reynolds created a new event -
+              </p>
+              <a
+                [routerLink]="['/']"
+                routerLinkActive="router-link-active"
+                class="activity-link display-inline ff-r fs(14)"
+                >Event name goes here.</a
+              >
+              <p class="activity-time display-inline fc(575D61) ff-r fs(14)">
+                12:58 PM, Today
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </section>
-  

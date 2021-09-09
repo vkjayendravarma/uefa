@@ -75,20 +75,24 @@
 
   <div class="componentActions bgc(161F26) mb-auto wdt(100)">
     <div class="actionsWrapper container ptr pbr">
-      <button
-        class="btn-dialog-action ff-sb fs(16)"
-        color="accent"
-        type="submit"
-        mat-raised-button
-      >
-        Next
-      </button>
-      <button
-        class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-        mat-button
-      >
-        Cancel
-      </button>
+      <a [routerLink]="['/onboard/inviteusers']">
+        <button
+          class="btn-dialog-action ff-sb fs(16)"
+          color="accent"
+          type="submit"
+          mat-raised-button
+        >
+          Next
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button
+          class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+          mat-button
+        >
+          Cancel
+        </button>
+      </a>
     </div>
   </div>
 </div>

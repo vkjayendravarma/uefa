@@ -1,129 +1,218 @@
 <div class="uiComponent FixturesListView">
-    <div class="groups mtr">
-        <div class="d-flex">
-            <div class="group pr  bgc(161F26) bgshadow1 bdr-rounded">
-                <h3 class="groupTitle text-uppercase fs(12) fc(9B9B9B) ff-sb"> GROUP 1 </h3>
-                <div class="clubsInGroup  ">
-                    <div class="d-flex">
-                        <div class="club bdrr prr">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                        </div>
-                        <div class="club bdrr plr prr">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Hawks </p>
-                        </div>
-                        <div class="club plr prr">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                        </div>
-                    </div>
-
-                </div>
+  <div class="groups mtr">
+    <div class="d-flex">
+      <div class="group pr bgc(161F26) bgshadow1 bdr-rounded">
+        <h3 class="groupTitle text-uppercase fs(12) fc(9B9B9B) ff-sb">
+          GROUP 1
+        </h3>
+        <div class="clubsInGroup">
+          <div class="d-flex">
+            <div class="club bdrr prr">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Warriors
+              </p>
             </div>
-
-            <div class="group pr  bgc(161F26) bgshadow1 bdr-rounded mll">
-                <h3 class="groupTitle text-uppercase fs(12) fc(9B9B9B) ff-sb"> GROUP 2 </h3>
-                <div class="clubsInGroup  ">
-                    <div class="d-flex">
-                        <div class="club bdrr prr">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                        </div>
-                        <div class="club bdrr plr prr">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Hawks </p>
-                        </div>
-                        <div class="club plr prr">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="club bdrr plr prr">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Hawks
+              </p>
             </div>
+            <div class="club plr prr">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Warriors
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="group pr bgc(161F26) bgshadow1 bdr-rounded mll">
+        <h3 class="groupTitle text-uppercase fs(12) fc(9B9B9B) ff-sb">
+          GROUP 2
+        </h3>
+        <div class="clubsInGroup">
+          <div class="d-flex">
+            <div class="club bdrr prr">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Warriors
+              </p>
+            </div>
+            <div class="club bdrr plr prr">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Hawks
+              </p>
+            </div>
+            <div class="club plr prr">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Warriors
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-
-    <div class="matchesWrapper mtl bgc(161F26) bgshadow1 bdr-rounded">
-        <div class="matchesSectionHeader pr bdrb">
-            <h1 class="sectionTitle display-inline fs(16) fc(EDEEEF) ff-r ">Matches</h1>
-            <mat-icon svgIcon="filter" class="float-right display-inline "></mat-icon>
-        </div>
-        <div class="matchesBody">
-            <div class="match d-flex ptr pbr pll prl bdrb" *ngFor="let match of matches">
-                <div class="matchBetween flex-grow-1">
-                    <div class="d-flex">
-                        <div class="team1">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                        </div>
-                        <div class="vs ff-r fc(9B9B9B) fs(12) mlr mrr align-self-center ">vs</div>
-                        <div class="team2">
-                            <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline">
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="details d-flex">
-                    <div class="date fs(14) fc(C3C5C7) ff-r mrxl align-self-center"> 2 Apr, 2021</div>
-                    <div class="time fs(14) fc(C3C5C7) ff-r mrxl align-self-center">8:00 AM</div>
-                    <div class="location fs(14) fc(C3C5C7) ff-r mrxl align-self-center">Liverpool</div>
-                    <div class="edit fs(14) fc(77B7FD) ff-r mlxl mlxl align-self-center">Edit</div>
-                </div>
-
-            </div>
-        </div>
+  <div class="matchesWrapper mtl bgc(161F26) bgshadow1 bdr-rounded">
+    <div class="matchesSectionHeader pr bdrb">
+      <h1 class="sectionTitle display-inline fs(16) fc(EDEEEF) ff-r">
+        Matches
+      </h1>
+      <mat-icon svgIcon="filter" class="float-right display-inline"></mat-icon>
     </div>
-
-    <div class="playoffsWrapper mtl mbl bgc(161F26) bgshadow1 bdr-rounded">
-        <div class="matchesSectionHeader pr bdrb">
-            <h1 class="sectionTitle display-inline fs(16) fc(EDEEEF) ff-r ">Playoffs</h1>
-            <mat-icon svgIcon="filter" class="float-right display-inline "></mat-icon>
+    <div class="matchesBody">
+      <div
+        class="match d-flex ptr pbr pll prl bdrb"
+        *ngFor="let match of matches"
+      >
+        <div class="matchBetween flex-grow-1">
+          <div class="d-flex">
+            <div class="team1">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Warriors
+              </p>
+            </div>
+            <div class="vs ff-r fc(9B9B9B) fs(12) mlr mrr align-self-center">
+              vs
+            </div>
+            <div class="team2">
+              <img
+                src="../../../../../../assets/images/clubsLogos/manchester.png"
+                alt=""
+                class="clubsInGroupLogo display-inline"
+              />
+              <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+                Warriors
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="playoffsBody">
-            <div class="payOff d-flex ptr pbr pll prl bdrb" >
-                <div class="playoffsBetween flex-grow-1">
-                    <div class="d-flex">
-                        <div class="team1 d-flex">
-                            <!-- <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
+        <div class="details d-flex">
+          <div class="date fs(14) fc(C3C5C7) ff-r mrxl align-self-center">
+            2 Apr, 2021
+          </div>
+          <div class="time fs(14) fc(C3C5C7) ff-r mrxl align-self-center">
+            8:00 AM
+          </div>
+          <div class="location fs(14) fc(C3C5C7) ff-r mrxl align-self-center">
+            Liverpool
+          </div>
+          <div class="edit fs(14) fc(77B7FD) ff-r mlxl mlxl align-self-center">
+            Edit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="playoffsWrapper mtl mbl bgc(161F26) bgshadow1 bdr-rounded">
+    <div class="matchesSectionHeader pr bdrb">
+      <h1 class="sectionTitle display-inline fs(16) fc(EDEEEF) ff-r">
+        Playoffs
+      </h1>
+      <mat-icon svgIcon="filter" class="float-right display-inline"></mat-icon>
+    </div>
+    <div class="playoffsBody">
+      <div class="payOff d-flex ptr pbr pll prl bdrb">
+        <div class="playoffsBetween flex-grow-1">
+          <div class="d-flex">
+            <div class="team1 d-flex">
+              <!-- <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
                                 class="clubsInGroupLogo display-inline"> -->
-                            <div class="mystery  bdr-rounded" align="center"> <span
-                                    class="questionMark ff-sb fs(24)  fc(82898E)">?</span> </div>
+              <div class="mystery bdr-rounded" align="center">
+                <span class="questionMark ff-sb fs(24) fc(82898E)">?</span>
+              </div>
 
-                            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs align-self-center"> Group 1
-                                Winner </p>
-                        </div>
-                        <div class="vs ff-r fc(9B9B9B) fs(12) mlr mrr align-self-center ">vs</div>
-                        <div class="team2 d-flex">
-                            <!-- <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                                class="clubsInGroupLogo display-inline"> -->
-                            <div class="mystery  bdr-rounded" align="center"> <span
-                                    class="questionMark ff-sb fs(24)  fc(82898E)">?</span> </div>
-
-                            <div class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs align-self-center"> Group 2
-                                Winner </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="details d-flex">
-                    <div class="date fs(14) fc(C3C5C7) ff-r mrxl align-self-center"> 2 Apr, 2021</div>
-                    <div class="time fs(14) fc(C3C5C7) ff-r mrxl align-self-center">8:00 AM</div>
-                    <div class="location fs(14) fc(C3C5C7) ff-r mrxl align-self-center">Liverpool</div>
-                    <div class="edit fs(14) fc(77B7FD) ff-r mlxl mlxl align-self-center">Edit</div>
-                </div>
-
+              <p
+                class="
+                  clubname
+                  display-inline
+                  fs(14)
+                  fc(C3C5C7)
+                  ff-r
+                  mlr
+                  align-self-center
+                "
+              >
+                Group 1 Winner
+              </p>
             </div>
+            <div class="vs ff-r fc(9B9B9B) fs(12) mlr mrr align-self-center">
+              vs
+            </div>
+            <div class="team2 d-flex">
+              <!-- <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
+                                class="clubsInGroupLogo display-inline"> -->
+              <div class="mystery bdr-rounded" align="center">
+                <span class="questionMark ff-sb fs(24) fc(82898E)">?</span>
+              </div>
+
+              <div
+                class="
+                  clubname
+                  display-inline
+                  fs(14)
+                  fc(C3C5C7)
+                  ff-r
+                  mlr
+                  align-self-center
+                "
+              >
+                Group 2 Winner
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="details d-flex">
+          <div class="date fs(14) fc(C3C5C7) ff-r mrxl align-self-center">
+            2 Apr, 2021
+          </div>
+          <div class="time fs(14) fc(C3C5C7) ff-r mrxl align-self-center">
+            8:00 AM
+          </div>
+          <div class="location fs(14) fc(C3C5C7) ff-r mrxl align-self-center">
+            Liverpool
+          </div>
+          <div class="edit fs(14) fc(77B7FD) ff-r mlxl mlxl align-self-center">
+            Edit
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
