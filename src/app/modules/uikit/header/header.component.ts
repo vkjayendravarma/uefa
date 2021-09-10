@@ -8,7 +8,6 @@ import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/
 import { CreateNewTeamComponent } from './models/create-new-team/create-new-team.component';
 import { InviteUserModelComponent } from './models/invite-user-model/invite-user-model.component';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -46,10 +45,8 @@ export class HeaderComponent implements OnInit {
     private dialog: MatDialog,
     private fb: FormBuilder,
     private sidebarService: SidebarServiceService,
-    private router: Router,
-  ) {
-    
-  }
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     if (this.backgroundImage == undefined || this.headerTitle == undefined) {
@@ -66,7 +63,12 @@ export class HeaderComponent implements OnInit {
   }
 
   quickActionsConfig() {
-    let supportedQuickActions = ['createNewEvent', 'inviteNewUsers', 'createNewSurvey', 'createNewTeam'];
+    let supportedQuickActions = [
+      'createNewEvent',
+      'inviteNewUsers',
+      'createNewSurvey',
+      'createNewTeam',
+    ];
     if (
       this.quickActionType !== undefined &&
       this.quickActionType in supportedQuickActions
@@ -98,6 +100,10 @@ export class HeaderComponent implements OnInit {
     console.log('toggle');
     this.sidebarIsActive = !this.sidebarIsActive;
     this.sidebarService.toggleSideBar(this.sidebarIsActive);
+    if (window.screen.width === 630) {
+      // 768px portrait
+      this.sidebarIsActive = false;
+    }
   }
 
   initiateQuickAction() {
@@ -118,8 +124,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  navigate(){
-    if(this.linkAction)
-      this.router.navigateByUrl(this.linkAction)
+  navigate() {
+    if (this.linkAction) this.router.navigateByUrl(this.linkAction);
   }
 }

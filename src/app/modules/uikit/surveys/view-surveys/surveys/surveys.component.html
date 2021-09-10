@@ -3,29 +3,12 @@
     <div class="componentHeader bdrb pr">
       <div class="row">
         <div class="col-6 align-self-center">
-          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
-            Surveys (23)
+          <h2 class="componentTitle servey-comp-title fs(16) fc(ffffff) ff-sb m-unset">
+            Surveys for you
           </h2>
         </div>
         <div class="col-6 d-flex flex-row justify-content-end" align="right">
-          <div
-            class="survey-actions uiComponent-top-actions align-items-center"
-          >
-            <p
-              class="
-                rescentlyClosed
-                uiComponent-text-action
-                fs(12)
-                fc(82898E)
-                display-inline
-              "
-            >
-              Recently Closed
-            </p>
-            <mat-icon class="fc(82898E) uiComponent-icon-action hgta mlr"
-              >add</mat-icon
-            >
-          </div>
+          <mat-icon svgIcon="filter" class="filterIcon hgta"></mat-icon>
         </div>
       </div>
     </div>
@@ -33,7 +16,7 @@
     <div class="componentBody plr prr pbr">
       <div class="surveys">
         <div class="survey" *ngFor="let item of surveys">
-          <uikit-sureveys-element></uikit-sureveys-element>
+          <uikit-sureveys-elementnew></uikit-sureveys-elementnew>
         </div>
       </div>
     </div>

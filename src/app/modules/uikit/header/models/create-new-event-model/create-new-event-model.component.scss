@@ -1,0 +1,48 @@
+@media (max-width: 628px) {
+  .evcreate-col-sm {
+    flex: 100% 0 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 429px) {
+  .evcreate-col-sm {
+    flex: 100% 0 0;
+    max-width: 100%;
+  }
+
+  .custom-dialog-content {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 396px) {
+  .display-button {
+    position: absolute;
+    top: 10;
+  }
+  .btn-dialog-action {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 1em !important;
+    margin-top: 1em !important;
+  }
+  .btn-dialog-action:nth-child(1) {
+    margin-bottom: 0 !important;
+  }
+  .actionsWrapper {
+    padding: 0 !important;
+    margin: auto;
+  }
+}
+
+@media (max-width: 352px) {
+  .btn-dialog-action {
+    width: 80% !important;
+    margin-left: 2em !important;
+    margin-right: 1em !important;
+  }
+  .evcreateHeadText {
+    font-size: 14px !important;
+  }
+}
