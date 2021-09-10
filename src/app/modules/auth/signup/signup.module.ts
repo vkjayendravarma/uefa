@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { FormUiElementsModule } from '../../uikit/form-ui-elements/form-ui-elements.module';
 import { RaDetailsComponent } from './components/ra/ra-details/ra-details.component';
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
+import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/ra-details-approved.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra
     InstituteRequestJoinComponent,
     InstituteRequestJoinSuccessMessageComponent,
     RaDetailsComponent,
-    RaDetailsSuccessComponent
+    RaDetailsSuccessComponent,
+    RaDetailsApprovedComponent,
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,7 @@ import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra
     MatDatepickerModule,
     MatButtonModule,
     MatRadioModule,
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
-export class SignupModule { }
+export class SignupModule {}
