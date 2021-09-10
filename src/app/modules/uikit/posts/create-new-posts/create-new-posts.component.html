@@ -10,7 +10,7 @@
       <form class="postData mtl formControlTopBorderUnset">
         <div class="inputGroup mtr">
           <div class="row">
-            <div class="col-8">
+            <div class="col-md-8 col-sm-12">
               <div class="formControl wdt(100)">
                 <label class="display-block fc(EDEEEF)">Post Title</label>
                 <mat-form-field appearance="outline" class="wdt(100)">
@@ -40,7 +40,7 @@
             Publish Options
           </h3>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <div class="formControl wdt(100)">
                 <label class="display-block fc(EDEEEF)"
                   >Institution Types</label
@@ -59,7 +59,7 @@
                 </mat-form-field>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-sm-12 col-md-6">
               <div class="formControl wdt(100)">
                 <label class="display-block fc(EDEEEF)">Invitee Type</label>
                 <div class="formControl-chiplist">
@@ -92,7 +92,7 @@
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-sm-12 col-md-6">
               <div class="formControl wdt(100)">
                 <label class="display-block fc(EDEEEF)">Select Region</label>
                 <mat-form-field
@@ -116,20 +116,26 @@
   </div>
 </section>
 
-<div class="form-actions mtr pr bgc(161F26)">
-  <div class="plr">
-    <button
-      class="btn-dialog-action ff-sb fs(16)"
-      mat-raised-button
-      color="accent"
-    >
-      Publish Post
-    </button>
-    <button
-      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-      mat-button
-    >
-      Cancel
-    </button>
-  </div>
+<div
+  class="
+    form-actions
+    d-flex
+    buttonStyle
+    justify-content-start
+    mtr
+    pr
+    pll
+    bgc(161F26)
+    d-flex
+  "
+>
+  <button class="btn-dialog-action ff-sb mrr" color="accent" mat-raised-button>
+    Publish Post
+  </button>
+  <button
+    class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+    mat-button
+  >
+    Cancel
+  </button>
 </div>

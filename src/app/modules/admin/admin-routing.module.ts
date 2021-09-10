@@ -49,10 +49,6 @@ const routes: Routes = [
         path: 'preview',
         component: EventPreviewComponent,
       },
-      {
-        path: 'new',
-        component: EventEditComponent,
-      },
     ],
   },
   {

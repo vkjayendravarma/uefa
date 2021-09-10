@@ -58,10 +58,6 @@ const routes: Routes = [
         path: 'preview',
         component: FEventsPreviewComponent,
       },
-      {
-        path: 'new',
-        component: EventEditComponent,
-      },
     ],
   },
   {
