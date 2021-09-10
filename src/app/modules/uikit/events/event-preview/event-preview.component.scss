@@ -2,3 +2,54 @@
   padding: 0.5em 2em;
   background-color: #e5f4ff33;
 }
+
+.eventsDetailsContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  @media (max-width: 801px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .eventDate,
+    .eventTime {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.registrationEndContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  @media (max-width: 801px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .eventDate,
+    .eventTime {
+      margin-bottom: 1rem !important;
+    }
+  }
+}
+
+.divisionsGroup {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  .category {
+    margin-left: 0.5rem;
+  }
+  .firstcategory {
+    margin-left: 0 !important;
+  }
+  @media (max-width: 801px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .category {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
+}
