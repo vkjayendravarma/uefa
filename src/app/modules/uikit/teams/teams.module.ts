@@ -24,10 +24,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { TeamMemberDetailsComponent } from './team-management/team-members-manage-view/team-member-details/team-member-details.component';
 import { TeamMemberDetailsEditComponent } from './team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
 import { RouterModule } from '@angular/router';
-import {MatTableModule} from '@angular/material/table';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateSquadModelComponent,
     TeamMembersElementComponent,
     TeamMemberDetailsComponent,
-    TeamMemberDetailsEditComponent
+    TeamMemberDetailsEditComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +63,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatButtonToggleModule,
     MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule,
   ],
   exports: [
     TeamsGalaryViewComponent,
@@ -76,7 +78,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TeamAnnouncementsComponent,
     TeamMemberDetailsComponent,
     TeamMembersElementComponent,
-    TeamMemberDetailsEditComponent
+    TeamMemberDetailsEditComponent,
   ],
 
   entryComponents: [
