@@ -16,7 +16,7 @@ export class CreateNewEventModelComponent implements OnInit {
     if (id == 'admin' || id == 'facilitator' || id == 'player') {
       console.log(id);
 
-      this.router.navigateByUrl('/dashboard/' + id + '/events/new');
+      this.router.navigateByUrl('/dashboard/' + id + '/events/individualevent');
     }
   }
 }
