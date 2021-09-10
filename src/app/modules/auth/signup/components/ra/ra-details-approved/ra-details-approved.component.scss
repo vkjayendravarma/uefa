@@ -1,0 +1,39 @@
+@import "../../../signup.module";
+
+.signupComponent {
+  background-image: url("../../../../../../../assets/images/backgrounds/signup/rocket1.svg");
+}
+.btn-submit {
+  height: 56px;
+}
+
+.successMessageNextStep {
+  line-height: 38px;
+}
+
+.successMessage {
+  line-height: 44px;
+}
+
+.successMeasageWrapper {
+  width: 100%;
+}
+
+.componentBody {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 1200px) {
+//   .registrationForm {
+//     width: 50% !important;
+//   }
+// }

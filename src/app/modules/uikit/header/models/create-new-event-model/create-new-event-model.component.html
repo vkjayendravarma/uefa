@@ -1,23 +1,26 @@
-<h2 class="fc(EDEEEF) ff-sb fs(20) mbr">
+<h2 class="fc(EDEEEF) ff-sb fs(20) mbr evcreateHeadText">
   Create New Event
   <span class="float-right display-button mlxxl" mat-dialog-close>
     <mat-icon class="fc(82898E)">close</mat-icon>
   </span>
 </h2>
-<mat-dialog-content class="mat-typography custom-dialog-content" color="primary">
+<mat-dialog-content
+  class="mat-typography custom-dialog-content"
+  color="primary"
+>
   <div class="horizontalLine">
     <div class="horizontal-line bdrt"></div>
   </div>
   <div class="newEventFormWrapper mtl">
     <form class="newEventForm" autocomplete="off">
       <div class="row">
-        <div class="col-6">
+        <div class="col-6 evcreate-col-sm">
           <label class="display-block fc(EDEEEF)">Institute Name</label>
           <mat-form-field appearance="outline" class="formControl wdt(100)">
             <input matInput type="email" class="ff-r fs(14)" />
           </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-6 evcreate-col-sm">
           <label class="display-block fc(EDEEEF)">Event Type</label>
           <mat-form-field appearance="outline" class="formControl wdt(100)">
             <mat-select>
@@ -26,7 +29,7 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-6 evcreate-col-sm">
           <label class="display-block fc(EDEEEF)">Event Name (optional)</label>
           <mat-form-field appearance="outline" class="formControl wdt(100)">
             <input matInput type="email" class="ff-r fs(14)" />
@@ -38,10 +41,21 @@
 </mat-dialog-content>
 <mat-dialog-actions align="start">
   <div class="actionsWrapper pll">
-    <button class="btn-dialog-action ff-sb fs(16)" color="accent" mat-raised-button mat-dialog-close>
+    <button
+      class="btn-dialog-action ff-sb fs(16)"
+      color="accent"
+      type="submit"
+      (click)="authHandler()"
+      mat-raised-button
+      mat-dialog-close
+    >
       Create
     </button>
-    <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button mat-dialog-close>
+    <button
+      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+      mat-button
+      mat-dialog-close
+    >
       Cancel
     </button>
   </div>

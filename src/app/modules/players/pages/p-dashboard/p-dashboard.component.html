@@ -1,2 +1,38 @@
-<uikit-calendar-month-view></uikit-calendar-month-view>
-<uikit-calendar-week-view></uikit-calendar-week-view>
+<app-header
+  backgroundImage="1_football"
+  headerTitle="Welcome back Andrew"
+  subtitleTitle="NA Admin"
+></app-header>
+
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="ptl plr pbl prr">
+      <div class="d-flex flex-column">
+        <div class="eventsTeamWrapper">
+          <div class="d-flex flex-column upcomingDrillsWrapper">
+            <div class="">
+              <app-single-category-events-view
+                componentTitle="Upcoming Events"
+              ></app-single-category-events-view>
+            </div>
+            <div class="mtr">
+              <uikit-drills-sessions></uikit-drills-sessions>
+            </div>
+          </div>
+          <div class="d-flex flex-column teamCalenderWrapper">
+            <div class="">
+              <app-teams-galary-view></app-teams-galary-view>
+            </div>
+            <div class="mtr">
+              <uikit-calendar-week-view></uikit-calendar-week-view>
+            </div>
+          </div>
+        </div>
+
+        <div class="mtr">
+          <app-posts-list-view></app-posts-list-view>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

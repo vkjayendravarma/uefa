@@ -102,6 +102,10 @@ export class HeaderComponent implements OnInit {
     console.log('toggle');
     this.sidebarIsActive = !this.sidebarIsActive;
     this.sidebarService.toggleSideBar(this.sidebarIsActive);
+    if (window.screen.width === 630) {
+      // 768px portrait
+      this.sidebarIsActive = false;
+    }
   }
 
   initiateQuickAction() {

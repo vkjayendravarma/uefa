@@ -1,33 +1,54 @@
-<section class="uiComponent tournmentsListView bgc(161F26) bgshadow1 bdr-rounded">
-    <div class="componentWrapper ">
-        <div class="componentHeader bdrb pr">
-            <div class="row">
-                <div class="col-6 align-self-center">
-                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Tournaments (4)</h2>
-                </div>
-                <div class="col-6  " align="right">
-                    <div class="tournments-actions uiComponent-top-actions align-items-start">
-                        <p class="rescentlyClosed uiComponent-text-action ff-r fs(12) fc(82898E) display-inline">
-                            Current </p>
-                        <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr">add</mat-icon>
-                        <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
-                        <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr">search</mat-icon>
-                    </div>
-
-                </div>
-            </div>
+<section
+  class="uiComponent tournmentsListView bgc(161F26) bgshadow1 bdr-rounded"
+>
+  <div class="componentWrapper">
+    <div class="componentHeader bdrb pr">
+      <div class="d-flex flex-row justify-content-between">
+        <div>
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
+            Tournaments (4)
+          </h2>
         </div>
-        <div class="componentBody plr prr pbr">
-            <div class="tournaments ">
-                <div class="tournament " *ngFor="let item of posts">
-                    <uikit-tournaments-element-new *ngIf="isCompleted===false;else complitedEvent">
-                    </uikit-tournaments-element-new>
-                    <ng-template #complitedEvent>
-                        <uikit-tournaments-completed-element></uikit-tournaments-completed-element>
-                    </ng-template>
 
-                </div>
-            </div>
+        <div class="tournments-actions uiComponent-top-actions iconAlignStyle">
+          <p
+            class="
+              rescentlyClosed
+              uiComponent-text-action
+              ff-r
+              mtr
+              fs(12)
+              fc(82898E)
+              display-inline
+            "
+            align="right"
+          >
+            Current
+          </p>
+          <div class="d-flex justify-content-center">
+            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+              >add</mat-icon
+            >
+            <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
+            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+              >search</mat-icon
+            >
+          </div>
         </div>
+      </div>
     </div>
+    <div class="componentBody plr prr pbr">
+      <div class="tournaments">
+        <div class="tournament" *ngFor="let item of posts">
+          <uikit-tournaments-element-new
+            *ngIf="isCompleted === false; else complitedEvent"
+          >
+          </uikit-tournaments-element-new>
+          <ng-template #complitedEvent>
+            <uikit-tournaments-completed-element></uikit-tournaments-completed-element>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

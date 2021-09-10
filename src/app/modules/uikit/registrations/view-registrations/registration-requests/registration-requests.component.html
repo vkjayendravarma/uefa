@@ -1,23 +1,26 @@
-<section class="uiComponent registrationRequests bgc(161F26) bgshadow1 bdr-rounded">
-    <div class="componentWrapper ">
-        <div class="componentHeader bdrb pr">
-            <div class="row">
-                <div class="col-10 align-self-center">
-                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Registration Requests - Regional
-                        Associations (12)</h2>
-                </div>
-                <div class="col-2 " align="right">
-                    <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
-                </div>
-            </div>
+<section
+  class="uiComponent registrationRequests bgc(161F26) bgshadow1 bdr-rounded"
+>
+  <div class="componentWrapper">
+    <div class="componentHeader bdrb pr">
+      <div class="row d-flex flex-row">
+        <div class="col-9">
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
+            Registration Requests - Regional Associations (12)
+          </h2>
         </div>
-
-        <div class="componentBody plr prr pbr">
-            <div class="requests ">
-                <div class="request " *ngFor="let item of regestrations">
-                    <app-registrations-reuest-element></app-registrations-reuest-element>
-                </div>
-            </div>
+        <div class="col-3" align="right">
+          <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
         </div>
+      </div>
     </div>
+
+    <div class="componentBody plr prr pbr">
+      <div class="requests">
+        <div class="request" *ngFor="let item of regestrations">
+          <app-registrations-reuest-element></app-registrations-reuest-element>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

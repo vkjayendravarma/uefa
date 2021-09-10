@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EventEditComponent } from '../uikit/events/event-edit/event-edit.component';
 import { TeamMemberDetailsEditComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details-edit/team-member-details-edit.component';
 import { TeamMemberDetailsComponent } from '../uikit/teams/team-management/team-members-manage-view/team-member-details/team-member-details.component';
 import { TeamSessionManageMembersComponent } from '../uikit/teams/team-management/team-sessions/team-session-manage-members/team-session-manage-members.component';
@@ -164,31 +165,35 @@ const routes: Routes = [
               {
                 path: '',
                 component: FTeamManagementSessionsComponent,
-              }, { 
+              },
+              {
                 path: 'invites/:id',
                 component: TeamSessionManageMembersComponent,
-              }
-            ]
+              },
+            ],
           },
           {
             path: 'documents',
             component: FTeamManagementDocumentsComponent,
-          },{ 
+          },
+          {
             path: 'squads',
             component: FTeamManagementSquadsComponent,
             children: [
               {
                 path: 'details/:id',
                 component: TeamSquadComponent,
-              },             
+              },
             ],
-          },{
+          },
+          {
             path: 'attendance',
             component: FTeamManagementAttendanceComponent,
-          },{
+          },
+          {
             path: 'announcements',
             component: FTeamManagementAnnouncementsComponent,
-          }
+          },
         ],
       },
     ],

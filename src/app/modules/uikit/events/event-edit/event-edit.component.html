@@ -7,13 +7,13 @@
             National Association Training: Women
           </h2>
         </div>
-        <div class="tags">
-          <app-tag-chips
-            [tags]="tags"
-            class="tag mlr display-inline"
-          ></app-tag-chips>
-        </div>
-        <div class="inComponentNavigation ml-auto">
+        <!-- <div class="tags"> -->
+        <app-tag-chips
+          [tags]="tags"
+          class="tag mlr mrr display-inline"
+        ></app-tag-chips>
+        <!-- </div> -->
+        <div class="inComponentNavigation ml-auto optionsStyle">
           <mat-icon svgIcon="horizontalDots" class="eventBodyIcons"></mat-icon>
         </div>
       </div>
@@ -29,7 +29,7 @@
                 </h3>
 
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)"
                         >Institute Name</label
@@ -39,7 +39,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">Event Type</label>
                       <mat-form-field
@@ -56,7 +56,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)"
                         >Event Name (optional)</label
@@ -66,7 +66,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">Category</label>
                       <mat-form-field
@@ -95,7 +95,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)"
                         >Program Name (optional)</label
@@ -127,7 +127,7 @@
                   Date & Time
                 </h3>
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">Start Date</label>
                       <mat-form-field
@@ -145,7 +145,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">Start Time</label>
                       <mat-form-field appearance="outline" class="wdt(100)">
@@ -153,7 +153,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">End Date</label>
                       <mat-form-field
@@ -168,7 +168,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">End Time</label>
                       <mat-form-field appearance="outline" class="wdt(100)">
@@ -183,7 +183,7 @@
                   Registration End Date & Time
                 </h3>
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">End Date</label>
                       <mat-form-field
@@ -206,7 +206,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-12 col-md-6">
                     <div class="formControl wdt(100)">
                       <label class="display-block fc(EDEEEF)">End Time</label>
                       <mat-form-field appearance="outline" class="wdt(100)">
@@ -218,38 +218,43 @@
               </div>
             </form>
 
-            <div class="stepper-controller mtr pr bgc(161F26)">
+            <div
+              class="
+                stepper-controller
+                mtr
+                pr
+                buttonStyle
+                bgc(161F26)
+                d-flex
+                flex-row
+                justify-content-start
+              "
+            >
               <button
-                class="btn-dialog-action ff-sb fs(16)"
-                mat-raised-button
+                class="btn-dialog-action ff-sb mr-2"
                 color="accent"
+                mat-stroked-button
                 matStepperNext
               >
                 Next
               </button>
               <button
-                class="
-                  btn-dialog-action
-                  bdr(77B7FD)
-                  fc(77B7FD)
-                  ff-sb
-                  fs(16)
-                  mll
-                "
-                mat-button
+                class="btn-dialog-action ff-sb mr-1"
+                color="accent"
+                mat-raised-button
               >
                 Cancel
               </button>
             </div>
           </mat-step>
 
-          <!-- ---------------------------------------------------------------- Event Details -->
+          <!-- ------------------------- Event Details -->
           <mat-step label="Event Details">
             <form class="eventDetails mtl formControlTopBorderUnset">
               <div class="row">
                 <div class="col-12">
-                  <div class="formControl wdt(100)">
-                    <label class="display-block fc(EDEEEF) mbl"
+                  <div class="formControl wdt(100) mbr">
+                    <label class="display-block fc(EDEEEF) fs(14) mb-3"
                       >Main Image</label
                     >
                     <app-file-uploader></app-file-uploader>
@@ -272,37 +277,43 @@
                 + Add Photo | + Add Text | + Add Video
               </p>
             </form>
-            <div class="stepper-controller mtr pr bgc(161F26)">
+            <div
+              class="
+                stepper-controller
+                mtr
+                pr
+                buttonStyle
+                bgc(161F26)
+                d-flex
+                flex-row
+                justify-content-start
+              "
+            >
               <button
-                class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
-                mat-raised-button
+                class="btn-dialog-action ff-sb mr-2"
                 color="accent"
+                mat-stroked-button
                 matStepperNext
               >
                 Next
               </button>
               <button
-                class="
-                  btn-dialog-action
-                  bdr(77B7FD)
-                  fc(77B7FD)
-                  ff-sb
-                  fs(16)
-                  mll
-                "
-                mat-button
+                class="btn-dialog-action ff-sb mr-1"
+                color="accent"
+                mat-raised-button
                 matStepperPrevious
               >
                 Back
               </button>
             </div>
           </mat-step>
-          <!-- ---------------------------------------------------------------- Publish -->
+
+          <!-- --------------- Publish -->
           <mat-step label="Publish">
             <div class="finalizing">
-              <div class="row">
-                <div class="col-2">
-                  <div class="banner wdt(100) hgt(100)">
+              <div class="row d-flex flex-row justify-content-center">
+                <div class="col-sm-12 col-md-4">
+                  <div class="banner wdt(100) hgt(100) text-center">
                     <img
                       src="../../../../../assets/images/others/event_1.jpg"
                       alt=""
@@ -310,8 +321,8 @@
                     />
                   </div>
                 </div>
-                <div class="col-10">
-                  <div class="eventInfo mll">
+                <div class="col-sm-12 col-md-8">
+                  <div class="eventInfo">
                     <h4 class="eventTitle ff-r fs(14) fc(ffffff)">
                       Women’s Group Session
                     </h4>
@@ -338,7 +349,7 @@
                       Publish Options
                     </h3>
                     <div class="row">
-                      <div class="col-6">
+                      <div class="col-sm-12 col-md-6">
                         <div class="formControl wdt(100)">
                           <label class="display-block fc(EDEEEF)"
                             >Event Type</label
@@ -358,7 +369,7 @@
                         </div>
                       </div>
 
-                      <div class="col-6">
+                      <div class="col-sm-12 col-md-6">
                         <div class="formControl wdt(100)">
                           <label class="display-block fc(EDEEEF)"
                             >Invitee Type</label
@@ -398,7 +409,7 @@
                         </div>
                       </div>
 
-                      <div class="col-6">
+                      <div class="col-sm-12 col-md-6">
                         <div class="formControl wdt(100)">
                           <label class="display-block fc(EDEEEF)"
                             >Select Region</label
@@ -444,24 +455,33 @@
                 </form>
               </div>
             </div>
-            <div class="stepper-controller mtr pr bgc(161F26)">
+
+            <div
+              class="
+                stepper-controller
+                mtr
+                pr
+                buttonStyle
+                bgc(161F26)
+                d-flex
+                flex-row
+                justify-content-start
+              "
+            >
               <button
-                class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
+                class="btn-dialog-action ff-sb mr-2"
                 mat-raised-button
+                (click)="authHandler()"
                 color="accent"
+                mat-stroked-button
+                matStepperNext
               >
-                Publish
+                Next
               </button>
               <button
-                class="
-                  btn-dialog-action
-                  bdr(77B7FD)
-                  fc(77B7FD)
-                  ff-sb
-                  fs(16)
-                  mll
-                "
-                mat-button
+                class="btn-dialog-action ff-sb mr-1"
+                color="accent"
+                mat-raised-button
                 matStepperPrevious
               >
                 Back
@@ -495,8 +515,10 @@
                     <mat-slide-toggle color="accent"></mat-slide-toggle>
                   </div>
 
-                  <div class="row mtl pbr">
-                    <div class="col-4">
+                  <div
+                    class="row mtl pbr d-flex flex-row justify-content-start"
+                  >
+                    <div class="col-sm-6 col-md-4">
                       <div class="formControl">
                         <label class="display-block fc(EDEEEF)"
                           >Attendance Count</label
@@ -506,7 +528,7 @@
                         </mat-form-field>
                       </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-6 col-md-4">
                       <div class="addBulkWrapper">
                         <div class="addBulk">
                           <button
@@ -516,7 +538,6 @@
                               fc(77B7FD)
                               ff-sb
                               fs(16)
-                              mll
                             "
                             mat-button
                             matStepperNext
@@ -529,7 +550,36 @@
                   </div>
                 </div>
               </form>
-              <div class="stepper-controller mtxxl pr bgc(161F26)">
+              <div
+                class="
+                  stepper-controller
+                  mtr
+                  pr
+                  buttonStyle
+                  bgc(161F26)
+                  d-flex
+                  flex-row
+                  justify-content-start
+                "
+              >
+                <button
+                  class="btn-dialog-action fc(ffffff) fs(16) ff-sb mr-2"
+                  color="accent"
+                  mat-raised-button
+                  matStepperNext
+                >
+                  Save Changes
+                </button>
+                <button
+                  class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16)"
+                  color="accent"
+                  mat-button
+                  matStepperPrevious
+                >
+                  Back
+                </button>
+              </div>
+              <!-- <div class="stepper-controller mtxxl pr bgc(161F26)">
                 <button
                   class="btn-dialog-action fc(ffffff) ff-sb fs(16)"
                   mat-raised-button
@@ -551,7 +601,7 @@
                 >
                   Back
                 </button>
-              </div>
+              </div> -->
             </div>
           </mat-step>
         </mat-stepper>

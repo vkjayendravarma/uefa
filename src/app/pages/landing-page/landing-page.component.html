@@ -95,9 +95,26 @@
   </section>
 
   <!-- Video  -->
-  <!-- <section class="videoCarousel">
-    <div class="bgc(0F171D) video">videos</div>
-  </section> -->
+  <section class="videoCarousel">
+    <div class="bgc(0F171D) video">
+      <div class="videoHeading">
+        <p class="fs(32) fc(ffffff)">Video Resources</p>
+      </div>
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="videoConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <img src="{{ slide.img }}" alt="" width="90%" class="" />
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
 
   <!-- Testimonials -->
   <section class="testimonials">
