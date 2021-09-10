@@ -5,7 +5,7 @@
 
 .eventsDetailsContent {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 
   @media (max-width: 801px) {
@@ -20,7 +20,7 @@
 
 .registrationEndContent {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 
   @media (max-width: 801px) {
@@ -36,7 +36,7 @@
 
 .divisionsGroup {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   .category {
     margin-left: 0.5rem;
