@@ -21,6 +21,7 @@ import { AAssociationsCriteriaComponent } from './pages/associations/a-associati
 import { AdminMonitorTournamentComponent } from './pages/adminTournaments/admin-monitor-tournament/admin-monitor-tournament.component';
 import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
 import { AProfileComponent } from './pages/a-profile/a-profile.component';
+import { EventEditComponent } from '../uikit/events/event-edit/event-edit.component';
 
 const routes: Routes = [
   {
@@ -38,7 +39,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: EventsDashboardComponent
+        component: EventsDashboardComponent,
       },
       {
         path: 'individualevent',
@@ -48,6 +49,10 @@ const routes: Routes = [
         path: 'preview',
         component: EventPreviewComponent,
       },
+      {
+        path: 'new',
+        component: EventEditComponent,
+      },
     ],
   },
   {
@@ -56,13 +61,12 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: PostsDashboardComponent
+        component: PostsDashboardComponent,
       },
       {
         path: 'create',
         component: ACreateNewPostComponent,
       },
-     
     ],
   },
   {
@@ -75,13 +79,12 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: AssociationsDashboardComponent
+        component: AssociationsDashboardComponent,
       },
       {
         path: 'criteria',
         component: AAssociationsCriteriaComponent,
       },
-     
     ],
   },
   {
@@ -91,11 +94,11 @@ const routes: Routes = [
       {
         path: '',
         component: SurveysDashboardComponent,
-      },{
+      },
+      {
         path: 'new',
         component: ANewSurveyComponent,
-      }
-     
+      },
     ],
   },
   {
@@ -113,14 +116,13 @@ const routes: Routes = [
       {
         path: 'monitor',
         component: AdminMonitorTournamentComponent,
-      }
-     
+      },
     ],
   },
   {
     path: 'profile',
-    component: AProfileComponent
-  }
+    component: AProfileComponent,
+  },
 ];
 
 @NgModule({
