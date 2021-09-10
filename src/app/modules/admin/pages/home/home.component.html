@@ -1,43 +1,41 @@
-<app-header backgroundImage='1_football' headerTitle='Welcome back Andrew' subtitleTitle='NA Admin'></app-header>
+<app-header
+  backgroundImage="1_football"
+  headerTitle="Welcome back Andrew"
+  subtitleTitle="NA Admin"
+></app-header>
 
-<section class="homeWrapper ">
-    <div class="container-fluid  ">
-        <div class=" ptl plr pbl ">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="eventsOrganisedView ">
-                        <app-organized-view componentTitle="National Events" [enableCreateNew]="true" ></app-organized-view>
-                    </div>
-        
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <app-registration-requests></app-registration-requests>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="surrveysListView mtl">
-                        <uikit-surveys></uikit-surveys>
-
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="tournmentsListView mtl">
-                        <app-tournaments-list-view></app-tournaments-list-view>
-                    </div>
-                    
-                </div>
-
-
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="postsListView mtl">
-                        <app-posts-list-view></app-posts-list-view>
-                    </div>
-                   
-                </div>
-
-
-            </div>
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="ptl plr prr pbl">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="eventsOrganisedView">
+            <app-organized-view
+              componentTitle="National Events"
+              [enableCreateNew]="true"
+            ></app-organized-view>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <app-registration-requests></app-registration-requests>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="surrveysListView mtl">
+            <uikit-surveys></uikit-surveys>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="tournmentsListView mtl">
+            <app-tournaments-list-view></app-tournaments-list-view>
+          </div>
         </div>
 
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="postsListView mtl">
+            <app-posts-list-view></app-posts-list-view>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </section>

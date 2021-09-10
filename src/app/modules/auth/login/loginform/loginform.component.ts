@@ -23,12 +23,12 @@ export class LoginformComponent implements OnInit {
     });
   }
 
-  authHandler(id:string){
+  authHandler(id: string) {
     console.log(id);
-    if(id=='admin' || id=='facilitator' || id=='player'){
-      console.log(id);      
+    if (id == 'admin' || id == 'facilitator' || id == 'player') {
+      console.log(id);
       window.localStorage.setItem('role', id);
-      this.router.navigateByUrl('/dashboard/'+id+'/home')
+      this.router.navigateByUrl('/dashboard/' + id + '/home');
     }
   }
 }
