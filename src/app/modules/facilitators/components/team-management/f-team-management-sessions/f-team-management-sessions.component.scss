@@ -1,0 +1,16 @@
+.sessionWrapper {
+  display: flex;
+  margin: 0.5rem 0;
+
+  .session {
+    width: 50%;
+    margin: 0 0.5rem;
+    @media (max-width: 801px) {
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+  }
+  @media (max-width: 801px) {
+    flex-direction: column;
+  }
+}
