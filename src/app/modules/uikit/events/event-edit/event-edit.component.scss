@@ -1,9 +1,25 @@
-.addBulkWrapper{
-    display: table;
-    height: 100%;
+.addBulkWrapper {
+  display: table;
+  height: 100%;
 
-    .addBulk{
-        display: table-cell;
-        vertical-align: middle;
-    }
+  .addBulk {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.buttonStyle {
+  @media only screen and (max-width: 768px) {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    justify-content: center !important;
+  }
+}
+
+.eventInfo {
+  @media only screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
+}
+.optionsStyle {
+  margin-top: -0.5rem;
 }
