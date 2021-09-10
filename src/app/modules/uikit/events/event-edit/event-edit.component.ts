@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { TagsPrototype } from 'src/app/prototypes/tags.interface';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-edit',
@@ -21,7 +22,7 @@ export class EventEditComponent implements OnInit {
 
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   Invitees: any = [{ name: 'Facilitators' }, { name: 'Players' }];
-  constructor() {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.tags = [
@@ -49,6 +50,15 @@ export class EventEditComponent implements OnInit {
 
     if (index >= 0) {
       this.Invitees.splice(index, 1);
+    }
+  }
+  authHandler() {
+    var id = window.localStorage.getItem('role');
+
+    if (id == 'admin' || id == 'facilitator' || id == 'player') {
+      console.log(id);
+
+      this.router.navigateByUrl('/dashboard/' + id + '/events/preview');
     }
   }
 }
