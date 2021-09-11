@@ -11,7 +11,7 @@ import { RaDetailsComponent } from './components/ra/ra-details/ra-details.compon
 
 const routes: Routes = [
   {
-    path: 'create-profile',
+    path: 'create-profile/:invitehash',
     component: CreateProfileComponent,
   },{
     path: 'institutedata',

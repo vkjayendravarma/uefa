@@ -1,20 +1,21 @@
 <div class="signupComponent  bgc(0F171D) wdt(100)">
-    <div class="componentHeader bdrb">
-        <div class="container ">
-            <div class="header ptr pbs ">
-                <div class="branding">
-                    <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="">
+    <div *ngIf="!profileSetup">
+        <div class="componentHeader bdrb">
+            <div class="container ">
+                <div class="header ptr pbs ">
+                    <div class="branding">
+                        <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="componentBody">
-        <div class="registrationFormWrapper container ">
-            <form action="" class="registrationForm mtxl formControlTopBorderUnset wdt(50) ">
+        <div class="componentBody">
+            <div class="registrationFormWrapper container ">
+                <form [formGroup]="profileForm" (submit)="updateProfile()" class="registrationForm mtxl  formControlTopBorderUnset wdt(50) ">
                 <h1 class="formTitle ff-sb fc(ffffff) fs(32) ">Create Profile</h1>
 
                 <div class="row mtl">
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <div class="formControl wdt(100) mbr">
                             <label class="display-block fc(EDEEEF) fs(14) mbl">Profile Picture</label>
                             <app-file-uploader></app-file-uploader>
@@ -72,23 +73,139 @@
 
                             </mat-form-field>
                         </div>
+                    </div> -->
+
+                    <div class="col-12 mb-3">
+                        <label class="form-label d-block" style="color: #EDEEEF;">Profile Picture</label>
+                        <div *ngIf="!image" style="height: 56px;background-color: #161F26;border: 1px dashed #535353; border-radius: 6px;font-size: 14px;display: flex;justify-content: center;align-items: center;" (click)="profile.click()">
+                            <div style="color:#466b91; padding-left:3px; cursor:pointer; margin-right:3px;">Browse</div>
+                            <span style="color: #C3C5C7;">An Image To Set As Profile Pic</span>
+                        </div>
+                        <div style="position: relative;display: inline-flex;" *ngIf="image">
+                            <img style="border-radius: 6px;" height="200" [src]="image">
+                            <span style="position: absolute; right: 8px; bottom: 8px; border-radius: 26px; background-color: #161F26; width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+                                <img (click)="profile.click()" src="../../../../../assets/images/icons/pencil.svg">
+                            </span>
+                        </div>
+                        <input formControlName="profile" (change)="profileImage($event)" type="file" #profile hidden>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label style="color: #EDEEEF;" for="ass_name" class="form-label">Association Name</label>
+                        <input readonly formControlName="ass_name" type="text" style="color: #EDEEEF;background-color: #0F171D;
+                        border: 1px solid #535353;display: inline-flex;"
+                            class="form-control" id="ass_name">
+                    </div>
+                    
+                    <div class="col-12 mb-3">
+                        <label style="color: #EDEEEF;" for="ass_email" class="form-label">Work Email Address</label>
+                        <input readonly formControlName="ass_email" type="email" style="color: #EDEEEF;background-color: #0F171D;
+                        border: 1px solid #535353;display: inline-flex;" class="form-control" id="ass_email">
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <label style="color: #EDEEEF;" for="f_name" class="form-label">First Name <span class="text-danger">*</span></label>
+                                <input formControlName="f_name" type="text" style="color: #EDEEEF;background-color: #0F171D;
+                                border: 1px solid #535353;display: inline-flex;" placeholder="Enter Fist Name" class="form-control" id="f_name">
+                            </div>
+    
+                            <div class="col">
+                                <label style="color: #EDEEEF;" for="l_name" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                <input formControlName="l_name" type="text" style="color: #EDEEEF;background-color: #0F171D;
+                                border: 1px solid #535353;display: inline-flex;" placeholder="Enter Last Name" class="form-control" id="l_name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label style="color: #EDEEEF;" for="email" class="form-label">Personal Email Address</label>
+                        <input readonly formControlName="email" type="email" style="color: #EDEEEF;background-color: #0F171D;
+                        border: 1px solid #535353;display: inline-flex;" class="form-control" id="email">
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <label style="color: #EDEEEF;" for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                                <input formControlName="password" type="password" style="color: #EDEEEF;background-color: #0F171D;
+                                border: 1px solid #535353;display: inline-flex;" placeholder="Enter Password" class="form-control" id="password">
+                            </div>
+    
+                            <div class="col">
+                                <label style="color: #EDEEEF;" for="c_password" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                <input formControlName="c_password" type="password" style="color: #EDEEEF;background-color: #0F171D;
+                                border: 1px solid #535353;display: inline-flex;" placeholder="Confirm Password" class="form-control" id="c_password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label style="color: #EDEEEF;display: flex;" class="form-label">Gender <span class="text-danger">*</span></label>
+                        <mat-radio-group aria-label="Select an option" formControlName="gender">
+                            <mat-radio-button *ngFor="let gender of genders" [value]="gender.gender_id" class="mrxxl text-light">
+                                {{ gender.gender_name }}
+                            </mat-radio-button>
+                            <!-- <mat-radio-button value="1" class="mrxxl">Male</mat-radio-button>
+                            <mat-radio-button value="2" class="mrxxl">Female</mat-radio-button>
+                            <mat-radio-button value="3">Prefer not to say</mat-radio-button> -->
+                        </mat-radio-group>
+                    </div>
+                    
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <label style="color: #EDEEEF;display: flex;" for="region" class="form-label">Region</label>
+                                <input formControlName="region" type="text" style="color: #EDEEEF;background-color: #0F171D; border: 1px solid #535353;display: inline-flex;" placeholder="Enter Region" class="form-control" id="region" readonly>
+                                <div style="display: inline-flex;color: #EDEEEF;margin-left: -28px;font-size: 16px; "><i class="bi bi-geo-alt"></i></div>
+                            </div>
+                            <div class="col">
+                                <label style="color: #EDEEEF;display: flex;" for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                                <input formControlName="dob" type="text" style="color: #EDEEEF;background-color: #0F171D; border: 1px solid #535353;display: inline-flex;" placeholder="MM/DD/YYYY" [matDatepicker]="picker" class="form-control" id="dob" (click)="picker.open()" readonly>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 mb-3">
+                        <label style="color: #EDEEEF;" for="role" class="form-label">Role</label>
+                        <input readonly formControlName="role" type="text" style="color: #EDEEEF;background-color: #0F171D;
+                        border: 1px solid #535353;display: inline-flex;" placeholder="User Role" class="form-control" id="role">
+                    </div>
+                    
+                    <div class="col-12 mb-3">
+                        <label style="color: #EDEEEF;" for="act_code" class="form-label">Activation Code <span class="text-danger">*</span></label>
+                        <input formControlName="act_code" type="text" style="color: #EDEEEF;background-color: #0F171D;
+                        border: 1px solid #535353;display: inline-flex;" placeholder="Enter Activation Code" class="form-control" id="act_code">
                     </div>
                 </div>
+                </form>
+            </div>
+        </div>
 
-             
-            </form>
+        <div class="componentActions bgc(161F26) mb-auto wdt(100)">
+            <div class="actionsWrapper container ptr pbr">
+                <button [disabled]="profileForm.invalid" class="btn-dialog-action ff-sb fs(16)" color="accent" type="button" mat-raised-button (click)="updateProfile()">
+                    Complete Profile
+                </button>
+            </div>
         </div>
     </div>
 
-    <div class="componentActions bgc(161F26) mb-auto wdt(100)">
-        <div class="actionsWrapper container ptr pbr">
-            <button class="btn-dialog-action ff-sb fs(16)" color="accent" type="submit"
-                mat-raised-button>
-                Create Profile
-            </button>
-            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
-                Cancel
-            </button>
+    <div *ngIf="profileSetup">
+        <div class="componentHeader bdrb">
+            <div class="container ">
+                <div class="header ptr pbs ">
+                    <div class="branding">
+                        <img src="../../../../../assets/images/logos/LogoSmall.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="componentBody">
+            <div style="font-size: 20px;color: #FFFFFF;margin-top:10%;margin-bottom: 5%;display: flex;justify-content: center;line-height: 30px;text-align: center;">You have successfully updated you profile details.</div>
+            <div style="font-size: 20px;color: #C3C5C7;text-align: center;margin-bottom: 10%;">Please login to our web portal to continue working.</div>
         </div>
     </div>
 </div>
