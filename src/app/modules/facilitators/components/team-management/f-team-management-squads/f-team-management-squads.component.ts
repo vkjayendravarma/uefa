@@ -18,7 +18,7 @@ export class FTeamManagementSquadsComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.backdropClass = 'mat-dialog-custom-backdrop';
-    dialogConfig.minWidth = '40%';
+    dialogConfig.minWidth = '100%';
 
     const dialogRef = this.dialog.open(CreateSquadModelComponent, dialogConfig);
 

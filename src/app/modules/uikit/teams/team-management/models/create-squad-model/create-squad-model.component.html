@@ -26,6 +26,54 @@
         </mat-form-field>
 
         <label class="display-block fc(EDEEEF) fs(20)">Members</label>
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-column wdt(50) prr">
+            <div class="wdt(100) borderBottomStyle">
+              <p class="fc(EDEEEF) fs(16) pr fw(600)">Team Members</p>
+            </div>
+
+            <div
+              class="d-flex flex-row justify-content-between align-items-center"
+            >
+              <mat-select class="wdt(50)" placeholder="All Players">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+              <p
+                class="fc(EDEEEF) fs(16) wdt(50) pr mtr fc(77B7FD)"
+                align="left"
+              >
+                Add all
+              </p>
+            </div>
+            <div class="row pr" *ngFor="let player of TEAM_PLAYERS">
+              <mat-icon
+                svgIcon="{{ player.image }}"
+                class="col-2"
+                align="right"
+              ></mat-icon>
+
+              <p class="d-flex fc(ffffff) col-6">{{ player.name }}</p>
+
+              <mat-icon
+                svgIcon="add"
+                class="col-3 mr-3"
+                align="right"
+              ></mat-icon>
+            </div>
+          </div>
+          <div class="borderRightStyle"></div>
+          <div class="d-flex flex-column wdt(50) prr">
+            <div class="wdt(100) borderBottomStyle">
+              <p class="fc(EDEEEF) fs(16) pr fw(600)">Squad Players</p>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <mat-icon svgIcon="users" class="col-2" align="right"></mat-icon>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>

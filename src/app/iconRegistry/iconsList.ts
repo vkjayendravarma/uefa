@@ -38,4 +38,6 @@ export enum Icons {
   pencilIcon = 'pencil',
   addIcon = 'add',
   back = 'back',
+  imgIcon = 'Img',
+  usersIcon = 'users',
 }
