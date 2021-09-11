@@ -51,6 +51,10 @@ import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey
 import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
 import { FPeopleComponent } from './pages/f-people/f-people.component';
 import { FPeopleDashboardComponent } from './pages/f-people/f-people-dashboard/f-people-dashboard.component';
+import { FPeoplePlayersComponent } from './components/people/f-people-players/f-people-players.component';
+import { FPeopleFacilitatorsComponent } from './components/people/f-people-facilitators/f-people-facilitators.component';
+import { FPeopleInviteesComponent } from './components/people/f-people-invitees/f-people-invitees.component';
+import { FPeopleRequestsComponent } from './components/people/f-people-requests/f-people-requests.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +87,10 @@ import { FPeopleDashboardComponent } from './pages/f-people/f-people-dashboard/f
     AddNewTeamToRegesterTournamentComponent,
     FTournamentsMonitorComponent,
     FCreateNewSurveyComponent,
+    FPeoplePlayersComponent,
+    FPeopleFacilitatorsComponent,
+    FPeopleInviteesComponent,
+    FPeopleRequestsComponent,
   ],
   imports: [
     CommonModule,

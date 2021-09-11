@@ -11,8 +11,17 @@
   <div class="container-fluid">
     <div class="mtl ptxs plr pbxs prr bgc(161F26)">
       <mat-tab-group color="primary" align="left" class="mat-tabs">
-        <mat-tab label="{{ tab }}" *ngFor="let tab of matTabs">
-          <div class="events plr prr">add tabs</div>
+        <mat-tab label="Players">
+          <app-f-people-players></app-f-people-players>
+        </mat-tab>
+        <mat-tab label="Facilitators">
+          <app-f-people-facilitators></app-f-people-facilitators>
+        </mat-tab>
+        <mat-tab label="Invitees">
+          <app-f-people-invitees></app-f-people-invitees>
+        </mat-tab>
+        <mat-tab label="Requests">
+          <app-f-people-requests></app-f-people-requests>
         </mat-tab>
       </mat-tab-group>
     </div>

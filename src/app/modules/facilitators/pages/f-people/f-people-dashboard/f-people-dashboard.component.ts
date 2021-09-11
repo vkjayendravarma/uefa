@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./f-people-dashboard.component.scss'],
 })
 export class FPeopleDashboardComponent implements OnInit {
-  matTabs = ['Players', 'Facilitators', 'Invitees', 'Requests'];
   constructor() {}
 
   ngOnInit(): void {}
