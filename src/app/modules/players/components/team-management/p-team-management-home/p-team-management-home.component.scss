@@ -1,0 +1,23 @@
+.teamhome {
+  display: flex;
+  @media (max-width: 801px) {
+    flex-direction: column;
+  }
+
+  .teaminfowrapper {
+    width: 50%;
+    margin-right: 0.5rem;
+    @media (max-width: 801px) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .teamsessionwrapper {
+    width: 50%;
+    margin-left: 0.5rem;
+    @media (max-width: 801px) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

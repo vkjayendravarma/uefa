@@ -1,0 +1,21 @@
+<app-header
+  backgroundImage="2_player"
+  headerTitle="U 13 Boys Team"
+></app-header>
+
+<div class="teamManagerSection">
+  <nav mat-tab-nav-bar>
+    <a
+      mat-tab-link
+      *ngFor="let link of matTabLinks"
+      [routerLink]="link.path"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [active]="rla.isActive"
+      class="mat-router-tab-link"
+    >
+      {{ link.label }}
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
