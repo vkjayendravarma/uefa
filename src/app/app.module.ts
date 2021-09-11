@@ -12,6 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { EmailTemplateComponent } from './components/email-template/email-template.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     DashboardLayoutComponent,
     SideNavDashboardLayoutComponent,
     LandingPageComponent,
+    EmailTemplateComponent,
   ],
   imports: [
     BrowserModule,

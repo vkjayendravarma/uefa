@@ -40,4 +40,9 @@ export enum Icons {
   back = 'back',
   imgIcon = 'Img',
   usersIcon = 'users',
+  lightLogo = 'lightLogo',
+  photoIcon = 'photo',
+  instagram = 'instagram',
+  twitter = 'twitter',
+  darkFacebook = 'darkFacebook',
 }

@@ -5,26 +5,32 @@
   background: transparent;
 }
 
-.bgc\(0F171D\) {
-  background-color: #0f171D;
+.bgc\(0f171d\) {
+  background-color: #0f171d;
 }
 
-.bgc\(1565D8\) {
-  background-color: #1565D8;
+.bgc\(1565d8\) {
+  background-color: #1565d8;
 }
 
-.bgc\(161F26\) {
-  background-color: #161F26;
+.bgc\(FAFAFA\) {
+  background-color: #fafafa;
 }
 
-.bgc\(FFECDB\){
-  background-color: #FFECDB;
+.bgc\(161f26\) {
+  background-color: #161f26;
 }
 
+.bgc\(FFECDB\) {
+  background-color: #ffecdb;
+}
+.bgc\(ffffff\) {
+  background-color: #ffffff;
+}
 .bg-img-cover {
   background-position: bottom center;
-  background-repeat  : no-repeat;
-  background-size    : cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // ------------------------------
@@ -38,25 +44,24 @@
   border-top: 1px solid rgba(56, 60, 64, 0.5);
 }
 
-.bdrr{
+.bdrr {
   border-right: 1px solid rgba(57, 61, 65, 0.5);
 }
 
-.bdr\(373A3D\){
-  border: 1px solid #373A3D;
+.bdr\(373a3d\) {
+  border: 1px solid #373a3d;
 }
 
-
-.bdrr\(383C40\){
-  border-right: 1px solid #383C40;
+.bdrr\(383c40\) {
+  border-right: 1px solid #383c40;
 }
 
-.bdrb\(383C40\){
-  border-bottom: 1px solid #383C40;
+.bdrb\(383c40\) {
+  border-bottom: 1px solid #383c40;
 }
 
-.bdr\(77B7FD\) {
-  border: 1px solid #77B7FD !important;
+.bdr\(77b7fd\) {
+  border: 1px solid #77b7fd !important;
 }
 
 // ------------------------------ box shadow ------------------------------
