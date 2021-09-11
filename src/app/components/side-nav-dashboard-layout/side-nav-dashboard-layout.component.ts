@@ -88,6 +88,27 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       link: '/dashboard/player/home',
       icon: 'home',
     },
+    {
+      label: 'Events',
+      link: '/dashboard/player/events',
+      icon: 'events',
+    },
+    {
+      label: 'Posts',
+      link: '/dashboard/player/posts',
+      icon: 'posts',
+    },
+
+    {
+      label: 'Surveys',
+      link: '/dashboard/player/surveys',
+      icon: 'surveys',
+    },
+    {
+      label: 'Tournaments',
+      link: '/dashboard/player/tournaments',
+      icon: 'tournaments',
+    },
   ];
 
   sideBar2: SideBarItemsPrototype[] = [

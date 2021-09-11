@@ -1,0 +1,20 @@
+<app-header
+  backgroundImage="1_football"
+  headerTitle="People"
+  quickActionType="inviteNewUsers"
+  quickActionButtonText="Invite Users"
+></app-header>
+
+<!-- change able link  -->
+<!-- linkAction='newpost' -->
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="mtl ptxs plr pbxs prr bgc(161F26)">
+      <mat-tab-group color="primary" align="left" class="mat-tabs">
+        <mat-tab label="{{ tab }}" *ngFor="let tab of matTabs">
+          <div class="events plr prr">add tabs</div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</section>
