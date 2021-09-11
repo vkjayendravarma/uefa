@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'uikit-ra-criteria-view',
   templateUrl: './ra-criteria-view.component.html',
-  styleUrls: ['./ra-criteria-view.component.scss']
+  styleUrls: ['./ra-criteria-view.component.scss'],
 })
 export class RaCriteriaViewComponent implements OnInit {
+  @Input()
+  type: string | undefined;
 
-  constructor() { }
+  @Input()
+  name: string | undefined;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

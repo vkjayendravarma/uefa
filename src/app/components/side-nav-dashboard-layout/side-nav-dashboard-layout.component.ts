@@ -8,6 +8,7 @@ import { SideBarItemsPrototype } from 'src/app/prototypes/sidebarItems.interface
 })
 export class SideNavDashboardLayoutComponent implements OnInit {
   currentSideBar: SideBarItemsPrototype[] = [];
+  currentSideBar2: SideBarItemsPrototype[] = [];
   user = 'facilitator';
 
   sidebarAdmin: SideBarItemsPrototype[] = [
@@ -88,9 +89,29 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       link: '/dashboard/player/home',
       icon: 'home',
     },
+    {
+      label: 'Events',
+      link: '/dashboard/player/events',
+      icon: 'events',
+    },
+    {
+      label: 'Posts',
+      link: '/dashboard/player/posts',
+      icon: 'posts',
+    },
+    {
+      label: 'Surveys',
+      link: '/dashboard/player/surveys',
+      icon: 'surveys',
+    },
+    {
+      label: 'Tournaments',
+      link: '/dashboard/player/tournaments',
+      icon: 'tournaments',
+    },
   ];
 
-  sideBar2: SideBarItemsPrototype[] = [
+  sideBar2Admin: SideBarItemsPrototype[] = [
     {
       label: 'Notifications',
       link: '/notifications',
@@ -99,6 +120,41 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     {
       label: 'Manage Users',
       link: '/dashboard/admin/users',
+      icon: 'user',
+    },
+    {
+      label: 'Logout',
+      link: '/auth/session/login',
+      icon: 'logout',
+    },
+  ];
+
+  sideBar2Facilitator: SideBarItemsPrototype[] = [
+    {
+      label: 'Notifications',
+      link: '/notifications',
+      icon: 'notifications',
+    },
+    {
+      label: 'Manage Users',
+      link: '/dashboard/facilitator',
+      icon: 'user',
+    },
+    {
+      label: 'Logout',
+      link: '/auth/session/login',
+      icon: 'logout',
+    },
+  ];
+  sideBar2Player: SideBarItemsPrototype[] = [
+    {
+      label: 'Notifications',
+      link: '/notifications',
+      icon: 'notifications',
+    },
+    {
+      label: 'Manage Users',
+      link: '/dashboard/players/teams',
       icon: 'user',
     },
     {
@@ -118,14 +174,18 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     let currentUserRole = window.localStorage.getItem('role');
     if (currentUserRole == 'admin') {
       this.currentSideBar = this.sidebarAdmin;
+      this.currentSideBar2 = this.sideBar2Admin;
       return;
     }
     if (currentUserRole == 'facilitator') {
       this.currentSideBar = this.sidebarFacilitators;
+      this.currentSideBar2 = this.sideBar2Facilitator;
       return;
     }
     if (currentUserRole == 'player') {
       this.currentSideBar = this.sidebarPlayers;
+      this.currentSideBar2 = this.sideBar2Player;
+
       return;
     }
   }

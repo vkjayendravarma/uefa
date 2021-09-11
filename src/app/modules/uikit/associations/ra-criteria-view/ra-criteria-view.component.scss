@@ -1,0 +1,12 @@
+.buttonsWrapper {
+  display: flex;
+  button {
+    margin-right: 1em;
+  }
+  @media (max-width: 801px) {
+    flex-direction: column;
+    button {
+      margin-bottom: 1em;
+    }
+  }
+}

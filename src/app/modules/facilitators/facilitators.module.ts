@@ -49,8 +49,12 @@ import { FTournamentsMonitorComponent } from './pages/f-tournaments/f-tournament
 import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey/f-create-new-survey.component';
 import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
-
-
+import { FPeopleComponent } from './pages/f-people/f-people.component';
+import { FPeopleDashboardComponent } from './pages/f-people/f-people-dashboard/f-people-dashboard.component';
+import { FPeoplePlayersComponent } from './components/people/f-people-players/f-people-players.component';
+import { FPeopleFacilitatorsComponent } from './components/people/f-people-facilitators/f-people-facilitators.component';
+import { FPeopleInviteesComponent } from './components/people/f-people-invitees/f-people-invitees.component';
+import { FPeopleRequestsComponent } from './components/people/f-people-requests/f-people-requests.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +64,8 @@ import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create
     FEventsDashboardComponent,
     FEventsIndividualComponent,
     FPostsComponent,
+    FPeopleComponent,
+    FPeopleDashboardComponent,
     FPostsDashboardComponent,
     FTournamentsComponent,
     FTournamentsDashboardComponent,
@@ -81,13 +87,17 @@ import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create
     AddNewTeamToRegesterTournamentComponent,
     FTournamentsMonitorComponent,
     FCreateNewSurveyComponent,
+    FPeoplePlayersComponent,
+    FPeopleFacilitatorsComponent,
+    FPeopleInviteesComponent,
+    FPeopleRequestsComponent,
   ],
   imports: [
     CommonModule,
     FacilitatorsRouterModule,
     ReactiveFormsModule,
     FormsModule,
-    
+
     // ui kit module
     HeaderModule,
     DrillsSessionsModule,
@@ -110,8 +120,8 @@ import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
   ],
-  entryComponents:[AddNewTeamToRegesterTournamentComponent]
+  entryComponents: [AddNewTeamToRegesterTournamentComponent],
 })
-export class FacilitatorsModule { }
+export class FacilitatorsModule {}
