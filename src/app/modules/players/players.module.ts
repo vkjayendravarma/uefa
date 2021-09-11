@@ -8,9 +8,13 @@ import { DrillsSessionsModule } from '../uikit/drills-sessions/drills-sessions.m
 import { EventsUiKitModule } from '../uikit/events/events-ui-kit/events-ui-kit.module';
 import { TeamsModule } from '../uikit/teams/teams.module';
 import { ViewPostsModule } from '../uikit/posts/view-posts/view-posts.module';
+import { PEventsComponent } from './pages/p-events/p-events.component';
+import { PPostsComponent } from './pages/p-posts/p-posts.component';
+import { PSurveysComponent } from './pages/p-surveys/p-surveys.component';
+import { PTournamentsComponent } from './pages/p-tournaments/p-tournaments.component';
 
 @NgModule({
-  declarations: [PDashboardComponent],
+  declarations: [PDashboardComponent, PEventsComponent, PPostsComponent, PSurveysComponent, PTournamentsComponent],
   imports: [
     CommonModule,
     PlayerRouterModule,

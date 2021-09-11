@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PDashboardComponent } from './pages/p-dashboard/p-dashboard.component';
+import { PEventsComponent } from './pages/p-events/p-events.component';
+import { PPostsComponent } from './pages/p-posts/p-posts.component';
+import { PSurveysComponent } from './pages/p-surveys/p-surveys.component';
+import { PTournamentsComponent } from './pages/p-tournaments/p-tournaments.component';
 
 const routes: Routes = [
   {
@@ -13,20 +17,23 @@ const routes: Routes = [
     component: PDashboardComponent,
   },
 
-  // {
-  //   path: 'surveys',
-  //   component: FSurveysComponent,
-  // },
-  // {
-  //   path: 'posts',
-  //   component: FPostsComponent}
+  {
+    path: 'surveys',
+    component: PSurveysComponent,
+  },
+  {
+    path: 'posts',
+    component: PPostsComponent,
+  },
 
-  //    {
-  //   path: 'events',
-  //   component: FEventsComponent},
-  //    {
-  //   path: 'tournaments',
-  //   component: FTournamentsComponent},
+  {
+    path: 'events',
+    component: PEventsComponent,
+  },
+  {
+    path: 'tournaments',
+    component: PTournamentsComponent,
+  },
 
   {
     path: 'teams',
