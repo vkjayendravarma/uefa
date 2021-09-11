@@ -51,6 +51,8 @@ import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create
 import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 import { AProfileComponent } from './pages/a-profile/a-profile.component';
 import { ProfileModule } from '../uikit/profile/profile.module';
+import { AAssociationsCriteriaAcceptComponent } from './pages/associations/a-associations-criteria-accept/a-associations-criteria-accept.component';
+import { AAssociationsCriteriaEditComponent } from './pages/associations/a-associations-criteria-edit/a-associations-criteria-edit.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { ProfileModule } from '../uikit/profile/profile.module';
 
     ANewSurveyComponent,
     AProfileComponent,
+    AAssociationsCriteriaAcceptComponent,
+    AAssociationsCriteriaEditComponent,
   ],
   imports: [
     CommonModule,

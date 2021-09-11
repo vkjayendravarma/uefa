@@ -1,8 +1,11 @@
 <section class="uiComponent newPost pl">
   <div class="uiComponentBody ptr pbl">
     <div class="newEventTitle">
-      <h2 class="eventTitle display-inline ff-sb fs(24) fc(ffffff)">
-        RA Registration Criteria
+      <h2
+        class="eventTitle display-inline ff-sb fs(24) fc(ffffff)"
+        *ngIf="name !== undefined"
+      >
+        {{ name }}
       </h2>
     </div>
 
@@ -53,6 +56,17 @@
                 <app-file-uploader></app-file-uploader>
               </div>
             </div>
+
+            <div class="col-12 mtxl">
+              <mat-form-field appearance="outline" class="formControl wdt(100)">
+                <textarea
+                  matInput
+                  type="text"
+                  class="ff-r fs(14)"
+                  placeholder="Write your comment here"
+                ></textarea>
+              </mat-form-field>
+            </div>
           </div>
         </div>
       </form>
@@ -61,7 +75,7 @@
 </section>
 
 <div class="form-actions mtr pr bgc(161F26)">
-  <a [routerLink]="['/dashboard/admin/associations']">
+  <a [routerLink]="['/dashboard/admin/associations']" *ngIf="type == 'create'">
     <div class="container">
       <button
         class="btn-dialog-action ff-sb fs(16)"
@@ -72,4 +86,44 @@
       </button>
     </div>
   </a>
+  <div class="d-flex" *ngIf="type == 'edit'">
+    <button
+      class="mr-3 btn-dialog-action ff-sb fs(16)"
+      mat-raised-button
+      color="accent"
+    >
+      Save Changes
+    </button>
+    <a [routerLink]="['/dashboard/admin/associations']">
+      <button
+        class="btn-dialog-action ff-sb fs(16)"
+        mat-stroked-button
+        color="accent"
+      >
+        Back
+      </button></a
+    >
+  </div>
+  <div class="buttonsWrapper" *ngIf="type == 'approval'">
+    <button
+      class="btn-dialog-action ff-sb fs(16)"
+      mat-raised-button
+      color="accent"
+    >
+      Accept
+    </button>
+    <button
+      class="btn-dialog-action ff-sb fs(16)"
+      mat-stroked-button
+      color="accent"
+    >
+      Reject</button
+    ><button
+      class="btn-dialog-action ff-sb fs(16)"
+      mat-stroked-button
+      color="accent"
+    >
+      Request Changes
+    </button>
+  </div>
 </div>

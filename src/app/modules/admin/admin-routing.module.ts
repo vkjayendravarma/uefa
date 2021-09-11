@@ -22,6 +22,8 @@ import { AdminMonitorTournamentComponent } from './pages/adminTournaments/admin-
 import { ANewSurveyComponent } from './pages/surveys/a-new-survey/a-new-survey.component';
 import { AProfileComponent } from './pages/a-profile/a-profile.component';
 import { EventEditComponent } from '../uikit/events/event-edit/event-edit.component';
+import { AAssociationsCriteriaAcceptComponent } from './pages/associations/a-associations-criteria-accept/a-associations-criteria-accept.component';
+import { AAssociationsCriteriaEditComponent } from './pages/associations/a-associations-criteria-edit/a-associations-criteria-edit.component';
 
 const routes: Routes = [
   {
@@ -80,6 +82,14 @@ const routes: Routes = [
       {
         path: 'criteria',
         component: AAssociationsCriteriaComponent,
+      },
+      {
+        path: 'approval',
+        component: AAssociationsCriteriaAcceptComponent,
+      },
+      {
+        path: 'edit',
+        component: AAssociationsCriteriaEditComponent,
       },
     ],
   },
