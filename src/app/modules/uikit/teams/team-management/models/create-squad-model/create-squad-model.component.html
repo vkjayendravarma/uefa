@@ -25,13 +25,79 @@
           />
         </mat-form-field>
 
-        <label class="display-block fc(EDEEEF) fs(20)">Members</label>
+        <label class="display-block fc(EDEEEF) fs(24)">Members</label>
+        <div class="d-flex flexStyle">
+          <div class="d-flex flex-column wdt(50) tableStyle borderRightStyle">
+            <div class="wdt(100) borderBottomStyle">
+              <p class="fc(EDEEEF) fs(16) pr fw(600)">Team Members</p>
+            </div>
+
+            <div
+              class="d-flex flex-row justify-content-between align-items-center"
+            >
+              <mat-select class="wdt(50) plr" placeholder="All Players">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+              <p
+                class="fc(EDEEEF) fs(16) wdt(50) ptr mtr fc(77B7FD)"
+                align="left"
+              >
+                Add all
+              </p>
+            </div>
+            <div class="row pr" *ngFor="let player of TEAM_PLAYERS">
+              <mat-icon
+                svgIcon="{{ player.image }}"
+                class="col-2"
+                align="right"
+              ></mat-icon>
+
+              <p class="d-flex fc(ffffff) col-6">{{ player.name }}</p>
+
+              <mat-icon
+                svgIcon="add"
+                class="col-3 mr-3"
+                align="right"
+              ></mat-icon>
+            </div>
+          </div>
+          <div class=""></div>
+          <div class="d-flex flex-column wdt(50) tableStyle prr">
+            <div class="wdt(100) borderBottomStyle">
+              <p class="fc(EDEEEF) fs(16) pr fw(600)">Squad Players</p>
+            </div>
+            <div
+              class="
+                d-flex
+                flex-column
+                align-items-center
+                fc(9B9B9B)
+                fs(14)
+                textStyle
+                text-center
+                plr
+              "
+            >
+              <img
+                src="../../../../../../../assets/images/icons/users.svg"
+                class="ptr"
+              />
+              <p class="mbr pbs ptr">No players added!</p>
+              <p>Please select players from ‘Team</p>
+              <p>Players’ Squad players will be added here</p>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>
 </mat-dialog-content>
-<mat-dialog-actions align="start">
-  <div class="actionsWrapper pll">
+
+<mat-dialog-actions class="dialogStyle">
+  <div class="buttonsStyle d-flex">
     <button
       class="btn-dialog-action ff-sb fs(16)"
       color="accent"
@@ -42,7 +108,7 @@
       Create Squad
     </button>
     <button
-      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16)"
       mat-button
       mat-dialog-close
     >
