@@ -21,7 +21,10 @@
           class="navLinkInActive"
         >
           <button mat-button class="navItem wdt(100)">
-            <mat-icon class="icon nav-icons mrr" [svgIcon]="navItem.icon"></mat-icon>
+            <mat-icon
+              class="icon nav-icons mrr"
+              [svgIcon]="navItem.icon"
+            ></mat-icon>
             <span class="navItemLabel ff-sb fc(C3C5C7)">
               {{ navItem.label }}</span
             >
@@ -31,14 +34,20 @@
     </ul>
 
     <ul class="nav navItemsUl pr">
-      <li class="navItemWrapper wdt(100) mbs" *ngFor="let navItem of sideBar2">
+      <li
+        class="navItemWrapper wdt(100) mbs"
+        *ngFor="let navItem of currentSideBar2"
+      >
         <a
           [routerLink]="[navItem.link]"
           routerLinkActive="navLinkActive"
           class="navLinkInActive"
         >
           <button mat-button class="navItem wdt(100)">
-            <mat-icon class="icon nav-icons mrr" [svgIcon]="navItem.icon"></mat-icon>
+            <mat-icon
+              class="icon nav-icons mrr"
+              [svgIcon]="navItem.icon"
+            ></mat-icon>
             <span class="navItemLabel ff-sb fc(C3C5C7)">
               {{ navItem.label }}</span
             >

@@ -1,0 +1,14 @@
+.surveyCompBody {
+  padding: 0 !important;
+}
+
+@media (max-width: 489px) {
+  .componentTitle {
+    font-size: 14px;
+  }
+}
+@media (max-width: 291px) {
+  .componentTitle {
+    font-size: 12px;
+  }
+} ;

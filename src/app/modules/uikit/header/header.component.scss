@@ -68,7 +68,10 @@
   }
   .event-btn {
     margin-top: -8px;
-    width: 120px;
+    width: 150px;
+  }
+  .btn-text {
+    text-align: center;
   }
   .pageTitleWrapper {
     padding: 1.5em 1em 1.5em 1em;
@@ -88,12 +91,9 @@
   .event-search-form {
     margin-left: 1rem;
   }
-  .event-language {
-    display: none;
-  }
 }
 
-@media (max-width: 284px) {
+@media (max-width: 310px) {
   .event-home-title {
     font-size: 16px;
   }

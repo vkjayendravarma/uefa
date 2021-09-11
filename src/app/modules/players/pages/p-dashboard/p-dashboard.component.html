@@ -6,14 +6,31 @@
 
 <section class="homeWrapper">
   <div class="container-fluid">
-    <div class="ptl plr pbl">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-          <uikit-calendar-month-view></uikit-calendar-month-view>
+    <div class="ptl plr pbl prr">
+      <div class="d-flex flex-column">
+        <div class="eventsTeamWrapper">
+          <div class="d-flex flex-column upcomingDrillsWrapper">
+            <div class="">
+              <app-single-category-events-view
+                componentTitle="Upcoming Events"
+              ></app-single-category-events-view>
+            </div>
+            <div class="mtr">
+              <uikit-drills-sessions></uikit-drills-sessions>
+            </div>
+          </div>
+          <div class="d-flex flex-column teamCalenderWrapper">
+            <div class="">
+              <app-teams-galary-view></app-teams-galary-view>
+            </div>
+            <div class="mtr">
+              <uikit-calendar-week-view></uikit-calendar-week-view>
+            </div>
+          </div>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-          <uikit-calendar-week-view></uikit-calendar-week-view>
+        <div class="mtr">
+          <app-posts-list-view></app-posts-list-view>
         </div>
       </div>
     </div>
