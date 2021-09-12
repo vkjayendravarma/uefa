@@ -1,6 +1,6 @@
 <section class="uiComponent OrganisedEvents bgc(161F26) bgshadow1 bdr-rounded">
   <div class="componentWrapper pr">
-    <div class="componentHeader" *ngIf="role !== 'player'">
+    <div class="componentHeader">
       <div class="row">
         <div class="col-8 align-self-center">
           <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
@@ -17,13 +17,8 @@
     </div>
 
     <div class="componentBody">
-      <mat-tab-group
-        color="primary"
-        align="left"
-        class="mat-tabs"
-        *ngIf="role !== 'player'"
-      >
-        <mat-tab label="{{ label }}" *ngFor="let label of eventsList">
+      <mat-tab-group color="primary" align="left" class="mat-tabs">
+        <mat-tab label="Current">
           <div class="events plr prr">
             <app-event-card-element></app-event-card-element>
             <app-event-card-element></app-event-card-element>
@@ -32,18 +27,17 @@
             <app-event-card-element></app-event-card-element>
           </div>
         </mat-tab>
-      </mat-tab-group>
 
-      <mat-tab-group
-        color="primary"
-        align="left"
-        class="mat-tabs"
-        *ngIf="role == 'player'"
-      >
-        <mat-tab label="{{ label }}" *ngFor="let label of eventsPlayer">
+        <mat-tab label="Upcoming">
           <div class="events plr prr">
             <app-event-card-element></app-event-card-element>
             <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+            <app-event-card-element></app-event-card-element>
+          </div>
+        </mat-tab>
+        <mat-tab label="Drafts">
+          <div class="events plr prr">
             <app-event-card-element></app-event-card-element>
             <app-event-card-element></app-event-card-element>
             <app-event-card-element></app-event-card-element>

@@ -10,9 +10,6 @@ export class OrganizedViewComponent implements OnInit {
   componentTitle!: string;
 
   @Input()
-  role: string | undefined;
-
-  @Input()
   enableCreateNew: boolean = false;
 
   eventsList = ['Current', 'Upcoming', 'Drafts'];
