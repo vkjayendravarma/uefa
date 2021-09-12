@@ -154,7 +154,7 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     },
     {
       label: 'Manage Users',
-      link: '/dashboard/players/teams',
+      link: '/dashboard/player/teams',
       icon: 'user',
     },
     {

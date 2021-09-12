@@ -35,6 +35,7 @@ import { ViewSurveysModule } from '../uikit/surveys/view-surveys/view-surveys.mo
 import { CreateNewPostsModule } from '../uikit/posts/create-new-posts/create-new-posts.module';
 import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
+import { PTeamsDashboardComponent } from './pages/p-teams/p-teams-dashboard/p-teams-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create
     PTeamManagementAnnouncementsComponent,
     PTeamsComponent,
     PTeamViewComponent,
+    PTeamsDashboardComponent,
   ],
   imports: [
     CommonModule,

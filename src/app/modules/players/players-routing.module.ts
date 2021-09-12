@@ -11,6 +11,7 @@ import { PEventsComponent } from './pages/p-events/p-events.component';
 import { PPostsComponent } from './pages/p-posts/p-posts.component';
 import { PSurveysComponent } from './pages/p-surveys/p-surveys.component';
 import { PTeamViewComponent } from './pages/p-teams/p-team-view/p-team-view.component';
+import { PTeamsDashboardComponent } from './pages/p-teams/p-teams-dashboard/p-teams-dashboard.component';
 import { PTeamsComponent } from './pages/p-teams/p-teams.component';
 import { PTournamentsComponent } from './pages/p-tournaments/p-tournaments.component';
 
@@ -49,7 +50,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        // component: FTeamsDashboardComponent,
+        component: PTeamsDashboardComponent,
       },
       {
         path: 'team',
