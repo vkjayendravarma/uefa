@@ -1,26 +1,42 @@
-<section class="uiComponent tournmentsListView bgc(161F26) bgshadow1 bdr-rounded">
+<section
+  class="uiComponent tournmentsListView bgc(161F26) bgshadow1 bdr-rounded"
+>
   <div class="componentWrapper">
     <div class="componentHeader bdrb pr">
-      <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row justify-content-between align-items-center">
         <div>
           <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
             {{ componentTitle }}
           </h2>
         </div>
 
-        <div class="tournments-actions uiComponent-top-actions iconAlignStyle">
-          <p class="rescentlyClosed uiComponent-text-action ff-r mtr fs(12) fc(82898E) display-inline" *ngIf="textAction !== undefined">
-            {{textAction}}
-          </p>
-          <div class="d-flex justify-content-center">
+        <div class="d-flex ml-auto">
+          <div class="textActionWapper" *ngIf="textAction !== undefined">
+            <p
+              class="
+                textAction
+                uiComponent-text-action
+                fs(12)
+                fc(82898E)
+                display-inline
+              "
+            >
+              {{ textAction }}
+            </p>
+          </div>
+          <div class="iconsWrapper d-flex justify-content-center">
             <div class="addNew" *ngIf="enableAddNew">
-              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr">add</mat-icon>
+              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+                >add</mat-icon
+              >
             </div>
             <div class="filter" *ngIf="enableFilter">
               <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
             </div>
             <div class="search" *ngIf="enableSearch">
-              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr">search</mat-icon>
+              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+                >search</mat-icon
+              >
             </div>
           </div>
         </div>
@@ -29,7 +45,9 @@
     <div class="componentBody plr prr pbr">
       <div class="tournaments">
         <div class="tournament" *ngFor="let item of posts">
-          <uikit-tournaments-element-new *ngIf="isCompleted === false; else complitedEvent">
+          <uikit-tournaments-element-new
+            *ngIf="isCompleted === false; else complitedEvent"
+          >
           </uikit-tournaments-element-new>
           <ng-template #complitedEvent>
             <uikit-tournaments-completed-element></uikit-tournaments-completed-element>
