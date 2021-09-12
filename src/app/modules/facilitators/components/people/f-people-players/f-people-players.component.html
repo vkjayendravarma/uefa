@@ -1,1 +1,47 @@
-<p>f-people-players works!</p>
+<table class="table table-hover table-dark mtr">
+  <col width="30%" />
+  <col width="30%" />
+  <col width="20%" />
+  <col width="20%" />
+  <thead class="thead bgc fc(9B9B9B) fs(14) ff-r">
+    <tr>
+      <th scope="col " class="">
+        <div class="dropDown">
+          <mat-select class="plr" placeholder="Player Name">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">option1</mat-option>
+            <mat-option value="option2">option2</mat-option>
+            <mat-option value="option3">option3</mat-option>
+          </mat-select>
+        </div>
+      </th>
+      <th scope="col">Contact Email</th>
+      <th scope="col" class="teamHeading">Teams</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
+    <tr *ngFor="let user of Players">
+      <td class="ff-r headings">{{ user.name }}</td>
+      <td class="ff-r">{{ user.email }}</td>
+      <td class="ff-r ff-c">
+        <div class="d-flex align-items-center">
+          <p class="tags mlr pll" *ngFor="let item of user.teams">
+            {{ item }}
+          </p>
+        </div>
+      </td>
+      <td class="actions fc(ffffff)">
+        <mat-icon
+          [matMenuTriggerFor]="menu"
+          svgIcon="horizontalDots"
+          class="small-icon"
+        ></mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Edit Teams</button>
+          <button mat-menu-item>Remove Player</button>
+        </mat-menu>
+      </td>
+    </tr>
+  </tbody>
+</table>

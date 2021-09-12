@@ -1,1 +1,50 @@
-<p>f-people-facilitators works!</p>
+<table class="table table-hover table-dark mtr">
+  <col width="30%" />
+  <col width="30%" />
+  <col width="20%" />
+  <col width="20%" />
+  <thead class="thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r">
+    <tr>
+      <th scope="col " class="">
+        <div class="dropDown">
+          <mat-select class="plr" placeholder="Facilitator Name">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">People</mat-option>
+            <mat-option value="option2">Facilitators</mat-option>
+            <mat-option value="option3">Admin</mat-option>
+          </mat-select>
+        </div>
+      </th>
+      <th scope="col">Work Email</th>
+      <th scope="col">Role</th>
+      <th scope="col" class="teamHeading">Teams</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
+    <tr *ngFor="let user of FACILITATORS">
+      <td class="ff-r headings">{{ user.name }}</td>
+      <td class="ff-r">{{ user.email }}</td>
+      <td class="ff-r">{{ user.role }}</td>
+      <td class="ff-r ff-c">
+        <div class="d-flex align-items-center">
+          <p class="tags mlr pll" *ngFor="let item of user.teams">
+            {{ item }}
+          </p>
+        </div>
+      </td>
+      <td class="actions fc(ffffff)">
+        <mat-icon
+          [matMenuTriggerFor]="menu"
+          svgIcon="horizontalDots"
+          class="small-icon"
+        ></mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Edit Teams</button>
+          <button mat-menu-item>Edit Roles</button>
+          <button mat-menu-item>Remove facilitator</button>
+        </mat-menu>
+      </td>
+    </tr>
+  </tbody>
+</table>

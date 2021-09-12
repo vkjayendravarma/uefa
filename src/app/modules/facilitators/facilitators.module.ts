@@ -45,6 +45,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 import { FTournamentsMonitorComponent } from './pages/f-tournaments/f-tournaments-monitor/f-tournaments-monitor.component';
 import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elevated/tournaments-elevated.module';
 import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey/f-create-new-survey.component';
@@ -55,6 +57,7 @@ import { FPeoplePlayersComponent } from './components/people/f-people-players/f-
 import { FPeopleFacilitatorsComponent } from './components/people/f-people-facilitators/f-people-facilitators.component';
 import { FPeopleInviteesComponent } from './components/people/f-people-invitees/f-people-invitees.component';
 import { FPeopleRequestsComponent } from './components/people/f-people-requests/f-people-requests.component';
+import { TagChipsModule } from '../uikit/global/tag-chips/tag-chips.module';
 
 @NgModule({
   declarations: [
@@ -121,6 +124,11 @@ import { FPeopleRequestsComponent } from './components/people/f-people-requests/
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatTableModule,
+    MatMenuModule,
+
+    //tag chips
+    TagChipsModule,
   ],
   entryComponents: [AddNewTeamToRegesterTournamentComponent],
 })
