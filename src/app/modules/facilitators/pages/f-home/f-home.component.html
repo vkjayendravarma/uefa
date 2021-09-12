@@ -92,14 +92,16 @@
         </div>
       </div>
     </div>
-    <div class="ptr plr pbl prr">
+    <div class="plr pbl prr">
       <div class="row">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mtl">
           <uikit-drills-sessions></uikit-drills-sessions>
         </div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-          <div class="posts">
-            <app-posts-list-view></app-posts-list-view>
+          <div class="posts mtl">
+            <app-posts-list-view
+              componentTitle="Recent Posts"
+            ></app-posts-list-view>
           </div>
           <div class="events mtl">
             <app-single-category-events-view

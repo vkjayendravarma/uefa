@@ -1,32 +1,34 @@
-<app-header backgroundImage='3_survey' headerTitle='Welcome back Andrew'  quickActionType='createNewSurvey' quickActionButtonText='Create Survey'></app-header>
+<app-header
+  backgroundImage="3_survey"
+  headerTitle="National Association Surveys"
+  quickActionType="createNewSurvey"
+  quickActionButtonText="Create Survey"
+></app-header>
 
-<section class="surveysDashboard ">
-    <div class="container-fluid">
-        <div class=" ptl plr pbl ">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                    <div class="surveysOrganisedView ">
-                        <uikit-surveys-tab-view componentTitle="Surveys"></uikit-surveys-tab-view>
-                    </div>
-                    <div class="surveysForYou mtl">
-                        <uikit-surveys ></uikit-surveys>
-                    </div>
-
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="activitiesView ">
-                        <app-global-activities></app-global-activities>
-                    </div>
-
-                </div>
-
-              
-
-
-            </div>
+<section class="surveysDashboard">
+  <div class="container-fluid">
+    <div class="plr prr pbl">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+          <div class="surveysOrganisedView mtl">
+            <uikit-surveys-tab-view
+              componentTitle="Surveys"
+              [enableFilter]="true"
+            ></uikit-surveys-tab-view>
+          </div>
+          <div class="surveysForYou mtl">
+            <uikit-surveys
+              componentTitle="Surveys for you"
+              [enableFilter]="true"
+            ></uikit-surveys>
+          </div>
         </div>
-
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="activitiesView mtl">
+            <app-global-activities></app-global-activities>
+          </div>
+        </div>
+      </div>
     </div>
-   
+  </div>
 </section>
