@@ -1,1 +1,43 @@
-<p>f-people-invitees works!</p>
+<div class="mtr mbr plr dropDown">
+  <mat-select class="plr" placeholder="Players">
+    <mat-option>None</mat-option>
+    <mat-option value="option1">People</mat-option>
+    <mat-option value="option2">Facilitators</mat-option>
+    <mat-option value="option3">Admin</mat-option>
+  </mat-select>
+</div>
+<table class="table table-hover table-dark mtr">
+  <col width="20%" />
+  <col width="50%" />
+  <col width="30%" />
+  <thead class="thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r">
+    <tr>
+      <th scope="col" class="headings">Contact Email</th>
+      <th scope="col" class="teamHeading">Teams</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
+    <tr *ngFor="let user of Invites">
+      <td class="ff-r headings">{{ user.email }}</td>
+      <td class="ff-r ff-c">
+        <div class="d-flex align-items-center">
+          <p class="tags mlr pll" *ngFor="let item of user.teams">
+            {{ item }}
+          </p>
+        </div>
+      </td>
+      <td class="actions fc(ffffff)">
+        <mat-icon
+          [matMenuTriggerFor]="menu"
+          svgIcon="horizontalDots"
+          class="small-icon"
+        ></mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Resend Invite</button>
+          <button mat-menu-item>Cancel Invite</button>
+        </mat-menu>
+      </td>
+    </tr>
+  </tbody>
+</table>

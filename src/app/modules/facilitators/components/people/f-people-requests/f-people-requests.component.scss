@@ -1,0 +1,14 @@
+.tags {
+  width: fit-content;
+  background-color: rgba(229, 244, 255, 0.2) !important;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+
+.headings {
+  padding-left: 2rem;
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 1rem;
+  }
+}
