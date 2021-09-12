@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TeamSessionManageMembersComponent } from '../uikit/teams/team-management/team-sessions/team-session-manage-members/team-session-manage-members.component';
+import { TeamSquadComponent } from '../uikit/teams/team-management/team-squad/team-squad.component';
 import { PTeamManagementAnnouncementsComponent } from './components/team-management/p-team-management-announcements/p-team-management-announcements.component';
 import { PTeamManagementAttendanceComponent } from './components/team-management/p-team-management-attendance/p-team-management-attendance.component';
 import { PTeamManagementDocumentsComponent } from './components/team-management/p-team-management-documents/p-team-management-documents.component';
@@ -74,7 +76,7 @@ const routes: Routes = [
               },
               {
                 path: 'invites/:id',
-                // component: TeamSessionManageMembersComponent,
+                component: TeamSessionManageMembersComponent,
               },
             ],
           },
@@ -88,7 +90,7 @@ const routes: Routes = [
             children: [
               {
                 path: 'details/:id',
-                // component: TeamSquadComponent,
+                component: TeamSquadComponent,
               },
             ],
           },
