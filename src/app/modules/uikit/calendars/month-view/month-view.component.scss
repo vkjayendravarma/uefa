@@ -1,0 +1,74 @@
+.month-title {
+    width: 200px;
+}
+
+.month-before,
+.month-next,
+.current-month {
+    cursor: pointer;
+}
+
+::ng-deep .cal-cell-row {
+    background-color   : #161F26;
+    border-bottom-color: #383C4080 !important;
+}
+
+::ng-deep .cal-days {
+    border      : none !important;
+    border-color: #383C4080 !important;
+}
+
+::ng-deep .cal-month-view .cal-day-cell:not(:last-child) {
+    border-right-color: #383C4080 !important;
+}
+::ng-deep .cal-day-number{
+    font-size: 12px !important;
+}
+::ng-deep .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+    color: #ffffff !important;
+}
+
+::ng-deep .cal-cell-row:hover {
+    background-color: #161F26 !important;
+}
+
+::ng-deep .cal-cell-top {
+    display        : flex !important;
+    justify-content: center !important;
+    min-height: 50px !important;
+}
+
+
+::ng-deep .cal-today {
+    background-color: #0F171D !important;
+}
+
+::ng-deep .cal-day-badge {
+    display: none !important; // to disable event count in cells.
+}
+
+::ng-deep .cal-month-view .cal-cell-row .cal-cell:hover {
+    background-color: #0F171D !important;
+}
+
+::ng-deep .cal-month-view .cal-cell.cal-has-events.cal-open {
+    background-color: #0F171D !important;
+}
+
+::ng-deep .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+    font-size       : 12px !important;
+}
+
+.eventTitleCustom {
+    padding      : 0.4em 0.6em;
+    max-width    : 80px;
+    white-space  : nowrap;
+    overflow     : hidden !important;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+::ng-deep .cal-cell {
+    width : 80px !important;
+}
