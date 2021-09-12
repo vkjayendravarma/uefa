@@ -1,7 +1,7 @@
 <div class="calendar-month-view wdt(100)">
-  <div class="month-title-container d-flex">
+  <div class="month-title-container d-flex plr prr ">
 
-    <h6 class="fs(16) month-title">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }} {{ ' Schedule'}}</h6>
+    <h6 class="fs(16) ff-r fw(500)  month-title flex-grow-1">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }} {{ ' Schedule'}}</h6>
 
     <div class="btn-group">
       <div class="month-before" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
@@ -40,13 +40,11 @@
               [tooltipPlacement]="tooltipPlacement" [tooltipEvent]="event" [tooltipTemplate]="tooltipTemplate"
               [tooltipAppendToBody]="tooltipAppendToBody" [tooltipDelay]="tooltipDelay">
               <p class="eventTitleCustom"> {{event.title}}</p>
-
-
             </div>
           </ng-template>
           <ng-template #showMoreBlock>
             <ng-container *ngIf="i === EVENT_LIMIT">
-              <div class="cal-events" (mwlClick)="handleMoreEvent($event,day.events)">
+              <div class="cal-events" (click)="handleMoreEvent($event,day.events)">
                 <!-- <a class="fs(12)"> {{day.events.length - EVENT_LIMIT}} more</a> -->
                 <a class="fs(12) ff-r fc(77B7FD)"> view more</a>
               </div>
