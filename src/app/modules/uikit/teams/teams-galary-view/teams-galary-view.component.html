@@ -1,24 +1,32 @@
 <section class="uiComponent postsListView">
-  <div class="componentWrapper ">
+  <div class="componentWrapper">
     <div class="componentHeader bdrb pr">
       <div class="row">
         <div class="col-6 align-self-center">
-          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Your Teams (2)</h2>
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
+            Your Teams (2)
+          </h2>
         </div>
-        <div class="col-6  " align="right">
+        <div class="col-6" align="right">
           <div class="post-actions uiComponent-top-actions align-items-start">
-            <mat-icon class=" fc(82898E) uiComponent-icon-action hgta mlr">add</mat-icon>
+            <mat-icon class="fc(82898E) uiComponent-icon-action hgta mlr"
+              >add</mat-icon
+            >
           </div>
-
         </div>
       </div>
     </div>
-    <div class="col-6" align="right" *ngIf="role !== 'player' && role !== 'dependent'">
+    <div
+      class="col-6"
+      align="right"
+      *ngIf="role !== 'player' && role !== 'dependent'"
+    >
       <div class="post-actions uiComponent-top-actions align-items-start">
-        <mat-icon class="fc(82898E) uiComponent-icon-action hgta mlr">add</mat-icon>
+        <mat-icon class="fc(82898E) uiComponent-icon-action hgta mlr"
+          >add</mat-icon
+        >
       </div>
     </div>
-  </div>
   </div>
 
   <div class="componentBody ptr plr prr pbl">
@@ -31,6 +39,5 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
