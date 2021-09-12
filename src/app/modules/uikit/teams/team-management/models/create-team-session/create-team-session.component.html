@@ -5,20 +5,156 @@
   </span>
 </h2>
 <mat-dialog-content
-  class="mat-typography custom-dialog-content"
+  class="mat-typography custom-dialog-content mbr"
   color="primary"
 >
   <div class="horizontalLine">
     <div class="horizontal-line bdrt"></div>
   </div>
-  <div class="newEventFormWrapper mtl">
-    <form class="newEventForm" autocomplete="off">
-      <!-- Code  -->
-    </form>
+  <div class="signupComponent bgc(0F171D) wdt(100)">
+    <div class="componentBody">
+      <div class="container">
+        <form
+          action=""
+          class="formWrapper mtxl formControlTopBorderUnset wdt(100)"
+        >
+          <div class="mtl wdt(70) fieldWrapper">
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Category</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <mat-select
+                  panelClass="matSelectCustomFocus"
+                  placeholder="U-13 Boys"
+                >
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="enterInstituteType">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)">Institute Type</label>
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <mat-select
+                    panelClass="matSelectCustomFocus"
+                    placeholder="Enter Institution Type"
+                    class="p-1"
+                  >
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="instituteType">
+              <div class="formControl wdt(100)">
+                <label class="display-block fc(EDEEEF)">Session Type</label>
+                <mat-form-field
+                  appearance="outline"
+                  color="primary"
+                  class="wdt(100)"
+                >
+                  <mat-select panelClass="matSelectCustomFocus">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- <div class="col-6"> -->
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)"
+                >Date & Time
+              </label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <input
+                  matInput
+                  [matDatepicker]="startDatePicker"
+                  class="ff-r fs(14) p-1"
+                  class="mbr"
+                  placeholder="DD/MM/YYYY"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  class="mbr"
+                  [for]="startDatePicker"
+                >
+                </mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <!-- </div> -->
+
+            <div class="d-flex">
+              <label class="display-block fc(EDEEEF) fs(16) mtr mbl"
+                >Recurring Event?
+              </label>
+              <mat-slide-toggle
+                class="display-block fc(EDEEEF) mlr mtr mbl"
+                color="accent"
+              ></mat-slide-toggle>
+            </div>
+
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF)">Venue Address</label>
+              <mat-form-field appearance="outline" class="wdt(100)">
+                <textarea
+                  matInput
+                  fill="none"
+                  class="bgc(0F171D) wdt(100) fc(EDEEEF) textAreaBorder"
+                  placeholder="Enter Venue"
+                ></textarea>
+              </mat-form-field>
+            </div>
+
+            <div class="formControl wdt(100)">
+              <label class="display-block fc(EDEEEF) fs(14)">Notes</label>
+              <mat-form-field
+                appearance="outline"
+                color="primary"
+                class="wdt(100)"
+              >
+                <textarea
+                  matInput
+                  fill="none"
+                  class="bgc(0F171D) wdt(100) fc(EDEEEF) textAreaBorder"
+                  placeholder="Enter Notes"
+                ></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div class="componentActions bgc(161F26) mb-auto wdt(100)">
+      
+    </div> -->
   </div>
 </mat-dialog-content>
-<mat-dialog-actions align="start">
-  <div class="actionsWrapper pll">
+<mat-dialog-actions class="dialogStyle ptr">
+  <div class="buttonsStyle d-flex">
     <button
       class="btn-dialog-action ff-sb fs(16)"
       color="accent"
@@ -29,7 +165,7 @@
       Create Session
     </button>
     <button
-      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16)"
       mat-button
       mat-dialog-close
     >

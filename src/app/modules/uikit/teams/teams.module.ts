@@ -30,6 +30,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.module';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,8 @@ import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.modul
     ReactiveFormsModule,
     MatRadioModule,
     FormUiElementsModule,
+    MatSlideToggleModule,
+    MatInputModule,
   ],
   exports: [
     TeamsGalaryViewComponent,
