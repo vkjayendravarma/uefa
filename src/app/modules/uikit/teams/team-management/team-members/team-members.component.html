@@ -1,27 +1,43 @@
 <section class="uiComponent postsListView bgc(161F26) bgshadow1 bdr-rounded">
-    <div class="componentWrapper ">
-        <div class="componentHeader bdrb pr">
-            <div class="row">
-                <div class="col-6 align-self-center">
-                    <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">Team Members</h2>
-                </div>
-           
-            </div>
+  <div class="componentWrapper">
+    <div class="componentHeader bdrb pr">
+      <div class="row">
+        <div class="col-6 align-self-center">
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
+            Team Members
+          </h2>
         </div>
-
-        <div class="componentBody ">
-            <div class="teamsMembers  ">
-                <div class="teamsMembersGroup coaches bdrb mlr mrr mtr pbr" >
-                    <h5 class="teamsMembersGroupTitle ff-sb fc(EDEEEF) fs(16) ">Coaches <span class="add fc(77B7FD) fs(14) cursor-pointer" (click)="addTeamMember()" >+ Add </span> </h5>
-                    <uikit-team-members-element></uikit-team-members-element>
-                </div>
-
-                <div class="teamsMembersGroup players pr" >
-                    <h5 class="teamsMembersGroupTitle ff-sb fc(EDEEEF) fs(16) ">Players <span class="add fc(77B7FD) fs(14) cursor-pointer" (click)="addTeamMember()">+ Add </span> </h5>
-                    <uikit-team-members-element></uikit-team-members-element>
-                </div>
-
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div class="componentBody">
+      <div class="teamsMembers">
+        <div class="teamsMembersGroup coaches bdrb mlr mrr mtr pbr">
+          <h5 class="teamsMembersGroupTitle ff-sb fc(EDEEEF) fs(16)">
+            Coaches
+            <span
+              class="add fc(77B7FD) fs(14) cursor-pointer"
+              (click)="addTeamMember()"
+              *ngIf="role !== 'player'"
+              >+ Add
+            </span>
+          </h5>
+          <uikit-team-members-element></uikit-team-members-element>
+        </div>
+
+        <div class="teamsMembersGroup players pr">
+          <h5 class="teamsMembersGroupTitle ff-sb fc(EDEEEF) fs(16)">
+            Players
+            <span
+              class="add fc(77B7FD) fs(14) cursor-pointer"
+              (click)="addTeamMember()"
+              *ngIf="role !== 'player'"
+              >+ Add
+            </span>
+          </h5>
+          <uikit-team-members-element></uikit-team-members-element>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

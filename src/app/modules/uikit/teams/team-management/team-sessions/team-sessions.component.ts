@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { CreateTeamSessionComponent } from '../models/create-team-session/create-team-session.component';
 
@@ -8,6 +8,9 @@ import { CreateTeamSessionComponent } from '../models/create-team-session/create
   styleUrls: ['./team-sessions.component.scss'],
 })
 export class TeamSessionsComponent implements OnInit {
+  @Input()
+  role: string | undefined;
+
   constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {}
