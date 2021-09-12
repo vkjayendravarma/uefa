@@ -1,1 +1,65 @@
+<div class="calendar-month-view wdt(100)">
+  <div class="month-title-container d-flex plr prr ">
 
+    <h6 class="fs(16) ff-r fw(500)  month-title flex-grow-1">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }} {{ ' Schedule'}}</h6>
+
+    <div class="btn-group">
+      <div class="month-before" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()">
+        <mat-icon>navigate_before</mat-icon>
+      </div>
+      <div mwlCalendarNextView class="month-next" [view]="view" [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()">
+        <mat-icon>navigate_next</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div [ngSwitch]="view">
+
+    <ng-template #customCellTemplate let-day="day" let-locale="locale" let-tooltipPlacement="tooltipPlacement"
+      let-highlightDay="highlightDay" let-unhighlightDay="unhighlightDay" let-eventClicked="eventClicked"
+      let-tooltipTemplate="tooltipTemplate" let-tooltipAppendToBody="tooltipAppendToBody"
+      let-tooltipDelay="tooltipDelay">
+      <div class="cal-cell-top">
+        <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">
+          {{ day.badgeTotal }}</span>
+        <span class="cal-day-number">
+          {{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
+      </div>
+      <div *ngIf="day.events.length > 0">
+        <div *ngFor="let event of day.events; index as i">
+
+
+          <ng-template *ngIf="i < EVENT_LIMIT; then showEventsBlock; else showMoreBlock">
+          </ng-template>
+          <ng-template #showEventsBlock>
+            <div class="cal-events" *ngIf="i < EVENT_LIMIT"
+              [ngStyle]="{ backgroundColor: event.color?.primary, fontSize: '12px', color: 'black' }"
+              [ngClass]="event?.cssClass" (mwlClick)="eventClicked.emit({event: event})"
+              [mwlCalendarTooltip]="event.title | calendarEventTitle: 'monthTooltip':event"
+              [tooltipPlacement]="tooltipPlacement" [tooltipEvent]="event" [tooltipTemplate]="tooltipTemplate"
+              [tooltipAppendToBody]="tooltipAppendToBody" [tooltipDelay]="tooltipDelay">
+              <p class="eventTitleCustom"> {{event.title}}</p>
+            </div>
+          </ng-template>
+          <ng-template #showMoreBlock>
+            <ng-container *ngIf="i === EVENT_LIMIT">
+              <div class="cal-events" (click)="handleMoreEvent($event,day.events)">
+                <!-- <a class="fs(12)"> {{day.events.length - EVENT_LIMIT}} more</a> -->
+                <a class="fs(12) ff-r fc(77B7FD)"> view more</a>
+              </div>
+            </ng-container>
+          </ng-template>
+        </div>
+      </div>
+
+    </ng-template>
+
+    <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
+      [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)" [cellTemplate]="customCellTemplate"
+      (eventClicked)="eventClicked($event.event)">
+    </mwl-calendar-month-view>
+
+  </div>
+
+</div>

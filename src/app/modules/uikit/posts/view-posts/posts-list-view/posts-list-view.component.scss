@@ -1,1 +1,9 @@
-
+.horizontal-line {
+  width: calc(100% - 40px);
+}
+.iconAlignStyle {
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}

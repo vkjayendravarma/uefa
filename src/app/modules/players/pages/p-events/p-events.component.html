@@ -2,7 +2,18 @@
 
 <section class="homeWrapper">
   <div class="container-fluid">
-    Pics
-    <div class="mtl ptxs plr pbxs prr bgc(161F26)">events</div>
+    <div class="people d-flex mtl">
+      <div class="userWrapper" [ngClass]="{isActive: true}">
+        <div class="activeWrapper">
+          <img src="../../../../../assets/images/users/person.png" alt="" class="userIcon">
+        </div>
+        <div class="isActiveDotWrapper mtxs" align="center">
+          <div class="isActiveDot"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mtl bgc(161F26) bgshadow1 bdr-rounded">
+      <app-organized-view componentTitle="Team events" ></app-organized-view>
+    </div>
   </div>
 </section>

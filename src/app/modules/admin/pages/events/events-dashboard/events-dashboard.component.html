@@ -7,28 +7,35 @@
 
 <section class="eventsWrapper">
   <div class="container-fluid">
-    <div class="ptl plr pbl">
+    <div class="plr prr pbl">
       <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8 events-col-order-1">
-          <div class="eventsOrganisedView">
-            <app-organized-view componentTitle="Events"></app-organized-view>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+          <div class="eventsOrganisedView mtl">
+            <app-organized-view
+              componentTitle="Events"
+              [enableFilter]="true"
+            ></app-organized-view>
           </div>
           <div class="pastEvents mtl">
             <app-single-category-events-view
               componentTitle="Past Events"
+              [enableSearch]="true"
+              [enableFilter]="true"
             ></app-single-category-events-view>
           </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-4 events-col-order-2">
-          <div class="activitiesView">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+          <div class="activitiesView mtl">
             <app-global-activities></app-global-activities>
           </div>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 events-col-order-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
           <div class="allEvents mtl">
             <app-single-category-events-view
               componentTitle="All Events"
+              [enableSearch]="true"
+              [enableFilter]="true"
             ></app-single-category-events-view>
           </div>
         </div>

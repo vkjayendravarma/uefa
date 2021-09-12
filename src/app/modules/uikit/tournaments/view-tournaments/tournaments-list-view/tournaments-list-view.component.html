@@ -3,36 +3,41 @@
 >
   <div class="componentWrapper">
     <div class="componentHeader bdrb pr">
-      <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row justify-content-between align-items-center">
         <div>
           <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
-            Tournaments (4)
+            {{ componentTitle }}
           </h2>
         </div>
 
-        <div class="tournments-actions uiComponent-top-actions iconAlignStyle">
-          <p
-            class="
-              rescentlyClosed
-              uiComponent-text-action
-              ff-r
-              mtr
-              fs(12)
-              fc(82898E)
-              display-inline
-            "
-            align="right"
-          >
-            Current
-          </p>
-          <div class="d-flex justify-content-center">
-            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
-              >add</mat-icon
+        <div class="d-flex ml-auto">
+          <div class="textActionWapper" *ngIf="textAction !== undefined">
+            <p
+              class="
+                textAction
+                uiComponent-text-action
+                fs(12)
+                fc(82898E)
+                display-inline
+              "
             >
-            <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
-            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
-              >search</mat-icon
-            >
+              {{ textAction }}
+            </p>
+          </div>
+          <div class="iconsWrapper d-flex justify-content-center">
+            <div class="addNew" *ngIf="enableAddNew">
+              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+                >add</mat-icon
+              >
+            </div>
+            <div class="filter" *ngIf="enableFilter">
+              <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
+            </div>
+            <div class="search" *ngIf="enableSearch">
+              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+                >search</mat-icon
+              >
+            </div>
           </div>
         </div>
       </div>

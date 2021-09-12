@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-registration-requests',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration-requests.component.scss'],
 })
 export class RegistrationRequestsComponent implements OnInit {
+
+  @Input()
+  componentTitle: string | undefined;
+
+  @Input()
+  enableFilter: boolean = false;
 
   regestrations = [1,2,3,4,5,6]
  

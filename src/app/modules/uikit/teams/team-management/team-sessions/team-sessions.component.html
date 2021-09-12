@@ -13,6 +13,7 @@
               mat-button
               class="actionCreateNewSession fc(77B7FD)"
               (click)="initiateDialogOpen()"
+              *ngIf="role !== 'player'"
             >
               + Create Session
             </button>

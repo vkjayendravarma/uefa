@@ -1,1 +1,30 @@
-<p>Documents</p>
+<section class="uiComponent postsListView bgc(161F26) bgshadow1 bdr-rounded">
+  <div class="componentWrapper">
+    <div class="componentHeader bdrb pr">
+      <div class="row">
+        <div class="col-6 align-self-center">
+          <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
+            Your Documents
+          </h2>
+        </div>
+        <div class="col-6" align="right">
+          <div class="post-actions uiComponent-top-actions align-items-start">
+            <button mat-button class="actionCreateNewSession fc(77B7FD)">
+              Upload Documents
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="componentBody ptr plr prr pbr">
+      <div class="sessions">
+        <div class="session pbr">
+          <div class="docs" *ngFor="let doc of documents">
+            <app-file-uploaded></app-file-uploaded>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

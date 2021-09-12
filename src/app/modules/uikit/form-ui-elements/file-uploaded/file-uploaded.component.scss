@@ -1,0 +1,20 @@
+.file-uploaderWrapper {
+  width: fit-content;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.file-uploader-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.file-uploader {
+  opacity: 0;
+  z-index: 9;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}

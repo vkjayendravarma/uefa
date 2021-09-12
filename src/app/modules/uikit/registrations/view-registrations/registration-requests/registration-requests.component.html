@@ -1,16 +1,16 @@
-<section
-  class="uiComponent registrationRequests bgc(161F26) bgshadow1 bdr-rounded"
->
+<section class="uiComponent registrationRequests bgc(161F26) bgshadow1 bdr-rounded">
   <div class="componentWrapper">
     <div class="componentHeader bdrb pr">
-      <div class="row d-flex flex-row">
-        <div class="col-9">
+      <div class="d-flex ">
+        <div class="titleWrapper flex-grow-1 align-self-center">
           <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
-            Registration Requests - Regional Associations (12)
+            {{componentTitle}}
           </h2>
         </div>
-        <div class="col-3" align="right">
-          <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
+        <div class="iconsWrapper d-flex ml-auto" align="right">
+          <div class="filter align-self-center" *ngIf="enableFilter">
+            <mat-icon svgIcon="filter" class="filterIcon hgta"  ></mat-icon>
+          </div>
         </div>
       </div>
     </div>

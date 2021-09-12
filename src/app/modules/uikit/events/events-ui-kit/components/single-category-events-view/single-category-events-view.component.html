@@ -3,15 +3,26 @@
 >
   <div class="componentWrapper">
     <div class="componentHeader bdrb pr">
-      <div class="row">
-        <div class="col-8 align-self-center">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="titleWrapper flex-grow-1 align-self-center">
           <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
             {{ componentTitle }}
           </h2>
         </div>
-        <div class="col-4 d-flex flex-row justify-content-end" align="right">
-          <mat-icon class="fc(9B9B9B)">search</mat-icon>
-          <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
+        <div class="iconsWrapper d-flex justify-content-center">
+          <div class="addNew align-self-center" *ngIf="enableAddNew">
+            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+              >add</mat-icon
+            >
+          </div>
+          <div class="filter align-self-center" *ngIf="enableFilter">
+            <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
+          </div>
+          <div class="search align-self-center" *ngIf="enableSearch">
+            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+              >search</mat-icon
+            >
+          </div>
         </div>
       </div>
     </div>
