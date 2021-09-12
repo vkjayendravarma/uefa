@@ -15,26 +15,15 @@
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="col-6"
-      align="right"
-      *ngIf="role !== 'player' && role !== 'dependent'"
-    >
-      <div class="post-actions uiComponent-top-actions align-items-start">
-        <mat-icon class="fc(82898E) uiComponent-icon-action hgta mlr"
-          >add</mat-icon
-        >
-      </div>
-    </div>
-  </div>
 
-  <div class="componentBody ptr plr prr pbl">
-    <div class="teams">
-      <div class="row">
-        <div class="col" *ngFor="let item of teams">
-          <div class="team">
-            <app-teams-element></app-teams-element>
+      <div class="componentBody ptr plr prr pbl">
+        <div class="teams">
+          <div class="row">
+            <div class="col" *ngFor="let item of teams">
+              <div class="team">
+                <app-teams-element></app-teams-element>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -8,6 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TournamentsListViewComponent implements OnInit {
   @Input()
   isCompleted:boolean = false;
+
+  @Input()
+  componentTitle: string | undefined;
+
+  @Input()
+  enableFilter: boolean = false;
+
+  @Input()
+  enableAddNew: boolean = false;
+
+  @Input()
+  enableSearch: boolean = false;
+
+  @Input()
+  textAction: string | undefined;
+
   posts = [1,2,3,4,5,6]
   constructor() { }
 

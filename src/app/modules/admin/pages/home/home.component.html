@@ -13,20 +13,21 @@
             <app-organized-view
               componentTitle="National Events"
               [enableCreateNew]="true"
+              [enableFilter]='true'
             ></app-organized-view>
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-          <app-registration-requests></app-registration-requests>
+          <app-registration-requests componentTitle="Registration Requests - Regional Associations (12)" [enableFilter]="true" ></app-registration-requests>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
           <div class="surrveysListView mtl">
-            <uikit-surveys></uikit-surveys>
+            <uikit-surveys componentTitle="Surveys (23)" textAction="Recently Closed" [enableAddNew]="true" ></uikit-surveys>
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
           <div class="tournmentsListView mtl">
-            <app-tournaments-list-view></app-tournaments-list-view>
+            <app-tournaments-list-view componentTitle="Tournaments (4)" [enableAddNew]="true" textAction="Current"></app-tournaments-list-view>
           </div>
         </div>
 

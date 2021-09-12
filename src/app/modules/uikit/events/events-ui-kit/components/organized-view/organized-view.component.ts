@@ -12,6 +12,9 @@ export class OrganizedViewComponent implements OnInit {
   @Input()
   enableCreateNew: boolean = false;
 
+  @Input()
+  enableFilter: boolean = false;
+
   eventsList = ['Current', 'Upcoming', 'Drafts'];
   eventsPlayer = ['Browse', 'Registered Events'];
 
