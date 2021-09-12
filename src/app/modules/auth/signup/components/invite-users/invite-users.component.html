@@ -10,24 +10,67 @@
     </div>
     <div class="componentBody pbxl">
         <div class="inviteUsersFormWrapper container ">
-            <div class="inviteUsersForm mtxl formControlTopBorderUnset wdt(50) ">
-                <h1 class="formTitle ff-sb fc(ffffff) fs(32) ">Create Profile</h1>
+            <div class="inviteUsersForm mtxl formControlTopBorderUnset wdt(100) ">
+                <h1 class="formTitle ff-sb fc(ffffff) fs(32) ">Invite Users</h1>
                 <h2 class="formDescription fs(16) fc(9B9B9B) ff-r mbxl"> Select other users you want to invite to the platform </h2>
-                <app-invite-user-form></app-invite-user-form>
-                <app-invite-user-form></app-invite-user-form>
-                <app-invite-user-form></app-invite-user-form>
+                
+                <form [formGroup]="inviteForm" (submit)="inviteUsers()">
+                <ng-container formArrayName="invites">
+                    <div class="row mtl" *ngFor="let group of invites.controls; let i = index; let first = first;" [formGroupName]="i">
+                        <div class="col-4">
+                            <label style="color: #EDEEEF;" class="form-label">Email Address <span class="text-danger">*</span></label>
+                            <input formControlName="email" type="email" style="color: #EDEEEF;background-color: #0F171D;
+                            border: 1px solid #535353;display: inline-flex;" placeholder="Enter Email ...." class="form-control">
+                        </div>
 
+                        <div class="col-4">
+                            <label style="color: #EDEEEF;" class="form-label">Association Type <span class="text-danger">*</span></label>
+                            <select class="form-control" style="color: #EDEEEF; background-color: #0F171D; border: 1px solid #535353; display: inline-flex;" formControlName="association">
+                                <option value="">------ Select ------</option>
+                                <option *ngFor="let assType of associationTypes" [value]="assType.id">{{ assType.label }}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-3">
+                            <label style="color: #EDEEEF;" class="form-label">Region</label>
+                            <select class="form-control" style="color: #EDEEEF; background-color: #0F171D; border: 1px solid #535353; display: inline-flex;" formControlName="region">
+                                <option value="">------ Select ------</option>
+                                <option *ngFor="let ass of userDetails.child_ass" [value]="ass.ass_id">{{ ass.ass_region }}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-1" *ngIf="first">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button (click)="addInvite()">More</button>
+                        </div>
+                        <div class="col-1" *ngIf="!first">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button (click)="removeInvite(i)">Remove</button>
+                        </div>
+
+
+                        <div [class]="response.mailDetails[i].status == 1 ? 'col text-success' : 'col text-danger'" style="margin-bottom: 10px;" *ngIf="inviteSent">
+                            {{ response.mailDetails[i].msg }}
+                        </div>
+                    </div>
+                </ng-container>
+                </form>
             </div>
         </div>
     </div>
 
     <div class="componentActions bgc(161F26) wdt(100)">
-        <div class="actionsWrapper container ptr pbr">
-            <button class="btn-dialog-action ff-sb fs(16)" color="accent" type="submit" mat-raised-button>
-                Send Invites
+        <div class="actionsWrapper container ptr pbr" *ngIf="!inviteSent">
+            <button class="btn-dialog-action ff-sb fs(16)" color="accent" type="button" (click)="inviteUsers()" mat-raised-button [disabled]="loading || inviteForm.invalid">
+                {{ loading ? "Please Wiat..." : "Send Invite(s)" }}
             </button>
-            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
+            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button (click)="loginUser()">
                 Skip
+            </button>
+        </div>
+        <div class="actionsWrapper container ptr pbr" *ngIf="inviteSent">
+            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button (click)="loginUser()">
+                Proceed to Dashboard
             </button>
         </div>
     </div>

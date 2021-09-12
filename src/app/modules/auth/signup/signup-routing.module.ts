@@ -26,7 +26,7 @@ const routes: Routes = [
     path: 'institute/joinas/success',
     component: InstituteRequestJoinSuccessMessageComponent
   },{
-    path: 'inviteusers',
+    path: 'inviteusers/:invitehash',
     component: InviteUsersComponent
   },
   {

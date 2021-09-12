@@ -14,11 +14,16 @@ export class CreateProfileComponent implements OnInit {
 
   image: any;
   params: any;
+  userDetails: any = {
+    ass_type: 0
+  };
   genders: any = [];
 
   profileSetup = false;
   response:any;
   apiLink = apiUrl+'/api/';
+
+  loading = false;
 
   profileForm: FormGroup = this.fb.group({
     profile: [''],
@@ -77,8 +82,10 @@ export class CreateProfileComponent implements OnInit {
     let request = {
       invitehash: this.params.invitehash
     };
+    this.loading = true;
     return this.http.post(this.apiLink+'invite/get_details', request).toPromise().then(response => {
       this.response = response;
+      this.loading = false;
       
       if(this.response.status == 0) {
         // this.toastr.error(this.response.msg, 'Error!', {
@@ -86,8 +93,10 @@ export class CreateProfileComponent implements OnInit {
         // });
         // return false;
         if(this.response.profile_filled && this.response.profile_filled == 1) this.profileSetup = true;
+        this.userDetails.ass_type = this.response.ass_type;
       } else {
         this.genders = this.response.genders;
+        this.userDetails = this.response.user_details;
         this.setupForm(this.response);
       }
     });
@@ -106,9 +115,7 @@ export class CreateProfileComponent implements OnInit {
       }
 
       reader.readAsDataURL(event.target.files[0]);
-
     }
-
   }
 
   updateProfile() {
@@ -123,8 +130,10 @@ export class CreateProfileComponent implements OnInit {
       dob: profileForm.dob
     };
 
+    this.loading = true;
     return this.http.post(this.apiLink+'invite/setup_profile', request).toPromise().then(response => {
       this.response = response;
+      this.loading = false;
       
       if(this.response.status == 0) {
         // this.toastr.error(this.response.msg, 'Error!', {
