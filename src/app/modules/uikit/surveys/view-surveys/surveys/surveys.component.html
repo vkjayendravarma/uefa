@@ -1,25 +1,23 @@
 <section class="uiComponent surveysListView bgc(161F26) bgshadow1 bdr-rounded">
   <div class="componentWrapper">
     <div class="componentHeader bdrb pr">
-      <div class="d-flex justify-content-between">
-        <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
-          Surveys (23)
-        </h2>
-        <div class="d-flex" align="right">
-          <p
-            class="
-              rescentlyClosed
-              uiComponent-text-action
-              fs(12)
-              fc(82898E)
-              display-inline
-            "
-          >
-            Recently Closed
-          </p>
-          <mat-icon class="fc(82898E) uiComponent-icon-action hgta mlr"
-            >add</mat-icon
-          >
+      <div class="d-flex ">
+        <div class="titleWrapper align-self-center">
+          <h2 class="componentTitle    fs(16) fc(ffffff) ff-sb m-unset">
+            {{componentTitle}}
+          </h2>
+        </div>
+
+        <div class="d-flex ml-auto ">
+          <div class="textActionWapper " *ngIf="textAction !== undefined">
+            <p class="textAction  uiComponent-text-action fs(12) fc(82898E) display-inline">
+              {{textAction}}
+            </p>
+          </div>
+
+          <div class="addnew mlr hgta cursor-pointer" *ngIf="enableAddNew">
+            <mat-icon class="addNew fc(82898E)">add</mat-icon>
+          </div>
         </div>
       </div>
     </div>
