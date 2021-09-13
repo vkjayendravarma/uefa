@@ -5,6 +5,7 @@ import { EmailTemplateRegistrationApprovedComponent } from './email-template-reg
 import { FEmailTemplateComponent } from './f-email-template/f-email-template.component';
 import { InviteDependentToPlatformComponent } from './invite-dependent-to-platform/invite-dependent-to-platform.component';
 import { InviteToPlatformComponent } from './invite-to-platform/invite-to-platform.component';
+import { ResetPasswordEmailTemplateComponent } from './reset-password-email-template/reset-password-email-template.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'login-mail',
     component: FEmailTemplateComponent,
+  },
+  {
+    path: 'reset-password-email',
+    component: ResetPasswordEmailTemplateComponent,
   },
   {
     path: 'invite-mail',
