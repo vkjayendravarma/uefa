@@ -1,0 +1,31 @@
+<div class="slideWrapper">
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="config"
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)"
+    (afterChange)="afterChange($event)"
+    (beforeChange)="beforeChange($event)"
+  >
+    <div ngxSlickItem *ngFor="let item of posts" class="slide bdrr(383C40)">
+      <div class="team1 display-inline">
+        <img
+          src="../../../../../assets/images/clubsLogos/manchester.png"
+          alt=""
+          class="slideTeamImg display-inline"
+        />
+        <p class="ff-r fs(12) fc(9B9B9B) display-inline">Warriors</p>
+      </div>
+      <p class="vs ff-r fs(12) fc(9B9B9B) display-inline mrs mls">vs</p>
+      <div class="team1 display-inline">
+        <p class="ff-r fs(12) fc(9B9B9B) display-inline">Warriors</p>
+        <img
+          src="../../../../../assets/images/clubsLogos/manchester.png"
+          alt=""
+          class="slideTeamImg display-inline"
+        />
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

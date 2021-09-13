@@ -23,10 +23,17 @@
   }
 }
 
-.date {
-  width: 20%;
+// Slick Slider
+
+.slick-slider {
+  margin: auto;
+  background: transparent;
 }
 
-.slider {
-  width: 80%;
+.slick-prev,
+.slick-next {
+  height: 45px;
+  width: 40px;
+  background: white !important;
+  z-index: 100;
 }
