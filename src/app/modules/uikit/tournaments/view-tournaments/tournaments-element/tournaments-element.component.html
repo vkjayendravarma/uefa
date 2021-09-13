@@ -9,7 +9,7 @@
     </div>
     <div class="tournament flex-grow-1 mlr">
       <div class="tournaments-intro d-flex justify-content-between">
-        <div class="d-flex align-items-end">
+        <div class="d-flex heading align-items-end">
           <app-tag-chips
             [tags]="[{ name: 'Arsenal FC', bgColor: '#D5DFEF' }]"
             class="display-inline"
@@ -34,11 +34,19 @@
         </div>
       </div>
       <div class="tournaments-matches mts flex-grow">
-        <div class="tournaments-intro d-flex justify-content-between wdt(100)">
+        <div
+          class="
+            tournaments-intro
+            d-flex
+            justify-content-between
+            wdt(100)
+            componentAlign
+          "
+        >
           <div class="d-flex align-items-baseline date">
             <mat-icon
               svgIcon="calendar"
-              class="uiComponent-small-icon"
+              class="uiComponent-small-icon calenderIcon"
             ></mat-icon>
             <p
               class="
@@ -49,6 +57,7 @@
                 fs(12)
                 fc(9B9B9B)
                 mlxs
+                calenderDate
               "
             >
               14 Mar’ 21 - 15 Mar’21
