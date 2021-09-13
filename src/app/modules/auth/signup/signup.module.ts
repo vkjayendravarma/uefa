@@ -22,9 +22,7 @@ import { RaDetailsComponent } from './components/ra/ra-details/ra-details.compon
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
 import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/ra-details-approved.component';
 import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
-
 import { MatDialogModule } from '@angular/material/dialog';
-import { SignupSuccessfulComponent } from './components/signup-successful/signup-successful.component';
 @NgModule({
   declarations: [
     CreateProfileComponent,
@@ -37,7 +35,6 @@ import { SignupSuccessfulComponent } from './components/signup-successful/signup
     RaDetailsSuccessComponent,
     RaDetailsApprovedComponent,
     RegisterProfileComponent,
-    SignupSuccessfulComponent,
   ],
   imports: [
     CommonModule,

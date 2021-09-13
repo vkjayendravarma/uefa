@@ -11,8 +11,6 @@ import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
 import { RaDetailsComponent } from './components/ra/ra-details/ra-details.component';
 import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
-import { SignupSuccessfulComponent } from './components/signup-successful/signup-successful.component';
-
 const routes: Routes = [
   {
     path: 'create-profile',
@@ -22,10 +20,7 @@ const routes: Routes = [
     path: 'player-register-profile',
     component: RegisterProfileComponent,
   },
-  {
-    path: 'signup-successful',
-    component: SignupSuccessfulComponent,
-  },
+
   {
     path: 'institutedata',
     component: InstitutePresetComponent,
