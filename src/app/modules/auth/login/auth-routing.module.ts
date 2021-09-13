@@ -6,7 +6,8 @@ import { RecoverPasswordComponent } from './recover-password/recover-password.co
 import { ResetPasswordSuccessComponent } from './reset-password-success/reset-password-success.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SignupSuccessComponent } from './signup-success/signup-success.component';
-import { SignupSuccessfulComponent } from './signup-successful/signup-successful.component';
+import { SignupSuccessfulComponent } from './player-signup-successful/signup-successful.component';
+import { DateOfBirthComponent } from './date-of-birth/date-of-birth.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'signup-success',
         component: SignupSuccessfulComponent,
+      },
+      {
+        path: 'date-of-birth',
+        component: DateOfBirthComponent,
       },
     ],
   },

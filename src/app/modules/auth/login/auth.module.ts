@@ -12,7 +12,10 @@ import { SignupSuccessComponent } from './signup-success/signup-success.componen
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ResetPasswordSuccessComponent } from './reset-password-success/reset-password-success.component';
-import { SignupSuccessfulComponent } from './signup-successful/signup-successful.component';
+import { SignupSuccessfulComponent } from './player-signup-successful/signup-successful.component';
+import { DateOfBirthComponent } from './date-of-birth/date-of-birth.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { SignupSuccessfulComponent } from './signup-successful/signup-successful
     ResetPasswordComponent,
     ResetPasswordSuccessComponent,
     SignupSuccessfulComponent,
+    DateOfBirthComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +37,8 @@ import { SignupSuccessfulComponent } from './signup-successful/signup-successful
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class AuthModule {}
