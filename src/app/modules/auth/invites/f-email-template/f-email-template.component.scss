@@ -1,0 +1,19 @@
+.emailbg {
+  background-color: #fafafa;
+}
+
+.emailBgWhite {
+  background-color: #ffffff;
+}
+.semi-bold {
+  font-weight: 400;
+}
+.contentWrapper {
+  @media only screen and (max-width: 600px) {
+    flex-direction: row !important;
+  }
+}
+
+.buttonStyle {
+  padding: 1rem !important;
+}

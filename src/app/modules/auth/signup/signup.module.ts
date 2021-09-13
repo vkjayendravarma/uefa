@@ -24,6 +24,7 @@ import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/
 import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { SignupSuccessfulComponent } from './components/signup-successful/signup-successful.component';
 @NgModule({
   declarations: [
     CreateProfileComponent,
@@ -36,6 +37,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     RaDetailsSuccessComponent,
     RaDetailsApprovedComponent,
     RegisterProfileComponent,
+    SignupSuccessfulComponent,
   ],
   imports: [
     CommonModule,
