@@ -7,6 +7,7 @@ import { InstituteProfileComponent } from './components/institute-profile/instit
 import { InstituteRequestJoinSuccessMessageComponent } from './components/institute-request-join-success-message/institute-request-join-success-message.component';
 import { InstituteRequestJoinComponent } from './components/institute-request-join/institute-request-join.component';
 import { InviteUsersComponent } from './components/invite-users/invite-users.component';
+import { PlayerSignupSuccessComponent } from './components/player-signup-success/player-signup-success.component';
 import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/ra-details-approved.component';
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
 import { RaDetailsComponent } from './components/ra/ra-details/ra-details.component';
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'ra/approved',
     component: RaDetailsApprovedComponent,
+  },
+  {
+    path: 'signup-success',
+    component: PlayerSignupSuccessComponent,
   },
 ];
 

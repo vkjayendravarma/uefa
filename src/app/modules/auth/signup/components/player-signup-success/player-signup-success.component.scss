@@ -27,13 +27,14 @@
 
   .authSection {
     height: 100vh;
+    padding: 2em;
   }
 
   .authBanner {
     display: none;
   }
   .router-outlet {
-    width: 60%;
+    width: 100%;
     margin-bottom: 40px;
   }
 }
@@ -67,11 +68,5 @@
   align-items: center;
 
   @media (max-width: 801px) {
-  }
-}
-
-.descriptionText {
-  @media (max-width: 801px) {
-    display: none;
   }
 }

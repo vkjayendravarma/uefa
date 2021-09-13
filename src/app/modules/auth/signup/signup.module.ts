@@ -23,6 +23,7 @@ import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra
 import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/ra-details-approved.component';
 import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PlayerSignupSuccessComponent } from './components/player-signup-success/player-signup-success.component';
 @NgModule({
   declarations: [
     CreateProfileComponent,
@@ -35,6 +36,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     RaDetailsSuccessComponent,
     RaDetailsApprovedComponent,
     RegisterProfileComponent,
+    PlayerSignupSuccessComponent,
   ],
   imports: [
     CommonModule,
