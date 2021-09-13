@@ -16,15 +16,9 @@
   padding-bottom: 5em;
 }
 
-.componentActions {
-  position: absolute;
-  bottom: 0;
-}
-
 .blue {
   color: #1565d8 !important;
 }
-
 .wrapperBody {
   font-size: 32px;
   color: #ffffff;
@@ -32,6 +26,14 @@
   padding-right: 5rem;
   @media only screen and (max-width: 600px) {
     font-size: 24px !important;
-    padding: 2rem 3rem 4rem 2rem !important;
+    padding: 1rem 2rem 1rem 2rem !important;
   }
 }
+.componentActions {
+  position: absolute;
+  bottom: 0;
+}
+// @media (max-width: 600px) {
+//   .wrapperBody {
+//   }
+// }

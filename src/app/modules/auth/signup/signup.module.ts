@@ -21,7 +21,9 @@ import { FormUiElementsModule } from '../../uikit/form-ui-elements/form-ui-eleme
 import { RaDetailsComponent } from './components/ra/ra-details/ra-details.component';
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
 import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/ra-details-approved.component';
+import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
 
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     CreateProfileComponent,
@@ -33,6 +35,7 @@ import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/
     RaDetailsComponent,
     RaDetailsSuccessComponent,
     RaDetailsApprovedComponent,
+    RegisterProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +53,7 @@ import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/
     MatButtonModule,
     MatRadioModule,
     RouterModule,
+    MatDialogModule,
   ],
 })
 export class SignupModule {}

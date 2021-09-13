@@ -9,11 +9,16 @@ import { InviteUsersComponent } from './components/invite-users/invite-users.com
 import { RaDetailsApprovedComponent } from './components/ra/ra-details-approved/ra-details-approved.component';
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
 import { RaDetailsComponent } from './components/ra/ra-details/ra-details.component';
+import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
 
 const routes: Routes = [
   {
     path: 'create-profile',
     component: CreateProfileComponent,
+  },
+  {
+    path: 'player-register-profile',
+    component: RegisterProfileComponent,
   },
   {
     path: 'institutedata',
