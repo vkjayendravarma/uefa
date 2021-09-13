@@ -1,0 +1,27 @@
+<mat-sidenav-container class="dashboard-layout">
+  <mat-sidenav mode="side" [(opened)]="opened" [fixedInViewport]="true">
+    <app-side-nav-dashboard-layout></app-side-nav-dashboard-layout>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- <button (click)="opened = !opened">toggle</button> -->
+    <div class="bgc(0F171D) minHgtv(100)">
+      <app-header
+        backgroundImage="2_player"
+        headerTitle="Notifications"
+      ></app-header>
+      <!-- linkAction='newpost' -->
+      <section class="homeWrapper">
+        <div class="container-fluid">
+          <div class="ptl plr pbl prr">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <app-global-activities></app-global-activities>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

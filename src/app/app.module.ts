@@ -12,6 +12,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { HeaderModule } from './modules/uikit/header/header.module';
+import { ActivitiesModule } from './modules/uikit/global/activities/activities.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     DashboardLayoutComponent,
     SideNavDashboardLayoutComponent,
     LandingPageComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     MatSidenavModule,
     MatButtonModule,
     SlickCarouselModule,
+    HeaderModule,
+    ActivitiesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
