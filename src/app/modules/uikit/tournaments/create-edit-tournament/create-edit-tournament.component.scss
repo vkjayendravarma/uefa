@@ -1,0 +1,17 @@
+.dialogStyle {
+  justify-content: start;
+  @media only screen and (max-width: 700px) {
+    justify-content: center !important;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .buttonsStyle {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .cancelButton {
+    margin-top: 1rem !important;
+    margin-left: 0rem !important;
+  }
+}

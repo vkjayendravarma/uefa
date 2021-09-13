@@ -23,6 +23,28 @@
   }
 }
 
+@media (max-width: 600px) {
+  .componentAlign {
+    flex-direction: column;
+    align-items: center !important;
+    padding-top: 0.2rem !important;
+  }
+  .date {
+    width: 100% !important;
+  }
+  .heading {
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .calenderDate {
+    padding-bottom: 1rem !important;
+  }
+  .todayAlign {
+    padding-top: -0.4rem !important;
+    align-items: center !important;
+  }
+}
 .date {
   width: 20%;
 }
