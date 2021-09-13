@@ -54,6 +54,8 @@ import { ProfileModule } from '../uikit/profile/profile.module';
 import { AAssociationsCriteriaAcceptComponent } from './pages/associations/a-associations-criteria-accept/a-associations-criteria-accept.component';
 import { AAssociationsCriteriaEditComponent } from './pages/associations/a-associations-criteria-edit/a-associations-criteria-edit.component';
 import { AAssociationDrilldownComponent } from './pages/associations/a-association-drilldown/a-association-drilldown.component';
+import { AAnsSurveyComponent } from './pages/surveys/a-ans-survey/a-ans-survey.component';
+import { ASurveyDoneComponent } from './pages/surveys/a-survey-done/a-survey-done.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import { AAssociationDrilldownComponent } from './pages/associations/a-associati
     AAssociationsCriteriaAcceptComponent,
     AAssociationsCriteriaEditComponent,
     AAssociationDrilldownComponent,
+    AAnsSurveyComponent,
+    ASurveyDoneComponent,
   ],
   imports: [
     CommonModule,

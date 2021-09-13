@@ -4,19 +4,17 @@ import { FormBuilderValuesInterface } from 'src/app/prototypes/formBuilderValues
 @Component({
   selector: 'uikit-create-new-survey',
   templateUrl: './create-new-survey.component.html',
-  styleUrls: ['./create-new-survey.component.scss']
+  styleUrls: ['./create-new-survey.component.scss'],
 })
 export class CreateNewSurveyComponent implements OnInit {
+  formBluePrint!: FormBuilderValuesInterface[];
 
-  formBluePrint!: FormBuilderValuesInterface[]
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  formBuildChangeEventHandler(event:FormBuilderValuesInterface[]){
+  formBuildChangeEventHandler(event: FormBuilderValuesInterface[]) {
     this.formBluePrint = event;
+    console.log('blueprint', event);
   }
-
 }

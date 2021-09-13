@@ -1,0 +1,40 @@
+<section class="createNewEventWrapper">
+  <div class="contrainer-fluid">
+    <div class="ptl pll pbr">
+      <div class="d-flex newSurveyTitle align-items-center">
+        <div class="eventTitleWrapper">
+          <h2 class="eventTitle display-inline ff-sb fs(24) fc(ffffff)">
+            New Survey 1234
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="componentBody darkStepperContainer mtr plr prr">
+      <uikit-form-render [formBluePrint]="surveys"></uikit-form-render>
+      <div class="buttonWrapper mtr pr bgc(161F26)">
+        <button
+          class="surveyBtns btn-dialog-action ff-sb fs(16)"
+          mat-raised-button
+          color="accent"
+          (click)="clickHandler()"
+        >
+          Finish Survey
+        </button>
+        <button
+          class="
+            surveyBtns
+            btn-dialog-action
+            bdr(77B7FD)
+            fc(77B7FD)
+            ff-sb
+            fs(16)
+          "
+          mat-button
+        >
+          Previous Page
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

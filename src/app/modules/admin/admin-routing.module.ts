@@ -25,6 +25,8 @@ import { EventEditComponent } from '../uikit/events/event-edit/event-edit.compon
 import { AAssociationsCriteriaAcceptComponent } from './pages/associations/a-associations-criteria-accept/a-associations-criteria-accept.component';
 import { AAssociationsCriteriaEditComponent } from './pages/associations/a-associations-criteria-edit/a-associations-criteria-edit.component';
 import { AAssociationDrilldownComponent } from './pages/associations/a-association-drilldown/a-association-drilldown.component';
+import { AAnsSurveyComponent } from './pages/surveys/a-ans-survey/a-ans-survey.component';
+import { ASurveyDoneComponent } from './pages/surveys/a-survey-done/a-survey-done.component';
 
 const routes: Routes = [
   {
@@ -109,6 +111,14 @@ const routes: Routes = [
       {
         path: 'new',
         component: ANewSurveyComponent,
+      },
+      {
+        path: 'answer',
+        component: AAnsSurveyComponent,
+      },
+      {
+        path: 'done',
+        component: ASurveyDoneComponent,
       },
     ],
   },

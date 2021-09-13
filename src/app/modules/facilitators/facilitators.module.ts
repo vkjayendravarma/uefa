@@ -58,6 +58,8 @@ import { FPeopleFacilitatorsComponent } from './components/people/f-people-facil
 import { FPeopleInviteesComponent } from './components/people/f-people-invitees/f-people-invitees.component';
 import { FPeopleRequestsComponent } from './components/people/f-people-requests/f-people-requests.component';
 import { TagChipsModule } from '../uikit/global/tag-chips/tag-chips.module';
+import { FAnsSurveysComponent } from './pages/f-surveys/f-ans-surveys/f-ans-surveys.component';
+import { FSurveyDoneComponent } from './pages/f-surveys/f-survey-done/f-survey-done.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +96,8 @@ import { TagChipsModule } from '../uikit/global/tag-chips/tag-chips.module';
     FPeopleFacilitatorsComponent,
     FPeopleInviteesComponent,
     FPeopleRequestsComponent,
+    FAnsSurveysComponent,
+    FSurveyDoneComponent,
   ],
   imports: [
     CommonModule,

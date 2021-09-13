@@ -22,7 +22,9 @@ import { FPeopleComponent } from './pages/f-people/f-people.component';
 import { FCreateNewPostComponent } from './pages/f-posts/f-create-new-post/f-create-new-post.component';
 import { FPostsDashboardComponent } from './pages/f-posts/f-posts-dashboard/f-posts-dashboard.component';
 import { FPostsComponent } from './pages/f-posts/f-posts.component';
+import { FAnsSurveysComponent } from './pages/f-surveys/f-ans-surveys/f-ans-surveys.component';
 import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey/f-create-new-survey.component';
+import { FSurveyDoneComponent } from './pages/f-surveys/f-survey-done/f-survey-done.component';
 import { FSurveysDashboardComponent } from './pages/f-surveys/f-surveys-dashboard/f-surveys-dashboard.component';
 import { FSurveysComponent } from './pages/f-surveys/f-surveys.component';
 import { FTeamViewComponent } from './pages/f-teams/f-team-view/f-team-view.component';
@@ -112,6 +114,14 @@ const routes: Routes = [
       {
         path: 'new',
         component: FCreateNewSurveyComponent,
+      },
+      {
+        path: 'answer',
+        component: FAnsSurveysComponent,
+      },
+      {
+        path: 'done',
+        component: FSurveyDoneComponent,
       },
     ],
   },
