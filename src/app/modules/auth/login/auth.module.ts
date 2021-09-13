@@ -9,9 +9,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LoginformComponent } from './loginform/loginform.component';
 import { SignupSuccessComponent } from './signup-success/signup-success.component';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ResetPasswordSuccessComponent } from './reset-password-success/reset-password-success.component';
 
 @NgModule({
-  declarations: [LoginComponent, LoginformComponent, SignupSuccessComponent],
+  declarations: [LoginComponent, LoginformComponent, SignupSuccessComponent, RecoverPasswordComponent, ResetPasswordComponent, ResetPasswordSuccessComponent],
   imports: [
     CommonModule,
     AuthRouterModule,
