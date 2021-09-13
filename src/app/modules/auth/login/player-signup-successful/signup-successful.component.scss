@@ -52,3 +52,26 @@
 .contentWrapper {
   width: 60%;
 }
+
+.optionImage {
+  height: 100%;
+
+  @media (max-width: 801px) {
+    max-height: 100px;
+    max-width: 100px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 801px) {
+  }
+}
+
+.descriptionText {
+  @media (max-width: 801px) {
+    display: none;
+  }
+}
