@@ -53,6 +53,7 @@ import { AProfileComponent } from './pages/a-profile/a-profile.component';
 import { ProfileModule } from '../uikit/profile/profile.module';
 import { AAssociationsCriteriaAcceptComponent } from './pages/associations/a-associations-criteria-accept/a-associations-criteria-accept.component';
 import { AAssociationsCriteriaEditComponent } from './pages/associations/a-associations-criteria-edit/a-associations-criteria-edit.component';
+import { AAssociationDrilldownComponent } from './pages/associations/a-association-drilldown/a-association-drilldown.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { AAssociationsCriteriaEditComponent } from './pages/associations/a-assoc
     AProfileComponent,
     AAssociationsCriteriaAcceptComponent,
     AAssociationsCriteriaEditComponent,
+    AAssociationDrilldownComponent,
   ],
   imports: [
     CommonModule,

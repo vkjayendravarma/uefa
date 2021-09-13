@@ -1,0 +1,40 @@
+<app-header backgroundImage="1_football" headerTitle="{{ name }}"></app-header>
+
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="plr prr pbl">
+      <div class="DrilldownTabs">
+        <nav mat-tab-nav-bar>
+          <a
+            mat-tab-link
+            *ngFor="let link of matTabLinks"
+            class="mat-router-tab-link"
+          >
+            {{ link.label }}
+          </a>
+        </nav>
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="eventsOrganisedView mtl">
+              <app-stats-list-view
+                componentTitle="Active Institutes (14)"
+                [enableFilter]="true"
+              ></app-stats-list-view>
+            </div>
+            <div class="registrationRequests mtl">
+              <app-registrations-tabview
+                componentTitle="Registration Requests"
+              ></app-registrations-tabview>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="activitiesView mtl">
+              <app-global-activities></app-global-activities>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

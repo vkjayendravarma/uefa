@@ -24,6 +24,7 @@ import { AProfileComponent } from './pages/a-profile/a-profile.component';
 import { EventEditComponent } from '../uikit/events/event-edit/event-edit.component';
 import { AAssociationsCriteriaAcceptComponent } from './pages/associations/a-associations-criteria-accept/a-associations-criteria-accept.component';
 import { AAssociationsCriteriaEditComponent } from './pages/associations/a-associations-criteria-edit/a-associations-criteria-edit.component';
+import { AAssociationDrilldownComponent } from './pages/associations/a-association-drilldown/a-association-drilldown.component';
 
 const routes: Routes = [
   {
@@ -90,6 +91,10 @@ const routes: Routes = [
       {
         path: 'edit',
         component: AAssociationsCriteriaEditComponent,
+      },
+      {
+        path: 'drilldown/:name',
+        component: AAssociationDrilldownComponent,
       },
     ],
   },
