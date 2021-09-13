@@ -1,24 +1,28 @@
-<app-header backgroundImage='1_football' headerTitle='Posts' quickActionType="createNewTeam" quickActionButtonText='Create Team'></app-header>
+<app-header
+  backgroundImage="2_player"
+  headerTitle="Teams"
+  quickActionType="createNewTeam"
+  quickActionButtonText="Create Team"
+></app-header>
 <!-- linkAction='newpost' -->
-<section class="homeWrapper ">
-    <div class="container-fluid  ">
-        <div class=" ptl plr pbl ">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="postsOrganisedView ">
-                        <app-teams-galary-view></app-teams-galary-view>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="activitiesView  mtl">
-                        <app-global-activities></app-global-activities>
-                    </div>
-
-                </div>
-            </div>
+<section class="homeWrapper">
+  <div class="container-fluid">
+    <div class="prr plr pbl">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="postsOrganisedView mtl">
+            <app-teams-galary-view
+              componentTitle="Your Teams (2)"
+              [enableAddNew]="true"
+            ></app-teams-galary-view>
+          </div>
         </div>
-
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="activitiesView mtl">
+            <app-global-activities></app-global-activities>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </section>

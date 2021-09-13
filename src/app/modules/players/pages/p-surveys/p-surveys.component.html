@@ -3,9 +3,13 @@
 <section class="homeWrapper">
   <div class="container-fluid">
     <div class="people d-flex mtl">
-      <div class="userWrapper" [ngClass]="{isActive: true}">
+      <div class="userWrapper" [ngClass]="{ isActive: true }">
         <div class="activeWrapper">
-          <img src="../../../../../assets/images/users/person.png" alt="" class="userIcon">
+          <img
+            src="../../../../../assets/images/users/person.png"
+            alt=""
+            class="userIcon"
+          />
         </div>
         <div class="isActiveDotWrapper mtxs" align="center">
           <div class="isActiveDot"></div>
@@ -13,7 +17,10 @@
       </div>
     </div>
     <div class="mtl bgc(161F26) bgshadow1 bdr-rounded">
-      <uikit-surveys  ></uikit-surveys>
+      <uikit-surveys
+        componentTitle="Surveys for your Institute"
+        [enableFilter]="true"
+      ></uikit-surveys>
     </div>
   </div>
 </section>

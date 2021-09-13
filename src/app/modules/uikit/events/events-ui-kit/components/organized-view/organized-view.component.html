@@ -9,12 +9,16 @@
         </div>
         <div class="iconsWrapper d-flex ml-auto" align="right">
           <div class="addnew align-self-center" *ngIf="enableCreateNew">
-            <mat-icon class="addNew hgta mrr fc(82898E)" >add</mat-icon>
+            <mat-icon class="addNew hgta mrr fc(82898E)">add</mat-icon>
           </div>
           <div class="filter align-self-center" *ngIf="enableFilter">
-            <mat-icon svgIcon="filter" class="filterIcon hgta"  ></mat-icon>
+            <mat-icon svgIcon="filter" class="filterIcon hgta"></mat-icon>
           </div>
-        
+          <div class="search align-self-center" *ngIf="enableSearch">
+            <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+              >search</mat-icon
+            >
+          </div>
         </div>
       </div>
     </div>

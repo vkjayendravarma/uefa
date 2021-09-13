@@ -1,18 +1,40 @@
 <section class="uiComponent PostTabView bgc(161F26) bgshadow1 bdr-rounded">
   <div class="componentWrapper">
-    <div class="componentHeader pr">
-      <div class="row">
-        <div class="col-6 align-self-center">
+    <div class="componentHeader bdrb pr">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="titleWrapper flex-grow-1 align-self-center">
           <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
-            Surveys for your Institute
+            {{ componentTitle }}
           </h2>
         </div>
-        <div class="col-6" align="right">
-          <div class="survey-actions uiComponent-top-actions align-items-start">
-            <mat-icon svgIcon="filter" class="filterIcon hgta"></mat-icon>
-            <p class="rescentlyClosed uiComponent-text-action  ff-r fs(12) fc(82898E) display-inline">
-                            Recently Closed </p>
-                        <mat-icon class=" fc(82898E) uiComponent-icon-action hgta mlr">add</mat-icon>
+        <div class="d-flex ml-auto">
+          <div class="textActionWapper" *ngIf="textAction !== undefined">
+            <p
+              class="
+                textAction
+                uiComponent-text-action
+                fs(12)
+                fc(82898E)
+                display-inline
+              "
+            >
+              {{ textAction }}
+            </p>
+          </div>
+          <div class="iconsWrapper d-flex justify-content-center">
+            <div class="addNew align-self-center" *ngIf="enableAddNew">
+              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+                >add</mat-icon
+              >
+            </div>
+            <div class="filter align-self-center" *ngIf="enableFilter">
+              <mat-icon svgIcon="filter" class="filterIcon hgta mlr"></mat-icon>
+            </div>
+            <div class="search align-self-center" *ngIf="enableSearch">
+              <mat-icon class="uiComponent-icon-action fc(82898E) hgta mlr"
+                >search</mat-icon
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -26,7 +48,7 @@
             <uikit-sureveys-element></uikit-sureveys-element>
             <uikit-sureveys-element></uikit-sureveys-element>
             <uikit-sureveys-element></uikit-sureveys-element>
-            <uikit-sureveys-element></uikit-sureveys-element>           
+            <uikit-sureveys-element></uikit-sureveys-element>
           </div>
         </mat-tab>
       </mat-tab-group>

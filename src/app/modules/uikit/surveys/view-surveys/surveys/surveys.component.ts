@@ -3,23 +3,29 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'uikit-surveys',
   templateUrl: './surveys.component.html',
-  styleUrls: ['./surveys.component.scss']
+  styleUrls: ['./surveys.component.scss'],
 })
 export class SurveysComponent implements OnInit {
+  @Input()
+  isCompleted: boolean = false;
 
   @Input()
   componentTitle: string | undefined;
 
   @Input()
-  textAction: string | undefined;
+  enableFilter: boolean = false;
 
   @Input()
   enableAddNew: boolean = false;
 
-  surveys = [1,2,3,4,5,6]
-  constructor() { }
+  @Input()
+  enableSearch: boolean = false;
 
-  ngOnInit(): void {
-  }
+  @Input()
+  textAction: string | undefined;
 
+  surveys = [1, 2, 3, 4, 5, 6];
+  constructor() {}
+
+  ngOnInit(): void {}
 }

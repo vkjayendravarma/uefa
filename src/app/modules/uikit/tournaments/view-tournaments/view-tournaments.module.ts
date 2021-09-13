@@ -7,17 +7,24 @@ import { TournamentsElementComponent } from './tournaments-element/tournaments-e
 import { TournamentsTabViewComponent } from './tournaments-tab-view/tournaments-tab-view.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TournamentsCompletedElementComponent } from './tournaments-completed-element/tournaments-completed-element.component';
-
-
+import { TournamentsSliderComponent } from './tournaments-slider/tournaments-slider.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
-  declarations: [TournamentsListViewComponent, TournamentsElementComponent, TournamentsTabViewComponent, TournamentsCompletedElementComponent],
+  declarations: [
+    TournamentsListViewComponent,
+    TournamentsElementComponent,
+    TournamentsTabViewComponent,
+    TournamentsCompletedElementComponent,
+    TournamentsSliderComponent,
+  ],
   imports: [
     CommonModule,
     MatIconModule,
     TagChipsModule,
-    MatTabsModule
+    MatTabsModule,
+    SlickCarouselModule,
   ],
-  exports: [TournamentsListViewComponent, TournamentsTabViewComponent]
+  exports: [TournamentsListViewComponent, TournamentsTabViewComponent],
 })
-export class ViewTournamentsModule { }
+export class ViewTournamentsModule {}

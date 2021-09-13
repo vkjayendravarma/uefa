@@ -9,7 +9,10 @@ export class TeamsGalaryViewComponent implements OnInit {
   teams = [1, 2, 3];
 
   @Input()
-  role: string | undefined;
+  enableAddNew: boolean = false;
+
+  @Input()
+  componentTitle: string | undefined;
 
   constructor() {}
 

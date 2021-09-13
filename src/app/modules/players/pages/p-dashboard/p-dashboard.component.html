@@ -1,50 +1,39 @@
 <app-header
   backgroundImage="1_football"
-  headerTitle="Welcome back Andrew"
-  subtitleTitle="NA Admin"
+  headerTitle="Welcome back Andrew!"
 ></app-header>
 
 <section class="homeWrapper">
   <div class="container-fluid">
     <div class="ptl plr pbl prr">
-      <div class="row">
-        <div class="col-4">
-          <div class="eventsTeamWrapper">
-            <div class="upcomingDrillsWrapper">
-              <div class="">
-                <app-single-category-events-view
-                  componentTitle="Upcoming Events"
-                ></app-single-category-events-view>
-              </div>
-              <div class="mtr">
-                <uikit-drills-sessions></uikit-drills-sessions>
-              </div>
+      <div class="d-flex flex-column">
+        <div class="eventsTeamWrapper">
+          <div class="d-flex flex-column upcomingDrillsWrapper">
+            <div class="">
+              <app-single-category-events-view
+                componentTitle="Upcoming Events"
+              ></app-single-category-events-view>
             </div>
-         
+            <div class="mtr">
+              <uikit-drills-sessions></uikit-drills-sessions>
+            </div>
           </div>
-        </div>
-
-        <div class="col-8">
-          <div class="teamData teamCalenderWrapper bgc(161F26) bgshadow1 bdr-rounded">
-            <div class="teams">
-              <app-teams-galary-view></app-teams-galary-view>
+          <div class="d-flex flex-column teamCalenderWrapper">
+            <div class="">
+              <app-teams-galary-view
+                componentTitle="Your Teams"
+              ></app-teams-galary-view>
             </div>
-            <div class="monthCalender mtr">
+            <div class="mtr">
               <uikit-calendar-month-view></uikit-calendar-month-view>
             </div>
           </div>
         </div>
 
-        <div class="col-12">
-          <div class="posts mtr">
-            <app-posts-list-view></app-posts-list-view>
-          </div>
+        <div class="mtr">
+          <app-posts-list-view componentTitle="Posts"></app-posts-list-view>
         </div>
-        
-
-       
       </div>
     </div>
   </div>
 </section>
-

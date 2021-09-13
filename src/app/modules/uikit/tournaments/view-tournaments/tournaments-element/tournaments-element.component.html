@@ -8,7 +8,7 @@
       />
     </div>
     <div class="tournament flex-grow-1 mlr">
-      <div class="tournaments-intro intro-box">
+      <div class="tournaments-intro d-flex justify-content-between">
         <div class="d-flex align-items-end">
           <app-tag-chips
             [tags]="[{ name: 'Arsenal FC', bgColor: '#D5DFEF' }]"
@@ -21,19 +21,6 @@
             Tournament - 1
           </h3>
         </div>
-        <div class="d-flex align-items-baseline">
-          <mat-icon
-            svgIcon="calendar"
-            class="uiComponent-small-icon"
-          ></mat-icon>
-          <p
-            class="time display-inline float-right ff-r fs(12) fc(9B9B9B) mlxs"
-          >
-            14 Mar’ 21 - 15 Mar’21
-          </p>
-        </div>
-      </div>
-      <div class="tournaments-matches mts">
         <div class="d-flex align-self-center">
           <div class="matches-today">
             <div class="d-flex align-items-baseline">
@@ -44,44 +31,61 @@
               <p class="time fs(12) fc(9B9B9B) mls">Today (5)</p>
             </div>
           </div>
-          <div class="matches-list">
-            <div class="sliderWrapper">
-              <marquee
-                behavior="scroll"
-                scrollamount="4"
-                direction="left"
-                class="slider"
+        </div>
+      </div>
+      <div class="tournaments-matches mts flex-grow">
+        <div class="tournaments-intro d-flex justify-content-between wdt(100)">
+          <div class="d-flex align-items-baseline date">
+            <mat-icon
+              svgIcon="calendar"
+              class="uiComponent-small-icon"
+            ></mat-icon>
+            <p
+              class="
+                time
+                display-inline
+                float-right
+                ff-r
+                fs(12)
+                fc(9B9B9B)
+                mlxs
+              "
+            >
+              14 Mar’ 21 - 15 Mar’21
+            </p>
+          </div>
+          <div class="slider">
+            <marquee
+              behavior="scroll"
+              scrollamount="4"
+              direction="left"
+              class="slider"
+            >
+              <div
+                class="slide prs pls display-inline bdrr(383C40)"
+                *ngFor="let item of posts"
               >
-                <div
-                  class="slide prs pls display-inline bdrr(383C40)"
-                  *ngFor="let item of posts"
-                >
-                  <div class="team1 display-inline">
-                    <img
-                      src="../../../../../assets/images/clubsLogos/manchester.png"
-                      alt=""
-                      class="slideTeamImg display-inline"
-                    />
-                    <p class="ff-r fs(12) fc(9B9B9B) display-inline">
-                      Warriors
-                    </p>
-                  </div>
-                  <p class="vs ff-r fs(12) fc(9B9B9B) display-inline mrs mls">
-                    vs
-                  </p>
-                  <div class="team1 display-inline">
-                    <img
-                      src="../../../../../assets/images/clubsLogos/manchester.png"
-                      alt=""
-                      class="slideTeamImg display-inline"
-                    />
-                    <p class="ff-r fs(12) fc(9B9B9B) display-inline">
-                      Warriors
-                    </p>
-                  </div>
+                <div class="team1 display-inline">
+                  <img
+                    src="../../../../../assets/images/clubsLogos/manchester.png"
+                    alt=""
+                    class="slideTeamImg display-inline"
+                  />
+                  <p class="ff-r fs(12) fc(9B9B9B) display-inline">Warriors</p>
                 </div>
-              </marquee>
-            </div>
+                <p class="vs ff-r fs(12) fc(9B9B9B) display-inline mrs mls">
+                  vs
+                </p>
+                <div class="team1 display-inline">
+                  <img
+                    src="../../../../../assets/images/clubsLogos/manchester.png"
+                    alt=""
+                    class="slideTeamImg display-inline"
+                  />
+                  <p class="ff-r fs(12) fc(9B9B9B) display-inline">Warriors</p>
+                </div>
+              </div>
+            </marquee>
           </div>
         </div>
       </div>
