@@ -46,4 +46,5 @@ export enum Icons {
   instagram = 'instagram',
   twitter = 'twitter',
   darkFacebook = 'darkFacebook',
+  footballPlayerIcon = 'footballPlayer',
 }

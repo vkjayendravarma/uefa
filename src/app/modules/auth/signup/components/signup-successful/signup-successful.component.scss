@@ -1,0 +1,54 @@
+.router-outlet {
+  width: 60%;
+}
+
+.authBanner {
+  height: 100vh;
+}
+
+.btn-submit {
+  height: 56px;
+}
+
+.container-fluid {
+  padding-left: unset;
+}
+
+@media (max-width: 1138px) {
+  .router-outlet {
+    width: 60%;
+  }
+}
+
+@media (max-width: 801px) {
+  .imageLoginWrapper {
+    padding-top: 6rem;
+  }
+
+  .authSection {
+    height: 100vh;
+  }
+
+  .authBanner {
+    display: none;
+  }
+  .router-outlet {
+    width: 60%;
+    margin-bottom: 40px;
+  }
+}
+
+.selected {
+  border: 3px solid #0890e2;
+  border-radius: 6px;
+}
+.buttonWidth {
+  //   width: 70%;
+  box-sizing: border-box;
+}
+.divWrapper {
+  justify-content: space-evenly;
+}
+.contentWrapper {
+  width: 60%;
+}
