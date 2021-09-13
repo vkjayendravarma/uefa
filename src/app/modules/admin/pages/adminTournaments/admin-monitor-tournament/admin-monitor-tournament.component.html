@@ -1,89 +1,95 @@
-<app-header backgroundImage='2_player' headerTitle='Back'></app-header>
-<section class="monitorTournamentTitleWrapper ">
-    <div class=" ml ">
-        <div class="d-flex monitorTournamentTitle bdrb pbl">
-            <div class="TournamentTitleWrapper">
-                <h2 class="TournamentTitle display-inline  ff-sb fs(24) fc(ffffff)  "> New Tournament</h2>
-            </div>
-            <div class="tags">
-                <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
-            </div>
-
-        </div>
+<app-header backgroundImage="2_player" headerTitle="Back"></app-header>
+<section class="monitorTournamentTitleWrapper">
+  <div class="ml">
+    <div class="d-flex monitorTournamentTitle bdrb pbl">
+      <div class="TournamentTitleWrapper">
+        <h2 class="TournamentTitle display-inline ff-sb fs(24) fc(ffffff)">
+          New Tournament
+        </h2>
+      </div>
+      <div class="tags d-flex">
+        <app-tag-chips
+          [tags]="tags"
+          class="tag display-inline componentAlign"
+        ></app-tag-chips>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="monitorTournamentBodyWrapper pll prl">
-    <mat-tab-group>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Information
-                <mat-icon svgIcon='tabCompleteCheck' class='mlr'>thumb_up</mat-icon>
-            </ng-template>
-            <ng-template matTabContent>
-                <uikit-create-edit-tournament></uikit-create-edit-tournament>
-            </ng-template>
-        </mat-tab>
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Information
+        <mat-icon svgIcon="tabCompleteCheck" class="mlr"></mat-icon>
+      </ng-template>
+      <ng-template matTabContent>
+        <uikit-create-edit-tournament></uikit-create-edit-tournament>
+      </ng-template>
+    </mat-tab>
 
-        <!-- participents  -->
+    <!-- participents  -->
 
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Participants
-                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
-            </ng-template>
-            <ng-template matTabContent>
-                <app-tournament-participants></app-tournament-participants>
-            </ng-template>
-        </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Participants
+        <mat-icon svgIcon="tabCompleteCheck" class="mlr"></mat-icon>
+      </ng-template>
+      <ng-template matTabContent>
+        <app-tournament-participants></app-tournament-participants>
+      </ng-template>
+    </mat-tab>
 
-        <!-- Fixtures  -->
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Fixtures
-                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
-            </ng-template>
-            <ng-template matTabContent>
-                <uikit-tournament-fixtures></uikit-tournament-fixtures>
-            </ng-template>
-        </mat-tab>
+    <!-- Fixtures  -->
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Fixtures
+        <mat-icon svgIcon="tabCompleteCheck" class="mlr"></mat-icon>
+      </ng-template>
+      <ng-template matTabContent>
+        <uikit-tournament-fixtures></uikit-tournament-fixtures>
+      </ng-template>
+    </mat-tab>
 
+    <!-- Scoring  -->
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Scoring
+        <mat-icon svgIcon="tabCompleteCheck" class="mlr"></mat-icon>
+      </ng-template>
+      <ng-template matTabContent>
+        <uikit-score-table></uikit-score-table>
+        <div class="stepper-actions mtr pr bgc(161F26)">
+          <div class="container">
+            <button
+              class="btn-dialog-action ff-sb fs(16)"
+              mat-raised-button
+              color="accent"
+            >
+              Conclude Tournament
+            </button>
+            <button
+              class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+              mat-button
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-        <!-- Scoring  -->
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Scoring
-                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
-            </ng-template>
-            <ng-template matTabContent>
-                <uikit-score-table></uikit-score-table>
-                <div class="stepper-actions mtr pr bgc(161F26) ">
-                    <div class="container ">
-                        <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent" >
-                            Conclude Tournament
-                        </button>
-                        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                            >
-                            Cancel
-                        </button>
-                    </div>
+    <!-- Final Result  -->
 
-                </div>
-            </ng-template>
-        </mat-tab>
-
-        <!-- Final Result  -->
-
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Final Result
-                <mat-icon svgIcon='tabCompleteCheck' class='mlr'></mat-icon>
-            </ng-template>
-            <ng-template matTabContent>
-                <uikit-final-result></uikit-final-result>
-            </ng-template>
-        </mat-tab>
-
-
-    </mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Final Result
+        <mat-icon svgIcon="tabCompleteCheck" class="mlr"></mat-icon>
+      </ng-template>
+      <ng-template matTabContent>
+        <uikit-final-result></uikit-final-result>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 </section>

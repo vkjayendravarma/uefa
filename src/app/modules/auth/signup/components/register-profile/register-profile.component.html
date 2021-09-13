@@ -114,7 +114,7 @@
           </div>
 
           <div class="col-12 fs(20) pbr fw(600) fc(EDEEEF)">Add Dependents</div>
-          <div class="col-6">
+          <div class="col-sm-12 col-md-6">
             <div class="formControl wdt(100)">
               <label class="display-block fc(EDEEEF) fs(14)">Full Name</label>
               <mat-form-field appearance="outline" class="wdt(100)">
@@ -128,7 +128,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-md-6 col-sm-12">
             <div class="formControl wdt(100)">
               <label class="display-block fc(EDEEEF) fs(14)"
                 >Date of Birth
@@ -152,29 +152,9 @@
           </div>
 
           <div class="addNew align-self-center">
-            <button mat-button class="ff-r fs(14) fc(77B7FD)">
-              + Add Team
-            </button>
+            <button mat-button class="ff-r fs(14) fc(77B7FD)">+ Add</button>
           </div>
         </div>
-        <!-- <div class="buttonsStyle d-flex mlr mtl">
-          <button
-            class="btn-dialog-action ff-sb fs(16) mrr"
-            color="accent"
-            mat-raised-button
-            mat-dialog-close
-            cdkFocusInitial
-          >
-            Create Profile
-          </button>
-          <button
-            class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) pls"
-            mat-button
-            mat-dialog-close
-          >
-            Cancel
-          </button>
-        </div> -->
       </form>
     </div>
   </div>
@@ -193,7 +173,15 @@
       </a>
       <a [routerLink]="['/']">
         <button
-          class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+          class="
+            btn-dialog-action
+            bdr(77B7FD)
+            fc(77B7FD)
+            ff-sb
+            fs(16)
+            mll
+            cancelButton
+          "
           mat-button
         >
           Cancel
@@ -201,28 +189,4 @@
       </a>
     </div>
   </div>
-
-  <!-- <div class="componentActions bgc(161F26) mb-auto wdt(100)">
-    <div class="actionsWrapper container ptr pbr">
-      <a [routerLink]="['/onboard/inviteusers']">
-        <button
-          class="btn-dialog-action ff-sb fs(16)"
-          color="accent"
-          type="submit"
-          mat-raised-button
-        >
-          Create Profile
-        </button>
-      </a>
-      <a [routerLink]="['/']">
-        <button
-          class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-          mat-button
-        >
-          Cancel
-        </button>
-      </a>
-    </div>
-  </div>
-</div> -->
 </div>
