@@ -13,3 +13,8 @@
   top: -1.9rem;
   left: -1.5rem;
 }
+.buttonAlign {
+  @media only screen and (max-width: 700px) {
+    justify-content: space-between;
+  }
+}

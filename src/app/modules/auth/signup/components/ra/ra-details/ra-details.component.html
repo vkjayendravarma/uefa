@@ -63,7 +63,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-sm-12 col-md-6">
             <div class="formControl wdt(100)">
               <label class="display-block fc(EDEEEF) fs(14)">Location</label>
               <mat-form-field appearance="outline" class="wdt(100)">
@@ -82,7 +82,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-sm-12 col-md-6">
             <div class="formControl wdt(100)">
               <label class="display-block fc(EDEEEF) fs(14)"
                 >Date of Birth
@@ -105,8 +105,8 @@
             </div>
           </div>
 
-          <div class="col-12">
-            <div class="formControl wdt(100) mbr">
+          <div class="col-12 mbr">
+            <div class="formControl wdt(100) mbl">
               <label class="display-block fc(EDEEEF) fs(14) mbl"
                 >Registration Documentation
                 <span class="fs(14) fc(9B9B9B) ff-r"
@@ -122,7 +122,7 @@
   </div>
 
   <div class="componentActions bgc(161F26) mb-auto wdt(100)">
-    <div class="actionsWrapper container ptr pbr">
+    <div class="actionsWrapper container ptr pbr d-flex buttonAlign">
       <a [routerLink]="['/onboard/ra/success']">
         <button
           class="btn-dialog-action ff-sb fs(16)"
@@ -135,7 +135,14 @@
       </a>
       <a [routerLink]="['/']">
         <button
-          class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+          class="
+            btn-dialog-action
+            bdr(77B7FD)
+            fc(77B7FD)
+            ff-sb
+            fs(16)
+            draftButton
+          "
           mat-button
         >
           Save as Draft & Sign Out
