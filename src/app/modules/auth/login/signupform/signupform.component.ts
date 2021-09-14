@@ -10,11 +10,12 @@ USER_TYPE = "USER_TYPE",
 USER_DATA = "USER_DATA";
 
 @Component({
-  selector: 'app-loginform',
-  templateUrl: './loginform.component.html',
-  styleUrls: ['./loginform.component.scss'],
+  selector: 'app-signupform',
+  templateUrl: './signupform.component.html',
+  styleUrls: ['./signupform.component.scss']
 })
-export class LoginformComponent implements OnInit {
+export class SignupformComponent implements OnInit {
+
   hide = true;
   authType: string | undefined;
 
@@ -24,9 +25,10 @@ export class LoginformComponent implements OnInit {
   loading = false;
   formError = '';
 
-  loginForm: FormGroup = this.fb.group({
+  signupForm: FormGroup = this.fb.group({
     email: ['', Validators.required],
-    password: ['', Validators.required]
+    password: ['', Validators.required],
+    agree: [false, Validators.required]
   });
   
   constructor(
@@ -53,49 +55,34 @@ export class LoginformComponent implements OnInit {
   setupPage() {
     this.loading = false;
 
-    this.loginForm = this.fb.group({
+    this.signupForm = this.fb.group({
       email: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      agree: [false, Validators.required]
     });
-    this.loginForm.updateValueAndValidity();
+    this.signupForm.updateValueAndValidity();
   }
 
-  async login() {
-    let request = this.loginForm.value;
+  async signup() {
+    let request = this.signupForm.value;
     this.loading = true;
     this.formError = '';
     
-    this.http.post(this.apiLink+'auth/login', request).toPromise().then(response => {
+    this.http.post(this.apiLink+'auth/signup', request).toPromise().then(response => {
       this.response = response;
 
       if(this.response.status == 0) {
         this.loading = false;
         this.formError = this.response.msg;
       } else {
-        // Setup profile details in the local machine
-        localStorage.setItem(AUTH_STATUS, '1');
-        localStorage.setItem(USER_TYPE, this.response.type);
-        localStorage.setItem(AUTH_TOKEN, this.response.token);
-        localStorage.setItem(USER_DATA, JSON.stringify(this.response.user[0]));
-
-        // Redirect to the dashboard of the user according to logged in role
-        switch (this.response.type) {
-          case 'productadmin':
-            this.router.navigate(['productadmin']);
-          break;
-
-          case 'national':
-            this.router.navigate(['/dashboard/admin/home']);
-          break;
-          
-          case 'players-parents':
-            this.router.navigate(['/dashboard/player/home']);
-          break;
-        
-          default:
-          break;
-        }
+        // Navigate to onboarding process for the player
       }
     });
   }
+
+  // Getter Functions
+  get agree() {
+    return this.signupForm.get('agree');
+  }
+
 }

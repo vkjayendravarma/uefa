@@ -16,6 +16,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormUiElementsModule } from '../../form-ui-elements/form-ui-elements.module';
 import { RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSlideToggleModule,
     FormUiElementsModule,
     RouterModule,
-    MatChipsModule
+    MatChipsModule,
+    NgxMaterialTimepickerModule
   ],
   exports: [EventEditComponent]
 })

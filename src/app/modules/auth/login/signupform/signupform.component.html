@@ -1,0 +1,48 @@
+<div class="loginFormWrapper" align="left">
+    <h1 class="formTitle fs(32)">
+        <span class="fc(575D61) ff-sb mrr cursor-pointer" [routerLink]="['/auth/session/signup']"
+            routerLinkActive="fc(ffffff)"> Sign up </span>
+        <span class="fc(575D61) fs(24) ff-sb mrr"> or </span>
+        <span class="fc(575D61) ff-sb cursor-pointer" [routerLink]="['/auth/session/login']"
+            routerLinkActive="fc(ffffff)"> Login </span>
+    </h1>
+    <form class="loginForm mtl fc(C3C5C7) ff-r fs(14)" [formGroup]="signupForm" (submit)="signup()">
+        <div class="row">
+            <div class="col-md-12">
+                <label class="display-block fc(EDEEEF)">Date Of Birth</label>
+                <mat-form-field color="primary" appearance="outline" class="formControl wdt(100)">
+                    <input matInput type="email" class="ff-r fs(14)" formControlName="email" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <label class="display-block fc(EDEEEF)">Email Address</label>
+                <mat-form-field color="primary" appearance="outline" class="formControl wdt(100)">
+                    <input matInput type="email" class="ff-r fs(14)" formControlName="email" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <label class="display-block fc(EDEEEF)">Password</label>
+                <mat-form-field color="primary" appearance="outline" class="formControl wdt(100)">
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+                    <button type="button" mat-button matSuffix (click)="hide = !hide" [attr.aria-p]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <div *ngIf="hide; else show">show</div>
+                        <ng-template #show>hide</ng-template>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-checkbox class="agreeTerms mtr mbr" color="accent" formControlName="agree">I agree to terms &
+                    conditions</mat-checkbox>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" mat-raised-button color="accent" type="submit"
+                    class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs" [disabled]="loading || signupForm.invalid || !this.agree?.value">
+                    {{ loading ? 'Please Wait.... Signing You Up' : 'Signup' }}
+                </button>
+
+                <h6 class="text-danger" *ngIf="formError.length > 0">{{ formError }}</h6>
+            </div>
+        </div>
+    </form>
+</div>

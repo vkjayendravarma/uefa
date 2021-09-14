@@ -4,33 +4,38 @@
     <mat-icon class="fc(82898E)">close</mat-icon>
   </span>
 </h2>
+<h6 class="text-danger" *ngIf="formError.length > 0">{{ formError }}</h6>
 <mat-dialog-content class="mat-typography custom-dialog-content" color="primary">
   <div class="horizontalLine">
     <div class="horizontal-line bdrt"></div>
   </div>
+
   <div class="newEventFormWrapper mtl">
-    <form class="newEventForm" autocomplete="off">
+    <form class="newEventForm" autocomplete="off" [formGroup]="eventForm" (submit)="createEvent()">
       <div class="row">
-        <div class="col-6">
-          <label class="display-block fc(EDEEEF)">Institute Name</label>
-          <mat-form-field appearance="outline" class="formControl wdt(100)">
-            <input matInput type="email" class="ff-r fs(14)" />
-          </mat-form-field>
+        <div class="col-6 form-group">
+          <label class="display-block fc(EDEEEF)">Institute Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control ff-r fs(14)" formControlName="institute" style="color:#EDEEEF; background-color:#0F171D; border:1px solid #535353; display:inline-flex; padding:3px;" />
+          <p class="text-danger" *ngIf="institute?.hasError('required') && institute?.dirty">
+            Institute name is required
+          </p>
         </div>
-        <div class="col-6">
-          <label class="display-block fc(EDEEEF)">Event Type</label>
-          <mat-form-field appearance="outline" class="formControl wdt(100)">
-            <mat-select>
-              <mat-option value="">Select</mat-option>
-              <mat-option value="two">Second option</mat-option>
-            </mat-select>
-          </mat-form-field>
+        <div class="col-6 form-group">
+          <label class="display-block fc(EDEEEF)">Event Type <span class="text-danger">*</span></label>
+          <select class="form-control" formControlName="event_type" style="color:#EDEEEF; background-color:#0F171D; border:1px solid #535353; display:inline-flex; padding:3px;">
+            <option value="">------ Select -------</option>
+            <option [value]="event.id" *ngFor="let event of globalEventTypes">{{ event.name }}</option>
+          </select>
+          <p class="text-danger" *ngIf="event_type?.hasError('required') && event_type?.dirty">
+            Event type selection is mandatory
+          </p>
         </div>
-        <div class="col-6">
-          <label class="display-block fc(EDEEEF)">Event Name (optional)</label>
-          <mat-form-field appearance="outline" class="formControl wdt(100)">
-            <input matInput type="email" class="ff-r fs(14)" />
-          </mat-form-field>
+        <div class="col-6 form-group">
+          <label class="display-block fc(EDEEEF)">Event Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control ff-r fs(14)" formControlName="event_name" style="color:#EDEEEF; background-color:#0F171D; border:1px solid #535353; display:inline-flex; padding:3px;" />
+          <p class="text-danger" *ngIf="event_name?.hasError('required') && event_name?.dirty">
+            Event name is required
+          </p>
         </div>
       </div>
     </form>
@@ -38,10 +43,10 @@
 </mat-dialog-content>
 <mat-dialog-actions align="start">
   <div class="actionsWrapper pll">
-    <button class="btn-dialog-action ff-sb fs(16)" color="accent" mat-raised-button mat-dialog-close>
+    <button type="button" (click)="createEvent()" class="btn-dialog-action ff-sb fs(16)" color="accent" mat-raised-button>
       Create
     </button>
-    <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button mat-dialog-close>
+    <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button mat-dialog-close>
       Cancel
     </button>
   </div>

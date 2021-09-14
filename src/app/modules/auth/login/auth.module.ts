@@ -8,10 +8,11 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LoginformComponent } from './loginform/loginform.component';
+import { SignupformComponent } from './signupform/signupform.component';
 import { SignupSuccessComponent } from './signup-success/signup-success.component';
 
 @NgModule({
-  declarations: [LoginComponent, LoginformComponent, SignupSuccessComponent],
+  declarations: [LoginComponent, LoginformComponent, SignupSuccessComponent, SignupformComponent],
   imports: [
     CommonModule,
     AuthRouterModule,

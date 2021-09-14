@@ -5,10 +5,10 @@
         <div class=" ptl plr pbl ">
             <div class="d-flex newTournamentTitle">
                 <div class="eventTitleWrapper">
-                    <h2 class="eventTitle display-inline  ff-sb fs(24) fc(ffffff)  "> National Association Training: Women</h2>
+                    <h2 class="eventTitle display-inline ff-sb fs(24) fc(ffffff)">{{ this.eventDetails.event_name }}</h2>
                 </div>
                 <div class="tags">
-                    <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
+                    <app-tag-chips [tags]="tags" class="tag mlr display-inline"></app-tag-chips>
                 </div>
                 <div class="inComponentNavigation ml-auto">
                     <mat-icon svgIcon="horizontalDots" class="eventBodyIcons"></mat-icon>
@@ -20,182 +20,165 @@
                 <mat-stepper #stepper color="accent">
                     <!-- ---------------------------------------------------------------- Basic Info  -->
                     <mat-step label="Basic Information">
-                        <form class="basicInfo mtl formControlTopBorderUnset">
+                        <form class="basicInfo mtl formControlTopBorderUnset" [formGroup]="basicInfoForm" (submit)="saveBasicInfo()">
                             <div class="inputGroup mtr">
-                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Event Title</h3>
-
+                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Event Details</h3>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Institute Name</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
+                                            <label class="display-block fc(EDEEEF)">Institute Name</label>
+                                            <input type="text" class="ff-r fs(14) form-control" formControlName="institute" />
+                                            <p class="text-danger" *ngIf="basicForm.institute.hasError('required') && basicForm.institute.dirty">Institute name is required</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                                                <mat-select panelClass="matSelectCustomFocus">
-                                                    <mat-option>None</mat-option>
-                                                    <mat-option value="option1">Option 1</mat-option>
-                                                    <mat-option value="option2">Option 2</mat-option>
-                                                    <mat-option value="option3">Option 3</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
+                                            <label class="display-block fc(EDEEEF)">Event Type</label>
+                                            <select class="form-control" formControlName="event_type">
+                                                <option value="">------ Select -------</option>
+                                                <option [value]="event.id" *ngFor="let event of globalEventTypes">{{ event.name }}</option>
+                                            </select>
+                                            <p class="text-danger" *ngIf="basicForm.event_type.hasError('required') && basicForm.event_type.dirty">Event type selection is mandatory</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Event Name (optional)</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
+                                            <label class="display-block fc(EDEEEF)">Event Name</label>
+                                            <input type="text" class="ff-r fs(14) form-control" formControlName="event_name" />
+                                            <p class="text-danger" *ngIf="basicForm.event_name.hasError('required') && basicForm.event_name.dirty">Event name is required</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="formControl wdt(100) ">
-                                            <label class="display-block fc(EDEEEF)   ">Category</label>
+                                    <div class="col-6 form-group">
+                                        <div class="formControl wdt(100)">
+                                            <label class="display-block fc(EDEEEF)">Category</label>
                                             <mat-form-field appearance="outline" color="primary" class="wdt(100)">
-                                                <mat-select panelClass="mat-select-grid-3" multiple>
-                                                    <mat-optgroup label="Gender">
-                                                        <mat-option value="option1">Male</mat-option>
-                                                        <mat-option value="option2">Female</mat-option>
-                                                        <mat-option value="option3">Mixed</mat-option>
+                                                <mat-select panelClass="mat-select-grid-2" formControlName="event_cat" multiple>
+                                                    <mat-optgroup [label]="(type.type == 1 ? 'Gender' : 'Age Groups')" *ngFor="let type of globalEventCategories">
+                                                        <mat-option [value]="cat.id" *ngFor="let cat of type.categories">{{ cat.name }}</mat-option>
                                                     </mat-optgroup>
-                                                    <mat-optgroup label="All Groups">
-                                                        <mat-option value="option1">All Age Groups</mat-option>
-                                                        <mat-option value="option2">U-5</mat-option>
-                                                        <mat-option value="option2">U-6</mat-option>
-                                                        <mat-option value="option2">U-7</mat-option>
-                                                        <mat-option value="option2">U-8</mat-option>
-                                                        <mat-option value="option2">U-9</mat-option>
-                                                        <mat-option value="option2">U-10</mat-option>
-
-                                                    </mat-optgroup>
-
                                                 </mat-select>
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.event_cat.hasError('required') && basicForm.event_cat.dirty">Category selection is mandatory</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    
+                                    <div class="col-12 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Program Name (optional)</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
-                                            </mat-form-field>
+                                            <label class="display-block fc(EDEEEF)">Program Name (optional)</label>
+                                            <input type="text" class="ff-r fs(14) form-control" formControlName="event_program" />
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    
+                                    <div class="col-12 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Venue Address</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <textarea matInput rows="5" class="ff-r fs(14)"></textarea>
-                                            </mat-form-field>
+                                            <label class="display-block fc(EDEEEF)">Venue Address</label>
+                                            <textarea rows="5" class="ff-r fs(14) form-control" formControlName="event_venue"></textarea>
+                                            <p class="text-danger" *ngIf="basicForm.event_venue.hasError('required') && basicForm.event_venue.dirty">Event venue is required</p>
+                                            <p class="text-danger" *ngIf="basicForm.event_venue.hasError('max-length') && basicForm.event_venue.dirty">Event venue must be within 5000 characters</p>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
  
                             <div class="inputGroup mtr">
-                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Date & Time</h3>
+                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Date & Time Details</h3>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Start Date</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                                <input matInput [matDatepicker]="startDatePicker">
+                                            <label class="display-block fc(EDEEEF)">Start Date</label>
+                                            <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                                                <input matInput [matDatepicker]="startDatePicker" formControlName="start_date" readonly>
                                                 <mat-datepicker-toggle matSuffix [for]="startDatePicker">
                                                 </mat-datepicker-toggle>
                                                 <mat-datepicker #startDatePicker></mat-datepicker>
-
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.start_date.hasError('required') && basicForm.start_date.dirty">Event start date is required</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">Start Time</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
+                                            <label class="display-block fc(EDEEEF)">Start Time</label>
+                                            <mat-form-field appearance="outline" class="wdt(100)">
+                                                <input matInput [ngxTimepicker]="startTimePicker" [format]="24" class="ff-r fs(14)" formControlName="start_time" readonly>
+                                                <ngx-material-timepicker #startTimePicker></ngx-material-timepicker>
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.start_time.hasError('required') && basicForm.start_time.dirty">Event start time is required</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                                <input matInput [matDatepicker]="endDatePicker">
+                                            <label class="display-block fc(EDEEEF)">End Date</label>
+                                            <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                                                <input matInput [matDatepicker]="endDatePicker" formControlName="end_date" readonly>
                                                 <mat-datepicker-toggle matSuffix [for]="endDatePicker">
                                                 </mat-datepicker-toggle>
                                                 <mat-datepicker #endDatePicker></mat-datepicker>
-
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.end_date.hasError('required') && basicForm.end_date.dirty">Event end date is required</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-6 form-group">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Time</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
+                                            <label class="display-block fc(EDEEEF)">End Time</label>
+                                            <mat-form-field appearance="outline" class="wdt(100)">
+                                                <input matInput [ngxTimepicker]="endTimePicker" [format]="24" class="ff-r fs(14)" formControlName="end_time" readonly>
+                                                <ngx-material-timepicker #endTimePicker></ngx-material-timepicker>
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.end_time.hasError('required') && basicForm.end_time.dirty">Event end time is required</p>
                                         </div>
                                     </div>
-
-
-
-
                                 </div>
                             </div>
+                            
                             <div class="inputGroup mtr">
-                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Registration End Date & Time
-                                </h3>
+                                <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Registration End Date & Time</h3>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Date</label>
-                                            <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                                                <input matInput [matDatepicker]="registrationEndDatePicker">
+                                            <label class="display-block fc(EDEEEF)">End Date</label>
+                                            <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                                                <input matInput [matDatepicker]="registrationEndDatePicker" formControlName="reg_end_date" readonly>
                                                 <mat-datepicker-toggle matSuffix [for]="registrationEndDatePicker">
                                                 </mat-datepicker-toggle>
                                                 <mat-datepicker #registrationEndDatePicker></mat-datepicker>
-
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.reg_end_date.hasError('required') && basicForm.reg_end_date.dirty">Event registration end date is mandatory</p>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="formControl wdt(100)">
-                                            <label class="display-block fc(EDEEEF)   ">End Time</label>
-                                            <mat-form-field appearance="outline" class=" wdt(100)">
-                                                <input matInput type="text" class="ff-r fs(14)" />
+                                            <label class="display-block fc(EDEEEF)">End Time</label>
+                                            <mat-form-field appearance="outline" class="wdt(100)">
+                                                <input matInput [ngxTimepicker]="registrationEndTimePicker" [format]="24" class="ff-r fs(14)" formControlName="reg_end_time" readonly>
+                                                <ngx-material-timepicker #registrationEndTimePicker></ngx-material-timepicker>
                                             </mat-form-field>
+                                            <p class="text-danger" *ngIf="basicForm.reg_end_time.hasError('required') && basicForm.reg_end_time.dirty">Event registration end time is mandatory</p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </form>
 
                         <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action ff-sb fs(16)" mat-raised-button color="accent"
-                                matStepperNext>
+                            <h6 class="text-danger">{{ formError }}</h6>
+                            <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16)" mat-button [routerLink]="['/dashboard/admin/events']" [disabled]="loading">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn-dialog-action ff-sb fs(16) mll" mat-raised-button color="accent" (click)="goForward(stepper, 'basicInfo')" [disabled]="loading">
                                 Next
                             </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button>
-                                Cancel
+
+                            <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll float-right" mat-button (click)="saveBasicInfo()" [disabled]="loading">
+                                {{ loading ? 'Please Wait... Saving Form Details.' : 'Save Details' }}
                             </button>
                         </div>
                     </mat-step>
 
                     <!-- ---------------------------------------------------------------- Event Details -->
                     <mat-step label="Event Details">
-                        <form class="eventDetails mtl formControlTopBorderUnset">
+                        <form class="eventDetails mtl formControlTopBorderUnset" [formGroup]="eventDetailsForm" (submit)="saveDetailsInfo()">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="formControl wdt(100)">
@@ -205,30 +188,33 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="formControl wdt(100)">
-                                        <label class="display-block fc(EDEEEF)  mtl ">Summary </label>
-                                        <mat-form-field appearance="outline" class=" wdt(100)">
-                                            <textarea matInput rows="5" class="ff-r fs(14)"></textarea>
-                                        </mat-form-field>
+                                        <label class="display-block fc(EDEEEF) mtl">Summary</label>
+                                        <textarea rows="5" class="ff-r fs(14) form-control" formControlName="event_summary"></textarea>
+                                        <p class="text-danger" *ngIf="detailsForm.event_summary.hasError('required') && detailsForm.event_summary.dirty">Event summary is required</p>
+                                        <p class="text-danger" *ngIf="detailsForm.event_summary.hasError('max-length') && detailsForm.event_summary.dirty">Event summary must be within 5000 characters</p>
                                     </div>
                                 </div>
                             </div>
-                            <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add Photo | + Add Text | + Add Video</p>
+                            <!-- <p class="addMore ff-r fs(14) fc(77B7FD) mtr mbr">+ Add Photo | + Add Text | + Add Video</p> -->
                         </form>
                         <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action  fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent"
-                                matStepperNext>
+                            <h6 class="text-danger">{{ formError }}</h6>
+                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16)" mat-button matStepperPrevious [disabled]="loading">
+                                Back
+                            </button>
+                            <button class="btn-dialog-action  fc(ffffff) ff-sb fs(16) mll" mat-raised-button color="accent" (click)="goForward(stepper, 'eventDetails')" [disabled]="loading">
                                 Next
                             </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                                matStepperPrevious>
-                                Back
+
+                            <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll float-right" mat-button (click)="saveDetailsInfo()" [disabled]="loading">
+                                {{ loading ? 'Please Wait... Saving Form Details.' : 'Save Details' }}
                             </button>
                         </div>
                     </mat-step>
                     <!-- ---------------------------------------------------------------- Publish -->
                     <mat-step label="Publish">
                         <div class="finalizing">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-2">
                                     <div class="banner wdt(100) hgt(100) ">
                                         <img src="../../../../../assets/images/others/event_1.jpg" alt=""
@@ -248,79 +234,66 @@
                                         <a [routerLink]="['/']" class=" ff-r fs(14) fc(77B7FD)"> Preview</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                            
                             <div class="publishingOptions">
-                                <form class="publishingOptionsForm formControlTopBorderUnset">
+                                <form class="publishingOptionsForm formControlTopBorderUnset" [formGroup]="eventPublishForm" (submit)="savePublishInfo()">
                                     <div class="inputGroup mtr">
                                         <h3 class="inputGroupTitle ff-sb fs(20) fc(ffffff) mbr">Publish Options
                                         </h3>
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Event Type</label>
-                                                    <mat-form-field appearance="outline" color="primary"
-                                                        class=" wdt(100)">
-                                                        <mat-select panelClass="matSelectCustomFocus">
-                                                            <mat-option>None</mat-option>
-                                                            <mat-option value="option1">Option 1</mat-option>
-                                                            <mat-option value="option2">Option 2</mat-option>
-                                                            <mat-option value="option3">Option 3</mat-option>
-                                                        </mat-select>
-                                                    </mat-form-field>
+                                                    <label class="display-block fc(EDEEEF)">Institute Type</label>
+                                                    <select class="form-control" formControlName="institute_type">
+                                                        <option value="">------ Select -------</option>
+                                                        <option [value]="instType.id" *ngFor="let instType of globalInstituteTypes">{{ instType.name }}</option>
+                                                    </select>
+                                                    <p class="text-danger" *ngIf="publishForm.institute_type.hasError('required') && publishForm.institute_type.dirty">Institute type selection is mandatory</p>
                                                 </div>
                                             </div>
-
                                             <div class="col-6">
                                                 <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Invitee Type</label>
+                                                    <label class="display-block fc(EDEEEF)">Invitee Type</label>
                                                     <div class="formControl-chiplist">
                                                         <mat-form-field appearance="outline" color="primary"
                                                             class=" wdt(100)">
                                                             <mat-chip-list #chipList aria-label="Invitee Type">
-                                                                <mat-chip *ngFor="let Invitee of Invitees"
-                                                                    [selectable]="selectable" [removable]="removable"
-                                                                    (removed)="remove(Invitee)">
-                                                                    {{Invitee.name}}
-                                                                    <mat-icon matChipRemove *ngIf="removable">cancel
-                                                                    </mat-icon>
+                                                                <mat-chip *ngFor="let inv of Invitees" [selectable]="selectable" [removable]="removable" (removed)="remove(inv)">
+                                                                    {{inv}} <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
                                                                 </mat-chip>
-                                                                <input [matChipInputFor]="chipList"
-                                                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                                                    [matChipInputAddOnBlur]="addOnBlur"
-                                                                    (matChipInputTokenEnd)="add($event)">
+                                                                <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" formControlName="invitee_type">
                                                             </mat-chip-list>
-
                                                         </mat-form-field>
+                                                        <p class="text-danger" *ngIf="publishForm.invitee_type.hasError('required') && publishForm.invitee_type.dirty">Invitee type is mandatory</p>
                                                     </div>
-
                                                 </div>
                                             </div>
 
                                             <div class="col-6">
                                                 <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Select Region</label>
-                                                    <mat-form-field appearance="outline" color="primary"
-                                                        class=" wdt(100)">
-                                                        <mat-select panelClass="matSelectCustomFocus">
-                                                            <mat-option>None</mat-option>
-                                                            <mat-option value="option1">Option 1</mat-option>
-                                                            <mat-option value="option2">Option 2</mat-option>
-                                                            <mat-option value="option3">Option 3</mat-option>
+                                                    <label class="display-block fc(EDEEEF)">Select Region</label>
+                                                    <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                                                        <mat-select panelClass="mat-select-grid-2" formControlName="region" multiple>
+                                                            <!-- <mat-option [value]="reg.id" *ngFor="let reg of globalEventRegions">{{ reg.name }}</mat-option> -->
+                                                            <mat-option value="1">Option 1</mat-option>
+                                                            <mat-option value="2">Option 2</mat-option>
+                                                            <mat-option value="3">Option 3</mat-option>
                                                         </mat-select>
                                                     </mat-form-field>
+                                                    <p class="text-danger" *ngIf="publishForm.region.hasError('required') && publishForm.region.dirty">Region selection is mandatory</p>
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="formControl wdt(100)">
-                                                    <label class="display-block fc(EDEEEF)   ">Shareable LInk</label>
+                                                    <label class="display-block fc(EDEEEF)">Shareable Link</label>
                                                     <mat-form-field appearance="outline" color="primary"
                                                         class=" wdt(100)">
-                                                        <input matInput type="text" value="www.uefa/newtournament">
-                                                        <button matSuffix mat-icon-button>
+                                                        <input matInput type="text" formControlName="link" readonly>
+                                                        <!-- <button matSuffix mat-icon-button>
                                                             <mat-icon svgIcon="copy"></mat-icon>
-                                                        </button>
-
+                                                        </button> -->
                                                     </mat-form-field>
                                                 </div>
                                             </div>
@@ -331,17 +304,21 @@
                             </div>
                         </div>
                         <div class="stepper-controller mtr pr bgc(161F26) ">
-                            <button class="btn-dialog-action fc(ffffff) ff-sb fs(16)" mat-raised-button color="accent">
+                            <h6 class="text-danger">{{ formError }}</h6>
+                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16)" mat-button matStepperPrevious [disabled]="loading">
+                                Back
+                            </button>
+                            <button class="btn-dialog-action fc(ffffff) ff-sb fs(16) mll" mat-raised-button color="accent" (click)="publishEvent()" [disabled]="loading">
                                 Publish
                             </button>
-                            <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button
-                                matStepperPrevious>
-                                Back
+
+                            <button type="button" class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll float-right" mat-button (click)="savePublishInfo()" [disabled]="loading">
+                                {{ loading ? 'Please Wait... Saving Form Details.' : 'Save Details' }}
                             </button>
                         </div>
                     </mat-step>
 
-                    <mat-step label="Attendees">
+                    <!-- <mat-step label="Attendees">
                         <div class="attendeesWrapper">
                             <form class="basicInfo mtl formControlTopBorderUnset">
 
@@ -397,12 +374,9 @@
                                 </button>
                             </div>
                         </div>
-
-                    </mat-step>
+                    </mat-step> -->
                 </mat-stepper>
             </div>
         </div>
-
     </div>
-
 </section>

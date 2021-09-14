@@ -93,17 +93,21 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       label: 'Manage Users',
       link: '/dashboard/admin/users',
       icon: 'user',
-    },
-    {
-      label: 'Logout',
-      link: '/logout',
-      icon: 'logout',
     }
   ]
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  async logout() {
+    localStorage.removeItem('USER_DATA');
+    localStorage.removeItem('USER_TYPE');
+    localStorage.removeItem('AUTH_TOKEN');
+    localStorage.removeItem('AUTH_STATUS');
+    
+    window.location.reload();
   }
 
 }

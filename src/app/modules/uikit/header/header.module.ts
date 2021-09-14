@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { CreateNewSurveyModelComponent } from './models/create-new-survey-model/create-new-survey-model.component';
 import { CreateNewTeamComponent } from './models/create-new-team/create-new-team.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -36,6 +37,8 @@ import { MatRadioModule } from '@angular/material/radio';
     FormUiElementsModule,
     RouterModule,
     MatRadioModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [HeaderComponent],
   entryComponents: [CreateNewEventModelComponent, InviteUserModelComponent, CreateNewSurveyModelComponent],

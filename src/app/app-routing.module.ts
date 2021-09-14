@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { WithAuthGuard } from './guards/with-auth.guard';
+import { WithoutAuthGuard } from './guards/without-auth.guard';
 import { DashboardLayoutComponent } from './pages/dashboard-layout/dashboard-layout.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
@@ -9,11 +11,12 @@ const routes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: 'auth',
+    path: 'auth', canActivate: [WithoutAuthGuard],
     loadChildren: () => import("./modules/auth/login/auth.module").then(module => module.AuthModule)
   },
   {
     path: 'dashboard',
+    canActivate: [WithAuthGuard],
     component: DashboardLayoutComponent,
     children: [
       {
@@ -31,13 +34,13 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'event/regester',
+    path: 'event/regester', canActivate: [WithAuthGuard],
     loadChildren: () => import("./modules/uikit/events/event-register/event-register.module").then(module=> module.EventRegisterModule)
   }, { 
-    path: 'onboard',
+    path: 'onboard', canActivate: [WithoutAuthGuard],
     loadChildren: () => import("./modules/auth/signup/signup.module").then(module=> module.SignupModule)
   },{
-    path: 'inviteToPlatform',
+    path: 'inviteToPlatform', canActivate: [WithoutAuthGuard],
     loadChildren: () => import("./modules/auth/invites/invites.module").then(module=> module.InvitesModule)
   }
 ];

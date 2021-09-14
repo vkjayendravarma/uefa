@@ -36,7 +36,7 @@ const routes: Routes = [
         component: EventsDashboardComponent
       },
       {
-        path: 'individualevent',
+        path: 'individualevent/:event_id',
         component: IndividualEventComponent,
       },
       {
