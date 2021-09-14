@@ -1,22 +1,27 @@
-<table class="table table-hover table-dark mtr">
-  <col width="20%" />
-  <col width="50%" />
-  <col width="30%" />
-  <thead class="thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r ff-c">
-    <tr>
-      <th scope="col" class="headings">Work Email</th>
-      <th scope="col" class="text-left">Role</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
-    <tr *ngFor="let user of Requests">
-      <td class="ff-r headings">{{ user.email }}</td>
-      <td class="ff-r text-left">{{ user.role }}</td>
-      <td class="actions fc(ffffff) d-flex justify-content-center">
-        <mat-icon svgIcon="tickCircle" class="small-icon"></mat-icon>
-        <mat-icon svgIcon="crossCircle" class="small-icon mlr"></mat-icon>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="fComponent">
+  <div class="componentBody">
+    <table class="table table-hover table-dark mtr">
+      <col width="20%">
+      <col width="20%">
+      <col width="60%">
+
+      <thead class="thead bgc(373A3D) fc(9B9B9B) fs(14) ff-r ff-c">
+        <tr>
+          <th scope="col" >Work Email</th>
+          <th scope="col" >Role</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody class="bgc(161F26) fc(9B9B9B) fs(14)">
+        <tr *ngFor="let user of Requests">
+          <td class="ff-r ">{{ user.email }}</td>
+          <td class="ff-r ">{{ user.role }}</td>
+          <td class="actions fc(ffffff)">
+            <mat-icon svgIcon="tickCircle" class="small-icon"></mat-icon>
+            <mat-icon svgIcon="crossCircle" class="small-icon mlr mrxxl"></mat-icon>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
