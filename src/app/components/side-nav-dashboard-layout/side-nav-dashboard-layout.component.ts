@@ -137,7 +137,7 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     },
     {
       label: 'Manage Users',
-      link: '/dashboard/facilitator',
+      link: '/dashboard/facilitator/users',
       icon: 'user',
     },
     {

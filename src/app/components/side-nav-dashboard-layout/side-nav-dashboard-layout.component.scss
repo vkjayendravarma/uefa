@@ -1,5 +1,9 @@
 .sideNav {
   max-width: 240px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 200px;
+  }
 }
 
 .navItemsUl {
@@ -32,15 +36,15 @@
 
 // Responsive styles section
 
-@media (max-width: 628px) {
-  .sideNav {
-    max-width: 140px;
-  }
+// @media (max-width: 628px) {
+//   .sideNav {
+//     max-width: 140px;
+//   }
 
-  .navItemsUl {
-    padding-left: 0;
-  }
-  .nav-icons {
-    margin-right: 0;
-  }
-} ;
+//   .navItemsUl {
+//     padding-left: 0;
+//   }
+//   .nav-icons {
+//     margin-right: 0;
+//   }
+// } 

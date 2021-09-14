@@ -17,7 +17,6 @@ import { FEventsIndividualComponent } from './pages/f-events/f-events-individual
 import { FEventsPreviewComponent } from './pages/f-events/f-events-preview/f-events-preview.component';
 import { FEventsComponent } from './pages/f-events/f-events.component';
 import { FHomeComponent } from './pages/f-home/f-home.component';
-import { FPeopleDashboardComponent } from './pages/f-people/f-people-dashboard/f-people-dashboard.component';
 import { FPeopleComponent } from './pages/f-people/f-people.component';
 import { FCreateNewPostComponent } from './pages/f-posts/f-create-new-post/f-create-new-post.component';
 import { FPostsDashboardComponent } from './pages/f-posts/f-posts-dashboard/f-posts-dashboard.component';
@@ -80,13 +79,7 @@ const routes: Routes = [
   },
   {
     path: 'people',
-    component: FPeopleComponent,
-    children: [
-      {
-        path: '',
-        component: FPeopleDashboardComponent,
-      },
-    ],
+    component: FPeopleComponent  
   },
   //   {
   //     path: 'users',

@@ -6,6 +6,7 @@ import { EventCardElementComponent } from './components/event-card-element/event
 import { TagChipsModule } from '../../global/tag-chips/tag-chips.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
+import { EmptyStateModule } from '../../global/empty-state/empty-state.module';
 
 
 
@@ -16,6 +17,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     TagChipsModule,
     MatIconModule,
     MatTabsModule,
+    EmptyStateModule
   ],
   exports: [OrganizedViewComponent, SingleCategoryEventsViewComponent]
 })

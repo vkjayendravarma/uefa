@@ -52,7 +52,6 @@ import { TournamentsElevatedModule } from '../uikit/tournaments/tournaments-elev
 import { FCreateNewSurveyComponent } from './pages/f-surveys/f-create-new-survey/f-create-new-survey.component';
 import { CreateNewSurveyModule } from '../uikit/surveys/create-new-survey/create-new-survey.module';
 import { FPeopleComponent } from './pages/f-people/f-people.component';
-import { FPeopleDashboardComponent } from './pages/f-people/f-people-dashboard/f-people-dashboard.component';
 import { FPeoplePlayersComponent } from './components/people/f-people-players/f-people-players.component';
 import { FPeopleFacilitatorsComponent } from './components/people/f-people-facilitators/f-people-facilitators.component';
 import { FPeopleInviteesComponent } from './components/people/f-people-invitees/f-people-invitees.component';
@@ -70,7 +69,6 @@ import { FSurveyDoneComponent } from './pages/f-surveys/f-survey-done/f-survey-d
     FEventsIndividualComponent,
     FPostsComponent,
     FPeopleComponent,
-    FPeopleDashboardComponent,
     FPostsDashboardComponent,
     FTournamentsComponent,
     FTournamentsDashboardComponent,
