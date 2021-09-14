@@ -9,6 +9,21 @@
   }
 }
 
+.widthStyle {
+  width: 50% !important;
+  @media only screen and (max-width: 700px) {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.componentAlign {
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
 .location {
   position: absolute;
   top: -1.9rem;
