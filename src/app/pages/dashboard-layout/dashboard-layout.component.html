@@ -1,5 +1,5 @@
 <mat-sidenav-container class="dashboard-layout">
-    <mat-sidenav  mode="side" [(opened)]="opened" [fixedInViewport]="true">
+    <mat-sidenav  [mode]="sideNavMode" [(opened)]="opened" (openedChange)="openevent($event)" [fixedInViewport]="true">
         <app-side-nav-dashboard-layout></app-side-nav-dashboard-layout>
     </mat-sidenav>
 

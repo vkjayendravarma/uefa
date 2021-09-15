@@ -2,6 +2,9 @@
   .formControl {
     float: right;
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .globalSearchSubmitbtn {
@@ -32,76 +35,82 @@
   border-radius: 6px;
 }
 
-// Responsive styles section
-
-@media (max-width: 692px) {
-  .event-btn {
-    width: 150px;
-    text-align: center;
-  }
-  .btn-text {
-    text-align: center;
-    padding: 0;
-  }
-}
-
-@media (max-width: 448px) {
-  .event-search-form {
-    margin-right: 0;
-    padding: 0;
-  }
-  .menu-toggler {
-    padding-left: 0;
-  }
-  .event-menu-tag-wrapper {
-    padding: 0 5px 0 5px;
-  }
-
-  .searchIcon {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 412px) {
-  .event-home-title {
-    font-size: 18px;
-  }
-  .event-btn {
-    margin-top: -8px;
-    width: 150px;
-  }
-  .btn-text {
-    text-align: center;
-  }
-  .pageTitleWrapper {
-    padding: 1.5em 1em 1.5em 1em;
-  }
-}
-
-@media (max-width: 366px) {
-  .event-search-form {
-    margin-left: 3rem;
-  }
-  .event-language {
+.global-search-form{
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
 
-@media (max-width: 289px) {
-  .event-search-form {
-    margin-left: 1rem;
-  }
-}
+// Responsive styles section
 
-@media (max-width: 310px) {
-  .event-home-title {
-    font-size: 16px;
-  }
-  .event-btn {
-    width: 100px;
-  }
+// @media (max-width: 692px) {
+//   .event-btn {
+//     width: 150px;
+//     text-align: center;
+//   }
+//   .btn-text {
+//     text-align: center;
+//     padding: 0;
+//   }
+// }
 
-  .btn-text {
-    font-size: 12px;
-  }
-}
+// @media (max-width: 448px) {
+//   .event-search-form {
+//     margin-right: 0;
+//     padding: 0;
+//   }
+//   .menu-toggler {
+//     padding-left: 0;
+//   }
+//   .event-menu-tag-wrapper {
+//     padding: 0 5px 0 5px;
+//   }
+
+//   .searchIcon {
+//     margin-right: 0;
+//   }
+// }
+
+// @media (max-width: 412px) {
+//   .event-home-title {
+//     font-size: 18px;
+//   }
+//   .event-btn {
+//     margin-top: -8px;
+//     width: 150px;
+//   }
+//   .btn-text {
+//     text-align: center;
+//   }
+//   .pageTitleWrapper {
+//     padding: 1.5em 1em 1.5em 1em;
+//   }
+// }
+
+// @media (max-width: 366px) {
+//   .event-search-form {
+//     margin-left: 3rem;
+//   }
+//   .event-language {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 289px) {
+//   .event-search-form {
+//     margin-left: 1rem;
+//   }
+// }
+
+// @media (max-width: 310px) {
+//   .event-home-title {
+//     font-size: 16px;
+//   }
+//   .event-btn {
+//     width: 100px;
+//   }
+
+//   .btn-text {
+//     font-size: 12px;
+//   }
+// }
