@@ -1,20 +1,21 @@
 .iconSquare {
-    width           : 16px;
-    height          : 16px;
-    background-color: #DDC7C7;
-    border-radius   : 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #ddc7c7;
+  border-radius: 2px;
 }
-
 
 .icon {
-    width  : 16px;
-    height : 100%;
-    float: left;
-  
+  width: 16px;
+  height: 100%;
+  float: left;
 }
 
-.userImg{
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+.userImg {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.iconAlign {
+  margin-top: -0.1rem !important;
 }

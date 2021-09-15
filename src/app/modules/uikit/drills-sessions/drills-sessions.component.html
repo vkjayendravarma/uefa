@@ -1,40 +1,57 @@
 <section class="uiComponent OrganisedEvents bgc(161F26) bgshadow1 bdr-rounded">
-    <div class="componentWrapper ">
-        <div class="componentHeader pr bdrb">
-            <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset "> Drills and Sessions Today </h2>
-        </div>
-
-        <div class="componentBody plr prr">
-            <div class="drillAndSessionDetail  " >
-                <div class="drillAndSessionDetailElement d-flex pbr ptr bdrb" *ngFor="let item of drillsAndSessions" >
-                    <div class="icon p-1  ">
-                        <div class="iconSquare"></div>
-                    </div>
-                    <div class="drillAndSessionDetailsWrapper p-1 flex-grow-1    ">
-                        <div class="drillAndSessionDetails mls ">
-                            <div class="drillSessionTitle">
-                                <p class="Title ff-r fs(14) fc(EDEEEF)  ">
-                                    Practice Game
-                                </p>
-                            </div>
-                            <div class="timeAndGroup ">
-                                <p class="sessionDetails display-inline ff-r fs(12) fc(9B9B9B)">
-                                    <mat-icon svgIcon="time" class="uiComponent-small-icon"></mat-icon> 8:30 Am - 10:30 AM
-                                </p>
-                                <p class="sessionDetails display-inline ff-r fs(12) fc(9B9B9B) mls">
-                                    <mat-icon svgIcon="teams" class="uiComponent-small-icon"></mat-icon> Boys U13 A Squad
-                                </p>
-                            </div>
-                            <div class="userIcons mts">
-                                <img src="../../../../../assets/images/users/userimg1.jpg" alt="" class="userImg mrs">
-                                <img src="../../../../../assets/images/users/userimg1.jpg" alt="" class="userImg mrs">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-            </div>
-        </div>
+  <div class="componentWrapper">
+    <div class="componentHeader pr bdrb">
+      <h2 class="componentTitle fs(16) fc(ffffff) ff-sb m-unset">
+        Drills and Sessions Today
+      </h2>
     </div>
+
+    <div class="componentBody plr prr">
+      <div class="drillAndSessionDetail">
+        <div
+          class="drillAndSessionDetailElement d-flex pbr ptr bdrb"
+          *ngFor="let item of drillsAndSessions"
+        >
+          <div class="icon p-1">
+            <div class="iconSquare"></div>
+          </div>
+          <div class="drillAndSessionDetailsWrapper p-1 flex-grow-1">
+            <div class="drillAndSessionDetails mls">
+              <div class="drillSessionTitle">
+                <p class="Title ff-r fs(14) fc(EDEEEF)">Practice Game</p>
+              </div>
+              <div class="timeAndGroup d-flex">
+                <div class="sessionDetails d-flex ff-r fs(12) fc(9B9B9B)">
+                  <mat-icon
+                    svgIcon="time"
+                    class="uiComponent-small-icon iconAlign mrs"
+                  ></mat-icon>
+                  <p class="align-self-center">8:30 Am - 10:30 AM</p>
+                </div>
+                <div class="sessionDetails d-flex ff-r fs(12) fc(9B9B9B) mls">
+                  <mat-icon
+                    svgIcon="teams"
+                    class="uiComponent-small-icon iconAlign mrs"
+                  ></mat-icon>
+                  <p class="align-self-center">Boys U13 A Squad</p>
+                </div>
+              </div>
+              <div class="userIcons mts d-flex align-items-center">
+                <img
+                  src="../../../../../assets/images/users/userimg1.jpg"
+                  alt=""
+                  class="userImg mrs"
+                />
+                <img
+                  src="../../../../../assets/images/users/userimg1.jpg"
+                  alt=""
+                  class="userImg mrs"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
