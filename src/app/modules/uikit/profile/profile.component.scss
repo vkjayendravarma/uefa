@@ -3,3 +3,11 @@
   top: -1.9rem;
   left: -1.5rem;
 }
+@media (max-width: 700px) {
+  .widthStyle {
+    width: 100% !important;
+  }
+  .marginStyle {
+    margin: auto !important;
+  }
+}

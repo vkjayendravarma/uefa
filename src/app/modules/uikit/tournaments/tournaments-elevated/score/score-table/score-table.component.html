@@ -1,41 +1,97 @@
-<div class="uiComponent scoresComponent mtl mbl bgc(161F26) bgshadow1 bdr-rounded">
-    <div class="componentHeader pr bdrb">
-        <h2 class="title fs(16) ff-r display-inline ">Matches</h2>
-        <div class="headerActions float-right">
-            <p class="timeline  display-inline fs(14) ff-r ">
-                <mat-icon svgIcon="calendar" class="iconSmall"></mat-icon> 1 April 2021 - Today
+<div
+  class="
+    uiComponent
+    scoresComponent
+    mtl
+    mbl
+    bgc(161F26)
+    bgshadow1
+    bdr-rounded
+    widthFit
+  "
+>
+  <div
+    class="
+      componentHeader
+      pr
+      bdrb
+      d-flex
+      componentAlign
+      justify-content-between
+    "
+  >
+    <h2 class="title fs(16) ff-r display-inline">Matches</h2>
+    <div class="headerActions float-right d-flex marginAlign">
+      <p class="timeline display-inline fs(14) ff-r">
+        <mat-icon svgIcon="calendar" class="iconSmall"></mat-icon> 1 April 2021
+        - Today
+      </p>
+      <p
+        class="fs(14) display-inline mlxl ff-r fc(77B7FD) cursor-pointer"
+        (click)="actionControl('displayPointsTable')"
+      >
+        View Points Table
+      </p>
+    </div>
+  </div>
+  <div class="componentBody">
+    <div
+      class="match d-flex justify-content-between ptr pbr pll prl bdrb"
+      *ngFor="let match of matches"
+    >
+      <div class="matchBetween">
+        <div class="d-flex justify-content-between">
+          <div class="team1">
+            <img
+              src="../../../../../../assets/images/clubsLogos/manchester.png"
+              alt=""
+              class="clubsInGroupLogo display-inline"
+            />
+            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+              Warriors
             </p>
-            <p class="fs(14) display-inline mlxl ff-r fc(77B7FD) cursor-pointer "
-                (click)="actionControl('displayPointsTable')"> View Points Table</p>
+          </div>
+          <div class="vs ff-r fc(9B9B9B) fs(12) mlr mrr align-self-center">
+            vs
+          </div>
+          <div class="team2">
+            <img
+              src="../../../../../../assets/images/clubsLogos/manchester.png"
+              alt=""
+              class="clubsInGroupLogo display-inline"
+            />
+            <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs">
+              Warriors
+            </p>
+          </div>
         </div>
-    </div>
-    <div class="componentBody">
-        <div class="match d-flex ptr pbr pll prl bdrb" *ngFor="let match of matches">
-            <div class="matchBetween flex-grow-1">
-                <div class="d-flex">
-                    <div class="team1">
-                        <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                            class="clubsInGroupLogo display-inline">
-                        <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                    </div>
-                    <div class="vs ff-r fc(9B9B9B) fs(12) mlr mrr align-self-center ">vs</div>
-                    <div class="team2">
-                        <img src="../../../../../../assets/images/clubsLogos/manchester.png" alt=""
-                            class="clubsInGroupLogo display-inline">
-                        <p class="clubname display-inline fs(14) fc(C3C5C7) ff-r mlxs"> Warriors </p>
-                    </div>
-                </div>
-            </div>
-            <div class="details d-flex">
-                <div class="date fs(14) fc(C3C5C7) ff-r mrxl align-self-center"> 2 Apr, 2021</div>
-                <div class="score fs(14)  ff-r mlxl mrxl align-self-center ">
-                    <div class="scoreMatch fc(77B7FD) cursor-pointer" (click)="actionControl('scoreMatch')" *ngIf="user !=='facilitator'" >Score Match
-                    </div>
-                    <div class="score" *ngIf="user ==='facilitator'">3 - 2</div>
-
-                </div>
-            </div>
-
+      </div>
+      <div class="details d-flex">
+        <div
+          class="
+            date
+            fs(14)
+            fc(C3C5C7)
+            ff-r
+            mrxl
+            mlxl
+            widthStyle
+            align-self-center
+          "
+        >
+          2 Apr, 2021
         </div>
+        <div class="score fs(14) ff-r mlxl mrxl align-self-center">
+          <div
+            class="scoreMatch fc(77B7FD) cursor-pointer"
+            (click)="actionControl('scoreMatch')"
+            *ngIf="user !== 'facilitator'"
+          >
+            Score Match
+          </div>
+          <div class="score" *ngIf="user === 'facilitator'">3 - 2</div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
