@@ -1,1 +1,10 @@
-@import '../../signup.module';
+@import "../../signup.module";
+
+@media (max-width: 700px) {
+  .checkMarkAlign {
+    text-align: center !important;
+  }
+  .widthStyle {
+    width: 100% !important;
+  }
+}

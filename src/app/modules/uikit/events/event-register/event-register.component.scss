@@ -1,15 +1,21 @@
-.socialIconWrapper{
-    height: 38px !important;
-    width: 38px !important;
-    position: relative;
-    .socialIcon{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) ;
-    }
+.socialIconWrapper {
+  height: 38px !important;
+  width: 38px !important;
+  position: relative;
+  .socialIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.eventDescription{
-    line-height: 28px;
+.eventDescription {
+  line-height: 28px;
 }
+
+// .buttonStyle {
+//   @media only screen and (max-width: 600px) {
+//     flex-direction: column !important;
+//   }
+// }

@@ -129,13 +129,21 @@
     d-flex
   "
 >
-  <button class="btn-dialog-action ff-sb mrr" color="accent" mat-raised-button>
-    Publish Post
-  </button>
-  <button
-    class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-    mat-button
-  >
-    Cancel
-  </button>
+  <a [routerLink]="['/dashboard/admin/posts']">
+    <button
+      class="btn-dialog-action ff-sb mrr"
+      color="accent"
+      mat-raised-button
+    >
+      Publish Post
+    </button>
+  </a>
+  <a [routerLink]="['/dashboard/admin/posts']">
+    <button
+      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
+      mat-button
+    >
+      Cancel
+    </button>
+  </a>
 </div>
