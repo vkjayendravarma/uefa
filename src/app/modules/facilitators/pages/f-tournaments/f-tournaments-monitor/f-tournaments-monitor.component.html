@@ -1,85 +1,98 @@
-<app-header backgroundImage='2_player' headerTitle='Back'></app-header>
-<section class="monitorTournamentTitleWrapper ">
-    <div class=" mtl  ">
-        <div class="d-flex monitorTournamentTitle bdrb pbl">
-            <div class="TournamentTitleWrapper pll prl">
-                <h2 class="TournamentTitle display-inline  ff-sb fs(24) fc(ffffff)  "> New Tournament</h2>
-            </div>
-          
-        </div>
+<app-header backgroundImage="2_player" headerTitle="Back"></app-header>
+<section class="monitorTournamentTitleWrapper">
+  <div class="mtl">
+    <div class="d-flex monitorTournamentTitle bdrb pbl">
+      <div class="TournamentTitleWrapper pll prl">
+        <h2 class="TournamentTitle display-inline ff-sb fs(24) fc(ffffff)">
+          New Tournament
+        </h2>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="monitorTournamentBodyWrapper ">
-    <mat-tab-group>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Information
-            </ng-template>
-            <ng-template matTabContent>
-                <app-uikit-event-preview></app-uikit-event-preview>
-            </ng-template>
-        </mat-tab>
+<section class="monitorTournamentBodyWrapper">
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label> Information </ng-template>
+      <ng-template matTabContent>
+        <app-uikit-event-preview></app-uikit-event-preview>
+      </ng-template>
+    </mat-tab>
 
-        <!-- participents  -->
+    <!-- participents  -->
 
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Your Teams
-            </ng-template>
-            <ng-template matTabContent>
-                <div class="regesteredTeamWrapper ml">
-                    <div class="regesteredTeam wdt(100) d-flex fs(16) ff-r bdr(373A3D) bdr-rounded ptr pbr pll prl ">
-                        <div class="category mrl align-self-center">U15 - Mixed</div>
-                        <div class="coach ml-auto mrl align-self-center ">Alan Rickman (Coach)</div>
-                        <div class="players ml-auto mrl align-self-center">Romelu Lukaku, Bose Chadman, Another name <span class="fc(77B7FD)">+4</span> </div>
-                        <div class="approvalStatus ml-auto mrl fc(FFC107) align-self-center ">Pending Approval</div>
-                        <button mat-icon-button class="editTeam  ml-auto"><mat-icon svgIcon="pencil" ></mat-icon> </button>
-                    </div>
-                </div>
-               
-            </ng-template>
-        </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label> Your Teams </ng-template>
+      <ng-template matTabContent>
+        <div class="regesteredTeamWrapper ml overflow-auto widthAlign">
+          <div
+            class="
+              regesteredTeam
+              wdt(100)
+              d-flex
+              fs(16)
+              ff-r
+              bdr(373A3D)
+              bdr-rounded
+              ptr
+              pbr
+              pll
+              prl
+            "
+          >
+            <div class="category mrl align-self-center">U15 - Mixed</div>
+            <div class="coach ml-auto mrl align-self-center">
+              Alan Rickman (Coach)
+            </div>
+            <div class="players ml-auto mrl align-self-center">
+              Romelu Lukaku, Bose Chadman, Another name
+              <span class="fc(77B7FD)">+4</span>
+            </div>
+            <div
+              class="approvalStatus ml-auto mrl fc(FFC107) align-self-center"
+            >
+              Pending Approval
+            </div>
+            <button mat-icon-button class="editTeam ml-auto">
+              <mat-icon svgIcon="pencil"></mat-icon>
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-        <!-- Fixtures  -->
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Fixtures
-            </ng-template>
-            <ng-template matTabContent>
-                <div class="ml">
-                    <uikit-tournament-fixtures user="facilitator" ></uikit-tournament-fixtures>
+    <!-- Fixtures  -->
+    <mat-tab>
+      <ng-template mat-tab-label> Fixtures </ng-template>
+      <ng-template matTabContent>
+        <div class="ml">
+          <uikit-tournament-fixtures
+            user="facilitator"
+          ></uikit-tournament-fixtures>
+        </div>
+      </ng-template>
+    </mat-tab>
 
-                </div>
-            </ng-template>
-        </mat-tab>
+    <!-- Scoring  -->
+    <mat-tab>
+      <ng-template mat-tab-label> Points </ng-template>
+      <ng-template matTabContent>
+        <div class="scoreWrapper ml">
+          <uikit-score-table user="facilitator"></uikit-score-table>
+        </div>
+      </ng-template>
+    </mat-tab>
 
+    <!-- Final Result  -->
 
-        <!-- Scoring  -->
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Points
-            </ng-template>
-            <ng-template matTabContent>
-                <div class="scoreWrapper ml">
-                    <uikit-score-table user="facilitator" ></uikit-score-table>
-                </div>        
-            </ng-template>
-        </mat-tab>
-
-        <!-- Final Result  -->
-
-        <mat-tab>
-            <ng-template mat-tab-label>
-                Final Result
-            </ng-template>
-            <ng-template matTabContent>
-                <div class="finalResultWrapper mr">
-                    <uikit-final-result></uikit-final-result>
-                </div>
-            </ng-template>
-        </mat-tab>
-
-
-    </mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label> Final Result </ng-template>
+      <ng-template matTabContent>
+        <div class="finalResultWrapper mr">
+          <uikit-final-result></uikit-final-result>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 </section>

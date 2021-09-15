@@ -6,13 +6,26 @@
   <h2 class="componentTitle fs(24) fc(ffffff) ff-sb">
     Tournament Registration
   </h2>
-  <div class="tournamentInfo bgc(161F26) bgshadow1 bdr-rounded pl mtl">
+  <div
+    class="
+      tournamentInfo
+      bgc(161F26)
+      bgshadow1
+      bdr-rounded
+      pl
+      mtl
+      d-flex
+      flex-column
+    "
+  >
     <h2 class="tournamentTitle fs(24) fc(ffffff) ff-sb">
       School Tournament - St. Andrew’s
     </h2>
-    <div class="eventDetailsWrapper mtr">
-      <div class="d-flex justify-content-start align-items-center">
-        <p class="eventDate fs(16) fc(EDEEEF) mrl">
+    <div class="eventDetailsWrapper mtr d-flex">
+      <div
+        class="d-flex justify-content-start align-items-center componentAlign"
+      >
+        <p class="eventDate fs(16) fc(EDEEEF) mrl marginAlign">
           <mat-icon
             svgIcon="calendar"
             class="uiComponent-small-icon mrs"
@@ -22,17 +35,17 @@
         <p class="eventTime fs(16) fc(EDEEEF) mrl">
           <mat-icon
             svgIcon="time"
-            class="uiComponent-small-icon mrs"
+            class="uiComponent-small-icon mrs marginAlign"
           ></mat-icon>
           8:30 Am - 10:30 AM
         </p>
         <p class="eventTime fs(16) fc(EDEEEF) mrl">
           <mat-icon
             svgIcon="location"
-            class="uiComponent-small-icon"
+            class="uiComponent-small-icon marginAlign"
           ></mat-icon>
           #2492 Anfield Stadium, Liverpool
-          <a href="" class="fc(77B7FD) mlxs">Google Maps</a>
+          <a href="" class="fc(77B7FD) mlxs marginAlign">Google Maps</a>
         </p>
       </div>
     </div>
@@ -48,17 +61,18 @@
     </div>
   </div>
 
-  <div class="teams mtl">
-    <div class="teamsHeader">
+  <div class="teams mtl d-flex flex-column">
+    <div class="teamsHeaderv componentAlign">
       <h2 class="componentTitle fs(20) fc(ffffff) ff-sb display-inline">
         Tournament Registration
       </h2>
-      <button mat-button class="addTeam mll fc(77B7FD)" (click)="addNewTeam()">
+      <button mat-button class="addTeam fc(77B7FD)" (click)="addNewTeam()">
         + Add Teams
       </button>
     </div>
     <div
       class="
+        overflow-auto
         regesteredTeam
         wdt(100)
         d-flex

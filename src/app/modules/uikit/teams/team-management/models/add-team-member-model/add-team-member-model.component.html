@@ -1,110 +1,122 @@
 <h2 class="fc(EDEEEF) ff-sb fs(20) mbr">
-    Add Team Member
-    <span class="float-right display-button mlxxl" mat-dialog-close>
-        <mat-icon class="fc(82898E)">close</mat-icon>
-    </span>
-    <div class="horizontalLine ptr">
-        <div class="horizontal-line bdrt"></div>
-    </div>
+  Add Team Member
+  <span class="float-right display-button" mat-dialog-close>
+    <mat-icon class="fc(82898E)">close</mat-icon>
+  </span>
+  <div class="horizontalLine ptr">
+    <div class="horizontal-line bdrt"></div>
+  </div>
 </h2>
 <mat-dialog-content class="mat-typography" color="primary">
-
-    <div class="newEventFormWrapper ">
-        <div class="row">
-            <div class="col-6">
-                <label class="display-block fc(EDEEEF)">Full Name*</label>
-                <mat-form-field appearance="outline" class="formControl wdt(100)">
-                    <input matInput type="email" class="ff-r fs(14)" />
-                </mat-form-field>
-            </div>
-            <div class="col-6">
-                <label class="display-block fc(EDEEEF)">Member Date of Birth*</label>
-                <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-
-                    <input matInput [matDatepicker]="DOBPicker">
-                    <mat-datepicker-toggle matSuffix [for]="DOBPicker">
-                    </mat-datepicker-toggle>
-                    <mat-datepicker #DOBPicker></mat-datepicker>
-
-                </mat-form-field>
-            </div>
-
-        </div>
-        <div class="inputGroup">
-            <h2 class="inputGroupTitle fs(16) ff-sb fc(9B9B9B) ">Main Contact - Player</h2>
-            <div class="row">
-                <div class="col-6">
-                    <label class="display-block fc(EDEEEF)">Full Name*</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <input matInput type="text" class="ff-r fs(14)" />
-                    </mat-form-field>
-                </div>
-                <div class="col-6">
-                    <label class="display-block fc(EDEEEF)">Sign Up Email*</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <input matInput type="email" class="ff-r fs(14)" />
-                    </mat-form-field>
-                </div>
-                <div class="col-6">
-                    <label class="display-block fc(EDEEEF)">Phone</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <input matInput type="tel" class="ff-r fs(14)" />
-                    </mat-form-field>
-                </div>
-                <div class="col-6">
-                    <div class="formControl wdt(100)">
-                        <label class="display-block fc(EDEEEF)   ">Country</label>
-                        <mat-form-field appearance="outline" color="primary" class=" wdt(100)">
-                            <mat-select panelClass="matSelectCustomFocus">
-                                <mat-option>None</mat-option>
-                                <mat-option value="option1">Option 1</mat-option>
-                                <mat-option value="option2">Option 2</mat-option>
-                                <mat-option value="option3">Option 3</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <label class="display-block fc(EDEEEF)">Address Line 1</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <textarea matInput rows="3" class="ff-r fs(14)"></textarea>
-                    </mat-form-field>
-                </div>
-                <div class="col-12">
-                    <label class="display-block fc(EDEEEF)">Address Line 2</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <textarea matInput rows="3" class="ff-r fs(14)" ></textarea>
-                    </mat-form-field>
-                </div>
-                <div class="col-4">
-                    <label class="display-block fc(EDEEEF)">Postal Code</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <input matInput type="tel" class="ff-r fs(14)" />
-                    </mat-form-field>
-                </div>
-                <div class="col-4">
-                    <label class="display-block fc(EDEEEF)">State/Province</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <input matInput type="tel" class="ff-r fs(14)" />
-                    </mat-form-field>
-                </div>
-                <div class="col-4">
-                    <label class="display-block fc(EDEEEF)">Town/City</label>
-                    <mat-form-field appearance="outline" class="formControl wdt(100)">
-                        <input matInput type="tel" class="ff-r fs(14)" />
-                    </mat-form-field>
-                </div>
-            </div>
-        </div>
+  <div class="newEventFormWrapper">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label class="display-block fc(EDEEEF)">Full Name*</label>
+        <mat-form-field appearance="outline" class="formControl wdt(100)">
+          <input matInput type="email" class="ff-r fs(14)" />
+        </mat-form-field>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <label class="display-block fc(EDEEEF)">Member Date of Birth*</label>
+        <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+          <input matInput [matDatepicker]="DOBPicker" />
+          <mat-datepicker-toggle matSuffix [for]="DOBPicker">
+          </mat-datepicker-toggle>
+          <mat-datepicker #DOBPicker></mat-datepicker>
+        </mat-form-field>
+      </div>
     </div>
+    <div class="inputGroup">
+      <h2 class="inputGroupTitle fs(16) ff-sb fc(9B9B9B)">
+        Main Contact - Player
+      </h2>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <label class="display-block fc(EDEEEF)">Full Name*</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="text" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <label class="display-block fc(EDEEEF)">Sign Up Email*</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="email" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <label class="display-block fc(EDEEEF)">Phone</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="tel" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="formControl wdt(100)">
+            <label class="display-block fc(EDEEEF)">Country</label>
+            <mat-form-field
+              appearance="outline"
+              color="primary"
+              class="wdt(100)"
+            >
+              <mat-select panelClass="matSelectCustomFocus">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-12">
+          <label class="display-block fc(EDEEEF)">Address Line 1</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <textarea matInput rows="3" class="ff-r fs(14)"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <label class="display-block fc(EDEEEF)">Address Line 2</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <textarea matInput rows="3" class="ff-r fs(14)"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-8 col-md-4">
+          <label class="display-block fc(EDEEEF)">Postal Code</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="tel" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-8 col-md-4">
+          <label class="display-block fc(EDEEEF)">State/Province</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="tel" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-8 col-md-4">
+          <label class="display-block fc(EDEEEF)">Town/City</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="tel" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
 </mat-dialog-content>
-<mat-dialog-actions align="start">
-    <div class="actionsWrapper pll">
-        <button class="btn-dialog-action ff-sb fs(16)" color="accent" mat-raised-button mat-dialog-close>
-            Add Team Member
-        </button>
-        <button class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll" mat-button mat-dialog-close>
-            Cancel
-        </button>
-    </div>
+<mat-dialog-actions class="dialogStyle ptr mbr">
+  <div class="buttonsStyle d-flex pbr">
+    <button
+      class="btn-dialog-action ff-sb fs(16)"
+      color="accent"
+      mat-raised-button
+      mat-dialog-close
+      cdkFocusInitial
+    >
+      Add Team Member
+    </button>
+    <button
+      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) cancelButton"
+      mat-button
+      mat-dialog-close
+    >
+      Cancel
+    </button>
+  </div>
 </mat-dialog-actions>

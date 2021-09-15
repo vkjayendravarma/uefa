@@ -1,0 +1,13 @@
+@media (max-width: 700px) {
+  .componentAlign {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+  }
+  .marginAlign {
+    margin-top: 0.3rem !important;
+  }
+  .widthAlign {
+    width: max-content !important;
+  }
+}

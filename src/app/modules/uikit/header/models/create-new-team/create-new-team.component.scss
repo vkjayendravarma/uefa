@@ -1,0 +1,23 @@
+.buttonsStyle {
+  padding-left: 2rem;
+  @media only screen and (max-width: 700px) {
+    justify-content: center !important;
+    flex-direction: column;
+    padding-left: 0% !important;
+    margin-left: 0% !important;
+  }
+}
+.cancelButton {
+  @media only screen and (max-width: 700px) {
+    margin-top: 1rem !important;
+    margin-left: 0rem !important;
+  }
+}
+.dialogStyle {
+  justify-content: start;
+  @media only screen and (max-width: 700px) {
+    padding-top: 1rem !important;
+    justify-content: center !important;
+    flex-direction: column;
+  }
+}

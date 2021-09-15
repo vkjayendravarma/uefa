@@ -10,16 +10,53 @@
         </h1>
       </div>
       <div class="eventDescriptionWrapper mtl">
-        <div class="d-flex justify-content-between align-items-center">
+        <div
+          class="
+            d-flex
+            justify-content-between
+            componentAlign
+            align-items-center
+          "
+        >
           <h1 class="eventName fc(ffffff) ff-sb fs(24) m-unset">
             Event Description
           </h1>
-          <div class="regesteredEvent">
-            <mat-icon svgIcon="tickCircle"></mat-icon>
-            <p class="regesteredMessage fc(B9FA51) fs(16) ff-r display-inline mlr mrr"> You have registered for this event</p>
-            <a [routerLink]="['/']"  class="eventPage fc(77B7FD) ff-r fs(16)">View Details</a>
+          <div class="regesteredEvent align-items-center d-flex componentAlign">
+            <div class="marginAlign">
+              <mat-icon svgIcon="tickCircle"></mat-icon>
+              <p
+                class="
+                  regesteredMessage
+                  fc(B9FA51)
+                  fs(16)
+                  ff-r
+                  display-inline
+                  mlr
+                  mrr
+                "
+              >
+                You have registered for this event
+              </p>
+            </div>
+
+            <a
+              [routerLink]="['/']"
+              class="
+                eventPage
+                fc(77B7FD)
+                ff-r
+                fs(16)
+                align-self-center
+                marginAlign
+              "
+              >View Details</a
+            >
           </div>
-          <button class="btn-dialog-action ff-sb" color="accent" mat-raised-button>
+          <button
+            class="btn-dialog-action ff-sb marginAlign"
+            color="accent"
+            mat-raised-button
+          >
             Register
           </button>
         </div>
@@ -27,15 +64,24 @@
       <div class="eventDetailsWrapper mtr">
         <div class="eventsDetailsContent">
           <p class="eventDate fs(16) fc(EDEEEF) mrl">
-            <mat-icon svgIcon="calendar" class="uiComponent-small-icon mrs"></mat-icon>
+            <mat-icon
+              svgIcon="calendar"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
             14 March 2021
           </p>
           <p class="eventTime fs(16) fc(EDEEEF) mrl">
-            <mat-icon svgIcon="time" class="uiComponent-small-icon mrs"></mat-icon>
+            <mat-icon
+              svgIcon="time"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
             8:30 Am - 10:30 AM
           </p>
           <p class="eventTime fs(16) fc(EDEEEF) mrl">
-            <mat-icon svgIcon="location" class="uiComponent-small-icon"></mat-icon>
+            <mat-icon
+              svgIcon="location"
+              class="uiComponent-small-icon"
+            ></mat-icon>
             #2492 Anfield Stadium, Liverpool
             <a href="" class="fc(77B7FD) mlxs">Google Maps</a>
           </p>
@@ -51,7 +97,10 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
         </p>
-        <img src="../../../../../assets/images/others/eventpreview.png" class="wdt(100) mtr mbr" />
+        <img
+          src="../../../../../assets/images/others/eventpreview.png"
+          class="wdt(100) mtr mbr"
+        />
         <p class="fs(16) fc(EDEEEF)">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -68,11 +117,17 @@
       <div class="registrationEndDetails mtr">
         <div class="registrationEndContent">
           <p class="endDate fs(16) fc(EDEEEF) mrl">
-            <mat-icon svgIcon="calendar" class="uiComponent-small-icon mrs"></mat-icon>
+            <mat-icon
+              svgIcon="calendar"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
             14 March 2021
           </p>
           <p class="endTime fs(16) fc(EDEEEF)">
-            <mat-icon svgIcon="time" class="uiComponent-small-icon mrs"></mat-icon>
+            <mat-icon
+              svgIcon="time"
+              class="uiComponent-small-icon mrs"
+            ></mat-icon>
             8:30 Am - 10:30 AM
           </p>
         </div>
