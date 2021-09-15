@@ -27,7 +27,7 @@ const routes: Routes = [
             component: LoginformComponent
           },
           {
-            path: 'success',
+            path: 'success/:data',
             canActivate: [WithoutAuthGuard],
             component: SignupSuccessComponent
           }

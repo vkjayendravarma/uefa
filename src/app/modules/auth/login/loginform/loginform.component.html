@@ -7,7 +7,7 @@
   <form class="loginForm mtl fc(C3C5C7) ff-r fs(14)" [formGroup]="loginForm" (submit)="login()">
     <div class="row">
       <div class="col-md-12">
-        <label class="display-block fc(EDEEEF)">Email Address</label>
+        <label class="display-block fc(EDEEEF)">Email Address <span class="text-danger">*</span></label>
         <mat-form-field color="primary"
           appearance="outline"
           class="formControl wdt(100)">
@@ -15,7 +15,7 @@
         </mat-form-field>
       </div>
       <div class="col-md-12">
-        <label class="display-block fc(EDEEEF)">Password</label>
+        <label class="display-block fc(EDEEEF)">Password <span class="text-danger">*</span></label>
         <mat-form-field color="primary" appearance="outline" class="formControl wdt(100)">
           <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
           <button type="button" mat-button matSuffix (click)="hide = !hide" [attr.aria-p]="'Hide password'" [attr.aria-pressed]="hide">
@@ -27,9 +27,6 @@
       <!-- <div class="col-md-12">
         <a [routerLink]="['/']" class="fs(14) ff-r">Forgot Password?</a>
       </div> -->
-      <div class="col-md-12">
-        <mat-checkbox class="agreeTerms mtr mbr" color="accent" formControlName="agree">I agree to terms & conditions</mat-checkbox>
-      </div>
       <div class="col-md-12">
         <button type="submit" mat-raised-button color="accent" type="submit" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs" [disabled]="loading || loginForm.invalid">
           {{ loading ? 'Please Wait.... Logging You In' : 'Login' }}

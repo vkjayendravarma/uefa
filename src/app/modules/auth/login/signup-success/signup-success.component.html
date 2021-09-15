@@ -10,10 +10,10 @@
     <h1 class="successMessage fs(32) ff-sb mtr fc(ffffff)">
         You have successfully Signed Up for Futbol
     </h1>
-    <h2 class="successMessageNextStep fs(20) ff-r mtr mbl fc(C3C5C7) ">However, the London Regional Association hasn't been accetpted yet. Please provide  the  necessary documentation to register.</h2>
+    <h2 class="successMessageNextStep fs(20) ff-r mtr mbl fc(C3C5C7) ">{{ params.msg }}</h2>
 
-    <a  class="action ">
-        <button mat-raised-button color="accent" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs  " >Begin Registration</button>
+    <a class="action" [routerLink]="['/onboard/signup-success', id]">
+        <button mat-raised-button color="accent" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs">Begin Registration</button>
     </a>
 
 </div>

@@ -8,7 +8,7 @@
     <div class="navItems ">
 
         <ul class="nav navItemsUl bdrb(383C40) pr">
-            <li class="navItemWrapper wdt(100) mbs" *ngFor="let navItem of sidebarFacilitators">
+            <li class="navItemWrapper wdt(100) mbs" *ngFor="let navItem of mainSidebar">
                 <a [routerLink]="[navItem.link]" routerLinkActive="navLinkActive" class="navLinkInActive">
                     <button mat-button class="navItem wdt(100)">
                         <mat-icon class="icon mrr" [svgIcon]="navItem.icon"></mat-icon>

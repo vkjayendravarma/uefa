@@ -26,6 +26,7 @@ export class SignupformComponent implements OnInit {
   formError = '';
 
   signupForm: FormGroup = this.fb.group({
+    dob: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
     agree: [false, Validators.required]
@@ -44,8 +45,6 @@ export class SignupformComponent implements OnInit {
 
       if (params['authType'] == 'signup' || params['authType'] == 'login') {
         this.authType = params['authType'];
-      } else {
-        this.router.navigateByUrl('/');
       }
     });
 
@@ -56,6 +55,7 @@ export class SignupformComponent implements OnInit {
     this.loading = false;
 
     this.signupForm = this.fb.group({
+      dob: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
       agree: [false, Validators.required]
@@ -75,7 +75,12 @@ export class SignupformComponent implements OnInit {
         this.loading = false;
         this.formError = this.response.msg;
       } else {
+        let data = {
+          id: this.response.user_id,
+          msg: this.response.msg
+        };
         // Navigate to onboarding process for the player
+        this.router.navigate(['/auth/success/', window.btoa(JSON.stringify(data))]);
       }
     });
   }

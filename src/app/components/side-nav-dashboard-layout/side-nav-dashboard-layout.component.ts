@@ -96,9 +96,50 @@ export class SideNavDashboardLayoutComponent implements OnInit {
     }
   ]
 
+  mainSidebar: SideBarItemsPrototype[] = [];
+
   constructor() { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    let userDetails = await this.getUserDetails();
+    switch (userDetails.type) {
+      case 'national':
+        this.mainSidebar = this.sidebarAdmin;
+      break;
+
+      case 'facilitator':
+        this.mainSidebar = this.sidebarFacilitators;
+      break;
+
+      case 'players-parents':
+        this.mainSidebar;
+      break;
+    }
+  }
+
+  //status check
+  isAuthenticated() {
+    let authState:any = localStorage.getItem('AUTH_STATUS');
+    if(!authState) return false;
+
+    authState = parseInt(authState);
+    return authState == 1;
+  }
+  async getUserDetails() {
+    if(this.isAuthenticated()) {
+      const type = localStorage.getItem('USER_TYPE');
+      const token = localStorage.getItem('AUTH_TOKEN');
+      const user:any = localStorage.getItem('USER_DATA');
+
+      return {
+        user: JSON.parse(user),
+        token: token,
+        type: type
+      };
+    }
+    else {
+      return {};
+    }
   }
 
   async logout() {

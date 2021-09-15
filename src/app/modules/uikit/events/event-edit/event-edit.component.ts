@@ -157,7 +157,7 @@ export class EventEditComponent implements OnInit {
     this.globalInstituteTypes = globalInstituteTypes.types;
     this.globalEventCategories = globalEventCategories.types;
 
-    return this.http.post(this.apiLink + 'event/get_details', request).toPromise().then(response => {
+    return this.http.post(this.apiLink + 'event/get_details', request, {headers: headers}).toPromise().then(response => {
       this.response = response;
       this.loading = false;
 
