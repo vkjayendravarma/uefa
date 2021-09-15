@@ -1,20 +1,18 @@
 <div class="uiComponent teamSquadDetailsView mtl mlr pbl">
-    <div class="componentHeader mts">
-        <h3 class="squadName fs(20) ff-sb fc(EDEEEF) display-inline ">Squad 2</h3>
-        <mat-icon svgIcon="pencil" class="icon icon-small mlr"></mat-icon>
-    </div>
+  <div class="componentHeader mts">
+    <h3 class="squadName fs(20) ff-sb fc(EDEEEF) display-inline">Squad 2</h3>
+    <mat-icon svgIcon="pencil" class="icon icon-small mlr"></mat-icon>
+  </div>
 
-    <div class="componentBody">
-        <div class="members mrl">
-            <div class="row">
-                <div class="col-4" *ngFor="let member of squadMembers">
-                    <div class="member mtl pr bdr-rounded">
-                        <uikit-team-members-element></uikit-team-members-element>
-                    </div>
-                </div>
-            </div>
-           
+  <div class="componentBody">
+    <div class="members mrl">
+      <div class="row overflow-auto expandWidth">
+        <div class="col-sm-8 col-md-4" *ngFor="let member of squadMembers">
+          <div class="member mtl pr bdr-rounded">
+            <uikit-team-members-element></uikit-team-members-element>
+          </div>
         </div>
+      </div>
     </div>
-
+  </div>
 </div>

@@ -1,11 +1,27 @@
-.col-6{
-    padding:  unset;
+.col-6 {
+  padding: unset;
 }
 
-.filter-options{
-    padding-bottom: 10px;
+.filter-options {
+  padding-bottom: 10px;
 }
 
-.sessionPlayers{
-    margin-top: 20px;
+.sessionPlayers {
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .componentAlign {
+    flex-direction: column;
+  }
+  .paddingStyle {
+    padding-left: 1rem !important;
+  }
+  .headingPaddingStyle {
+    padding-left: 2rem !important;
+  }
+  .marginStyle {
+    margin-top: -1rem !important;
+    margin-left: 4rem !important;
+  }
 }

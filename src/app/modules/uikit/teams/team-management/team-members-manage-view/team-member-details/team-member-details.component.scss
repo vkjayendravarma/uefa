@@ -1,10 +1,15 @@
-.profilePic{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+.profilePic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
-.icon-small{
-    height: 14px;
-    width: 14px;
+.icon-small {
+  height: 14px;
+  width: 14px;
+}
+.widthExpand {
+  @media (max-width: 700px) {
+    width: fit-content !important;
+  }
 }

@@ -44,6 +44,10 @@
   @media (max-width: 801px) {
     margin: 0.25rem 0;
   }
+  @media (max-width: 700px) {
+    padding: 0.5em 1em;
+    border-radius: 15px;
+  }
 }
 
 .icon-small {

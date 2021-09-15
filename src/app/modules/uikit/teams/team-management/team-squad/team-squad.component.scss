@@ -1,8 +1,14 @@
-.icon-small{
-    height: 14px;
-    width: 14px;
+.icon-small {
+  height: 14px;
+  width: 14px;
 }
 
-.member{
-    background: rgba(56, 60, 64, 0.5);
+.member {
+  background: rgba(56, 60, 64, 0.5);
+}
+
+@media (max-width: 700px) {
+  .expandWidth {
+    width: fit-content !important;
+  }
 }

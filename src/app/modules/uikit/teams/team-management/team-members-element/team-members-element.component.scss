@@ -1,5 +1,10 @@
-.userImg{
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+.userImg {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+@media (max-width: 700px) {
+  .expandWidth {
+    width: fit-content !important;
+  }
 }

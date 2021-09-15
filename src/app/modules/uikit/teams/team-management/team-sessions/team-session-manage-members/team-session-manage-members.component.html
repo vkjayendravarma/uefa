@@ -1,101 +1,156 @@
 <div class="uiComponent sessionInvites pl">
-    <div class="componentHeader">
-        <h4 class="tournamentTitle fs(16) ff-r ">Final Tournament 2021</h4>
-    </div>
+  <div class="componentHeader">
+    <h4 class="tournamentTitle fs(16) ff-r">Final Tournament 2021</h4>
+  </div>
 
-
-    <div class="componentBody bgc(161F26) bgshadow1 bdr-rounded mtr pbr">
-        <div class="row">
-            <div class="col-6 bdrr">
-                <div class="allMembers">
-                    <h3 class="membersTypeTitle fs(16) ff-sb fc(EDEEEF) mlr plr ptr pbr  bdrb">
-                        Team Members
-                    </h3>
-                    <div class="membersCategories mll mtr mrr ">
-                        <div class="membersCategory pbl bdrb">
-                            <h3 class="membersCategoryTitle fs(16) ff-sb fc(EDEEEF)">Coaches</h3>
-                            <div class="members">
-                                <div class="member d-flex">
-                                    <div class="memeberInfo">
-                                        <uikit-team-members-element></uikit-team-members-element>
-                                    </div>
-                                    <div class="addToInvite ml-auto ">
-                                        <mat-icon svgIcon="add"></mat-icon>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="membersCategory mbr">
-                            <div class="membersCategoryHeader d-flex">
-                                <div class="membersCategoryTitle fs(16) flex-grow-1 ff-sb fc(EDEEEF) align-self-center">
-                                    Players</div>
-                                <div class="language-control filter-dropdown filter-options align-self-center ">
-                                    <mat-form-field appearance="legacy" class="formControl ">
-                                        <mat-select value="All Players" required #language>
-                                            <mat-option value="All Players">All Players</mat-option>
-                                            <mat-option value="EN - US">EN - US</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                                <div class="addAllbutton align-self-center mlr fc(77B7FD)">Add all </div>
-                            </div>
-
-                            <div class="members">
-                                <div class="member d-flex">
-                                    <div class="memeberInfo">
-                                        <uikit-team-members-element></uikit-team-members-element>
-                                    </div>
-                                    <div class="addToInvite ml-auto ">
-                                        <mat-icon svgIcon="add"></mat-icon>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+  <div class="componentBody bgc(161F26) bgshadow1 bdr-rounded mtr pbr">
+    <div class="row overflow-auto">
+      <div class="col-sm-12 col-md-6 bdrr">
+        <div class="allMembers">
+          <h3
+            class="
+              membersTypeTitle
+              fs(16)
+              ff-sb
+              fc(EDEEEF)
+              mlr
+              plr
+              ptr
+              pbr
+              bdrb
+            "
+          >
+            Team Members
+          </h3>
+          <div class="membersCategories mll mtr mrr">
+            <div class="membersCategory pbl bdrb">
+              <h3 class="membersCategoryTitle fs(16) ff-sb fc(EDEEEF)">
+                Coaches
+              </h3>
+              <div class="members">
+                <div class="member d-flex">
+                  <div class="memeberInfo">
+                    <uikit-team-members-element></uikit-team-members-element>
+                  </div>
+                  <div class="addToInvite ml-auto">
+                    <mat-icon svgIcon="add"></mat-icon>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="col-6">
-                <div class="addedToInvites">
-                    <h3 class="membersTypeTitle fs(16) ff-sb fc(EDEEEF) mrr plr ptr pbr  bdrb">
-                        Invitees
-                    </h3>
-                    <div class="membersCategories mlr mtr mrl ">
-                        <div class="membersCategory pbl bdrb">
-                            <h3 class="membersCategoryTitle fs(16) ff-sb fc(EDEEEF)">Session Coaches</h3>
-                            <div class="members">
-                                <div class="memeberInfo">
-                                    <uikit-team-members-element></uikit-team-members-element>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="membersCategory mbr sessionPlayers">
-                            <h3 class="membersCategoryTitle fs(16) ff-sb fc(EDEEEF)">
-                                Session Players
-                            </h3>
-
-                            <div class="members mtr">
-                                <div class="memeberInfo">
-                                    <uikit-team-members-element></uikit-team-members-element>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+            <div class="membersCategory mbr">
+              <div class="membersCategoryHeader d-flex">
+                <div
+                  class="
+                    membersCategoryTitle
+                    fs(16)
+                    flex-grow-1
+                    ff-sb
+                    fc(EDEEEF)
+                    align-self-center
+                    d-flex
+                    componentAlign
+                  "
+                >
+                  Players
                 </div>
-            </div>
-            <div class="col-12 ">
-                <div class="sendInvites bdrt ptr pbl prl">
-                    <button mat-raised-button class="float-right " color="accent">Send Invites</button>
+                <div class="d-flex componentAlign">
+                  <div
+                    class="
+                      language-control
+                      filter-dropdown filter-options
+                      align-self-center
+                      d-flex
+                    "
+                  >
+                    <mat-form-field appearance="legacy" class="formControl">
+                      <mat-select value="All Players" required #language>
+                        <mat-option value="All Players">All Players</mat-option>
+                        <mat-option value="EN - US">EN - US</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div
+                    class="
+                      addAllbutton
+                      align-self-center
+                      mlr
+                      marginStyle
+                      fc(77B7FD)
+                    "
+                  >
+                    Add all
+                  </div>
                 </div>
-            </div>
+              </div>
 
+              <div class="members">
+                <div class="member d-flex">
+                  <div class="memeberInfo">
+                    <uikit-team-members-element></uikit-team-members-element>
+                  </div>
+                  <div class="addToInvite ml-auto">
+                    <mat-icon svgIcon="add"></mat-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="addedToInvites">
+          <h3
+            class="
+              membersTypeTitle
+              fs(16)
+              ff-sb
+              fc(EDEEEF)
+              mrr
+              plr
+              ptr
+              pbr
+              bdrb
+              headingPaddingStyle
+              pl-sm-4
+            "
+          >
+            Invitees
+          </h3>
+          <div class="membersCategories mlr mtr mrl">
+            <div class="membersCategory pbl bdrb pl-sm-3 paddingStyle">
+              <h3 class="membersCategoryTitle fs(16) ff-sb fc(EDEEEF)">
+                Session Coaches
+              </h3>
+              <div class="members">
+                <div class="memeberInfo">
+                  <uikit-team-members-element></uikit-team-members-element>
+                </div>
+              </div>
+            </div>
+            <div
+              class="membersCategory mbr sessionPlayers pl-sm-3 paddingStyle"
+            >
+              <h3 class="membersCategoryTitle fs(16) ff-sb fc(EDEEEF)">
+                Session Players
+              </h3>
+
+              <div class="members mtr">
+                <div class="memeberInfo">
+                  <uikit-team-members-element></uikit-team-members-element>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="sendInvites bdrt ptr pbl prl">
+          <button mat-raised-button class="float-right" color="accent">
+            Send Invites
+          </button>
+        </div>
+      </div>
     </div>
-
-
+  </div>
 </div>
