@@ -16,11 +16,18 @@
 
 .buttonsStyle {
   padding-left: 2rem;
+  .cancelbtn {
+    margin-top: 0;
+  }
   @media only screen and (max-width: 700px) {
     justify-content: center !important;
     flex-direction: column;
     padding-left: 0% !important;
     margin-left: 0% !important;
+    .cancelbtn {
+      margin-top: 1em;
+      margin-left: 0;
+    }
   }
 }
 .dialogStyle {

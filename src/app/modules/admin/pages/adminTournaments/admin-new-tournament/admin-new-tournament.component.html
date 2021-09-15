@@ -1,19 +1,27 @@
-<app-header backgroundImage='2_player' headerTitle='Back'></app-header>
-<section class="createNewTournamentWrapper ">
-    <div class="container ">
-        <div class=" ptl plr pbl ">
-            <div class="d-flex newTournamentTitle">
-                <div class="TournamentTitleWrapper">
-                    <h2 class="TournamentTitle display-inline  ff-sb fs(24) fc(ffffff)  "> National Association Training: Women</h2>
-                </div>
-                <div class="tags">
-                    <app-tag-chips [tags]="tags" class=" tag mlr display-inline"></app-tag-chips>
-                </div>
-                <div class="inComponentNavigation ml-auto">
-                    <mat-icon svgIcon="horizontalDots" class="TournamentBodyIcons"></mat-icon>
-                </div>
-            </div>
+<app-header backgroundImage="2_player" headerTitle="Back"></app-header>
+<section class="createNewTournamentWrapper">
+  <div class="container">
+    <div class="ptl plr pbl">
+      <div class="d-flex newTournamentTitle align-items-center">
+        <div class="TournamentTitleWrapper">
+          <h2 class="TournamentTitle display-inline ff-sb fs(24) fc(ffffff)">
+            National Association Training: Women
+          </h2>
         </div>
-        <uikit-create-edit-tournament></uikit-create-edit-tournament>
+        <!-- <div class="tags"> -->
+        <app-tag-chips
+          [tags]="tags"
+          class="tag mlr display-inline"
+        ></app-tag-chips>
+        <!-- </div> -->
+        <div class="inComponentNavigation ml-auto">
+          <mat-icon
+            svgIcon="horizontalDots"
+            class="TournamentBodyIcons"
+          ></mat-icon>
+        </div>
+      </div>
     </div>
+    <uikit-create-edit-tournament></uikit-create-edit-tournament>
+  </div>
 </section>
