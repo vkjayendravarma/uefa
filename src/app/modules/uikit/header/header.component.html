@@ -1,86 +1,50 @@
-<section
-  class="header bg-img-cover"
-  [ngStyle]="{ 'background-image': backgroundImageURL }"
->
+<section class="header bg-img-cover" [ngStyle]="{ 'background-image': backgroundImageURL }">
   <div class="header-inner">
     <div class="global-search-bar-wrapper bdrb(383C40) pts">
       <div class="global-search-bar">
-        <div class="row">
-          <div class="col-1 event-menu-tag-wrapper align-self-center">
+        <div class="d-flex">
+          <div class="pr align-self-center " (click)="toggleSideBar()">
             <div class="menu-toggler">
-              <mat-icon
-                svgIcon="menu-open"
-                class="menu-toggler-button"
-                (click)="toggleSideBar()"
-              >
+              <mat-icon svgIcon="menu-open" class="menu-toggler-button">
               </mat-icon>
             </div>
           </div>
-          <div class="col-9 event-search-form">
-            <div class="search-bar align-self-center">
-              <form class="searchForm">
-                <mat-icon class="fc(ffffff) searchIcon mrs">search</mat-icon>
-                <mat-form-field
-                  appearance="legacy"
-                  class="searchFormQueryField"
-                >
-                  <input
-                    matInput
-                    placeholder="Search for posts, events and tournaments"
-                  />
-                </mat-form-field>
-                <button type="submit" class="globalSearchSubmitbtn"></button>
-              </form>
-            </div>
-          </div>
-          <div class="col-2 event-language">
-            <div class="language-control">
-              <mat-form-field appearance="legacy" class="formControl">
-                <mat-select value="EN" required #language>
-                  <mat-option value="EN">EN</mat-option>
-                  <mat-option value="EN - US">EN - US</mat-option>
-                </mat-select>
+          <div class="global-search-form align-self-center">
+            <form class="searchForm">
+              <mat-icon class="fc(ffffff) searchIcon mrs">search</mat-icon>
+              <mat-form-field appearance="legacy" class="searchFormQueryField">
+                <input matInput placeholder="Search for posts, events and tournaments" />
               </mat-form-field>
-            </div>
+              <button type="submit" class="globalSearchSubmitbtn"></button>
+            </form>
+          </div>
+          <div class="search-icon-mobile align-self-center ml-auto">
+            <mat-icon class="fc(ffffff) ">search</mat-icon>
+          </div>
+          <div class="language-control">
+            <mat-form-field appearance="legacy" class="formControl">
+              <mat-select value="EN" required #language>
+                <mat-option value="EN">EN</mat-option>
+                <mat-option value="EN - US">EN - US</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
         </div>
       </div>
     </div>
     <div class="pageTitleWrapper ptxl pll pbr prl d-flex flex-column">
       <h1 class="title event-home-title fc(ffffff) ff-sb fs(24) m-unset">
-        <mat-icon
-          svgIcon="back"
-          class="mrr"
-          (click)="back()"
-          *ngIf="headerTitle == 'Back'"
-        ></mat-icon>
+        <mat-icon svgIcon="back" class="mrr" (click)="back()" *ngIf="headerTitle == 'Back'"></mat-icon>
         {{ headerTitle }}
-        <h2
-          class="display-inline fc(C3C5C7) ff-sb fs(16)"
-          *ngIf="subtitleTitle"
-        >
+        <h2 class="display-inline fc(C3C5C7) ff-sb fs(16)" *ngIf="subtitleTitle">
           {{ subtitleTitle }}
         </h2>
-        <button
-          mat-raised-button
-          type="button"
-          color="accent"
-          class="quickActions bgc(1565D8) float-right event-btn buttonStyle"
-          (click)="initiateQuickAction()"
-          *ngIf="quickActionType !== undefined"
-        >
-          <p class="btn-text fs(16) pll prl">
-            {{ quickActionButtonText }}
-          </p>
+        <button mat-raised-button type="button" color="accent" class="quickActions bgc(1565D8) float-right event-btn"
+          (click)="initiateQuickAction()" *ngIf="quickActionType !== undefined">
+          <p class="btn-text fs(16) pll prl">{{ quickActionButtonText }}</p>
         </button>
-        <button
-          mat-raised-button
-          type="button"
-          color="accent"
-          (click)="navigate()"
-          class="quickActions bgc(1565D8) float-right"
-          *ngIf="linkAction !== undefined"
-        >
+        <button mat-raised-button type="button" color="accent" (click)="navigate()"
+          class="quickActions bgc(1565D8) float-right" *ngIf="linkAction !== undefined">
           <p class="btn-text fs(16) pll prl">{{ linkActionButtonText }}</p>
         </button>
       </h1>

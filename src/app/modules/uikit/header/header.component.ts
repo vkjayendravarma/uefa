@@ -62,6 +62,12 @@ export class HeaderComponent implements OnInit {
 
       this.quickActionsConfig();
     }
+
+    if (window.screen.width < 1030){
+      this.sidebarIsActive = false;
+      this.mobileNavigationToggel()
+    }
+
   }
 
   quickActionsConfig() {
@@ -101,11 +107,8 @@ export class HeaderComponent implements OnInit {
   toggleSideBar() {
     console.log('toggle');
     this.sidebarIsActive = !this.sidebarIsActive;
-    this.sidebarService.toggleSideBar(this.sidebarIsActive);
-    if (window.screen.width === 630) {
-      // 768px portrait
-      this.sidebarIsActive = false;
-    }
+    this.sidebarService.toggleSideBar(this.sidebarIsActive)
+    
   }
 
   initiateQuickAction() {
@@ -117,7 +120,7 @@ export class HeaderComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.backdropClass = 'mat-dialog-custom-backdrop';
-    dialogConfig.minWidth = '40%';
+    dialogConfig.minWidth = '60%';
 
     const dialogRef = this.dialog.open(this.quickActionComponent, dialogConfig);
 
@@ -128,6 +131,14 @@ export class HeaderComponent implements OnInit {
 
   navigate() {
     if (this.linkAction) this.router.navigateByUrl(this.linkAction);
+  }
+
+  mobileNavigationToggel(){
+    if (window.screen.width < 1030) {      
+      this.sidebarService.onSideBarChanged().subscribe((isClose) => {
+        this.sidebarIsActive = false;
+      });
+    }
   }
 
   back() {

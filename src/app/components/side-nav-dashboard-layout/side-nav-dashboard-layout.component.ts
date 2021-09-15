@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidebarServiceService } from 'src/app/globalServices/sidebar-service.service';
 import { SideBarItemsPrototype } from 'src/app/prototypes/sidebarItems.interface';
 
 @Component({
@@ -163,8 +164,9 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       icon: 'logout',
     },
   ];
+  
 
-  constructor() {}
+  constructor(private _sidebarService: SidebarServiceService) {}
 
   ngOnInit(): void {
     this.sideBarManager();
@@ -187,6 +189,15 @@ export class SideNavDashboardLayoutComponent implements OnInit {
       this.currentSideBar2 = this.sideBar2Player;
 
       return;
+    }
+  }
+
+  openevent(){
+    if (window.screen.width < 1030) {      
+      
+        console.log("backdrop close");        
+        this._sidebarService.toggleSideBar(false);
+      
     }
   }
 }
