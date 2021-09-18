@@ -6,10 +6,19 @@ export const environment = {
   production: false
 };
 
-export const apiUrl = 'http://localhost:8081';
-export const baseUrl = 'http://localhost:4200';
+// // Local Server Settings
+// export const apiUrl = 'http://localhost:3000';
+// export const baseUrl = 'http://localhost:4200';
+// export const socketIoConfig = {
+//   url: 'http://localhost:3000',
+//   options: {}
+// };
+
+// Test Server Settings
+export const apiUrl = 'http://13.127.0.154/server';
+export const baseUrl = 'http://13.127.0.154';
 export const socketIoConfig = {
-  url: 'http://localhost:8081',
+  url: 'http://13.127.0.154/server',
   options: {}
 };
 

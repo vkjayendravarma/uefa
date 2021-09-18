@@ -8,7 +8,14 @@
     </h1>
     <form class="loginForm mtl fc(C3C5C7) ff-r fs(14)" [formGroup]="signupForm" (submit)="signup()">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 form-group">
+                <label class="display-block fc(EDEEEF)">Select Role <span class="text-danger">*</span></label>
+                <select class="form-control" formControlName="role" (change)="setupDobValidation($event)">
+                    <option value="">------ Select -------</option>
+                    <option [value]="role.role_id" *ngFor="let role of roles">{{ role.role_name }}</option>
+                </select>
+            </div>
+            <div class="col-md-12" *ngIf="role?.value == 8">
                 <label class="display-block fc(EDEEEF)">Date Of Birth <span class="text-danger">*</span></label>
                 <mat-form-field color="primary" appearance="outline" class="formControl wdt(100)">
                     <input matInput [matDatepicker]="picker" formControlName="dob" readonly>

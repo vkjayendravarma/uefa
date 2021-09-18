@@ -87,8 +87,13 @@ export class LoginformComponent implements OnInit {
           case 'national':
             this.router.navigate(['/dashboard/admin/home']);
           break;
+
+          case 'facilitator':
+            this.router.navigate(['/dashboard/facilitator/home']);
+          break;
           
-          case 'players-parents':
+          case 'parent':
+          case 'player':
             this.router.navigate(['/dashboard/player/home']);
           break;
         

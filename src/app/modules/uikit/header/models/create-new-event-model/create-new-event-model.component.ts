@@ -41,7 +41,7 @@ export class CreateNewEventModelComponent implements OnInit {
     });
     headers.append('Authorization', token);
     
-    let globalEventTypes:any = await this.http.post(this.apiLink+'event/get_global_event_type', {}, {headers: headers}).toPromise();
+    let globalEventTypes:any = await this.http.post(this.apiLink+'global/get_global_event_type', {}).toPromise();
     this.globalEventTypes = globalEventTypes.types;
   }
 

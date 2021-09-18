@@ -1,3 +1,15 @@
 .cursor-pointer{
     cursor: pointer;
 }
+
+input.form-control, select.form-control {
+    height: 45px;
+}
+input.form-control, select.form-control,
+textarea.form-control {
+    padding: 5px;
+    color: #EDEEEF;
+    display: inline-flex;
+    background-color: #0F171D;
+    border: 1px solid #535353;
+}

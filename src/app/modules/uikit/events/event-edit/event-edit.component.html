@@ -275,10 +275,7 @@
                                                     <label class="display-block fc(EDEEEF)">Select Region</label>
                                                     <mat-form-field appearance="outline" color="primary" class="wdt(100)">
                                                         <mat-select panelClass="mat-select-grid-2" formControlName="region" multiple>
-                                                            <!-- <mat-option [value]="reg.id" *ngFor="let reg of globalEventRegions">{{ reg.name }}</mat-option> -->
-                                                            <mat-option value="1">Option 1</mat-option>
-                                                            <mat-option value="2">Option 2</mat-option>
-                                                            <mat-option value="3">Option 3</mat-option>
+                                                            <mat-option [value]="reg.id" *ngFor="let reg of globalEventRegions">{{ reg.name }}</mat-option>
                                                         </mat-select>
                                                     </mat-form-field>
                                                     <p class="text-danger" *ngIf="publishForm.region.hasError('required') && publishForm.region.dirty">Region selection is mandatory</p>

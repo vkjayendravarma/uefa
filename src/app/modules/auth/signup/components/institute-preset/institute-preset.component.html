@@ -10,32 +10,22 @@
   </div>
   <div class="componentBody">
     <div class="institutePresetFormWrapper container">
-      <form
-        action=""
-        class="institutePresetForm mtxl formControlTopBorderUnset wdt(100)"
-      >
+      <form class="institutePresetForm mtxl formControlTopBorderUnset wdt(100)" [formGroup]="instForm" (submit)="sendJoiningRequest()">
         <h1 class="formTitle ff-sb fc(ffffff) fs(32)">
           You have successfully signed up for Futbol!
         </h1>
         <h3 class="ff-sb fc(9B9B9B) fs(16)">
-          Search and join an Institute or create a new if you haven't registered
-          it yet
+          Search and join an Institute or create a new if you haven't registered it yet
         </h3>
 
         <div class="mtl wdt(50)">
           <div class="selectRegion">
             <div class="formControl wdt(100)">
-              <label class="display-block fc(EDEEEF)">Select Region</label>
-              <mat-form-field
-                appearance="outline"
-                color="primary"
-                class="wdt(100)"
-              >
-                <mat-select panelClass="matSelectCustomFocus">
-                  <mat-option>None</mat-option>
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
+              <label class="display-block fc(EDEEEF) mb-3">Select Region</label>
+              <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                <mat-label>---- Choose An Option ----</mat-label>
+                <mat-select panelClass="matSelectCustomFocus" formControlName="region" (selectionChange)="searchInstitutes()">
+                  <mat-option [value]="reg.id" *ngFor="let reg of globalEventRegions">{{reg.name}}</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
@@ -43,17 +33,11 @@
 
           <div class="instituteType">
             <div class="formControl wdt(100)">
-              <label class="display-block fc(EDEEEF)">Institute Type</label>
-              <mat-form-field
-                appearance="outline"
-                color="primary"
-                class="wdt(100)"
-              >
-                <mat-select panelClass="matSelectCustomFocus">
-                  <mat-option>None</mat-option>
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
+              <label class="display-block fc(EDEEEF) mb-3">Institute Type</label>
+              <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                <mat-label>---- Choose An Option ----</mat-label>
+                <mat-select panelClass="matSelectCustomFocus" formControlName="inst_type" (selectionChange)="searchInstitutes()">
+                  <mat-option [value]="type.id" *ngFor="let type of globalInstituteTypes">{{type.name}}</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
@@ -61,13 +45,22 @@
 
           <div class="searchInstitute">
             <div class="formControl wdt(100)">
-              <label class="display-block fc(EDEEEF)">Search Institutes</label>
-              <mat-form-field appearance="outline" class="wdt(100)">
-                <input matInput type="text" class="ff-r fs(14)" />
-                <mat-icon matSuffix>search</mat-icon>
+              <label class="display-block fc(EDEEEF) mb-3">Select An Institute</label>
+              <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+                <mat-label>---- Choose An Option ----</mat-label>
+                <mat-select panelClass="matSelectCustomFocus" formControlName="institute">
+                  <mat-option [value]="inst.id" *ngFor="let inst of globalInstitutes">{{inst.name}}</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
           </div>
+
+          <h5 class="display-block fc(EDEEEF)" *ngIf="globalInstitutes.length > 0">
+            Request to Join Institute As {{ userDetails.role_display_name }}
+          </h5>
+          <h5 class="display-block fc(EDEEEF)" *ngIf="userDetails.user_role == '5'">
+            <a [routerLink]="['/onboard/institute/new', params.id]">Click Here</a> to Register a New Institute.
+          </h5>
         </div>
       </form>
     </div>
@@ -75,19 +68,8 @@
 
   <div class="componentActions bgc(161F26) mb-auto wdt(100)">
     <div class="actionsWrapper container ptr pbr">
-      <button
-        class="btn-dialog-action ff-sb fs(16)"
-        color="accent"
-        type="submit"
-        mat-raised-button
-      >
-        Next
-      </button>
-      <button
-        class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) mll"
-        mat-button
-      >
-        Cancel
+      <button class="btn-dialog-action ff-sb fs(16)" color="accent" type="button" mat-raised-button [disabled]="loading || instForm.invalid" (click)="sendJoiningRequest()">
+        Send Request
       </button>
     </div>
   </div>

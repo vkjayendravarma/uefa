@@ -25,8 +25,15 @@ export class SignupformComponent implements OnInit {
   loading = false;
   formError = '';
 
+  roles = [
+    { role_id: 5, role_name: 'Facilitator' },
+    { role_id: 6, role_name: 'Coach' },
+    { role_id: 8, role_name: 'Player' }
+  ]
+
   signupForm: FormGroup = this.fb.group({
     dob: ['', Validators.required],
+    role: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
     agree: [false, Validators.required]
@@ -55,12 +62,22 @@ export class SignupformComponent implements OnInit {
     this.loading = false;
 
     this.signupForm = this.fb.group({
-      dob: ['', Validators.required],
+      dob: [''],
+      role: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
       agree: [false, Validators.required]
     });
     this.signupForm.updateValueAndValidity();
+  }
+
+  setupDobValidation(event:any) {
+    if(event.target.value == 8) {
+      this.dob?.setValidators([Validators.required])
+    } else {
+      this.dob?.setValidators(null);
+    }
+    this.dob?.updateValueAndValidity();
   }
 
   async signup() {
@@ -77,7 +94,8 @@ export class SignupformComponent implements OnInit {
       } else {
         let data = {
           id: this.response.user_id,
-          msg: this.response.msg
+          msg: this.response.msg,
+          role: this.role?.value
         };
         // Navigate to onboarding process for the player
         this.router.navigate(['/auth/success/', window.btoa(JSON.stringify(data))]);
@@ -86,6 +104,12 @@ export class SignupformComponent implements OnInit {
   }
 
   // Getter Functions
+  get dob() {
+    return this.signupForm.get('dob');
+  }
+  get role() {
+    return this.signupForm.get('role');
+  }
   get agree() {
     return this.signupForm.get('agree');
   }

@@ -111,7 +111,8 @@ export class SideNavDashboardLayoutComponent implements OnInit {
         this.mainSidebar = this.sidebarFacilitators;
       break;
 
-      case 'players-parents':
+      case 'parents':
+      case 'players':
         this.mainSidebar;
       break;
     }

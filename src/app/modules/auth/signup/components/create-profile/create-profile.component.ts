@@ -123,7 +123,7 @@ export class CreateProfileComponent implements OnInit {
     let request = {
       invithash: this.params.invitehash,
       act_code: profileForm.act_code,
-      f_name: profileForm.fname,
+      f_name: profileForm.f_name,
       l_name: profileForm.l_name,
       password: profileForm.password,
       gender: profileForm.gender,

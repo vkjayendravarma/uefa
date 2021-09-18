@@ -21,7 +21,11 @@ export class SignupSuccessComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = window.btoa(this.params.id);
+    if(this.params.user_id) {
+      this.id = window.btoa(this.params.user_id);
+    } else {
+      this.id = window.btoa(this.params.id);
+    }
   }
 
 }

@@ -8,35 +8,41 @@ import { InstituteRequestJoinComponent } from './components/institute-request-jo
 import { InviteUsersComponent } from './components/invite-users/invite-users.component';
 import { RaDetailsSuccessComponent } from './components/ra/ra-details-success/ra-details-success.component';
 import { RaDetailsComponent } from './components/ra/ra-details/ra-details.component';
+import { PlayerSignupSuccessComponent } from './components/player-signup-success/player-signup-success.component';
+import { RegisterProfileComponent } from './components/register-profile/register-profile.component';
 
 const routes: Routes = [
   {
     path: 'create-profile/:invitehash',
     component: CreateProfileComponent,
   },{
-    path: 'institutedata',
+    path: 'institutedata/:id',
     component: InstitutePresetComponent,
-  }, { 
-    path: 'institute/new',
+  },{ 
+    path: 'institute/new/:id',
     component: InstituteProfileComponent
   },{ 
     path: 'institute/joinas',
     component: InstituteRequestJoinComponent
-  }, { 
+  },{ 
     path: 'institute/joinas/success',
     component: InstituteRequestJoinSuccessMessageComponent
   },{
     path: 'inviteusers/:invitehash',
     component: InviteUsersComponent
-  },
-  {
+  },{
     path: 'ra/details',
     component: RaDetailsComponent
-  },
-  {
+  },{
     path: 'ra/success',
     component: RaDetailsSuccessComponent
-  }
+  },{
+    path: 'signup-success/:id',
+    component: PlayerSignupSuccessComponent,
+  },{
+    path: 'player-register-profile/:id',
+    component: RegisterProfileComponent,
+  },
 ];
 
 @NgModule({

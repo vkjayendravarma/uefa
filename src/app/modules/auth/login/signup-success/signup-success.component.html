@@ -12,7 +12,10 @@
     </h1>
     <h2 class="successMessageNextStep fs(20) ff-r mtr mbl fc(C3C5C7) ">{{ params.msg }}</h2>
 
-    <a class="action" [routerLink]="['/onboard/signup-success', id]">
+    <a class="action" [routerLink]="['/onboard/signup-success', id]" *ngIf="params.role == 8">
+        <button mat-raised-button color="accent" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs">Begin Registration</button>
+    </a>
+    <a class="action" [routerLink]="['/onboard/institutedata', id]" *ngIf="params.role != 8">
         <button mat-raised-button color="accent" class="btn btn-submit wdt(100) fc(ffffff) ff-sb fs(16) pts pbs">Begin Registration</button>
     </a>
 

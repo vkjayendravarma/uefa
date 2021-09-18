@@ -24,8 +24,14 @@ export class WithoutAuthGuard implements CanActivate {
           this.router.navigate(['/dashboard/admin/home']);
           return false;
         break;
+        
+        case 'facilitator':
+          this.router.navigate(['/dashboard/facilitator/home']);
+          return false;
+        break;
 
-        case 'players-parents':
+        case 'parent':
+        case 'player':
           this.router.navigate(['/dashboard/player/home']);
           return false;
         break;

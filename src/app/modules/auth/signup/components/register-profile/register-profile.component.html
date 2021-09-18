@@ -1,0 +1,137 @@
+<div class="signupComponent bgc(0F171D) wdt(100)">
+	<div class="componentHeader bdrb">
+		<div class="container">
+			<div class="header ptr pbs">
+				<div class="branding">
+					<img src="../../../../../assets/images/logos/LogoSmall.svg" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="!profileSetup">
+		<div class="componentBody">
+			<div class="registrationFormWrapper container">
+				<form [formGroup]="profileForm" (submit)="updateProfile()"
+					class="registrationForm mtxl formControlTopBorderUnset registrationStyle">
+					<h1 class="formTitle ff-sb fc(ffffff) fs(32) ">Please fill in your personal information</h1>
+
+					<div class="row mtl">
+						<!-- Personal Details -->
+						<div class="col-12 mb-3">
+							<label class="form-label d-block" style="color: #EDEEEF;">Profile Picture</label>
+							<div *ngIf="!image"
+								style="height: 56px;background-color: #161F26;border: 1px dashed #535353; border-radius: 6px;font-size: 14px;display: flex;justify-content: center;align-items: center;"
+								(click)="profile.click()">
+								<div style="color:#466b91; padding-left:3px; cursor:pointer; margin-right:3px;">Browse</div>
+								<span style="color: #C3C5C7;">An Image To Set As Profile Pic</span>
+							</div>
+							<div style="position: relative;display: inline-flex;" *ngIf="image">
+								<img style="border-radius: 6px;" height="200" [src]="image">
+								<span
+									style="position: absolute; right: 8px; bottom: 8px; border-radius: 26px; background-color: #161F26; width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+									<img (click)="profile.click()" src="../../../../../assets/images/icons/pencil.svg">
+								</span>
+							</div>
+							<input formControlName="profile" (change)="profileImage($event)" type="file" #profile hidden>
+						</div>
+
+						<div class="col-12 mb-3">
+							<label style="color: #EDEEEF;" for="ass_email" class="form-label">Work Email Address</label>
+							<input readonly formControlName="email" type="email" style="color: #EDEEEF;background-color: #0F171D;
+							border: 1px solid #535353;display: inline-flex;" class="form-control" id="ass_email">
+						</div>
+
+						<div class="col-12 mb-3">
+							<div class="row">
+								<div class="col">
+									<label style="color: #EDEEEF;" for="f_name" class="form-label">First Name<span class="text-danger">*</span></label>
+									<input formControlName="f_name" type="text" style="color: #EDEEEF;background-color: #0F171D;
+											border: 1px solid #535353;display: inline-flex;" placeholder="Enter Fist Name" class="form-control"
+										id="f_name">
+								</div>
+
+								<div class="col">
+									<label style="color: #EDEEEF;" for="l_name" class="form-label">Last Name<span class="text-danger">*</span></label>
+									<input formControlName="l_name" type="text" style="color: #EDEEEF;background-color: #0F171D;
+											border: 1px solid #535353;display: inline-flex;" placeholder="Enter Last Name" class="form-control"
+										id="l_name">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 mb-3">
+							<label style="color: #EDEEEF;display: flex;" class="form-label">Gender<span class="text-danger">*</span></label>
+							<mat-radio-group aria-label="Select an option" formControlName="gender">
+								<mat-radio-button *ngFor="let gender of genders" [value]="gender.gender_id" class="mrxxl text-light">
+									{{ gender.gender_name }}
+								</mat-radio-button>
+							</mat-radio-group>
+						</div>
+
+						<div class="col-12 mb-3">
+							<div class="formControl wdt(100)">
+								<label class="display-block fc(EDEEEF) fs(14)">Address<span class="text-danger">*</span></label>
+								<mat-form-field appearance="outline" color="primary" class="wdt(100)">
+									<input matInput type="text" formControlName="address" class="ff-r fs(14) p-1" placeholder="Enter Postcode" />
+									<mat-icon matSuffix svgIcon="location" class="location"></mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+						
+						<!-- Dependents Details -->
+						<div class="col-12 fs(20) pbr fw(600) fc(EDEEEF)">Add Dependents</div>
+						<div class="col-12 row mb-3">
+							<div class="col-5">
+								<div class="formControl wdt(100)">
+									<label class="display-block fc(EDEEEF) fs(14)">Full Name</label>
+									<mat-form-field appearance="outline" class="wdt(100)">
+										<input matInput type="text" class="ff-r fs(14) p-1" placeholder="Enter Full Name" />
+									</mat-form-field>
+								</div>
+							</div>
+
+							<div class="col-5">
+								<div class="formControl wdt(100)">
+									<label class="display-block fc(EDEEEF) fs(14)">Date of Birth
+									</label>
+									<mat-form-field appearance="outline" color="primary" class="wdt(100)">
+										<input matInput [matDatepicker]="startDatePicker" class="ff-r fs(14) p-1" placeholder="DD/MM/YYYY" />
+										<mat-datepicker-toggle matSuffix [for]="startDatePicker">
+										</mat-datepicker-toggle>
+										<mat-datepicker #startDatePicker></mat-datepicker>
+									</mat-form-field>
+								</div>
+							</div>
+
+							<div class="col-2 addNew align-self-center">
+								<button type="button" mat-button class="ff-r fs(14) fc(77B7FD)">+ Add</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<div class="row" *ngIf="formError.length > 0">
+					<div class="col-12">
+						<h6 class="text-danger">{{ formError }}</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="componentActions bgc(161F26) mb-auto wdt(100)">
+			<div class="actionsWrapper container ptr pbr d-flex buttonStyle">
+				<button [disabled]="loading || profileForm.invalid" color="accent" type="button" mat-raised-button (click)="updateProfile()">
+					{{ loading ? "Please Wiat..." : "Complete Profile" }}
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="profileSetup">
+		<div class="componentBody">
+			<div style="font-size: 20px;color: #FFFFFF;margin-top:10%;margin-bottom: 5%;display: flex;justify-content: center;line-height: 30px;text-align: center;">You have successfully updated you profile details.</div>
+			<div style="font-size: 20px;color: #C3C5C7;text-align: center;">Please <a [routerLink]="['/auth/session/login']">login</a> to our web portal to continue working.</div>
+		</div>
+	</div>
+</div>
