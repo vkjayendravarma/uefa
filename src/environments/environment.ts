@@ -15,10 +15,10 @@ export const environment = {
 // };
 
 // Test Server Settings
-export const apiUrl = 'http://13.127.0.154/server';
-export const baseUrl = 'http://13.127.0.154';
+export const apiUrl = 'https://sports.verdentum.org/server';
+export const baseUrl = 'https://sports.verdentum.org';
 export const socketIoConfig = {
-  url: 'http://13.127.0.154/server',
+  url: 'https://sports.verdentum.org/server',
   options: {}
 };
 
