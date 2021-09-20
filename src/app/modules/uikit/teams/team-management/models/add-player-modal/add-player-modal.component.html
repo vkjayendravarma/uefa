@@ -1,0 +1,64 @@
+<h2 class="fc(EDEEEF) ff-sb fs(20) mbr">
+  Add Team Member
+  <span class="float-right display-button" mat-dialog-close>
+    <mat-icon class="fc(82898E)">close</mat-icon>
+  </span>
+  <div class="horizontalLine ptr">
+    <div class="horizontal-line bdrt"></div>
+  </div>
+</h2>
+<mat-dialog-content class="mat-typography" color="primary">
+  <div class="newEventFormWrapper">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <label class="display-block fc(EDEEEF)">Full Name*</label>
+        <mat-form-field appearance="outline" class="formControl wdt(100)">
+          <input matInput type="email" class="ff-r fs(14)" />
+        </mat-form-field>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <label class="display-block fc(EDEEEF)">Member Date of Birth*</label>
+        <mat-form-field appearance="outline" color="primary" class="wdt(100)">
+          <input matInput [matDatepicker]="DOBPicker" />
+          <mat-datepicker-toggle matSuffix [for]="DOBPicker">
+          </mat-datepicker-toggle>
+          <mat-datepicker #DOBPicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="inputGroup">
+      <h2 class="inputGroupTitle fs(16) ff-sb fc(9B9B9B)">
+        Main Contact - Player
+      </h2>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <label class="display-block fc(EDEEEF)">Full Name*</label>
+          <mat-form-field appearance="outline" class="formControl wdt(100)">
+            <input matInput type="text" class="ff-r fs(14)" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions class="dialogStyle ptr mbr">
+  <div class="buttonsStyle d-flex pbr">
+    <button
+      class="btn-dialog-action ff-sb fs(16)"
+      color="accent"
+      (click)="addTeamMember()"
+      mat-raised-button
+      mat-dialog-close
+      cdkFocusInitial
+    >
+      Add Team Member
+    </button>
+    <button
+      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) cancelButton"
+      mat-button
+      mat-dialog-close
+    >
+      Cancel
+    </button>
+  </div>
+</mat-dialog-actions>

@@ -31,6 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormUiElementsModule } from '../form-ui-elements/form-ui-elements.module';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AddCoachModalComponent } from './team-management/models/add-coach-modal/add-coach-modal.component';
+import { AddPlayerModalComponent } from './team-management/models/add-player-modal/add-player-modal.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     TeamMembersElementComponent,
     TeamMemberDetailsComponent,
     TeamMemberDetailsEditComponent,
+    AddCoachModalComponent,
+    AddPlayerModalComponent,
   ],
   imports: [
     CommonModule,
