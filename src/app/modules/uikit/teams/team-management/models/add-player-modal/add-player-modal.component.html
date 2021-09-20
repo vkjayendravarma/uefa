@@ -11,9 +11,25 @@
   <div class="newEventFormWrapper">
     <div class="row">
       <div class="col-sm-12 col-md-6">
+        <label class="display-block fc(EDEEEF)">Player</label>
+        <mat-form-field
+          appearance="outline"
+          color="primary"
+          class="formControl"
+        >
+          <mat-select placeholder="Select a player">
+            <mat-option value="Option1">Option1</mat-option>
+            <mat-option value="Option2">Option2</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="fc(9B9B9B) col-12 mbr fs(16) fw(600)">
+        Or enter details to invite
+      </div>
+      <div class="col-sm-12 col-md-6">
         <label class="display-block fc(EDEEEF)">Full Name*</label>
         <mat-form-field appearance="outline" class="formControl wdt(100)">
-          <input matInput type="email" class="ff-r fs(14)" />
+          <input matInput type="text" class="ff-r fs(14)" />
         </mat-form-field>
       </div>
       <div class="col-sm-12 col-md-6">
@@ -26,25 +42,22 @@
         </mat-form-field>
       </div>
     </div>
-    <div class="inputGroup">
-      <h2 class="inputGroupTitle fs(16) ff-sb fc(9B9B9B)">
-        Main Contact - Player
-      </h2>
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <label class="display-block fc(EDEEEF)">Full Name*</label>
-          <mat-form-field appearance="outline" class="formControl wdt(100)">
-            <input matInput type="text" class="ff-r fs(14)" />
-          </mat-form-field>
-        </div>
-      </div>
-    </div>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions class="dialogStyle ptr mbr">
-  <div class="buttonsStyle d-flex pbr">
+  <div
+    class="
+      stepper-controller
+      pr
+      buttonStyle
+      bgc(161F26)
+      d-flex
+      flex-row
+      justify-content-start
+    "
+  >
     <button
-      class="btn-dialog-action ff-sb fs(16)"
+      class="btn-dialog-action ff-sb mr-1"
       color="accent"
       (click)="addTeamMember()"
       mat-raised-button

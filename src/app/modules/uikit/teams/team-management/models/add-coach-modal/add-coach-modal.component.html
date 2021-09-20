@@ -11,51 +11,45 @@
   <div class="newEventFormWrapper">
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <label class="display-block fc(EDEEEF)">Full Name*</label>
-        <mat-form-field appearance="outline" class="formControl wdt(100)">
-          <input matInput type="email" class="ff-r fs(14)" />
+        <label class="display-block fc(EDEEEF)">Coach</label>
+        <mat-form-field
+          appearance="outline"
+          color="primary"
+          class="formControl"
+        >
+          <mat-select placeholder="Select a coach">
+            <mat-option value="Option1">Option1</mat-option>
+            <mat-option value="Option2">Option2</mat-option>
+          </mat-select>
         </mat-form-field>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <label class="display-block fc(EDEEEF)">Member Date of Birth*</label>
-        <mat-form-field appearance="outline" color="primary" class="wdt(100)">
-          <input matInput [matDatepicker]="DOBPicker" />
-          <mat-datepicker-toggle matSuffix [for]="DOBPicker">
-          </mat-datepicker-toggle>
-          <mat-datepicker #DOBPicker></mat-datepicker>
-        </mat-form-field>
-      </div>
-    </div>
-    <div class="inputGroup">
-      <h2 class="inputGroupTitle fs(16) ff-sb fc(9B9B9B)">
-        Main Contact - Player
-      </h2>
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <label class="display-block fc(EDEEEF)">Full Name*</label>
-          <mat-form-field appearance="outline" class="formControl wdt(100)">
-            <input matInput type="text" class="ff-r fs(14)" />
-          </mat-form-field>
-        </div>
       </div>
     </div>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions class="dialogStyle ptr mbr">
-  <div class="buttonsStyle d-flex pbr">
+  <div
+    class="
+      stepper-controller
+      pr
+      buttonStyle
+      bgc(161F26)
+      d-flex
+      flex-row
+      justify-content-start
+    "
+  >
     <button
-      class="btn-dialog-action ff-sb fs(16)"
-      color="accent"
+      class="btn-dialog-action ff-sb mr-1"
       mat-raised-button
-      mat-dialog-close
-      cdkFocusInitial
+      color="accent"
+      mat-stroked-button
     >
       Add Coach
     </button>
     <button
-      class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) cancelButton"
-      mat-button
-      mat-dialog-close
+    class="btn-dialog-action bdr(77B7FD) fc(77B7FD) ff-sb fs(16) cancelButton"
+    mat-button
+    mat-dialog-close
     >
       Cancel
     </button>
