@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { apiUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 const AUTH_TOKEN = "AUTH_TOKEN",
@@ -20,7 +20,7 @@ export class SignupformComponent implements OnInit {
   authType: string | undefined;
 
   response:any;
-  apiLink = apiUrl+'/api/';
+  apiLink = environment.apiUrl+'/api/';
 
   loading = false;
   formError = '';

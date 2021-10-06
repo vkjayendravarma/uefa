@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { apiUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -13,7 +13,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class CreateNewEventModelComponent implements OnInit {
 
   response:any;
-  apiLink = apiUrl+'/api/';
+  apiLink = environment.apiUrl+'/api/';
 
   loading = false;
   formError = '';

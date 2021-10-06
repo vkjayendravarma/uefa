@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { apiUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-player-signup-success',
@@ -13,7 +13,7 @@ export class PlayerSignupSuccessComponent implements OnInit {
 	
 	id:any;
 	response:any;
-  apiLink = apiUrl+'/api/';
+  apiLink = environment.apiUrl+'/api/';
 
 	formError = '';
   loading = false;

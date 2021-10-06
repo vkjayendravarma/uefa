@@ -3,28 +3,32 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
 
-// // Local Server Settings
-// export const apiUrl = 'http://localhost:3000';
-// export const baseUrl = 'http://localhost:4200';
-// export const socketIoConfig = {
-//   url: 'http://localhost:3000',
-//   options: {}
-// };
+  
+  
+  // Local Server Settings
+  apiUrl: 'http://localhost:3100',
+  baseUrl: 'http://localhost:4200',
+  socketIoConfig: {
+    url: 'http://localhost:3100',
+    options: {}
+  },
+  
+  // Test Server Settings
+  // apiUrl: 'http://sports.verdentum.org/server',
+  // baseUrl: 'http://sports.verdentum.org',
+  // socketIoConfig: {
+  //   url: 'http://sports.verdentum.org/server',
+  //   options: {}
+  // },
 
-// Test Server Settings
-export const apiUrl = 'https://sports.verdentum.org/server';
-export const baseUrl = 'https://sports.verdentum.org';
-export const socketIoConfig = {
-  url: 'https://sports.verdentum.org/server',
-  options: {}
-};
-
-export const maxFilesize = {
-  label: '2MB',
-  value: 2097152
+  
+  
+  maxFilesize: {
+    label: '2MB',
+    value: 2097152
+  }
 };
 
 /*

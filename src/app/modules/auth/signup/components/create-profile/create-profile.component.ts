@@ -3,7 +3,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { apiUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-create-profile',
@@ -21,7 +21,7 @@ export class CreateProfileComponent implements OnInit {
 
   profileSetup = false;
   response:any;
-  apiLink = apiUrl+'/api/';
+  apiLink = environment.apiUrl+'/api/';
 
   loading = false;
 

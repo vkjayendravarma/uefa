@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { apiUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -13,7 +13,7 @@ export class InstitutePresetComponent implements OnInit {
 
 	params: any;
 	response: any;
-	apiLink = apiUrl + '/api/';
+	apiLink = environment.apiUrl + '/api/';
 
 	formError = '';
 	loading = false;

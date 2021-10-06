@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { apiUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-invite-users',
@@ -16,7 +16,7 @@ export class InviteUsersComponent implements OnInit {
   userDetails:any = {
     child_ass: []
   };
-  apiLink = apiUrl+'/api/';
+  apiLink = environment.apiUrl+'/api/';
 
   associationTypes = [
     {id: 1, label: 'National'},

@@ -5,7 +5,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { apiUrl, baseUrl } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { MatStepper } from '@angular/material/stepper';
 
 @Component({
@@ -30,8 +30,8 @@ export class EventEditComponent implements OnInit {
 		event_id: '',
 		event_name: ''
 	};
-	baseUrl = baseUrl;
-	apiLink = apiUrl + '/api/';
+	baseUrl = environment.baseUrl;
+	apiLink = environment.apiUrl + '/api/';
 
 	loading = false;
 	loadingPublish = false;
